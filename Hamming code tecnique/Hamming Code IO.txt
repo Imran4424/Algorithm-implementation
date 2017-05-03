@@ -1,0 +1,6 @@
+Sample Input:
+Data: 1001101
+Received: 10010100101
+
+Sample Output:
+Error Position: 7
