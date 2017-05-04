@@ -119,7 +119,7 @@ int main()
         }
     }
 
-    ///need to edit the implementation
+
 
     cout<<"Received code: "<<received<<endl<<"Hamming  code: "<<hamming_code<<endl;
 
