@@ -4,3 +4,6 @@ Received: 10010100101
 
 Sample Output:
 Error Position: 7
+
+
+nothing
