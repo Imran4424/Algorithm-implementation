@@ -11,6 +11,16 @@ void AddEdge(int u, int v)
 	adj[u].push_back(v);
 }
 
+void BFS(int startVertex, int totalVertex)
+{
+	bool visited[totalVertex];
+
+	for(int i = 0; i < totalVertex; i++)
+	{
+		visited[i] = false;
+	}
+}
+
 
 int main(int argc, char const *argv[])
 {
