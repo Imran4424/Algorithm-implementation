@@ -89,7 +89,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	if (Solve(num, 0))
+	if (Solve(num, 0) == 0)
 	{
 		cout << "Solution doesn't exist" << endl;
 	}

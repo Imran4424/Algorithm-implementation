@@ -86,7 +86,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	if (Solve(num, 0, board))
+	if (Solve(num, 0, board) == 0)
 	{
 		cout << "Solution doesn't exist" << endl;
 	}
