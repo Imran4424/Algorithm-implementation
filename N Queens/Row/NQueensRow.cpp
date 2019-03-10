@@ -2,7 +2,7 @@
 using namespace std;
 
 
-bool IsSafe(int num, int board[num][num], int row, int col)
+bool IsSafe(int num, int row, int col, int board[num][num])
 {
 	int i,j;
 
@@ -41,20 +41,20 @@ bool IsSafe(int num, int board[num][num], int row, int col)
 }
 
 
-bool Solve(int num, int board[num][num], int row)
+bool Solve(int num, int row, int board[num][num])
 {
 	if(row == num) // base condition
 	{
 		return true;
 	}
 
-	for(int j = 0; j < num; i++)
+	for(int j = 0; j < num; j++)
 	{
-		if (IsSafe(num, board, row, j))
+		if (IsSafe(num, row, j, board))
 		{
 			board[row][j] = 1;
 
-			if (Solve(num, board, row+1))
+			if (Solve(num, row+1, board))
 			{
 				return true;
 			}
@@ -86,7 +86,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	if (Solve(num, board, 0))
+	if (Solve(num, 0, board))
 	{
 		cout << "Solution doesn't exist" << endl;
 	}
@@ -97,7 +97,7 @@ int main(int argc, char const *argv[])
 		{
 			for(int j=0; j<num; j++)
 			{
-				cout << board[i][j] << endl;
+				cout << board[i][j] << " " ;
 			}
 
 			cout << endl;
