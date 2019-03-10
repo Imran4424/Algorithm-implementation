@@ -9,5 +9,7 @@ int main(int argc, char const *argv[])
 	int num;
 	cin >> num;
 
+	
+
 	return 0;
 }
