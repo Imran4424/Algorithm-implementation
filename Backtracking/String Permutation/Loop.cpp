@@ -28,6 +28,7 @@ int main(int argc, char const *argv[])
 
 	cin >> s;
 
+	cout << "Permutations are : " << endl << endl;
 	
 	Permutation(s, 0, s.size()-1);
 
