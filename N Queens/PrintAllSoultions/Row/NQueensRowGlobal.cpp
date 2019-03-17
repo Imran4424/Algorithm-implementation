@@ -44,12 +44,35 @@ bool IsSafe(int num, int row, int col)
 }
 
 
+void DisplaySoluton(int num)
+{
+	static int k = 1;
+
+	cout << k++ << " - " << endl;
+
+
+	for(int i = 0; i<num; i++)
+	{
+		for(int j=0; j<num; j++)
+		{
+			cout << board[i][j] << " ";
+		}
+
+		cout << endl;
+	}
+}
+
+
 bool Solve(int num, int row)
 {
 	if(row == num) // base condition
 	{
+		DisplaySoluton(num);
+
 		return true;
 	}
+
+	bool status = false;
 
 	for(int j = 0; j < num; j++)
 	{
@@ -59,7 +82,7 @@ bool Solve(int num, int row)
 
 			if (Solve(num, row+1))
 			{
-				return true;
+				status = true;
 			}
 
 			
@@ -68,7 +91,7 @@ bool Solve(int num, int row)
 	}
 
 
-	return false; // when queen can't be placed in this row
+	return status; // when queen can't be placed in this row
 }
 
 
@@ -96,15 +119,7 @@ int main(int argc, char const *argv[])
 	else
 	{
 		
-		for(int i = 0; i<num; i++)
-		{
-			for(int j=0; j<num; j++)
-			{
-				cout << board[i][j] << " ";
-			}
-
-			cout << endl;
-		}
+		
 	}
 	
 
