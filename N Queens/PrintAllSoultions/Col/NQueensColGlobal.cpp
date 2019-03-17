@@ -87,7 +87,7 @@ bool Solve(int num, int col)
 
 
 	//If the queen cannot be placed in any row in this colum col 
-	return false;
+	return status;
 }
 
 
