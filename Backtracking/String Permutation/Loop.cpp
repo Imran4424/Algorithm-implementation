@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
 	cin >> s;
 
 	
-	Permutation(s, 0, s.size());
+	Permutation(s, 0, s.size()-1);
 
 	return 0;
 }
