@@ -63,8 +63,12 @@ bool Solve(int num, int col)
 {
 	if (col == num)
 	{
+		DisplaySoluton(num);
+
 		return true;
 	}
+
+	bool status = false;
 
 	for(int i=0; i<num; i++)
 	{
@@ -74,7 +78,7 @@ bool Solve(int num, int col)
 
 			if (Solve(num, col+1))
 			{
-				return true;
+				status = true;
 			}
 
 			board[i][col] = 0; // backtracking
