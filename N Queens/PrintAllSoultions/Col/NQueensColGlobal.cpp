@@ -40,6 +40,24 @@ bool IsSafe(int num, int row, int col)
 	return true;
 }
 
+void DisplaySoluton(int num)
+{
+	static int k = 1;
+
+	cout << k++ << " - " << endl;
+
+
+	for(int i = 0; i<num; i++)
+	{
+		for(int j=0; j<num; j++)
+		{
+			cout << board[i][j] << " ";
+		}
+
+		cout << endl;
+	}
+}
+
 
 bool Solve(int num, int col)
 {
