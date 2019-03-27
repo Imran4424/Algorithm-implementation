@@ -30,27 +30,31 @@ int IsMultipleOfThree(int n)
 
 	while(n)
 	{
+		int digit = n % 10;
+
 		/*
 			if the odd bit is set then increment odd counter
 		*/
 
-		if (n & 1)
+		if (digit == 1)
 		{
 			oddCount++;
 		}
 
-		n = n >> 1;
+		n = n / 10;
+
+		digit = n % 10;
 
 		/*
 			if the even bit is set then increment odd counter
 		*/
 
-		if(n & 1)
+		if(digit == 1)
 		{
 			evenCount++;
 		}
 
-		n = n >> 1;
+		n = n / 10;
 	}
 
 	return IsMultipleOfThree(abs(oddCount - evenCount));
