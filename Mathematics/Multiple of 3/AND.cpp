@@ -51,6 +51,8 @@ int IsMultipleOfThree(int n)
 
 		n = n >> 1;
 	}
+
+	return IsMultipleOfThree(abs(oddCount - evenCount));
 }
 
 
