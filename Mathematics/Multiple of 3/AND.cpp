@@ -59,7 +59,17 @@ int IsMultipleOfThree(int n)
 
 int main(int argc, char const *argv[])
 {
-	
+	int num;
+	cin >> num;
+
+	if (IsMultipleOfThree(num))
+	{
+		cout << num << " is divisible by 3" << endl;
+	}
+	else
+	{
+		cout << num << " is not divisible by 3" << endl;
+	}
 
 	return 0;
 }
