@@ -38,5 +38,7 @@ int main(int argc, char const *argv[])
 
 	cin >> x >> y;
 
+	cout << "Multipication: " << Multipication(x, y) << endl;
+
 	return 0;
 }
