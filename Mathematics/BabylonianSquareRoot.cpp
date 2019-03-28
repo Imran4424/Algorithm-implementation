@@ -20,6 +20,11 @@ double BabylonianRoot(double num)
 
 int main(int argc, char const *argv[])
 {
+	int num;
+	cin >> num;
+
+
+	cout << "Square root of " << num << " is: " << BabylonianRoot(num) << endl;
 	
 	return 0;
 }
