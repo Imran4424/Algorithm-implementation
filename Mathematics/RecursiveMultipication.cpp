@@ -34,7 +34,7 @@ lli Multipication(lli x, lli y)
 
 int main(int argc, char const *argv[])
 {
-	int x, y;
+	lli x, y;
 
 	cin >> x >> y;
 
