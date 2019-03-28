@@ -14,6 +14,7 @@ double BabylonianRoot(double num)
 		y = num / x;
 	}
 
+	return x;
 }
 
 
