@@ -21,10 +21,14 @@ lli Multipication(lli x, lli y)
 		return (x + Multipication(x, y - 1));
 	}
 
-	/*  */
+	/*
+		if y is negative making another recursive call making y positive then returning 
+		the result using negation 
+	*/
 
 	if (y < 0)
 	{
 		return - (Multipication(x, -y));
 	}
 }
+
