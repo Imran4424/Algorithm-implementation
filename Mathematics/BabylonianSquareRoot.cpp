@@ -3,6 +3,9 @@ using namespace std;
 
 double BabylonianRoot(double num)
 {
+
+	/* I Initialize */
+
 	double x = num;
 	double y = 1;
 
