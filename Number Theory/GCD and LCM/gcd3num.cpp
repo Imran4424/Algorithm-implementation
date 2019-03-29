@@ -29,14 +29,14 @@ lli GCD(lli a, lli b)
 
 int main()
 {
-    lli a, b, c;
+        lli a, b, c;
 
-    while(cin>> a>> b>> c)
-    {
-        lli temp = gcd(a, b);
+        while(cin>> a>> b>> c)
+        {
+                lli temp = gcd(a, b);
 
-        cout << gcd(c,temp) << endl;
-    }
+                cout << gcd(c,temp) << endl;
+        }
 
-    return 0;
+        return 0;
 }
