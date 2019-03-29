@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 	cout << "enter zero to exit" << endl;
 
 	int count = 0;
-	int avg = 0;
+	double avg = 0;
 
 	double num;
 	cin >> num; 
