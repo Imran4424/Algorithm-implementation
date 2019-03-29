@@ -32,12 +32,10 @@ lli LCM(lli a, lli b)
 
 lli lcmDriver(vector<int> numbers)
 {
-        int a = numbers[0];
-        int b = numbers[1];
 
-        int result = GCD(a, b);
+        int result = numbers[0];
 
-        numbers.erase(numbers.begin(), numbers.begin() + 1);
+        numbers.erase(numbers.begin());
 
         while(!numbers.empty())
         {
@@ -45,7 +43,7 @@ lli lcmDriver(vector<int> numbers)
 
                 numbers.erase(numbers.begin());
 
-                result = GCD(result, x);
+                result = ((result * x) / GCD(result, x));
         }
 
         return result;

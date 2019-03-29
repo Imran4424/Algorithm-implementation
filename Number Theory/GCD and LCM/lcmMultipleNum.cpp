@@ -26,6 +26,24 @@ lli GCD(lli a, lli b)
         }
 }
 
+lli lcmDriver(vector<int> numbers)
+{
+
+        int result = numbers[0];
+
+        numbers.erase(numbers.begin());
+
+        while(!numbers.empty())
+        {
+                int x = numbers.front();
+
+                numbers.erase(numbers.begin());
+
+                result = ((result * x) / GCD(result, x));
+        }
+
+        return result;
+}
 
 int main(int argc, char const *argv[])
 {
