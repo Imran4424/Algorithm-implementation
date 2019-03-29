@@ -23,7 +23,8 @@ int main(int argc, char const *argv[])
 
 		cout << "enter any number" << endl;
 		cout << "enter zero to exit" << endl;
-		
+
+		cin >> num;
 	}
 
 	return 0;
