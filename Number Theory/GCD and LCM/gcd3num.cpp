@@ -31,16 +31,16 @@ int main()
 {
         lli a, b, c;
 
-        cout << "enter any two intergers" << endl;
+        cout << "enter any three intergers" << endl;
 
 
         while(cin >> a >> b >> c)
         {
-                lli intermediate = gcd(a, b);
+                lli intermediate = GCD(a, b);
 
                 cout << "GCD of entered number are:" << GCD(c, intermediate) << endl;
 
-                cout << "enter any two intergers" << endl;
+                cout << "enter any three intergers" << endl;
         }
 
         return 0;
