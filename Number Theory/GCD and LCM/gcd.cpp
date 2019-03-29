@@ -4,7 +4,7 @@ using namespace std;
 
 typedef long long int lli;
 
-lli gcd(lli a, lli b)
+lli GCD(lli a, lli b)
 {
         if(a == 0 || b == 0)
         {
@@ -22,7 +22,7 @@ lli gcd(lli a, lli b)
         }
         else
         {
-                return gcd(a, a % b);
+                return GCD(a, a % b);
         }
 }
 
@@ -34,7 +34,7 @@ int main()
 
         while(cin >> a >> b)
         {
-                cout << "GCD of entered numbers is: " << gcd(a,b) << endl;
+                cout << "GCD of entered numbers is: " << GCD(a,b) << endl;
                 
                 cout << "enter any two intergers" << endl;
         }
