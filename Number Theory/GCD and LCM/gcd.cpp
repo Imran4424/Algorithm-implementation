@@ -23,14 +23,14 @@ lli gcd(lli a, lli b)
 
 int main()
 {
-    lli a,b;
+        lli a,b;
 
     
 
-    while(cin>>a>>b)
-    {
-	   cout << "GCD of entered numbers is: " << gcd(a,b) << endl;
-    }
+        while(cin>>a>>b)
+        {
+                cout << "GCD of entered numbers is: " << gcd(a,b) << endl;
+        }
 
-    return 0;
+        return 0;
 }
