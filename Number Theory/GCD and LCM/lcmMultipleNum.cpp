@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+typedef long long int lli;
+
 lli GCD(lli a, lli b)
 {
         if(a == 0 || b == 0)
