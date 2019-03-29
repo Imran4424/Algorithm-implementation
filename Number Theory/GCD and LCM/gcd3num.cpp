@@ -38,7 +38,7 @@ int main()
         {
                 lli temp = gcd(a, b);
 
-                cout << gcd(c,temp) << endl;
+                cout << "GCD of entered number are:" << gcd(c,temp) << endl;
 
                 cout << "enter any two intergers" << endl;
         }
