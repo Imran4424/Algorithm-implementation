@@ -41,7 +41,7 @@ lli gcdDriver(vector<int> numbers)
 	{
 		int x = numbers.front();
 
-		numbers.erase(0);
+		numbers.erase(numbers.begin());
 
 		result = GCD(result, x);
 	}
