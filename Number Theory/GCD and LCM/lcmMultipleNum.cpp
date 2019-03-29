@@ -1,4 +1,6 @@
-
+#include <iostream>
+#include <vector>
+using namespace std;
 
 lli GCD(lli a, lli b)
 {
