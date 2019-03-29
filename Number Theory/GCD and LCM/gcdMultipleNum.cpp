@@ -38,9 +38,9 @@ int main(int argc, char const *argv[])
 
 	while(cin >> num)
 	{
-		if (/* condition */)
+		if (0 == num)
 		{
-			/* code */
+			break;
 		}
 	}
 
