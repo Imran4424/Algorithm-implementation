@@ -31,7 +31,8 @@ int main()
 {
         lli a, b, c;
 
-        
+        cout << "enter any two intergers" << endl;
+
 
         while(cin>> a>> b>> c)
         {
