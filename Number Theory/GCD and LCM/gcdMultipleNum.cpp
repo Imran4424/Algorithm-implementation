@@ -31,6 +31,18 @@ lli GCD(lli a, lli b)
 
 int main(int argc, char const *argv[])
 {
-	
+	vector <int> numbers;
+
+	cout << "enter the int numbers" << endl;
+	int num;
+
+	while(cin >> num)
+	{
+		if (/* condition */)
+		{
+			/* code */
+		}
+	}
+
 	return 0;
 }
