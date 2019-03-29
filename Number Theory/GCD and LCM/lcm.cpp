@@ -39,8 +39,8 @@ int main(int argc, char const *argv[])
 
         while(cin >> a >> b)
         {
-                cout << "LCM of entered numbers is: " << LCM(a, b);
-                
+                cout << "LCM of entered numbers is: " << LCM(a, b) << endl;
+
                 cout << "enter two int number" << endl;
         }
         
