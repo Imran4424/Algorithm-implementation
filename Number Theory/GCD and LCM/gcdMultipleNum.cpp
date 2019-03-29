@@ -30,7 +30,21 @@ lli GCD(lli a, lli b)
 
 lli gcdDriver(vector<int> numbers)
 {
-	
+	int a = numbers[0];
+	int b = numbers[1];
+
+	numbers.erase(numbers.begin(), numbers.begin() + 1);
+
+
+
+	while(!numbers.empty())
+	{
+		int x = numbers.front();
+
+		numbers.erase(0);
+
+		result = GCD(result, x);
+	}
 }
 
 
