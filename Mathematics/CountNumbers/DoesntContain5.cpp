@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 		{
 			int digit = inTest % 10;
 
-			if (3 == digit)
+			if (5 == digit)
 			{
 				status = false;
 				break;
@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
 	}
 
 
-	cout << "Number of numbers which doesn't contain 3 in decimal form: " << count << endl;
+	cout << "Number of numbers which doesn't contain 5 in decimal form: " << count << endl;
 
 	return 0;
 }
