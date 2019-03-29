@@ -67,6 +67,7 @@ int main(int argc, char const *argv[])
 		numbers.push_back(num);
 	}
 
+        cout << "GCD of entered number is: " << gcdDriver(numbers) << endl;
 
 
 	return 0;
