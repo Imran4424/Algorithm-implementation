@@ -25,6 +25,11 @@ lli GCD(lli a, lli b)
         }
 }
 
+lli LCM(lli a, lli b)
+{
+        return ((a * b) / GCD(a, b));
+}
+
 
 int main(int argc, char const *argv[])
 {
