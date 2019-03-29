@@ -33,6 +33,14 @@ lli LCM(lli a, lli b)
 
 int main(int argc, char const *argv[])
 {
+        cout << "enter two int number" << endl;
+
+        int a, b;
+
+        while(cin >> a >> b)
+        {
+                cout 
+        }
         
         return 0;
 }
