@@ -33,9 +33,9 @@ lli gcdDriver(vector<int> numbers)
 	int a = numbers[0];
 	int b = numbers[1];
 
+	int result = GCD(a, b);
+
 	numbers.erase(numbers.begin(), numbers.begin() + 1);
-
-
 
 	while(!numbers.empty())
 	{
@@ -45,6 +45,8 @@ lli gcdDriver(vector<int> numbers)
 
 		result = GCD(result, x);
 	}
+
+	return result;
 }
 
 
