@@ -54,7 +54,8 @@ int main(int argc, char const *argv[])
 {
 	vector <int> numbers;
 
-	cout << "enter the int numbers" << endl;
+	cout << "enter the int numbers, 0 is the ending number" << endl;
+
 	int num;
 
 	while(cin >> num)
