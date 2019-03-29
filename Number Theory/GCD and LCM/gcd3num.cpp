@@ -38,7 +38,7 @@ int main()
         {
                 lli intermediate = GCD(a, b);
 
-                cout << "GCD of entered number are: " << GCD(c, intermediate) << endl;
+                cout << "GCD of entered number is: " << GCD(c, intermediate) << endl;
 
                 cout << "enter any three intergers" << endl;
         }
