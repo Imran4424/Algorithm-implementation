@@ -42,6 +42,8 @@ int main(int argc, char const *argv[])
 		{
 			break;
 		}
+
+		numbers.push_back(num);
 	}
 
 	return 0;
