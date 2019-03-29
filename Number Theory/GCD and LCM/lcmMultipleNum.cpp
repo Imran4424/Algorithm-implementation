@@ -25,3 +25,28 @@ lli GCD(lli a, lli b)
                 return GCD(b, a % b);
         }
 }
+
+
+int main(int argc, char const *argv[])
+{
+        vector <int> numbers;
+
+        cout << "enter the int numbers, 0 is the ending number" << endl;
+
+        int num;
+
+        while(cin >> num)
+        {
+                if (0 == num)
+                {
+                        break;
+                }
+
+                numbers.push_back(num);
+        }
+
+        cout << "GCD of entered number is: " << gcdDriver(numbers) << endl;
+
+
+        return 0;
+}
