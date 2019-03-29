@@ -25,6 +25,8 @@ int main()
 {
     lli a,b;
 
+    
+
     while(cin>>a>>b)
     {
         cout<<gcd(a,b)<<endl;
