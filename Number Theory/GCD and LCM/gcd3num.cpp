@@ -39,6 +39,8 @@ int main()
                 lli temp = gcd(a, b);
 
                 cout << gcd(c,temp) << endl;
+
+                cout << "enter any two intergers" << endl;
         }
 
         return 0;
