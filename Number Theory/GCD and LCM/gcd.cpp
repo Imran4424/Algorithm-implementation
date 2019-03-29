@@ -28,7 +28,7 @@ lli GCD(lli a, lli b)
 
 int main()
 {
-        lli a,b;
+        lli a, b;
 
         cout << "enter any two intergers" << endl;
 
