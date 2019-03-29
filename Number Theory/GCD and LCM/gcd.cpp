@@ -22,7 +22,7 @@ lli GCD(lli a, lli b)
         }
         else
         {
-                return GCD(a, a % b);
+                return GCD(b, a % b);
         }
 }
 
