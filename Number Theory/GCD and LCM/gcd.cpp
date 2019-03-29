@@ -6,6 +6,11 @@ typedef long long int lli;
 
 lli gcd(lli a, lli b)
 {
+        if(a == 0 || b == 0)
+        {
+                return 0;
+        }
+
         if(a < b)
         {
                 swap(a, b);
@@ -25,7 +30,7 @@ int main()
 {
         lli a,b;
 
-    
+        cout << "enter any two intergers" << endl;
 
         while(cin>>a>>b)
         {
