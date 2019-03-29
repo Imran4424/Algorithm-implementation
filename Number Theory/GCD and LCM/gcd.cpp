@@ -4,11 +4,11 @@ using namespace std;
 
 typedef long long int lli;
 
-lli gcd(lli a,lli b)
+lli gcd(lli a, lli b)
 {
         if(a < b)
         {
-                swap(a,b);
+                swap(a, b);
         }
 
         if(a % b == 0)
@@ -29,7 +29,7 @@ int main()
 
     while(cin>>a>>b)
     {
-	   cout<<gcd(a,b)<<endl;
+	   cout << "GCD of entered numbers is: " << gcd(a,b) << endl;
     }
 
     return 0;
