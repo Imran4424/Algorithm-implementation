@@ -24,3 +24,10 @@ lli GCD(lli a, lli b)
                 return GCD(b, a % b);
         }
 }
+
+
+int main(int argc, char const *argv[])
+{
+        
+        return 0;
+}
