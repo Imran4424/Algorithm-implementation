@@ -28,6 +28,11 @@ lli GCD(lli a, lli b)
         }
 }
 
+lli gcdDriver(vector<int> numbers)
+{
+	
+}
+
 
 int main(int argc, char const *argv[])
 {
@@ -45,6 +50,8 @@ int main(int argc, char const *argv[])
 
 		numbers.push_back(num);
 	}
+
+
 
 	return 0;
 }
