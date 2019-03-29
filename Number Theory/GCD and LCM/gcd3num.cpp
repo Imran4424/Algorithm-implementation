@@ -36,9 +36,9 @@ int main()
 
         while(cin>> a>> b>> c)
         {
-                lli temp = gcd(a, b);
+                lli intermediate = gcd(a, b);
 
-                cout << "GCD of entered number are:" << gcd(c,temp) << endl;
+                cout << "GCD of entered number are:" << GCD(c, intermediate) << endl;
 
                 cout << "enter any two intergers" << endl;
         }
