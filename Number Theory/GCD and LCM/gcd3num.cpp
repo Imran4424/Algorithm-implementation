@@ -34,7 +34,7 @@ int main()
         cout << "enter any two intergers" << endl;
 
 
-        while(cin>> a>> b>> c)
+        while(cin >> a >> b >> c)
         {
                 lli intermediate = gcd(a, b);
 
