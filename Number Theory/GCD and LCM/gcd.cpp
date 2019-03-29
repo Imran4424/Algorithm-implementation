@@ -32,9 +32,11 @@ int main()
 
         cout << "enter any two intergers" << endl;
 
-        while(cin>>a>>b)
+        while(cin >> a >> b)
         {
                 cout << "GCD of entered numbers is: " << gcd(a,b) << endl;
+                
+                cout << "enter any two intergers" << endl;
         }
 
         return 0;
