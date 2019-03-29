@@ -31,6 +31,8 @@ int main()
 {
         lli a, b, c;
 
+        
+
         while(cin>> a>> b>> c)
         {
                 lli temp = gcd(a, b);
