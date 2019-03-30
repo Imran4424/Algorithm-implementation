@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace std;
 
-void primeFactors(int num)
+void printAllPrimeFactors(int num)
 {
 	// print the number of 2's if it divide num
 
@@ -31,6 +31,12 @@ void primeFactors(int num)
 
 int main(int argc, char const *argv[])
 {
-	
+	cout << "enter any  number" << endl;
+
+	int num;
+	cin >> num;
+
+	printAllPrimeFactors(num);
+
 	return 0;
 }
