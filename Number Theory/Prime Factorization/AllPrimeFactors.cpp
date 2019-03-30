@@ -25,8 +25,10 @@ void printAllPrimeFactors(int num)
 
 	if (num > 2)
 	{
-		cout << num << endl;
+		cout << num ;
 	}
+
+	cout << endl << endl;
 }
 
 int main(int argc, char const *argv[])
