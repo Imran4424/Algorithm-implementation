@@ -34,9 +34,13 @@ int main(int argc, char const *argv[])
 	cout << "enter any  number" << endl;
 
 	int num;
-	cin >> num;
+	
+	while(cin >> num)
+	{
+		printAllPrimeFactors(num);
+		
+	}
 
-	printAllPrimeFactors(num);
 
 	return 0;
 }
