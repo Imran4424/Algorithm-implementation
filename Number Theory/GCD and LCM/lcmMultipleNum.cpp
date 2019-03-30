@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
                 numbers.push_back(num);
         }
 
-        cout << "LCM of entered number is: " << gcdDriver(numbers) << endl;
+        cout << "LCM of entered number is: " << lcmDriver(numbers) << endl;
 
 
         return 0;
