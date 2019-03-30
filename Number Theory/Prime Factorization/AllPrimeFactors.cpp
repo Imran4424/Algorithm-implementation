@@ -39,6 +39,7 @@ int main(int argc, char const *argv[])
 	{
 		printAllPrimeFactors(num);
 		
+		cout << "enter any  number" << endl;
 	}
 
 
