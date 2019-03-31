@@ -6,6 +6,8 @@ using namespace std;
 
 void printAllDivisor(int num)
 {
+	vector <int> list;
+
 	for (int i = 1; i <= sqrt(num); ++i)
 	{
 		if (num % i == 0)
