@@ -38,7 +38,11 @@ bool isPrime(lli num, lli k = 25)
 		{
 			return false;
 		}
+
+		k--;
 	}
+
+	return true;
 
 }
 
