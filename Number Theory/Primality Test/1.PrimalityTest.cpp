@@ -36,6 +36,8 @@ int main(int argc, char const *argv[])
 		{
 			cout << "Not Prime" << endl << endl;
 		}
+		
+		cout << " enter any natural number" << endl;
 	}
 	
 	return 0;
