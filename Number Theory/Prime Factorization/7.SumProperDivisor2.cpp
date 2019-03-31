@@ -24,7 +24,6 @@ lli sumOfAllProperDivisor(lli num)
 		}
 	}
 
-
 	// cause 1 is also a proper divisor
 	return sum + 1;
 }
