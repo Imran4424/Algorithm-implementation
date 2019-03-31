@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 typedef long long int lli;
