@@ -50,6 +50,8 @@ int main(int argc, char const *argv[])
 	{
 		cout << "The prime numbers that smaller than " << num << " are" << endl;
 
+		SieveOfEratosthenes(num);
+
 		cout << " enter any natural number" << endl;
 	}
 	
