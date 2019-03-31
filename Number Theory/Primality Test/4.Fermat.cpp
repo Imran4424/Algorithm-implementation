@@ -22,7 +22,7 @@ bool isPrime(lli num, lli k = 25)
 		return false;
 	}
 
-	if (k <= 3)
+	if (num <= 3)
 	{
 		return true;
 	}
