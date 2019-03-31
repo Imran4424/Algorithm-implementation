@@ -18,7 +18,7 @@ void printAllDivisor(int num)
 			}
 			else // otherwise print both
 			{
-				cout << i << " " << num / i << " ";
+				cout << num / i << " " << i << " ";
 			}
 		}
 	}
@@ -29,6 +29,8 @@ void printAllDivisor(int num)
 int main(int argc, char const *argv[])
 {
 	cout << "enter any natural number" << endl;
+
+	int num;
 
 	while ( cin >> num)
 	{
