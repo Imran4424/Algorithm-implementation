@@ -15,20 +15,20 @@ void printAllPrimeFactors(int num)
 
 	/*
 
-	now the number is a odd number
-	so starting from 3 and incrementing by 2 to check
+		now the number is a odd number
+		so starting from 3 and incrementing by 2 to check
 
-	odd non-prime numbers will never encounter if that worries you
+		odd non-prime numbers will never encounter if that worries you
 
-	cause
+		cause
 
-	9 will divide by 3
-	15 will divide by 3, 5
-	21 will divide by 3, 7
-	25 will divide by 5
-	and so on
+		9 will divide by 3
+		15 will divide by 3, 5
+		21 will divide by 3, 7
+		25 will divide by 5
+		and so on
 
-	and they also divide the multiplies on non prime numbers
+		and they also divide the multiplies on non prime numbers
 
 	*/
 
@@ -42,6 +42,10 @@ void printAllPrimeFactors(int num)
 			num = num / i;
 		}
 	}
+
+	/*
+		This condition is for factorization of prime numbers
+	*/
 
 	if (num > 2)
 	{
