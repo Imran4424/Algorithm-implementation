@@ -19,7 +19,7 @@ lli sumOfAllProperDivisor(lli num)
 			}
 			else
 			{
-				sum = sum + i + (num / i);
+				sum = sum + (i + (num / i));
 			}
 		}
 	}
