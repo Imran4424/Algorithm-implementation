@@ -10,13 +10,16 @@ bool isPrime(int num)
 
 	if (num <= 3)
 	{
-		return true
+		return true;
 	}
 
 	/*
-		checking (6k + i)
-
+		all integers can be expressed as (6k + i)
+		
 		here, i = -1, 0, 1, 2, 3, 4
+
+
+		checking (6k + i)
 
 		2 divides (6k + 0), (6k + 2), (6k + 4)
 		3 divides (6k + 3)
