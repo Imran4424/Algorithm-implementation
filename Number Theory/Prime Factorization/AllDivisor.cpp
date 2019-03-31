@@ -9,11 +9,14 @@ void printAllDivisor(int num)
 	{
 		if (num % i == 0)
 		{
+
+			// if the divisors are equal print one
+
 			if( num / i == i)
 			{
 				cout << i << " ";
 			}
-			else
+			else // otherwise print both
 			{
 				cout << i << " " << num / i << " ";
 			}
