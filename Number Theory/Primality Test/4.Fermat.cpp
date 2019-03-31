@@ -3,6 +3,18 @@ using namespace std;
 
 typedef long long int lli;
 
+lli MyPow(lli base, lli expo, lli mod)
+{
+	lli result = 1;
+
+	for(lli i = 1; i <= expo; i++)
+	{
+		result = (result * base) % mod;
+	}
+
+	return result;
+}
+
 bool isPrime(lli num, llli k = 25)
 {
 	if(num <= 1 || num == 4)
@@ -16,7 +28,12 @@ bool isPrime(lli num, llli k = 25)
 	}
 
 	// test k times
+	while(k > 0)
+	{
+		// pick a random number between 2 and num-2
 
+		int base = 2 + rand() % (num - 4);
+	}
 
 }
 
