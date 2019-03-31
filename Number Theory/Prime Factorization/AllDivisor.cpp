@@ -22,10 +22,20 @@ void printAllDivisor(int num)
 			}
 		}
 	}
+
+	cout << endl << endl;
 }
 
 int main(int argc, char const *argv[])
 {
+	cout << "enter any natural number" << endl;
+
+	while ( cin >> num)
+	{
+		printAllDivisor(num);
+
+		cout << "enter any natural number" << endl;
+	}
 	
 	return 0;
 }
