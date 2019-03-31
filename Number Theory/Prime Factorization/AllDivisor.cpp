@@ -7,7 +7,17 @@ void printAllDivisor(int num)
 {
 	for (int i = 1; i <= sqrt(num); ++i)
 	{
-		/* code */
+		if (num % i == 0)
+		{
+			if( num / i == i)
+			{
+				cout << i << " ";
+			}
+			else
+			{
+				cout << i << " " << num / i << " ";
+			}
+		}
 	}
 }
 
