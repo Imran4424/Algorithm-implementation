@@ -17,7 +17,27 @@ void SieveOfEratosthenes(lli num)
 
 	prime[0] = prime[1] = false;
 
-	
+	for(lli p = 2; p*p <= num; p++)
+	{
+		if (prime[p] == true)
+		{
+			for(lli i = p*p; i <= num; i = i+p)
+			{
+				prime[i] = false;
+			}
+		}
+	}
+
+
+	for (int i = 2; i <= num; ++i)
+	{
+		if (prime[i])
+		{
+			cout << i << " ";
+		}
+	}
+
+	cout << endl << endl;
 }
 
 int main(int argc, char const *argv[])
