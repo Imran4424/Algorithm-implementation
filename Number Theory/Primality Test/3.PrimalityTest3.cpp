@@ -55,11 +55,11 @@ int main(int argc, char const *argv[])
 	{
 		if(isPrime(num))
 		{
-			cout << "Prime" << endl << endl;
+			cout << " Prime" << endl << endl;
 		}
 		else
 		{
-			cout << "Not Prime" << endl << endl;
+			cout << " Not Prime" << endl << endl;
 		}
 
 		cout << " enter any natural number" << endl;
