@@ -15,7 +15,7 @@ lli MyPow(lli base, lli expo, lli mod)
 	return result;
 }
 
-bool isPrime(lli num, llli k = 25)
+bool isPrime(lli num, lli k = 25)
 {
 	if(num <= 1 || num == 4)
 	{
@@ -33,6 +33,11 @@ bool isPrime(lli num, llli k = 25)
 		// pick a random number between 2 and num-2
 
 		int base = 2 + rand() % (num - 4);
+
+		if (MyPow(base, num - 1, num) != 1)
+		{
+			return false;
+		}
 	}
 
 }
