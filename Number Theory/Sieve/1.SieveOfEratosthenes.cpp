@@ -49,7 +49,7 @@ int main(int argc, char const *argv[])
 
 	while(cin >> num)
 	{
-		cout << "The prime numbers that smaller than " << num << " are" << endl;
+		cout << "The prime numbers that is less than or equal to " << num << " are" << endl;
 
 		SieveOfEratosthenes(num);
 
