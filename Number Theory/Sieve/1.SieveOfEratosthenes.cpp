@@ -42,6 +42,16 @@ void SieveOfEratosthenes(lli num)
 
 int main(int argc, char const *argv[])
 {
+	cout << " enter any natural number" << endl;
+
+	lli num;
+
+	while(cin >> num)
+	{
+		cout << "The prime numbers that smaller than " << num << " are" << endl;
+
+		cout << " enter any natural number" << endl;
+	}
 	
 	return 0;
 }
