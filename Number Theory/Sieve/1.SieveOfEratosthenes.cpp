@@ -14,6 +14,10 @@ void SieveOfEratosthenes(lli num)
 	*/
 
 	memset(prime, true, sizeof(prime));
+
+	prime[0] = prime[1] = false;
+
+	
 }
 
 int main(int argc, char const *argv[])
