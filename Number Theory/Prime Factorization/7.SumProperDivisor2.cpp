@@ -25,6 +25,12 @@ lli sumOfAllProperDivisor(lli num)
 	}
 
 	// cause 1 is also a proper divisor
+
+	if(num == 1)
+	{
+		return sum;
+	}
+
 	return sum + 1;
 }
 
