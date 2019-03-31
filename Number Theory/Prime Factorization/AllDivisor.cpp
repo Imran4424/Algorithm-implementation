@@ -18,7 +18,7 @@ void printAllDivisor(int num)
 			}
 			else // otherwise print both
 			{
-				cout << num / i << " " << i << " ";
+				cout << i << " " << num / i << " ";
 			}
 		}
 	}
