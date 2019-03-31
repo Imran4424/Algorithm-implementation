@@ -16,7 +16,7 @@ lli sumOfAllProperDivisor(lli num)
 		endPoint = num / 3;
 	}
 
-	for(lli i = 1; i < endPoint; i++)
+	for(lli i = 1; i <= endPoint; i++)
 	{
 		if (num % i == 0)
 		{
@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
 		int result = sumOfAllProperDivisor(num);
 
 		cout << "The sum is: " << result << endl << endl;
-		
+
 		cout << " enter any natural number " << endl;
 	}
 	
