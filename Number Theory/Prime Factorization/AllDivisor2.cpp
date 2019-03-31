@@ -6,6 +6,8 @@ using namespace std;
 
 void printAllDivisor(int num)
 {
+	vector <int> list;
+
 	for (int i = 1; i <= sqrt(num); ++i)
 	{
 		if (num % i == 0)
@@ -15,13 +17,21 @@ void printAllDivisor(int num)
 
 			if( num / i == i)
 			{
-				cout << i << " ";
+				list.push_back(i);
 			}
 			else // otherwise print both
 			{
-				cout << i << " " << num / i << " ";
+				list.push_back(i);
+				list.push_back(num / i);
 			}
 		}
+	}
+
+	sort(list.begin(), list.end());
+
+	for(int i = 0; i < list.size(); ++i)
+	{
+		cout << list[i] << " ";
 	}
 
 	cout << endl << endl;
