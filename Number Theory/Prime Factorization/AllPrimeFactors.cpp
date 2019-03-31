@@ -13,6 +13,26 @@ void printAllPrimeFactors(int num)
 		num = num / 2 ;
 	}
 
+	/*
+
+	now the number is a odd number
+	so starting from 3 and incrementing by 2 to check
+
+	odd non-prime numbers will never encounter if that worries you
+
+	cause
+
+	9 will divide by 3
+	15 will divide by 3, 5
+	21 will divide by 3, 7
+	25 will divide by 5
+	and so on
+
+	and they also divide the multiplies on non prime numbers
+
+	*/
+
+
 	for(int i = 3; i <= sqrt(num); i = i + 2)
 	{
 		while(num % i == 0)
