@@ -10,7 +10,12 @@ bool isPrime(int num)
 
 	if (num <= 3)
 	{
-	
+		return true
+	}
+
+	if(num % 2 == 0 || num % 3 == 0)
+	{
+		return false;
 	}
 
 	for(int i=2; i*i <= num; ++i)
