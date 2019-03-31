@@ -21,10 +21,14 @@ void printAllDivisor(int num)
 			}
 			else // otherwise print both
 			{
-				cout << i << " " << num / i << " ";
+				cout << i << " ";
+
+				list.push_back(num / i);
 			}
 		}
 	}
+
+	
 
 	cout << endl << endl;
 }
