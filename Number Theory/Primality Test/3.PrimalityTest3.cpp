@@ -18,7 +18,7 @@ bool isPrime(int num)
 		return false;
 	}
 
-	for(int i=2; i*i <= num; ++i)
+	for(int i = 5; i*i <= num; i = i + 6)
 	{
 		if(num % i == 0)
 		{
