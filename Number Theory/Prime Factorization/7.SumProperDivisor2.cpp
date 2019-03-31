@@ -1,30 +1,32 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 typedef long long int lli;
 
 lli sumOfAllProperDivisor(lli num)
 {
-	lli endPoint, sum = 0;
+	lli sum = 0;
 
-	if(num % 2 == 0)
-	{
-		endPoint = num / 2;
-	}
-	else
-	{
-		endPoint = num / 3;
-	}
 
-	for(lli i = 1; i <= endPoint; i++)
+	for(lli i = 2; i <= sqrt(num); i++)
 	{
 		if (num % i == 0)
 		{
-			sum = sum + i;
+			if(num / i == i)
+			{
+				sum = sum + i;
+			}
+			else
+			{
+				sum = sum + i + (num / i);
+			}
 		}
 	}
 
-	return sum;
+
+	// cause 1 is also a proper divisor
+	return sum + 1;
 }
 
 int main(int argc, char const *argv[])
