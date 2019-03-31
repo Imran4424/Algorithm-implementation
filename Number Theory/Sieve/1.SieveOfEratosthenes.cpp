@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
 
-void SieveOfEratosthenes(int num)
+typedef long long int lli;
+
+void SieveOfEratosthenes(lli num)
 {
 	
 }
