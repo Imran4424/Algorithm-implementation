@@ -53,6 +53,8 @@ void primeFactorization(lli num)
 
 int main(int argc, char const *argv[])
 {
+	Sieve();
+
 	cout << "enter any natural number" << endl;
 
 	lli num;
