@@ -105,14 +105,14 @@ void SegmentedSieve(int num)
 			}
 
 
-			for (int j = lowLimit; j < high; j = j + prime[i])
+			for (int j = lowLimit; j <= high; j = j + prime[i])
 			{
 				mark[j - low] = false;
 			}
 		}
 
 
-		for (int i = low; i < high; ++i)
+		for (int i = low; i <= high; ++i)
 		{
 			if (mark[i - low])
 			{
