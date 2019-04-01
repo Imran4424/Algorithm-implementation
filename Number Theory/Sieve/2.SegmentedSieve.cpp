@@ -70,9 +70,22 @@ void SegmentedSieve(int num)
 
 		for (int i = 0; i < prime.size() ; ++i)
 		{
-			
+			int lowLimit = (low / prime[i]) * prime[i];
+
+			if (lowLimit < low)
+			{
+				lowLimit = lowLimit + prime[i];
+			}
+
+
+			for (int j = lowLimit; j < high; j = j + prime[i])
+			{
+				mark[j - low] = false;
+			}
 		}
 
+		
+		
 	}
 }
 
