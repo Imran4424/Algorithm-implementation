@@ -52,7 +52,16 @@ void primeFactorization(lli num)
 
 int main(int argc, char const *argv[])
 {
+	cout << "enter any  number" << endl;
+
+	int num;
 	
+	while(cin >> num)
+	{
+		printAllPrimeFactors(num);
+		
+		cout << "enter any  number" << endl;
+	}
 
 	return 0;
 }
