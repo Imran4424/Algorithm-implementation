@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include <vector>
 using namespace std;
 
@@ -43,7 +44,10 @@ void SieveOfEratosthenes(lli limit, vector <int> &prime)
 	cout << endl << endl;
 }
 
-void SegmentedSieve()
+void SegmentedSieve(int num)
+{
+	int limit = floor(sqrt(num)) + 1;
+}
 
 
 int main(int argc, char const *argv[])
