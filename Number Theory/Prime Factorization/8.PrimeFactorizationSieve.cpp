@@ -8,7 +8,9 @@ const int limit = 10001;
 
 void Sieve()
 {
+	bool mark[limit + 1];
 
+	memset(mark, true, sizeof(mark));
 }
 
 int main(int argc, char const *argv[])
