@@ -42,7 +42,7 @@ void primeFactorization(lli num)
 {
 	for(lli i=0; i < prime.size(); i++)
 	{
-		if (num % i == 0)
+		if (num % prime[i] == 0)
 		{
 			cout << i << " ";
 		}
