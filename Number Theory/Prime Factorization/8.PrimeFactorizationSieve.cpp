@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cstring>
 using namespace std;
 
 typedef long long int lli;
