@@ -43,6 +43,9 @@ void SieveOfEratosthenes(lli limit, vector <int> &prime)
 	cout << endl << endl;
 }
 
+void SegmentedSieve()
+
+
 int main(int argc, char const *argv[])
 {
 	
