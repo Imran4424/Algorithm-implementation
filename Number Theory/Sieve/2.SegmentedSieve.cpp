@@ -6,7 +6,7 @@ using namespace std;
 
 typedef long long int lli;
 
-void SieveOfEratosthenes(lli limit, vector <int> &prime)
+void SieveOfEratosthenes(lli limit, vector <lli> &prime)
 {
 	bool mark[limit + 1];
 
@@ -32,7 +32,7 @@ void SieveOfEratosthenes(lli limit, vector <int> &prime)
 	}
 
 
-	for (int i = 2; i <= limit; ++i)
+	for (lli i = 2; i <= limit; ++i)
 	{
 		if (mark[i])
 		{
@@ -44,15 +44,15 @@ void SieveOfEratosthenes(lli limit, vector <int> &prime)
 
 }
 
-void SegmentedSieve(int num)
+void SegmentedSieve(lli num)
 {
 	/*
 		making the limit as sqrt of num
 	*/
 
-	int limit = floor(sqrt(num)) + 1;
+	lli limit = floor(sqrt(num)) + 1;
 
-	vector <int> prime;
+	vector <lli> prime;
 
 	/*
 		passing the first segment
@@ -65,8 +65,8 @@ void SegmentedSieve(int num)
 		preparing the next segments
 	*/
 
-	int low = limit;
-	int high = limit * 2;
+	lli low = limit;
+	lli high = limit * 2;
 
 	while(low < num)
 	{
@@ -87,7 +87,7 @@ void SegmentedSieve(int num)
 			marking the numbers which is divisible by this primes 
 		*/
 
-		for (int i = 0; i < prime.size() ; ++i)
+		for (lli i = 0; i < prime.size() ; ++i)
 		{
 			/*
 				first finding the minimum number which is multiple of prime
@@ -97,7 +97,7 @@ void SegmentedSieve(int num)
 				then we will start with 28
 			*/
 
-			int lowLimit = (low / prime[i]) * prime[i];
+			lli lowLimit = (low / prime[i]) * prime[i];
 
 			if (lowLimit < low)
 			{
@@ -105,14 +105,14 @@ void SegmentedSieve(int num)
 			}
 
 
-			for (int j = lowLimit; j <= high; j = j + prime[i])
+			for (lli j = lowLimit; j <= high; j = j + prime[i])
 			{
 				mark[j - low] = false;
 			}
 		}
 
 
-		for (int i = low; i <= high; ++i)
+		for (lli i = low; i <= high; ++i)
 		{
 			if (mark[i - low])
 			{
