@@ -92,6 +92,9 @@ void SegmentedSieve(int num)
 			/*
 				first finding the minimum number which is multiple of prime
 				in [low...high] range
+
+				for example if low is 27 and prime[i] = 2
+				then we will start with 28
 			*/
 
 			int lowLimit = (low / prime[i]) * prime[i];
