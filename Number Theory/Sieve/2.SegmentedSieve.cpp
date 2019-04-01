@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <cstring>
 using namespace std;
 
 typedef long long int lli;
@@ -41,7 +42,6 @@ void SieveOfEratosthenes(lli limit, vector <int> &prime)
 		}
 	}
 
-	cout << endl << endl;
 }
 
 void SegmentedSieve(int num)
@@ -143,10 +143,10 @@ int main(int argc, char const *argv[])
 	{
 		cout << "The prime numbers that is less than or equal to " << num << " are" << endl;
 
-		SieveOfEratosthenes(num);
+		SegmentedSieve(num);
 
 		cout << " enter any natural number" << endl;
 	}
-	
+
 	return 0;
 }
