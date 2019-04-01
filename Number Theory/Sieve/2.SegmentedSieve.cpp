@@ -135,6 +135,18 @@ void SegmentedSieve(int num)
 
 int main(int argc, char const *argv[])
 {
+	cout << " enter any natural number" << endl;
+
+	lli num;
+
+	while(cin >> num)
+	{
+		cout << "The prime numbers that is less than or equal to " << num << " are" << endl;
+
+		SieveOfEratosthenes(num);
+
+		cout << " enter any natural number" << endl;
+	}
 	
 	return 0;
 }
