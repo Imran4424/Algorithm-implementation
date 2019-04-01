@@ -38,6 +38,9 @@ void Sieve()
 }
 
 void primeFactorization(lli num)
+{
+	
+}
 
 int main(int argc, char const *argv[])
 {
