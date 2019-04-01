@@ -58,7 +58,7 @@ int main(int argc, char const *argv[])
 	
 	while(cin >> num)
 	{
-		cout << "Prime factorization of " << num << "are: "
+		cout << "Prime factorization of " << num << "are: " << endl;
 
 		primeFactorization(num);
 		
