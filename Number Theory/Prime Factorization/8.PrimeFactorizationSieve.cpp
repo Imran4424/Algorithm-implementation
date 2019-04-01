@@ -44,7 +44,7 @@ void primeFactorization(lli num)
 	{
 		if (num % prime[i] == 0)
 		{
-			cout << i << " ";
+			cout << prime[i] << " ";
 		}
 	}
 
@@ -59,7 +59,7 @@ int main(int argc, char const *argv[])
 	
 	while(cin >> num)
 	{
-		cout << "Prime factorization of " << num << "are: " << endl;
+		cout << "Prime factorization of " << num << " are: " << endl;
 
 		primeFactorization(num);
 		
