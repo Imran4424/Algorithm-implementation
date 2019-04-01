@@ -112,8 +112,24 @@ void SegmentedSieve(int num)
 		}
 
 
+		for (int i = low; i < high; ++i)
+		{
+			if (mark[i - low])
+			{
+				cout << i << " ";
+			}
+		}
 
+		/*
+			preparing the next segments
+		*/
+
+		low = low + limit;
+		high = high +limit;
 	}
+
+
+	cout << endl << endl;
 }
 
 
