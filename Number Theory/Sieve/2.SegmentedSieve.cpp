@@ -1,11 +1,12 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 typedef long long int lli;
 
 void SieveOfEratosthenes(lli limit, vector <int> &prime)
 {
-	bool mark[num + 1];
+	bool mark[limit + 1];
 
 	/*
 		memset sample syntax:
@@ -17,22 +18,24 @@ void SieveOfEratosthenes(lli limit, vector <int> &prime)
 
 	mark[0] = mark[1] = false;
 
-	for(lli p = 2; p*p <= num; p++)
+	for(lli p = 2; p*p <= limit; p++)
 	{
-		if (prime[p] == true)
+		if (mark[p] == true)
 		{
-			for(lli i = p*p; i <= num; i = i+p)
+			for(lli i = p*p; i <= limit; i = i+p)
 			{
-				prime[i] = false;
+				mark[i] = false;
 			}
 		}
 	}
 
 
-	for (int i = 2; i <= num; ++i)
+	for (int i = 2; i <= limit; ++i)
 	{
-		if (prime[i])
+		if (mark[i])
 		{
+			prime.push_back(i);
+
 			cout << i << " ";
 		}
 	}
