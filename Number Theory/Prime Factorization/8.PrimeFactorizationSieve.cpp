@@ -2,9 +2,11 @@
 #include <vector>
 using namespace std;
 
-vector <int> prime;
+typedef long long int lli;
 
-const int limit = 10001;
+vector <lli> prime;
+
+const lli limit = 10001;
 
 void Sieve()
 {
@@ -26,7 +28,7 @@ void Sieve()
 	}
 
 
-	for (int i = 2; i <= num; ++i)
+	for (lli i = 2; i <= limit; ++i)
 	{
 		if (mark[i])
 		{
@@ -34,6 +36,8 @@ void Sieve()
 		}
 	}
 }
+
+void primeFactorization(lli num)
 
 int main(int argc, char const *argv[])
 {
