@@ -82,11 +82,18 @@ void SegmentedSieve(int num)
 
 
 		/*
-			marking 
+			using the prime list from sieve of eratothens function
+
+			marking the numbers which is divisible by this primes 
 		*/
 
 		for (int i = 0; i < prime.size() ; ++i)
 		{
+			/*
+				first finding the minimum number which is multiple of prime
+				in [low...high] range
+			*/
+
 			int lowLimit = (low / prime[i]) * prime[i];
 
 			if (lowLimit < low)
