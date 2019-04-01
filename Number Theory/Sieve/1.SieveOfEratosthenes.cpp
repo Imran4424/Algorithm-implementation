@@ -30,7 +30,7 @@ void SieveOfEratosthenes(lli num)
 	}
 
 
-	for (int i = 2; i <= num; ++i)
+	for (lli i = 2; i <= num; ++i)
 	{
 		if (prime[i])
 		{
