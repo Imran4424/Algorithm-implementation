@@ -47,6 +47,33 @@ void SieveOfEratosthenes(lli limit, vector <int> &prime)
 void SegmentedSieve(int num)
 {
 	int limit = floor(sqrt(num)) + 1;
+
+	vector <int> prime;
+
+	SieveOfEratosthenes(limit, prime);
+
+
+	int low = limit;
+	int high = limit * 2;
+
+	while(low < num)
+	{
+		if(high > num)
+		{
+			high = num;
+		}
+
+
+		bool mark[limit + 1];
+
+		memset(mark, true, sizeof(mark));
+
+		for (int i = 0; i < prime.size() ; ++i)
+		{
+			
+		}
+
+	}
 }
 
 
