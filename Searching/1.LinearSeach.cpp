@@ -26,6 +26,8 @@ int main(int argc, char const *argv[])
 
 	vector <int> numbers(n);
 
+	srand(time(0)); // for managing session
+
 	for (int i = 0; i < numbers.size(); ++i)
 	{
 		int temp = rand() % 100;
