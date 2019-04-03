@@ -32,12 +32,7 @@ int main(int argc, char const *argv[])
 	{
 		int temp = rand() % 100;
 
-		temp = (temp + i - 50);
-
-		if (temp < 0)
-		{
-			temp = -temp;
-		}
+		
 
 		numbers[i] = temp;
 	}
