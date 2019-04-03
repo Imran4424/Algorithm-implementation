@@ -9,7 +9,7 @@ int LinearSearch(vector<int> ar)
 
 int main(int argc, char const *argv[])
 {
-	
+	int num;
 
 	return 0;
 }
