@@ -9,7 +9,13 @@ int LinearSearch(vector<int> ar)
 
 int main(int argc, char const *argv[])
 {
-	int num;
+	cout << "enter the size of the array" << endl;
+
+	int size;
+	cin >> size;
+
+	vector <int> numbers(size);
+	
 
 	return 0;
 }
