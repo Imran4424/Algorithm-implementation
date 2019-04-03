@@ -15,6 +15,7 @@ int main(int argc, char const *argv[])
 	cin >> size;
 
 	vector <int> numbers(size);
+
 	
 
 	return 0;
