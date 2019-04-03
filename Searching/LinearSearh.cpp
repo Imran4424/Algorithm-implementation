@@ -6,7 +6,7 @@ int LinearSearch(vector<int> ar)
 {
 	for (int i = 0; i < ar.size(); ++i)
 	{
-		/* code */
+		
 	}
 }
 
@@ -33,7 +33,12 @@ int main(int argc, char const *argv[])
 		numbers.push_back(temp);
 	}
 
-	int position = LinearSearch(numbers);
+	cout << "enter your target" << endl;
+
+	int target;
+	cin >> target;
+
+	int position = LinearSearch(numbers, target);
 
 	return 0;
 }
