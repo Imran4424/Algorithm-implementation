@@ -2,12 +2,17 @@
 #include <vector>
 using namespace std;
 
-int LinearSearch(vector<int> ar)
+int LinearSearch(vector<int> ar, int target)
 {
 	for (int i = 0; i < ar.size(); ++i)
 	{
-		
+		if (target == ar[i])
+		{
+			return i+1;
+		}
 	}
+
+	return -1;
 }
 
 int main(int argc, char const *argv[])
