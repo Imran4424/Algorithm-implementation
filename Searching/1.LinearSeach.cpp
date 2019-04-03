@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
 
 		
 
-		numbers[i] = temp;
+		numbers[i] = temp + 1;
 	}
 
 	cout << "enter your target" << endl;
