@@ -45,5 +45,14 @@ int main(int argc, char const *argv[])
 
 	int position = LinearSearch(numbers, target);
 
+	if (position == -1)
+	{
+		cout << "target does not exist in the array" << endl;
+	}
+	else
+	{
+		cout << "found in position: " << position << endl;
+	}
+
 	return 0;
 }
