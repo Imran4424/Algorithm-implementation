@@ -9,7 +9,7 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 {
 	if (start <= stop)
 	{
-		/* code */
+		int mid = (start + stop) / 2;
 	}
 	
 }
