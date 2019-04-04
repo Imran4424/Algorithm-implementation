@@ -69,7 +69,7 @@ int main(int argc, char const *argv[])
 		}
 		else
 		{
-			cout << "found in Index: " << position << endl << endl	;
+			cout << "found in position: " << position << endl << endl	;
 		}
 		
 		cout << "enter your target" << endl;
