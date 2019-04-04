@@ -54,18 +54,22 @@ int main(int argc, char const *argv[])
 	cout << "enter your target" << endl;
 
 	int target;
-	cin >> target;
 
-	int position = BinarySearch(numbers, target, 0, numbers.size()-1);
+	while(cin >> target)
+	{
+		int position = BinarySearch(numbers, target, 0, numbers.size()-1);
 
-	if (position == -1)
-	{
-		cout << "target does not exist in the array" << endl;
+		if (position == -1)
+		{
+			cout << "target does not exist in the array" << endl;
+		}
+		else
+		{
+			cout << "found in position: " << position << endl;
+		}
+		
 	}
-	else
-	{
-		cout << "found in position: " << position << endl;
-	}
+
 
 	return 0;
 }
