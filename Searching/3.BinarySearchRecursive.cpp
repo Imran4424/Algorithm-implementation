@@ -17,7 +17,7 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 	}
 
 
-	while(start <= stop)
+	if(start <= stop)
 	{
 		int mid = (start + stop ) / 2;
 
