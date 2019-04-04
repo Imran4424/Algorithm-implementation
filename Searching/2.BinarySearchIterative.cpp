@@ -65,11 +65,11 @@ int main(int argc, char const *argv[])
 
 		if (position == -1)
 		{
-			cout << "target does not exist in the array" << endl;
+			cout << "target does not exist in the array" << endl << endl;
 		}
 		else
 		{
-			cout << "found in position: " << position << endl;
+			cout << "found in position: " << position << endl << endl;
 		}
 		
 		cout << "enter your target" << endl;
