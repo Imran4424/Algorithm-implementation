@@ -68,6 +68,7 @@ int main(int argc, char const *argv[])
 			cout << "found in position: " << position << endl;
 		}
 		
+		cout << "enter your target" << endl;
 	}
 
 
