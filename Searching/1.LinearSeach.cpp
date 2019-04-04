@@ -40,6 +40,8 @@ int main(int argc, char const *argv[])
 
 	}
 
+	cout << endl << endl;
+
 	cout << "enter your target" << endl;
 
 	int target;
