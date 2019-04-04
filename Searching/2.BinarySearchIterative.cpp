@@ -53,7 +53,7 @@ int main(int argc, char const *argv[])
 		cout << numbers[i] << " ";
 	}
 
-	cout << endl;
+	cout << endl << endl;
 
 	cout << "enter your target" << endl;
 
