@@ -27,11 +27,11 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 		}
 		else if (ar[mid] > target)
 		{
-			stop = mid - 1;
+			return BinarySearch(ar, target, start, mid-1);
 		}
 		else if (ar[mid] < target)
 		{
-			start = mid + 1;
+			return BinarySearch(ar, target, mid+1, stop);
 		}
 	}
 
