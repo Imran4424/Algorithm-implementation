@@ -43,17 +43,21 @@ int main(int argc, char const *argv[])
 	cout << "enter your target" << endl;
 
 	int target;
-	cin >> target;
 
-	int position = LinearSearch(numbers, target);
+	while(cin >> target)
+	{
+		int position = LinearSearch(numbers, target);
 
-	if (position == -1)
-	{
-		cout << "target does not exist in the array" << endl;
-	}
-	else
-	{
-		cout << "found in position: " << position << endl;
+		if (position == -1)
+		{
+			cout << "target does not exist in the array" << endl << endl;
+		}
+		else
+		{
+			cout << "found in position: " << position << endl << endl	;
+		}
+		
+		cout << "enter your target" << endl;
 	}
 
 	return 0;
