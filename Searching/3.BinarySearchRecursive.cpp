@@ -11,10 +11,9 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 {
 	if (isSorted)
 	{
-		
+		sort(ar.begin(), ar.end());
 	}
 
-	sort(ar.begin(), ar.end());
 
 	while(start <= stop)
 	{
