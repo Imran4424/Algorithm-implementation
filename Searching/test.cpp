@@ -30,14 +30,14 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 		{
 			return mid + 1;
 		}
-		else if (ar[mid] > target)
+
+		if (ar[mid] > target)
 		{
 			return BinarySearch(ar, target, start, mid-1);
 		}
-		else if (ar[mid] < target)
-		{
-			return BinarySearch(ar, target, mid+1, stop);
-		}
+		
+
+		return BinarySearch(ar, target, mid+1, stop);
 		
 	}
 
