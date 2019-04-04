@@ -16,7 +16,7 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 		isSorted = true;
 	}
 
-	if (start == stop && ar[mid] != target)
+	if (start == stop && ar[start] != target)
 	{
 		return -1;
 	}
