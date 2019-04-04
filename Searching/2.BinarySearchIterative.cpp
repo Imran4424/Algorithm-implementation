@@ -17,13 +17,17 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 		{
 			return mid+1;
 		}
-
-		if (/* condition */)
+		else if (ar[mid] > target)
 		{
-			/* code */
+			stop = mid - 1;
+		}
+		else if (ar[mid] < target)
+		{
+			start = mid + 1;
 		}
 	}
-	
+
+	return -1;
 }
 
 
