@@ -15,7 +15,7 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 
 		if (ar[mid] == target)
 		{
-			return mid;
+			return mid + 1;
 		}
 		else if (ar[mid] > target)
 		{
