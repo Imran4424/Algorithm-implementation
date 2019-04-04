@@ -56,7 +56,7 @@ int main(int argc, char const *argv[])
 	int target;
 	cin >> target;
 
-	int position = LinearSearch(numbers, target, 0, numbers.size()-1);
+	int position = BinarySearch(numbers, target, 0, numbers.size()-1);
 
 	if (position == -1)
 	{
