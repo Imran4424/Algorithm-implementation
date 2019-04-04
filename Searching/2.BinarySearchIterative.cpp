@@ -7,12 +7,11 @@ using namespace std;
 
 int BinarySearch(vector<int> ar, int target, int start, int stop)
 {
-
-
-	for (int i = 0; i < ar.size(); ++i)
+	if (start <= stop)
 	{
-		
+		/* code */
 	}
+	
 }
 
 
