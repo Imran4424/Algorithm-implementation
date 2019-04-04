@@ -41,8 +41,6 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 		
 	}
 
-	return -1;
-
 }
 
 
