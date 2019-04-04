@@ -7,9 +7,21 @@ using namespace std;
 
 int BinarySearch(vector<int> ar, int target, int start, int stop)
 {
+	sort(ar.begin(), ar.end());
+
 	if (start <= stop)
 	{
 		int mid = (start + stop) / 2;
+
+		if (ar[mid] == target)
+		{
+			return mid+1;
+		}
+
+		if (/* condition */)
+		{
+			/* code */
+		}
 	}
 	
 }
