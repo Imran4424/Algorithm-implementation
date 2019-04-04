@@ -29,7 +29,7 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 		{
 			return BinarySearch(ar, target, start, mid-1);
 		}
-		else if (ar[mid] < target)
+		else
 		{
 			return BinarySearch(ar, target, mid+1, stop);
 		}
