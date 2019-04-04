@@ -9,9 +9,11 @@ bool isSorted = false;
 
 int BinarySearch(vector<int> ar, int target, int start, int stop)
 {
-	if (isSorted)
+	if (!isSorted)
 	{
 		sort(ar.begin(), ar.end());
+
+		isSorted = true;
 	}
 
 
