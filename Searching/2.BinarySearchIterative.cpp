@@ -9,7 +9,7 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 {
 	sort(ar.begin(), ar.end());
 
-	if (start <= stop)
+	while(start <= stop)
 	{
 		int mid = (start + stop ) / 2;
 
@@ -17,13 +17,11 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 		{
 			return mid+1;
 		}
-
-		if (ar[mid] > target)
+		else if (ar[mid] > target)
 		{
 			stop = mid - 1;
 		}
-		
-		if (ar[mid] < target)
+		else if (ar[mid] < target)
 		{
 			start = mid + 1;
 		}
