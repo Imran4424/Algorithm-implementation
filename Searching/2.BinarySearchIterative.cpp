@@ -7,6 +7,8 @@ using namespace std;
 
 int BinarySearch(vector<int> ar, int target, int start, int stop)
 {
+
+
 	for (int i = 0; i < ar.size(); ++i)
 	{
 		
@@ -39,7 +41,7 @@ int main(int argc, char const *argv[])
 	int target;
 	cin >> target;
 
-	int position = LinearSearch(numbers, target);
+	int position = LinearSearch(numbers, target, 0, numbers.size()-1);
 
 	if (position == -1)
 	{
