@@ -15,7 +15,7 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 
 		if (ar[mid] == target)
 		{
-			return mid+1;
+			return mid;
 		}
 		else if (ar[mid] > target)
 		{
@@ -69,7 +69,7 @@ int main(int argc, char const *argv[])
 		}
 		else
 		{
-			cout << "found in position: " << position << endl << endl;
+			cout << "found in Index: " << position << endl << endl	;
 		}
 		
 		cout << "enter your target" << endl;
