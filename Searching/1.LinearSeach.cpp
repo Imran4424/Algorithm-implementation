@@ -35,6 +35,9 @@ int main(int argc, char const *argv[])
 		
 
 		numbers[i] = temp + 1;
+
+		cout << numbers[i] << " ";
+
 	}
 
 	cout << "enter your target" << endl;
