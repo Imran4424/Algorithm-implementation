@@ -32,14 +32,34 @@ vector<int> AllPrimeFactor(int num)
 }
 
 
-void KthPrimeFactor(int num)
+void KthPrimeFactor(int num, int k)
 {
-	
+	vector <int> primeFactors = AllPrimeFactor(num);
+
+	if(k < AllPrimeFactor.size())
+	{
+		cout << "k-th prime factor is: " << primeFactors[k-1] << endl;
+	}
+	else
+	{
+
+		cout << "k-th prime factor is: " << -1 << endl;
+	}
 }
 
 
 int main(int argc, char const *argv[])
 {
-	
+	int num, k;
+
+	cout << "enter any positive number and k value" << endl;
+
+	while(cin >> num >> k)
+	{
+		KthPrimeFactor(num, k);
+		
+		cout << "enter any positive number and k value" << endl;
+	}
+
 	return 0;
 }
