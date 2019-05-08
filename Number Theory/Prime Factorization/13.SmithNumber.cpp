@@ -53,7 +53,12 @@ void SmithOrNot(int num)
 
 	for(int i=2; i*i <= num; i++)
 	{
-		
+		if(num % i == 0)
+		{
+			primeCheck = false;
+
+			break;
+		}
 	}
 
 
@@ -72,7 +77,7 @@ void SmithOrNot(int num)
 
 
 
-	if (digitSum == factorSum)
+	if (digitSum == factorSum && !primeCheck)
 	{
 
 
