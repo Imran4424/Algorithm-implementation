@@ -49,8 +49,15 @@ int AllPrimeFactor(int num)
 
 void SmithOrNot(int num)
 {
-	int factorSum = AllPrimeFactor(num);
+	bool primeCheck = true;
 
+	for(int i=2; i*i <= num; i++)
+	{
+		
+	}
+
+
+	int factorSum = AllPrimeFactor(num);
 
 	int digitSum = 0;
 
@@ -63,8 +70,12 @@ void SmithOrNot(int num)
 		num = num / 10;
 	}
 
+
+
 	if (digitSum == factorSum)
 	{
+
+
 		cout << "Smith Number" << endl;
 	}
 	else
