@@ -26,12 +26,18 @@ int Politeness(int num)
 			divCount++;
 		}
 
-		result = (result * divCount) + 1;
+		politeCount = (politeCount * divCount) + 1;
 	}
 
+	// if num odd prime still remains then count it
+
+	if(num > 2)
+	{
+		politeCount *= 2;
+	}
 	
 
-	return politeCount;
+	return politeCount - 1; // subtracting the first one
 }
 
 
