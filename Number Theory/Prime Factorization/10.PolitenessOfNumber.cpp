@@ -14,7 +14,10 @@ int Politeness(int num)
 
 	// now num is an odd number
 
-	
+	for(int i=3; i*i <= num; i++)
+	{
+		
+	}
 
 	
 
