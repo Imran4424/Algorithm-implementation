@@ -32,7 +32,7 @@ void PrintPrime(int start, int stop)
 	{
 		if(prime[i])
 		{
-			cout << prime[i] << " ";
+			cout << i << " ";
 		}
 	}
 
