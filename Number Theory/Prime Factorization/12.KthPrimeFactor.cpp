@@ -32,6 +32,12 @@ vector<int> AllPrimeFactor(int num)
 }
 
 
+void KthPrimeFactor(int num)
+{
+	
+}
+
+
 int main(int argc, char const *argv[])
 {
 	
