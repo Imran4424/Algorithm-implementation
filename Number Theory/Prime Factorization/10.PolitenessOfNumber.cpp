@@ -16,7 +16,14 @@ int Politeness(int num)
 
 	for(int i=3; i*i <= num; i++)
 	{
-		
+		int divCount = 0;
+
+		// if i divides num, then start counting divisors
+
+		while(num % i == 0)
+		{
+			num /= i;
+		}
 	}
 
 	
