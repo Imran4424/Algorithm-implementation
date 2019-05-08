@@ -23,7 +23,18 @@ int AllPrimeFactor(int num)
 		{
 			primeFactors.push_back(i);
 
-			factorSum += i;
+			//factorSum += i;
+
+			int x = i;
+
+			while(x)
+			{
+				int digit = x % 10;
+
+				factorSum += digit;
+
+				x = x / 10;
+			}
 
 			num = num / i;
 		}
