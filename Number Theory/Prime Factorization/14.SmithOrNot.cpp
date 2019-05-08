@@ -22,33 +22,47 @@ vector<bool> Sieve(int num)
 	return prime;
 }
 
-void SmithOrNot(int num)
+vector <int> AllPrimeFactor(int num)
 {
 	vector <bool> prime = Sieve(num);
 
+	vector <int> primeFactors;
+
+	//int tnum = num;
+
+	for(int i=2; i<=num; i++)
+	{
+		if(prime[i])
+		{
+			while(num % i == 0)
+			{
+				primeFactors.push_back(i);
+
+				num /= i;
+			}
+		}
+	}
+
+	return primeFactors
+}
+
+void SmithOrNot(int num)
+{
+	vector <int> primeFactors = AllPrimeFactor(num);
+
 	int factorSum = 0;
 
-	int reserve = num;
-
-	for(int i=2; i*i <= reserve; i++)
+	for(int i=0; i < primeFactors.size(); i++)
 	{
-		while(reserve % i == 0)
+		int x = primeFactors[i];
+
+		while(x)
 		{
-			if(prime[i])
-			{
-				int pfNum = i;
+			int digit = x % 10;
 
-				while(pfNum)
-				{
-					int digit = pfNum % 10;
+			factorSum += digit;
 
-					factorSum += digit;
-
-					pfNum = pfNum / 10;
-				}
-			}
-
-			reserve /= i;
+			x = x / 10;
 		}
 	}
 
