@@ -22,6 +22,13 @@ vector<int> AllPrimeFactor(int num)
 			num /= i;
 		}
 	}
+
+	if(num > 2)
+	{
+		primeFactors.push_back(num);
+	}
+
+	return primeFactors;
 }
 
 
