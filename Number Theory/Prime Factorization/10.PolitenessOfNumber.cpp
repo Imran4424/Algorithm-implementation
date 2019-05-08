@@ -3,7 +3,14 @@ using namespace std;
 
 int Politeness(int num)
 {
-	int politeCount = 0;
+	int politeCount = 1; // 1 for multiplying cause;
+
+	// removing all even prime factor of num
+
+	while(num % 2 == 0)
+	{
+		num /= 2;
+	}
 
 	
 
