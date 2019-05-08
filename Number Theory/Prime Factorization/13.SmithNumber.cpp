@@ -28,7 +28,7 @@ void SmithOrNot(int num)
 
 	int factorSum = 0;
 
-	for(int i=2; i*i<=num; i++)
+	for(int i=2; i<=num/2; i++)
 	{
 		if(prime[i])
 		{
