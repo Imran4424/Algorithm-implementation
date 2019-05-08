@@ -28,9 +28,11 @@ void SmithOrNot(int num)
 
 	int factorSum = 0;
 
-	for(int i=2; i <= num; i++)
+	int reserve = num;
+
+	for(int i=2; i*i <= reserve; i++)
 	{
-		while(num % i == 0)
+		while(reserve % i == 0)
 		{
 			if(prime[i])
 			{
@@ -45,6 +47,8 @@ void SmithOrNot(int num)
 					pfNum = pfNum / 10;
 				}
 			}
+
+			reserve /= i;
 		}
 	}
 
