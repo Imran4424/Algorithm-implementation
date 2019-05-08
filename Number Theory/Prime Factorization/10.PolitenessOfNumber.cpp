@@ -23,7 +23,10 @@ int Politeness(int num)
 		while(num % i == 0)
 		{
 			num /= i;
+			divCount++;
 		}
+
+		result = (result * divCount) + 1;
 	}
 
 	
