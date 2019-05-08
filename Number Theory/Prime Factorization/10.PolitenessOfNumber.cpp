@@ -12,6 +12,10 @@ int Politeness(int num)
 		num /= 2;
 	}
 
+	// now num is an odd number
+
+	
+
 	
 
 	return politeCount;
