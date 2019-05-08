@@ -3,14 +3,42 @@ using namespace std;
 
 int Politeness(int num)
 {
-	for()
+	int politeCount = 0;
+
+	for(int i=1; i <= (num/2); i++)
+	{
+		int currentSum = 0;
+
+		for(int j=i; j<= (num/2)+1; j++)
+		{
+			currentSum += j;
+
+			if (currentSum == num)
+			{
+				politeCount++;
+				break;
+			}
+			else if(currentSum > num)
+			{
+				break;
+			}
+
+		}
+	}
+
+	return politeCount;
 }
 
 
 
 int main(int argc, char const *argv[])
 {
-	
+	int num;
+
+	while(cin >> num)
+	{
+		cout << "Politeness of " << num << " is: " << Politeness(num) << endl;
+	}
 
 	return 0;
 }
