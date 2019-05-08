@@ -68,6 +68,16 @@ void SmithOrNot(int num)
 
 int main(int argc, char const *argv[])
 {
-	
+	int num;
+
+	cout << "enter any positive interger" << endl;
+
+	while(cin >> num)
+	{
+		SmithOrNot(num);
+
+		cout << "enter any positive interger" << endl;
+	}
+
 	return 0;
 }
