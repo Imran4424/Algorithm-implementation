@@ -24,7 +24,7 @@ vector<bool> Sieve(int num)
 
 void SmithOrNot(int num)
 {
-	vector <int> prime = Sieve(num);
+	vector <bool> prime = Sieve(num);
 
 	int factorSum = 0;
 
@@ -32,17 +32,17 @@ void SmithOrNot(int num)
 	{
 		if(prime[i])
 		{
-			if(num % prime[i] == 0)
+			if(num % i == 0)
 			{
-				int x = prime[i];
+				int pfNum = i;
 
-				while(x)
+				while(pfNum)
 				{
-					int digit = x % 10;
+					int digit = pfNum % 10;
 
 					factorSum += digit;
 
-					x = x / 10;
+					pfNum = pfNum / 10;
 				}
 			}
 		}
