@@ -10,7 +10,7 @@ vector<bool> Sieve(int num)
 
 	for(int i=2; i*i <= num; i++)
 	{
-		if(prime[i] == true)
+		if(prime[i])
 		{
 			for(int j=i*i; j<=num; j = j+i)
 			{
@@ -43,7 +43,7 @@ vector <int> AllPrimeFactor(int num)
 		}
 	}
 
-	return primeFactors
+	return primeFactors;
 }
 
 void SmithOrNot(int num)
