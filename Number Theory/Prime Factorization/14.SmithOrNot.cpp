@@ -30,9 +30,9 @@ void SmithOrNot(int num)
 
 	for(int i=2; i<=num; i++)
 	{
-		if(prime[i])
+		if(num % i == 0)
 		{
-			if(num % i == 0)
+			if(prime[i])
 			{
 				int pfNum = i;
 
