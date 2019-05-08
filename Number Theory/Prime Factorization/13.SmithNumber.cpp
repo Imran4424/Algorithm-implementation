@@ -33,7 +33,15 @@ int AllPrimeFactor(int num)
 	{
 		primeFactors.push_back(num);
 
-		factorSum += num;
+		while(num)
+		{
+			int digit = num % 10;
+
+			factorSum += digit;
+
+			num = num / 10;
+		}
+
 	}
 
 	return factorSum;
