@@ -41,6 +41,17 @@ void PrintPrime(int start, int stop)
 
 int main(int argc, char const *argv[])
 {
-	
+	int start, stop;
+
+	cout << "enter a range" << endl;
+
+	while(cin >> start >> stop)
+	{
+		PrintPrime(start, stop);
+
+		cout << "enter a range" << endl;
+	}
+
+
 	return 0;
 }
