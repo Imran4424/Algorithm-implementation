@@ -2,54 +2,51 @@
 #include <vector>
 using namespace std;
 
-int AllPrimeFactor(int num)
+vector<bool> Sieve(int num)
 {
-	int factorSum = 0;
+	vector<bool> prime(num+1, true);
 
-	vector <int> primeFactors;
+	prime[0] = prime[1] = false;
 
-	while(num % 2 == 0)
+	for(int i=2; i*i <= num; i++)
 	{
-		primeFactors.push_back(2);
-
-		factorSum += 2;
-
-		num /= 2;
-	}
-
-	for(int i=3; i*i <= num; i = i + 2)
-	{
-		while(num % i == 0)
+		if(prime[i] == true)
 		{
-			primeFactors.push_back(i);
-
-			factorSum += i;
-
-			num = num / i;
+			for(int j=i*i; j<=num; j = j+i)
+			{
+				prime[j] = false;
+			}
 		}
 	}
 
-	if(num > 2)
-	{
-		primeFactors.push_back(num);
-
-		while(num)
-		{
-			int digit = num % 10;
-
-			factorSum += digit;
-
-			num = num / 10;
-		}
-
-	}
-
-	return factorSum;
+	return prime;
 }
 
 void SmithOrNot(int num)
 {
-	int factorSum = AllPrimeFactor(num);
+	vector <int> prime = Sieve(num);
+
+	int factorSum = 0;
+
+	for(int i=2; i*i<=num; i++)
+	{
+		if(prime[i])
+		{
+			if(num % prime[i] == 0)
+			{
+				int x = prime[i];
+
+				while(x)
+				{
+					int digit = x % 10;
+
+					factorSum += digit;
+
+					x = x / 10;
+				}
+			}
+		}
+	}
 
 
 	int digitSum = 0;
