@@ -14,14 +14,15 @@ vector< vector<int> > SearchingPath(vector< vector<int> > maze, vector< vector <
 
 	if(row == maze.size()-1)
 	{
-		return path;
+		return SearchingPath(maze, path, row, col);
 	}
 
 	if (col == maze[row].size()-1)
 	{
-		return path;
+		return SearchingPath(maze, path, row, col);
 	}
 
+	path[row][col] = 1;
 
 	if(maze[row+1][col] == 1)
 	{
@@ -33,7 +34,7 @@ vector< vector<int> > SearchingPath(vector< vector<int> > maze, vector< vector <
 		return SearchingPath(maze, path, row, col+1);
 	}
 
-	return SearchingPath(maze, path, row, col);
+	//return SearchingPath(maze, path, row, col);
 
 }
 

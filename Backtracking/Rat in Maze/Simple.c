@@ -8,7 +8,7 @@ int maxRow, maxCol;
 
 void SearchingPath(int row, int col)
 {
-	
+	if(row = )
 }
 
 
@@ -16,22 +16,22 @@ int main(int argc, char const *argv[])
 {
 	printf("enter row and col of the maze\n");
 
-	scanf("%d %d", &row, &col);
+	scanf("%d %d", &maxRow, &maxCol);
 
 	printf("enter the maze matrix\n");
 
-	for(int i=0; i < row; i++)
+	for(int i=0; i < maxRow; i++)
 	{
-		for(int col=0; j < col; j++)
+		for(int col=0; j < maxCol; j++)
 		{
 			scanf("%d", &maze[i][j]);
 		}
 	}
 
 
-	for(int i=0; i < row; i++)
+	for(int i=0; i < maxRow; i++)
 	{
-		for(int col=0; j < col; j++)
+		for(int col=0; j < maxCol; j++)
 		{
 			path = 0;
 		}
