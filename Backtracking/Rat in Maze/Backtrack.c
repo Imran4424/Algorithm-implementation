@@ -15,27 +15,25 @@ void SearchingPath(int row, int col)
 		return;
 	}
 
-	if (maxRow - 1 == row)
-	{
-		return;
-	}
-
-	if (maxCol - 1 == col)
-	{
-		return;
-	}
-
 	path[row][col] = 1;
 
-	if (maze[row+1][col] == 1)
+	
+	if (row < maxRow - 1)
 	{
-		SearchingPath(row+1, col);
+		if (maze[row+1][col] == 1)
+		{
+			SearchingPath(row+1, col);
+		}
 	}
 
-	if (maze[row][col+1] == 1)
+	if (col < maxCol - 1)
 	{
-		SearchingPath(row, col+1);
+		if (maze[row][col+1] == 1)
+		{
+			SearchingPath(row, col+1);
+		}
 	}
+
 
 	path[row][col] = 0;
 }
