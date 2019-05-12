@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	vector < vector <int> > path = SearchingPath(maze, path, 0, 0);
+	path = SearchingPath(maze, path, 0, 0);
 
 	for (int i = 0; i < path.size(); ++i)
 	{
