@@ -79,17 +79,25 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	SearchingPath(0, 0);
+	bool status = SearchingPath(0, 0);
 
-	for(int i=0; i < maxRow; i++)
+	if (status)
 	{
-		for(int j=0; j < maxCol; j++)
+		for(int i=0; i < maxRow; i++)
 		{
-			printf("%d ", path[i][j]);
-		}
+			for(int j=0; j < maxCol; j++)
+			{
+				printf("%d ", path[i][j]);
+			}
 
-		printf("\n");
+			printf("\n");
+		}
 	}
+	else
+	{
+		printf("Solution doesn't exist\n");
+	}
+
 
 	return 0;
 }
