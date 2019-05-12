@@ -85,7 +85,7 @@ int main(int argc, char const *argv[])
 		{
 			for (int j = 0; j < 8; ++j)
 			{
-				printf("%d", solution[i][j]);
+				printf("%d ", solution[i][j]);
 			}
 			printf("\n");
 		}
