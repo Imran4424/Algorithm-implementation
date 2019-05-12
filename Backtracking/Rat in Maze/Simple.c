@@ -24,6 +24,18 @@ void SearchingPath(int row, int col)
 	{
 		return;
 	}
+
+	path[row][col] = 1;
+
+	if (maze[row+1][col] == 1)
+	{
+		SearchingPath(row+1, col);
+	}
+
+	if (maze[row][col+1] == 1)
+	{
+		SearchingPath(row, col+1);
+	}
 }
 
 
