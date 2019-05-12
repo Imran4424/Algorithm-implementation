@@ -8,7 +8,22 @@ int maxRow, maxCol;
 
 void SearchingPath(int row, int col)
 {
-	if(row = )
+	if(maxRow - 1 == row && maxCol - 1 == col)
+	{
+		path[row][col] = 1;
+
+		return;
+	}
+
+	if (maxRow - 1 == row)
+	{
+		return;
+	}
+
+	if (maxCol - 1 == col)
+	{
+		return;
+	}
 }
 
 
