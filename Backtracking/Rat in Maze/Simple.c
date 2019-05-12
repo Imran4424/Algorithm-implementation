@@ -51,7 +51,7 @@ int main(int argc, char const *argv[])
 
 	for(int i=0; i < maxRow; i++)
 	{
-		for(int col=0; j < maxCol; j++)
+		for(int j=0; j < maxCol; j++)
 		{
 			scanf("%d", &maze[i][j]);
 		}
@@ -60,7 +60,7 @@ int main(int argc, char const *argv[])
 
 	for(int i=0; i < maxRow; i++)
 	{
-		for(int col=0; j < maxCol; j++)
+		for(int j=0; j < maxCol; j++)
 		{
 			path[i][j] = 0;
 		}
@@ -70,7 +70,7 @@ int main(int argc, char const *argv[])
 
 	for(int i=0; i < maxRow; i++)
 	{
-		for(int col=0; j < maxCol; j++)
+		for(int j=0; j < maxCol; j++)
 		{
 			printf("%d ", path[i][j]);
 		}
