@@ -3,14 +3,15 @@
 using namespace std;
 
 
-void SearchingPath(vector< vector<int> > maze, bool start)
+void SearchingPath(vector< vector<int> > maze, int row, int col)
 {
-	if (start)
+	if (row = 0 && col == 0)
 	{
-		cout << 0 << " " << 0 << endl;
-		
-		start = false;
+		cout << 0 << " " << 0 << endl;		
 	}
+
+
+
 
 }
 
