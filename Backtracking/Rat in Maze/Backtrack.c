@@ -34,8 +34,6 @@ void SearchingPath(int row, int col)
 		}
 	}
 
-
-	path[row][col] = 0;
 }
 
 
