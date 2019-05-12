@@ -71,7 +71,7 @@ int main(int argc, char const *argv[])
 
 	printf("enter the starting position of Knight\n");
 
-	int x, int y;
+	int x, y;
 
 	scanf("%d %d", &x, &y);
 
