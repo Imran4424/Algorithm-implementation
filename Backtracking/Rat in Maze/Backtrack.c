@@ -18,18 +18,14 @@ void SearchingPath(int row, int col)
 
 	path[row][col] = 1;
 
-	int failCount = 0;
-
 	
 	if (row < maxRow - 1)
 	{
 		if (maze[row+1][col] == 1)
 		{
 			SearchingPath(row+1, col);
-		}
-		else
-		{
-			failCount++;
+
+			return;
 		}
 	}
 
@@ -38,18 +34,13 @@ void SearchingPath(int row, int col)
 		if (maze[row][col+1] == 1)
 		{
 			SearchingPath(row, col+1);
-		}
-		else
-		{
-			failCount++;
+
+			return;
 		}
 	}
 
 
-	if (failCount == 2)
-	{
-		path[row][col] = 0;
-	}
+	path[row][col] = 0;
 }
 
 
