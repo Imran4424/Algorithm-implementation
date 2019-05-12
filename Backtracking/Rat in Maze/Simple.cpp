@@ -7,12 +7,12 @@ vector< vector<int> > SearchingPath(vector< vector<int> > maze, vector< vector <
 {
 	if(row == maze.size())
 	{
-		return;
+		return path;
 	}
 
 	if (col == maze[row].size())
 	{
-		return;
+		return path;
 	}
 
 
@@ -29,7 +29,7 @@ vector< vector<int> > SearchingPath(vector< vector<int> > maze, vector< vector <
 		return SearchingPath(maze, path, row+1, col);
 	}
 
-	if(maze[row][col+1])
+	if(maze[row][col+1] == 1)
 	{
 		return SearchingPath(maze, path, row, col+1);
 	}
@@ -48,9 +48,9 @@ int main(int argc, char const *argv[])
 
 	vector< vector <int> > path(row, vector <int> (col, 0)); //initializing path matrix with zero
 
-	for (int i = 0; i < maze.size(); ++i)
+	for (int i = 0; i < row; ++i)
 	{
-		for(int j = 0 ; j < maze[i].size(); ++j)
+		for(int j = 0 ; j < col; ++j)
 		{
 			cin >> maze[i][j];
 		}
