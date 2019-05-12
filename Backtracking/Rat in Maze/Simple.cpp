@@ -6,7 +6,7 @@ using namespace std;
 vector< vector<int> > SearchingPath(vector< vector<int> > maze, vector< vector <int> > path, int row, int col)
 {
 	path[row][col] = 1;
-	
+
 	if(row == maze.size()-1 && col == maze[row].size()-1)
 	{
 		return path;
@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-
+	vector < vector <int> > path = SearchingPath(maze, path, 0, 0);
 
 	return 0;
 }
