@@ -47,6 +47,16 @@ int main(int argc, char const *argv[])
 
 	vector < vector <int> > path = SearchingPath(maze, path, 0, 0);
 
+	for (int i = 0; i < path.size(); ++i)
+	{
+		for(int j = 0 ; j < path[i].size(); ++j)
+		{
+			cout << path[i][j] << " ";
+		}
+
+		cout << endl;
+	}
+
 	return 0;
 }
 
