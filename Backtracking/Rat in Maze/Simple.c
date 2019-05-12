@@ -68,5 +68,15 @@ int main(int argc, char const *argv[])
 
 	SearchingPath(0, 0);
 
+	for(int i=0; i < maxRow; i++)
+	{
+		for(int col=0; j < maxCol; j++)
+		{
+			printf("%d ", path[i][j]);
+		}
+
+		printf("\n");
+	}
+
 	return 0;
 }
