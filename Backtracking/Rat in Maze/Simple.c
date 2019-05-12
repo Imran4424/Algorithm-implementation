@@ -36,6 +36,8 @@ void SearchingPath(int row, int col)
 	{
 		SearchingPath(row, col+1);
 	}
+
+	path[row][col] = 0;
 }
 
 
@@ -60,10 +62,11 @@ int main(int argc, char const *argv[])
 	{
 		for(int col=0; j < maxCol; j++)
 		{
-			path = 0;
+			path[i][j] = 0;
 		}
 	}
 
+	SearchingPath(0, 0);
 
 	return 0;
 }
