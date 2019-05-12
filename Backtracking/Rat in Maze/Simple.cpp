@@ -3,7 +3,16 @@
 using namespace std;
 
 
+void SearchingPath(vector< vector<int> > maze, bool start)
+{
+	if (start)
+	{
+		cout << 0 << " " << 0 << endl;
+		
+		start = false;
+	}
 
+}
 
 
 int main(int argc, char const *argv[])
@@ -24,6 +33,8 @@ int main(int argc, char const *argv[])
 			cin >> maze[i][j];
 		}
 	}
+
+
 
 	return 0;
 }
