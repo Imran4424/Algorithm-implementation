@@ -6,6 +6,10 @@ int path[40][40];
 
 int maxRow, maxCol;
 
+void SearchingPath(int row, int col)
+{
+	
+}
 
 
 int main(int argc, char const *argv[])

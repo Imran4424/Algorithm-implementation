@@ -5,20 +5,19 @@ using namespace std;
 
 vector< vector<int> > SearchingPath(vector< vector<int> > maze, vector< vector <int> > path, int row, int col)
 {
-	if(row == maze.size())
-	{
-		return path;
-	}
-
-	if (col == maze[row].size())
-	{
-		return path;
-	}
-
-
-	path[row][col] = 1;
-
 	if(row == maze.size()-1 && col == maze[row].size()-1)
+	{
+		path[row][col] = 1;
+		
+		return path;
+	}
+
+	if(row == maze.size()-1)
+	{
+		return path;
+	}
+
+	if (col == maze[row].size()-1)
 	{
 		return path;
 	}
