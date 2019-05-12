@@ -75,7 +75,9 @@ int main(int argc, char const *argv[])
 
 	scanf("%d %d", &x, &y);
 
-	bool status = KnightTour(0, 0, 1, xMove, yMove);
+	solution[x][y] = 1;
+
+	bool status = KnightTour(x, y, 1, xMove, yMove);
 
 	if (status)
 	{
