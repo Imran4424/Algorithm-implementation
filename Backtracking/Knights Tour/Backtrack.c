@@ -21,12 +21,14 @@ bool isSafe(int row, int col)
 }
 
 
-bool KnightTour(int row, int col, int noMoves)
+bool KnightTour(int row, int col, int noMoves, int *xMove, int *yMove)
 {
 	if (noMoves == 8*8)
 	{
 		return true;
 	}
+
+
 }
 
 
@@ -39,6 +41,9 @@ int main(int argc, char const *argv[])
 			isVisited[i][j] = false;
 		}
 	}
-	
+
+	int yMove[8] = {1, 2, 2, 1, -1, -2, -2, -1};
+	int xMove[8] = {2, 1, -1, -2, -2, -1, 1, 2};
+
 	return 0;
 }
