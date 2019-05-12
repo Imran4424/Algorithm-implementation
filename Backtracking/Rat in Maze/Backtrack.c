@@ -6,13 +6,13 @@ int path[40][40];
 
 int maxRow, maxCol;
 
-void SearchingPath(int row, int col)
+bool SearchingPath(int row, int col)
 {
 	if(maxRow - 1 == row && maxCol - 1 == col)
 	{
 		path[row][col] = 1;
 
-		return;
+		return true;
 	}
 
 	path[row][col] = 1;
@@ -48,6 +48,8 @@ void SearchingPath(int row, int col)
 	if (failCount == 2)
 	{
 		path[row][col] = 0;
+
+		return false;
 	}
 }
 
