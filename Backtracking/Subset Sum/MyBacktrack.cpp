@@ -125,7 +125,8 @@ int main(int argc, char const *argv[])
 
 	then start a recursion with every existing element in search of target
 
-	if the array end cause if some cases 	
+	if the array ends in some cases (think about the case we start the function with last index)
+	then retraverse the whole array until it find the subset	
 
 
 
