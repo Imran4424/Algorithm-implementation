@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+int solve[25];
+int count = 0;
+
 bool SubsetSum(int input[], int n, int sum)
 {
 	if (0 == sum)
