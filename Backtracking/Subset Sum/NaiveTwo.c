@@ -43,7 +43,14 @@ int main(int argc, char const *argv[])
 
 	if(status)
 	{
-		printf("Solution exists\n");
+		// printf("Solution exists\n");
+
+		for (int i = 0; i < count; ++i)
+		{
+			printf("%d \n", Solution[i]);
+		}
+
+		printf("\n");
 	}
 	else
 	{
