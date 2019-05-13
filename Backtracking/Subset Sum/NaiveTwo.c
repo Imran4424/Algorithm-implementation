@@ -21,6 +21,8 @@ bool SubsetSum(int input[], int n, int sum)
 		return SubsetSum(input, n-1, sum);
 	}
 
+	solve[count++] = input[n-1];
+
 	return (SubsetSum(input, n-1, sum) || SubsetSum(input, n-1, sum - input[n-1]));
 }
 
