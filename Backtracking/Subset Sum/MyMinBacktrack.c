@@ -54,7 +54,7 @@ bool SubSetSolve(int input[], int size, int index, int sum, int target)
 
 	while(sum > target)
 	{
-
+		sum = sum - input[frontIndex++];
 	}
 
 	if(sum == target)
