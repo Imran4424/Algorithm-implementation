@@ -40,8 +40,25 @@ void quick_sort(int ar[], int start,int end) // end will be size - 1
 	}
 }
 
-bool SubSetSolve(int input[], int size, int sum, int target)
+bool SubSetSolve(int input[], int size, int index, int sum, int target)
 {
+	sum = sum + input[index];
+
+	if(sum == target)
+	{
+		return true;
+	}
+
+	while(sum > target)
+	{
+
+	}
+
+	if(sum == target)
+	{
+		return true;
+	}
+
 	
 }
 
