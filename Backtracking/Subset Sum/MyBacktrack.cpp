@@ -26,6 +26,13 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 		arSet.erase(arSet.begin());
 	}
 
+	if(sum == target)
+	{
+		found = true;
+
+		return arSet;
+	}
+
 	if(index < input.size()-1)
 	{
 		return SubSetSolve(input, arSet, index+1, sum, target);
