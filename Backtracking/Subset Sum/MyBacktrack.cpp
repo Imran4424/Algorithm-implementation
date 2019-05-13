@@ -118,4 +118,12 @@ int main(int argc, char const *argv[])
 
 /*
 	Own implemented backtrack algorithm
+
+	first sorted the array
+
+	then delete the elements which is larger than the elements
+
+	then start a recursion with every existing element in search of target
+
+	
 */
