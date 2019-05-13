@@ -139,6 +139,15 @@ int main(int argc, char const *argv[])
 	now the recusive call will be like for target 9
 	
 	2
+	2+3+4
+
+	3
+	3+4
+	3+4+5
+	4+5
+
+	4+5
+	
 
 
 */
