@@ -17,9 +17,7 @@ bool SubsetSum(int input[], int n, int sum, vector <int> result)
 
 	if(0 == n && sum != 0)
 	{
-		status = false;
-
-		return solve;
+		return false;
 	}
 
 	if (input[n-1] > sum)
