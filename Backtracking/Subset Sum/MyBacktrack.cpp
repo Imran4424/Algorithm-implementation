@@ -19,7 +19,7 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 		return arSet;
 	}
 
-	if(sum > target)
+	while(sum > target)
 	{
 		sum = sum - arSet[0];
 
