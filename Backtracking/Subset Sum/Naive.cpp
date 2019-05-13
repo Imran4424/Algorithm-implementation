@@ -3,7 +3,39 @@
 #include <algorithm>
 using namespace std;
 
-void SubSetSum(vector<int> input, int target)
+bool found = false;
+
+vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int sum, int target)
+{
+	sum = sum + input[index];
+
+	arSet.push_back(input[index]);
+
+	if(sum == target)
+	{
+		found = true;
+
+		return arSet;
+	}
+
+	if(sum > target)
+	{
+		sum = sum - arSet[0];
+
+		arSet.erase(arSet.begin());
+	}
+
+	if(index < input.size()-1)
+	{
+		return SubSetSolve(input, arSet, index+1, sum, target);
+	}
+
+	return arSet;
+}
+
+
+
+vector<int> SubSetSum(vector<int> input, int target)
 {
 	sort(input.begin(), input.end());
 
@@ -16,6 +48,24 @@ void SubSetSum(vector<int> input, int target)
 
 	input.resize(i);
 
+	vector <int> arSet;
+
+
+	for(int k=0; k < input.size(); k++)
+	{
+		if(found)
+		{
+			break;
+		}
+		else
+		{
+			arSet = SubSetSolve(input, arSet, k, 0, target);		
+		}
+
+	}
+
+
+	return arSet;
 }
 
 int main(int argc, char const *argv[])
@@ -33,8 +83,21 @@ int main(int argc, char const *argv[])
 		input.push_back(temp);
 	}
 
+	vector<int> arSet = SubSetSum(input, target);
 
+	if(found)
+	{
+		for (int i = 0; i < arSet.size(); ++i)
+		{
+			cout << arSet[i] << " ";
+		}
 
+		cout << endl;
+	}
+	else
+	{
+		cout << "Solution doesn't exist" << endl;
+	}
 
 	return 0;
 }
