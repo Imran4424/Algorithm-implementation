@@ -46,6 +46,9 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 	
 	if(secondRoute && index >= input.size()-1)
 	{
+		int x = 300;
+		while(x--);
+
 		return arSet;
 	}
 }
