@@ -51,7 +51,7 @@ bool SubsetSum(int input[], int size, int target)
 		x++;
 	}
 
-	size = i;
+	size = x;
 }
 
 
