@@ -132,7 +132,7 @@ int main(int argc, char const *argv[])
 
 	3 34 4 12 5 2
 
-	
+	sorted: 2 3 4 5 12 34
 
 
 
