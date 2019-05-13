@@ -55,6 +55,11 @@ bool SubSetSolve(int input[], int size, int index, int sum, int target)
 	while(sum > target)
 	{
 		sum = sum - input[frontIndex++];
+
+		if(frontIndex >= size)
+		{
+			frontIndex = 0;
+		}
 	}
 
 	if(sum == target)
@@ -62,6 +67,16 @@ bool SubSetSolve(int input[], int size, int index, int sum, int target)
 		return true;
 	}
 
+	if (index < size-1)
+	{
+		return SubSetSolve(input, size, index+1, sum, target);
+	}
+	else if(!secondRoute)
+	{
+		secondRoute = true;
+
+		return SubSetSolve(input, size, 0, sum, target);
+	}
 
 }
 
