@@ -77,6 +77,8 @@ int main(int argc, char const *argv[])
 	int size, target;
 	cin >> size >> target;
 
+	cout << "enter the array" << endl;
+
 	for(int i=0; i< size; ++i)
 	{
 		int temp;
