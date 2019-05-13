@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void SubsetSumHandler()
+bool SubsetSum()
+{
+	
+}
 
 int main(int argc, char const *argv[])
 {
