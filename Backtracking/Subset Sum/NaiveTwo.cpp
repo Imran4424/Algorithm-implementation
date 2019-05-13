@@ -27,7 +27,7 @@ vector<int> SubsetSum(int input[], int n, int sum, vector <int> solve)
 
 	solve.push_back(input[n-1]);
 	
-	vector<int> result = SubsetSum(input, n-1, sum, solve);
+	vector <int> result = SubsetSum(input, n-1, sum, solve);
 
 	if(status)
 	{
