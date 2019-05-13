@@ -125,10 +125,10 @@ int main(int argc, char const *argv[])
 
 	then start a recursion with every existing element in search of target
 
-	
+	if the array end cause if some cases 	
 
 
 
 
-	
+
 */
