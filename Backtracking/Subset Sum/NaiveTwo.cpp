@@ -27,13 +27,16 @@ bool SubsetSum(int input[], int n, int sum, vector <int> result)
 
 	if (input[n-1] > sum)
 	{
-		result.push_back(input[n-1]);
 		return SubsetSum(input, n-1, sum, result);
 	}
 
+	result.push_back(input[n-1]);
 	
+	bool decideY =  SubsetSum(input, n-1, sum - input[n-1], result);
 
-	if(SubsetSum(input, n-1, sum, result) || SubsetSum(input, n-1, sum - input[n-1], result))
+	result.erase(result.begin());
+
+	if(SubsetSum(input, n-1, sum, result) || decideY)
 	{
 
 		return true;
