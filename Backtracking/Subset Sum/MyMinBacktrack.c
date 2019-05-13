@@ -29,7 +29,7 @@ int partitioning(int ar[], int start, int end)
 }
 
 
-void quick_sort(int ar[], int start,int end)
+void quick_sort(int ar[], int start,int end) // end will be size - 1
 {
 	if (start < end)
 	{
@@ -42,7 +42,7 @@ void quick_sort(int ar[], int start,int end)
 
 bool SubsetSum(int input[], int size, int target)
 {
-	
+
 }
 
 
