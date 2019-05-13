@@ -44,7 +44,14 @@ bool SubsetSum(int input[], int size, int target)
 {
 	quick_sort(input, 0, size-1);
 
-	
+	int x = 0;
+
+	while(input[x] <= target)
+	{
+		x++;
+	}
+
+	size = i;
 }
 
 
