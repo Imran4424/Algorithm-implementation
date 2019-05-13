@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <vector>
+using namespace std;
 
 bool status = false;
 
-vector<int> SubsetSum(int input[], int n, int sum, vector<int> solve)
+vector<int> SubsetSum(int input[], int n, int sum, vector <int> solve)
 {
 	if (0 == sum)
 	{
@@ -50,7 +51,7 @@ int main(int argc, char const *argv[])
 	{
 		// printf("Solution exists\n");
 
-		for (int i = 0; i < count; ++i)
+		for (int i = 0; i < solve.size(); ++i)
 		{
 			printf("%d ", solve[i]);
 		}
