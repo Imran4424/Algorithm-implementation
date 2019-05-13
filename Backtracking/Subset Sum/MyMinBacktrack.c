@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 bool secondRoute;
-int startIndex;
+int frontIndex;
 
 int partitioning(int ar[], int start, int end)
 {
@@ -77,6 +77,22 @@ bool SubsetSum(int input[], int size, int target)
 	}
 
 	size = x;
+
+	for(int i=0; i < size; i++)
+	{
+		secondRoute =  false;
+
+		frontIndex = i;
+
+		bool found = SubSetSolve(input, size, k, 0, target);
+
+		if (status)
+		{
+			return true;
+		}
+	}
+
+	return false;
 }
 
 
