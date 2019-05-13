@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+bool secondRoute;
+int startIndex;
+
 int partitioning(int ar[], int start, int end)
 {
 
@@ -59,7 +62,7 @@ bool SubSetSolve(int input[], int size, int index, int sum, int target)
 		return true;
 	}
 
-	
+
 }
 
 bool SubsetSum(int input[], int size, int target)
