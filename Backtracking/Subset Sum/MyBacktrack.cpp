@@ -124,6 +124,7 @@ int main(int argc, char const *argv[])
 
 
 /*
+
 	Own implemented backtrack algorithm
 
 	first sorted the array
