@@ -134,6 +134,8 @@ int main(int argc, char const *argv[])
 
 	sorted: 2 3 4 5 12 34
 
+	new array
+
 
 
 */
