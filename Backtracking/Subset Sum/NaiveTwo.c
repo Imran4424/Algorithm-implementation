@@ -47,7 +47,7 @@ int main(int argc, char const *argv[])
 
 		for (int i = 0; i < count; ++i)
 		{
-			printf("%d \n", Solution[i]);
+			printf("%d \n", solve[i]);
 		}
 
 		printf("\n");
