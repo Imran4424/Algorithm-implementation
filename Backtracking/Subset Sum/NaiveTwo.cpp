@@ -32,11 +32,11 @@ bool SubsetSum(int input[], int n, int sum, vector <int> result)
 
 	result.push_back(input[n-1]);
 	
-	bool decideY =  SubsetSum(input, n-1, sum - input[n-1], result);
+	bool decideY =  SubsetSum(input, n-1, sum - input[n-1], result); // in this call we keeping the vector and going toward
 
 	result.erase(result.begin());
 
-	if(SubsetSum(input, n-1, sum, result) || decideY)
+	if(SubsetSum(input, n-1, sum, result) || decideY) // in this call we are removing first element of vector and going forward
 	{
 
 		return true;
