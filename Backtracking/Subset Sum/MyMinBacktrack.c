@@ -78,6 +78,7 @@ bool SubSetSolve(int input[], int size, int index, int sum, int target)
 		return SubSetSolve(input, size, 0, sum, target);
 	}
 
+	return false;
 }
 
 bool SubsetSum(int input[], int size, int target)
