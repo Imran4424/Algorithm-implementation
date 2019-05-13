@@ -42,7 +42,9 @@ int main(int argc, char const *argv[])
 		scanf("%d", &input[i]);
 	}
 
-	bool status = SubsetSum(input, size, target);
+	vector <int> solve;
+
+	solve = SubsetSum(input, size, target, solve);
 
 	if(status)
 	{
