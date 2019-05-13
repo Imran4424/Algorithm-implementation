@@ -72,6 +72,8 @@ int main(int argc, char const *argv[])
 {
 	vector <int> input;
 
+	cout << "eter the size and target" << endl;
+
 	int size, target;
 	cin >> size >> target;
 
