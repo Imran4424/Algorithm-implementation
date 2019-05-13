@@ -2,15 +2,17 @@
 #include <vector>
 using namespace std;
 
-bool status = false;
+// bool status = false;
 
-vector<int> SubsetSum(int input[], int n, int sum, vector <int> solve)
+vector<int> solve;
+
+bool SubsetSum(int input[], int n, int sum, vector <int> result)
 {
 	if (0 == sum)
 	{
-		status = true;
+		solve = result;
 
-		return solve;
+		return true;
 	}
 
 	if(0 == n && sum != 0)
@@ -25,23 +27,17 @@ vector<int> SubsetSum(int input[], int n, int sum, vector <int> solve)
 		return SubsetSum(input, n-1, sum, solve);
 	}
 
-	solve.push_back(input[n-1]);
+	result.push_back(input[n-1]);
 	
-	vector <int> result = SubsetSum(input, n-1, sum, solve);
 
-	if(status)
+	if(SubsetSum(input, n-1, sum, result) || SubsetSum(input, n-1, sum - input[n-1], result))
 	{
-		return result;
+		solve = result;
+
+		return true;
 	}
 
-	result.clear();
-
-	result = SubsetSum(input, n-1, sum - input[n-1], solve);
-
-	if (status)
-	{
-		return result;
-	}
+	return false;
 }
 
 int main(int argc, char const *argv[])
@@ -57,9 +53,9 @@ int main(int argc, char const *argv[])
 		scanf("%d", &input[i]);
 	}
 
-	vector <int> solve;
+	vector <int> result;
 
-	solve = SubsetSum(input, size, target, solve);
+	bool status = SubsetSum(input, size, target, result);
 
 	if(status)
 	{
