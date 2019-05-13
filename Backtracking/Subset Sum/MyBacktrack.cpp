@@ -12,7 +12,7 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 
 	arSet.push_back(input[index]);
 
-	if(sum == target)
+	if(sum == target) // 
 	{
 		found = true;
 
@@ -43,11 +43,11 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 
 		return SubSetSolve(input, arSet, 0, sum, target);		
 	}
-	else
+	
+	if(secondRoute && index >= input.size()-1)
 	{
 		return arSet;
 	}
-
 }
 
 
