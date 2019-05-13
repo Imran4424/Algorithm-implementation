@@ -40,7 +40,10 @@ void quick_sort(int ar[], int start,int end)
 	}
 }
 
-
+bool SubsetSum(int input[], int size, int target)
+{
+	
+}
 
 
 int main(int argc, char const *argv[])
