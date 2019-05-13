@@ -109,9 +109,9 @@ int main(int argc, char const *argv[])
 
 	if(found)
 	{
-		for (int i = 0; i < arSet.size(); ++i)
+		for (int i = 0; i < solve.size(); ++i)
 		{
-			cout << arSet[i] << " ";
+			cout << solve[i] << " ";
 		}
 
 		cout << endl;
