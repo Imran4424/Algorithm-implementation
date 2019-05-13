@@ -43,8 +43,11 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 
 		return SubSetSolve(input, arSet, 0, sum, target);		
 	}
+	else
+	{
+		return arSet;
+	}
 
-	return arSet;
 }
 
 
