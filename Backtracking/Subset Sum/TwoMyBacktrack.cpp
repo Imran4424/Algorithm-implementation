@@ -105,7 +105,7 @@ int main(int argc, char const *argv[])
 		input.push_back(temp);
 	}
 
-	vector<int> arSet = SubSetSum(input, target);
+	SubSetSum(input, target);
 
 	if(found)
 	{
