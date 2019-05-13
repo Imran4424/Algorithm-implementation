@@ -35,6 +35,15 @@ int main(int argc, char const *argv[])
 	}
 
 	bool status = SubsetSum(input, size, target);
+
+	if(status)
+	{
+		printf("Solution exists\n");
+	}
+	else
+	{
+		printf("Solution doesn't exists\n");
+	}
 	
 	return 0;
 }
