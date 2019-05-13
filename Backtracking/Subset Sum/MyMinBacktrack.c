@@ -102,7 +102,7 @@ bool SubsetSum(int input[], int size, int target)
 
 		bool found = SubSetSolve(input, size, i, 0, target);
 
-		if (status)
+		if (found)
 		{
 			return true;
 		}
