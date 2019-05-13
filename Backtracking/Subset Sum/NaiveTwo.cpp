@@ -40,7 +40,7 @@ vector<int> SubsetSum(int input[], int n, int sum, vector <int> solve)
 
 	if (status)
 	{
-		return solve;
+		return result;
 	}
 }
 
