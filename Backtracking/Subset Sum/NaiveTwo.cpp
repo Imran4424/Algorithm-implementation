@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <vector>
 
-int solve[25];
-int count = 0;
 
 bool SubsetSum(int input[], int n, int sum)
 {
