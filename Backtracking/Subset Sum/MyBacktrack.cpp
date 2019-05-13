@@ -136,6 +136,8 @@ int main(int argc, char const *argv[])
 
 	new array: 2 3 4 5
 
+	now the recusive call will be like 
+
 
 
 */
