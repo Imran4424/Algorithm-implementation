@@ -1,27 +1,32 @@
 #include <stdio.h>
 #include <vector>
 
+bool status = false;
 
-bool SubsetSum(int input[], int n, int sum)
+vector<int> SubsetSum(int input[], int n, int sum, vector<int> solve)
 {
 	if (0 == sum)
 	{
-		return true;
+		status = true;
+
+		return solve;
 	}
 
 	if(0 == n && sum != 0)
 	{
-		return false;
+		status = false;
+
+		return solve;
 	}
 
 	if (input[n-1] > sum)
 	{
-		return SubsetSum(input, n-1, sum);
+		return SubsetSum(input, n-1, sum, solve);
 	}
 
-	solve[count++] = input[n-1];
+	solve.push_back(input[n-1]);
 
-	return (SubsetSum(input, n-1, sum) || SubsetSum(input, n-1, sum - input[n-1]));
+	return (SubsetSum(input, n-1, sum, solve) || SubsetSum(input, n-1, sum - input[n-1]), solve);
 }
 
 int main(int argc, char const *argv[])
