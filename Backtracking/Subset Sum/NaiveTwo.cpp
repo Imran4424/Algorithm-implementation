@@ -30,7 +30,7 @@ bool SubsetSum(int input[], int n, int sum, vector <int> result)
 
 	if(SubsetSum(input, n-1, sum, result) || SubsetSum(input, n-1, sum - input[n-1], result))
 	{
-		solve = result;
+		//solve = result;
 
 		return true;
 	}
