@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <vector>
 
 int solve[25];
 int count = 0;
