@@ -12,7 +12,7 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 
 	arSet.push_back(input[index]);
 
-	if(sum == target) // 
+	if(sum == target) // base
 	{
 		found = true;
 
@@ -26,7 +26,7 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 		arSet.erase(arSet.begin());
 	}
 
-	if(sum == target)
+	if(sum == target) // base
 	{
 		found = true;
 
@@ -44,13 +44,7 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 		return SubSetSolve(input, arSet, 0, sum, target);		
 	}
 	
-	if(secondRoute && index >= input.size()-1)
-	{
-		int x = 300;
-		while(x--);
-
-		return arSet;
-	}
+	return arSet;
 }
 
 
