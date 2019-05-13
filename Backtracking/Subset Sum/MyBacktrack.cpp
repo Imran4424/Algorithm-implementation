@@ -114,3 +114,8 @@ int main(int argc, char const *argv[])
 
 	return 0;
 }
+
+
+/*
+	Own implemented backtrack algorithm
+*/
