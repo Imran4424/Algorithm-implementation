@@ -4,7 +4,7 @@
 using namespace std;
 
 bool found = false;
-bool secondRoute = false;
+bool secondRoute;
 
 vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int sum, int target)
 {
@@ -33,7 +33,7 @@ vector<int> SubSetSolve(vector <int> input, vector <int> arSet, int index, int s
 	else if(!secondRoute)
 	{
 		secondRoute = true;
-		
+
 		return SubSetSolve(input, arSet, 0, sum, target);		
 	}
 
@@ -60,6 +60,8 @@ vector<int> SubSetSum(vector<int> input, int target)
 
 	for(int k=0; k < input.size(); k++)
 	{
+		secondRoute = false;
+
 		if(found)
 		{
 			break;
