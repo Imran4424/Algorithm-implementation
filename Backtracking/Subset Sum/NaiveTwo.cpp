@@ -10,7 +10,12 @@ bool SubsetSum(int input[], int n, int sum, vector <int> result)
 {
 	if (0 == sum)
 	{
-		solve = result;
+		// solve = result;
+
+		for (int i = 0; i < result.size(); ++i)
+		{
+			solve.push_back(result[i]);
+		}
 
 		return true;
 	}
