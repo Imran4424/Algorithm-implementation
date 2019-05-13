@@ -26,12 +26,20 @@ vector<int> SubsetSum(int input[], int n, int sum, vector <int> solve)
 	}
 
 	solve.push_back(input[n-1]);
+	
+	solve = SubsetSum(input, n-1, sum, solve);
 
+	if(status)
+	{
+		return solve;
+	}
 
-	//return SubsetSum(input, n-1, sum, solve);
+	solve = SubsetSum(input, n-1, sum - input[n-1], solve);
 
-	return SubsetSum(input, n-1, sum - input[n-1], solve);
-
+	if (status)
+	{
+		return solve;
+	}
 }
 
 int main(int argc, char const *argv[])
