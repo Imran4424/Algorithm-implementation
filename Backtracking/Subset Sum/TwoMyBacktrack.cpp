@@ -32,7 +32,7 @@ void SubSetSolve(vector <int> input, vector <int> arSet, int index, int sum, int
 	{
 		found = true;
 
-		return arSet;
+		solve = arSet;
 	}
 
 	if(index < input.size()-1)
