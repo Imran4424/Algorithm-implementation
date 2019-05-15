@@ -7,7 +7,7 @@ vector <int> Merge(vector <int> left, vector <int> right, vector <int> ar)
 {
 	ar.clear();
 
-	int i=0,
+	int i = 0, j = 0;
 }
 
 vector <int> MergeSort(vector <int> ar)
