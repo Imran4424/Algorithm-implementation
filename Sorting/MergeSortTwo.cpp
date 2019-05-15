@@ -11,7 +11,7 @@ vector <int> Merge(vector <int> left, vector <int> right)
 
 	while(i < left.size() && j < right.size())
 	{
-		if (left[i] <= right)
+		if (left[i] <= right[j])
 		{
 			sorted.push_back(left[i]);
 
@@ -19,7 +19,7 @@ vector <int> Merge(vector <int> left, vector <int> right)
 		}
 		else
 		{
-			sorted.push_back(right[i]);
+			sorted.push_back(right[j]);
 
 			j++;
 		}
@@ -72,6 +72,32 @@ vector <int> MergeSort(vector <int> ar)
 
 int main(int argc, char const *argv[])
 {
-	
+	cout << "enter the array size" << endl;
+
+	int size;
+	cin >> size;
+
+	vector <int> ar;
+
+	cout << "enter the array you want to be sorted" << endl;
+
+	int input;
+
+	for(int i=0; i < size; i++)
+	{
+		cin >> input;
+
+		ar.push_back(input);
+	}
+
+	ar = MergeSort(ar);
+
+	for (int i = 0; i < ar.size(); ++i)
+	{
+		cout << ar[i] << " ";
+	}
+
+	cout << endl;
+
 	return 0;
 }
