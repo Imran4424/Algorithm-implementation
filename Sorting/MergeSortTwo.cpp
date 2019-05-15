@@ -3,11 +3,42 @@
 using namespace std;
 
 
-vector <int> Merge(vector <int> left, vector <int> right, vector <int> ar)
+vector <int> Merge(vector <int> left, vector <int> right)
 {
-	ar.clear();
+	vector <int> sorted;
 
 	int i = 0, j = 0;
+
+	while(i < left.size() && j < right.size())
+	{
+		if (left[i] <= right)
+		{
+			sorted.push_back(left[i]);
+
+			i++;
+		}
+		else
+		{
+			sorted.push_back(right[i]);
+
+			j++;
+		}
+	}
+
+	while(i < left.size())
+	{
+		sorted.push_back(left[i]);
+		i++;
+	}
+
+	while(j < right.size())
+	{
+		sorted.push_back(right[j]);
+
+		j++;
+	}
+
+	return sorted;
 }
 
 vector <int> MergeSort(vector <int> ar)
@@ -35,7 +66,7 @@ vector <int> MergeSort(vector <int> ar)
 
 	right = MergeSort(right);
 
-	return Merge(left, right, ar);
+	return Merge(left, right);
 }
 
 
