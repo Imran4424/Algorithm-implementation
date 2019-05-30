@@ -2,6 +2,10 @@
 #include <vector>
 using namespace std;
 
+bool GraphColoring(vector< vector <int> > list)
+{
+	
+}
 
 
 int main(int argc, char const *argv[])
