@@ -6,9 +6,11 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	cout << "enter the number of vertices" << endl;
+	cout << "enter the number of vertices and edges" << endl;
 
-	int vertices;
+	int vertices, edges;
+
+	cin >> vertices >> edges;
 
 	cout << "enter the adjacency node" << endl;
 
