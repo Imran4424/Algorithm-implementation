@@ -10,11 +10,12 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 
 	currentColor[startNode] = 1;
 
-	currentList.push_back(startNode);
+	currentList.push(startNode);
 
 	while(!currentList.empty())
 	{
-		
+		int hand = currentList.front();
+		currentList.pop()
 	}
 }
 
