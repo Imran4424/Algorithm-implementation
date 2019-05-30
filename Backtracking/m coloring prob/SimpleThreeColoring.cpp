@@ -3,9 +3,9 @@
 using namespace std;
 
 
-bool GraphColoring(vector< vector <int> > list, vector<int> currentColor, int currentNode)
+int GraphColoring(vector< vector <int> > list, vector<int> currentColor, int currentNode)
 {
-
+	
 }
 
 
