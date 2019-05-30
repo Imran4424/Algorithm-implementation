@@ -34,6 +34,8 @@ int main(int argc, char const *argv[])
 
 	vector <int> currentColor(vertices+1, -1);
 
+	GraphColoring(list, currentColor, currentNode);
+
 	return 0;
 }
 
