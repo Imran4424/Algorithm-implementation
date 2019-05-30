@@ -4,11 +4,13 @@
 using namespace std;
 
 
-int BiColoring(vector< vector <int> > list, vector<int> currentColor, int startNode)
+bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int startNode)
 {
 	queue <int> currentList;
 
 	currentColor[startNode] = 1;
+
+	
 }
 
 
