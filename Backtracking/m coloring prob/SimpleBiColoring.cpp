@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
 
 	vector <int> currentColor(vertices+1, -1);
 
-	GraphColoring(list, currentColor, 1);
+	BiColoring(list, currentColor, 1);
 
 	return 0;
 }
