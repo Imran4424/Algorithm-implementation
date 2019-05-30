@@ -6,9 +6,9 @@ using namespace std;
 
 int GraphColoring(vector< vector <int> > list, vector<int> currentColor, int startNode)
 {
-	queue <int> Q;
+	queue <int> currentList;
 
-	if
+	currentColor[startNode] = 1;
 }
 
 
