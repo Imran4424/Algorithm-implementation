@@ -3,7 +3,7 @@
 using namespace std;
 
 
-bool GraphColoring(vector< vector <int> > list, vector<int> currentColor)
+bool GraphColoring(vector< vector <int> > list, vector<int> currentColor, int currentNode)
 {
 
 }
