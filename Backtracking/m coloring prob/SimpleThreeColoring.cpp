@@ -1,11 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 using namespace std;
 
 
 int GraphColoring(vector< vector <int> > list, vector<int> currentColor, int currentNode)
 {
-	
+	queue <int> Q;
+
+	if
 }
 
 
