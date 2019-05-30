@@ -16,6 +16,11 @@ int main(int argc, char const *argv[])
 
 	vector <int> list[vertices];
 
+	for (int i = 0; i < edges; ++i)
+	{
+		/* code */
+	}
+
 
 	return 0;
 }
