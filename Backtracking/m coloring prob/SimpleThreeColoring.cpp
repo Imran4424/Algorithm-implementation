@@ -18,7 +18,12 @@ int main(int argc, char const *argv[])
 
 	for (int i = 0; i < edges; ++i)
 	{
-		/* code */
+		int a, b;
+
+		cin >> a >> b;
+
+		list[a].push_back(b);
+		list[b].push_back(a);
 	}
 
 
