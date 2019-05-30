@@ -2,9 +2,10 @@
 #include <vector>
 using namespace std;
 
-bool GraphColoring(vector< vector <int> > list)
+
+bool GraphColoring(vector< vector <int> > list, vector<int> currentColor)
 {
-	
+
 }
 
 
@@ -18,6 +19,7 @@ int main(int argc, char const *argv[])
 
 	cout << "enter the adjacency node" << endl;
 
+
 	vector <int> list[vertices+1]; // for starting the count from 1
 
 	for (int i = 0; i < edges; ++i)
@@ -30,6 +32,7 @@ int main(int argc, char const *argv[])
 		list[b].push_back(a);
 	}
 
+	vector <int> currentColor(vertices+1, -1);
 
 	return 0;
 }
