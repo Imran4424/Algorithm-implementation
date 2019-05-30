@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int GraphColoring(vector< vector <int> > list, vector<int> currentColor, int currentNode)
+int GraphColoring(vector< vector <int> > list, vector<int> currentColor, int startNode)
 {
 	queue <int> Q;
 
@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
 
 	vector <int> currentColor(vertices+1, -1);
 
-	GraphColoring(list, currentColor, currentNode);
+	GraphColoring(list, currentColor, 1);
 
 	return 0;
 }
