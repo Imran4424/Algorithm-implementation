@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 
 	cout << "enter the adjacency node" << endl;
 
-	vector <int> list[vertices];
+	vector <int> list[vertices+1]; // for starting the count from 1
 
 	for (int i = 0; i < edges; ++i)
 	{
