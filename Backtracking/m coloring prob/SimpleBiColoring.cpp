@@ -15,7 +15,12 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 	while(!currentList.empty())
 	{
 		int hand = currentList.front();
-		currentList.pop()
+		currentList.pop();
+
+		if (currentColor == -1)
+		{
+			
+		}
 	}
 }
 
