@@ -37,7 +37,7 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 				
 			}
 		}
-		else if (/* condition */)
+		else if (currentColor[hand] == 2)
 		{
 			/* code */
 		}
