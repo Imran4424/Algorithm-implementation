@@ -21,7 +21,7 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 		{
 			for (int i = 0; i < list[hand].size(); ++i)
 			{
-				if (currentColor[])
+				if (currentColor[list[hand][i]])
 				{
 					/* code */
 				}
