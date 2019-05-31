@@ -23,11 +23,24 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 
 			for (int i = 0; i < list[hand].size(); ++i)
 			{
-				if (currentColor[list[hand][i]] == )
+				if (currentColor[list[hand][i]] != -1)
 				{
-					/* code */
+					adj[currentColor[list[hand][i]]] = 1;
+				}
+				else
+				{
+					currentList.push(list[hand][i]);
 				}
 			}
+			
+			int x = 1;
+
+			while(adj.count(x) != 0)
+			{
+				x++;
+			}
+
+			
 		}
 	}
 }
