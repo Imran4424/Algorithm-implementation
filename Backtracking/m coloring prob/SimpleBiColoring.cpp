@@ -37,6 +37,10 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 				
 			}
 		}
+		else if (/* condition */)
+		{
+			/* code */
+		}
 	}
 }
 
