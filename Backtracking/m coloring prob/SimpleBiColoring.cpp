@@ -19,7 +19,10 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 
 		if (currentColor[hand] == 1)
 		{
-			
+			for (int i = 0; i < list[hand].size(); ++i)
+			{
+				/* code */
+			}
 		}
 	}
 }
