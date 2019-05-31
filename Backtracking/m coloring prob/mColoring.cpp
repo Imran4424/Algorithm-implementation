@@ -40,6 +40,10 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 				x++;
 			}
 
+			currentColor[x] = k;			
+		}
+		else
+		{
 			
 		}
 	}
