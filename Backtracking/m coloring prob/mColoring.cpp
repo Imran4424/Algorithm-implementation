@@ -42,7 +42,12 @@ int BiColoring(vector< vector <int> > list, vector<int> currentColor, int startN
 				x++;
 			}
 
-			currentColor[x] = k;			
+			if (x > maxColorcount)
+			{
+				maxColorcount = x;
+			}
+
+			currentColor[hand] = x;			
 		}
 		else
 		{
