@@ -19,7 +19,7 @@ int BiColoring(vector< vector <int> > list, vector<int> currentColor, int startN
 		int hand = currentList.front();
 		currentList.pop();
 
-		if (currentColor == -1)
+		if (currentColor[hand] == -1)
 		{
 			map <int, int> adj;
 
@@ -51,7 +51,7 @@ int BiColoring(vector< vector <int> > list, vector<int> currentColor, int startN
 		}
 		else
 		{
-
+			
 		}
 	}
 }
