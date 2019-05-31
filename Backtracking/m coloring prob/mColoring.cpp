@@ -4,8 +4,10 @@
 using namespace std;
 
 
-bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int startNode)
+int BiColoring(vector< vector <int> > list, vector<int> currentColor, int startNode)
 {
+	int maxColorcount = 0;
+
 	queue <int> currentList;
 
 	currentColor[startNode] = 1;
@@ -44,7 +46,7 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 		}
 		else
 		{
-			
+
 		}
 	}
 }
