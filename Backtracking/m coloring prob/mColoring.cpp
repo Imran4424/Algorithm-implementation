@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int BiColoring(vector< vector <int> > list, vector<int> currentColor, int startNode)
+int mColoring(vector< vector <int> > list, vector<int> currentColor, int startNode)
 {
 	int maxColorcount = 0;
 
@@ -60,6 +60,8 @@ int BiColoring(vector< vector <int> > list, vector<int> currentColor, int startN
 			}
 		}
 	}
+
+	return maxColorcount;
 }
 
 
@@ -88,7 +90,9 @@ int main(int argc, char const *argv[])
 
 	vector <int> currentColor(vertices+1, -1);
 
-	BiColoring(list, currentColor, 1);
+	int maxColorcount =  mColoring(list, currentColor, 1);
+
+	cout << "Total " << maxColorcount << "colors need to color the graph" << endl;
 
 	return 0;
 }
