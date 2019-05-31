@@ -43,13 +43,13 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 			{
 				if (currentColor[list[hand][i]] == -1)
 				{
-					currentColor[list[hand][i]] = 2;
+					currentColor[list[hand][i]] = 1;
 
 					currentList.push(list[hand][i]);
 				}
 				else
 				{
-					if (currentColor[list[hand][i]] == 1)
+					if (currentColor[list[hand][i]] == 2)
 					{
 						return false;
 					}
