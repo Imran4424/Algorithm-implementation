@@ -58,6 +58,8 @@ bool BiColoring(vector< vector <int> > list, vector<int> currentColor, int start
 			}
 		}
 	}
+
+	return true;
 }
 
 
