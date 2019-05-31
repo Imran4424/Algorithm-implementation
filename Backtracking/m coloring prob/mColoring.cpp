@@ -51,7 +51,17 @@ int BiColoring(vector< vector <int> > list, vector<int> currentColor, int startN
 		}
 		else
 		{
-			
+			for (int i = 0; i < list[hand].size(); ++i)
+			{
+				if (currentColor[list[hand][i]] != -1)
+				{
+					adj[currentColor[list[hand][i]]] = 1;
+				}
+				else
+				{
+					currentList.push(list[hand][i]);
+				}
+			}
 		}
 	}
 }
