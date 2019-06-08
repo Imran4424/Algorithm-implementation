@@ -28,7 +28,7 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 
 		// int mid = start + (rand() % (stop - start + 1));
 
-		
+		int mid = start + (stop - 1) / 2;
 
 		if (ar[mid] == target)
 		{
