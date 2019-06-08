@@ -4,7 +4,7 @@
 using namespace std;
 
 
-bool BiColoring(vector< vecto> list, vector<int> currentColor, int startNode)
+bool BiColoring(vector< vec> list, vector<int> currentColor, int startNode)
 {
 	queue <int> currentList;
 
