@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int mColoring(vector< vecto> list, vector<int> currentColor, int startNode)
+int mColoring(vector< vect> list, vector<int> currentColor, int startNode)
 {
 	int maxColorcount = 0;
 
