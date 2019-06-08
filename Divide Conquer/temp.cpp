@@ -1,12 +1,27 @@
 // C++ program to implement recursive Binary Search 
-#include <iostream> 
+#include <iostream>
+#include <vector>
+#include <time.h>
+#include <algorithm>
+#include <stdlib.h>
 using namespace std; 
+
+bool isSorted = false;
+
 
 // A recursive binary search function. It returns 
 // location of x in given array arr[l..r] is present, 
 // otherwise -1 
-int BinarySearch(int arr[], int l, int r, int x) 
+int BinarySearch(vector<int> arr, int l, int r, int x) 
 { 
+	if (!isSorted)
+	{
+		sort(arr.begin(), arr.end());
+
+		isSorted = true;
+	}
+
+
 	if (r >= l) { 
 		int mid = l + (r - l) / 2; 
 
@@ -18,11 +33,11 @@ int BinarySearch(int arr[], int l, int r, int x)
 		// If element is smaller than mid, then 
 		// it can only be present in left subarray 
 		if (arr[mid] > x) 
-			return binarySearch(arr, l, mid - 1, x); 
+			return BinarySearch(arr, l, mid - 1, x); 
 
 		// Else the element can only be present 
 		// in right subarray 
-		return binarySearch(arr, mid + 1, r, x); 
+		return BinarySearch(arr, mid + 1, r, x); 
 	} 
 
 	// We reach here when element is not 
