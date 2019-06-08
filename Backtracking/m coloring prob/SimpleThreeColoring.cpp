@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int TriColoring(vector< vecto> list, vector<int> currentColor, int startNode)
+int TriColoring(vector< vect> list, vector<int> currentColor, int startNode)
 {
 	queue <int> currentList;
 
