@@ -4,7 +4,7 @@
 using namespace std;
 
 
-bool BiColoring(vector<int> list[], vector<int> currentColor, int startNode)
+bool BiColoring(vector<int> list[], vector<int> currentColor, int startNode) // multiple 1d vectors passing "list"
 {
 	queue <int> currentList;
 
