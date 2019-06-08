@@ -24,11 +24,11 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 
 	if(start <= stop)
 	{
-		// srand(time(0)); // for managing session
+		srand(time(0)); // for managing session
 
-		// int mid = start + (rand() % (stop - start + 1));
+		int mid = start + (rand() % (stop - start + 1));
 
-		int mid = start + (stop - 1) / 2;
+		// int mid = start + (stop - 1) / 2;
 
 		if (ar[mid] == target)
 		{
