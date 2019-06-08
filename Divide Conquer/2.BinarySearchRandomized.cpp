@@ -24,7 +24,8 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 
 	if(start <= stop)
 	{
-		
+			srand(time(0)); // for managing session
+
 		int mid = (start + stop) / 2;
 
 		if (ar[mid] == target)
