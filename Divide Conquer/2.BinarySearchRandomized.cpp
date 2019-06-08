@@ -26,7 +26,7 @@ int BinarySearch(vector<int> ar, int target, int start, int stop)
 	{
 		srand(time(0)); // for managing session
 
-		int mid = (start + stop) / 2;
+		int mid = start + (rand() % (stop - start + 1));
 
 		if (ar[mid] == target)
 		{
