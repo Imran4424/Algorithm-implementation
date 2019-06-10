@@ -21,6 +21,10 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 		{
 			auxilary[k++] = roksana[i++];
 		}
+		else
+		{
+			auxilary[k++] = roksana[j++];
+		}
 	}
 }
 
