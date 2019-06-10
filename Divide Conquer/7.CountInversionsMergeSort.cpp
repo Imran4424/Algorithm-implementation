@@ -69,12 +69,7 @@ int MergeSort(vector<int> &roksana, int left, int right)
 	return inversionCount;
 }
 
-int MergeSortHandler(vector <int> roksana)
-{
-	vector <int> auxilary(roksana.size());
 
-	return MergeSort(roksana, auxilary, 0, roksana.size()-1);
-}
 
 int main(int argc, char const *argv[])
 {
