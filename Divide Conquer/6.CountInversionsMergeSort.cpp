@@ -8,7 +8,10 @@
 using namespace std;
 
 
-
+int MergeSort(vector<int> roksana, int left, int right)
+{
+	
+}
 
 int main(int argc, char const *argv[])
 {
