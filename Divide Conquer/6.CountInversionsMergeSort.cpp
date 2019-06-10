@@ -8,7 +8,7 @@
 using namespace std;
 
 
-int MergeSort(vector<int> roksana, int left, int right)
+int MergeSort(vector<int> roksana, vector <int> auxilary, int left, int right)
 {
 	int mid, inversionCount = 0;
 
