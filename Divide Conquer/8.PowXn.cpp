@@ -7,7 +7,7 @@ lli Power(lli x, lli y)
 {
 	if (y == 0)
 	{
-		/* cod
+		/* co
 	}
 }
 
