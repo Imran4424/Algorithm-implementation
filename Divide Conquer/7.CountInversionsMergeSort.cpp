@@ -21,7 +21,8 @@ int Merge(vector <int> &roksana, int left, int mid, int right)
 	{
 		if (roksana[i] <= roksana[j])
 		{
-			auxilary[k++] = roksana[i++];
+			// auxilary[k++] = roksana[i++];
+			auxilary.push_back(roksana[i++]);
 		}
 		else
 		{
