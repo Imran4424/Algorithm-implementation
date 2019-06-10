@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
 	int n;
 	cin >> n;
 
-	vector <int> arr;
+	vector <int> arr(n);
 
 	srand(time(0)); // for managing session
 
