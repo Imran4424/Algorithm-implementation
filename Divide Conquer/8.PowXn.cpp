@@ -9,9 +9,9 @@ lli Power(lli x, lli y)
 	{
 		return 1;
 	}
-	else if (/* condition */)
+	else if (y % 2 == 0)
 	{
-		/* code */
+		/* code 
 	}
 
 }
