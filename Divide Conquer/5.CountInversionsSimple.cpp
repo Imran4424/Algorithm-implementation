@@ -37,6 +37,6 @@ int main(int argc, char const *argv[])
 		arr.push_back(rand() % 100 + 1);
 	}
 
-	int result = 
+	int result = CountInversions(arr);
 	return 0;
 }
