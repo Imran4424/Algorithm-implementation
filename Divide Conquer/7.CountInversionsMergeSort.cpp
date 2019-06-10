@@ -26,7 +26,8 @@ int Merge(vector <int> &roksana, int left, int mid, int right)
 		}
 		else
 		{
-			auxilary[k++] = roksana[j++];
+			// auxilary[k++] = roksana[j++];
+			auxilary.push_back(roksana[j++]);
 
 
 			inversionCount += (mid - i + 1);
