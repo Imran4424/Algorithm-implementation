@@ -35,6 +35,8 @@ int main(int argc, char const *argv[])
 	for (int i = 0; i < n; ++i)
 	{
 		arr.push_back(rand() % 20 + 1);
+
+		cout << arr[i] << " ";
 	}
 
 	int result = CountInversions(arr);
