@@ -38,5 +38,8 @@ int main(int argc, char const *argv[])
 	}
 
 	int result = CountInversions(arr);
+
+	
+	
 	return 0;
 }
