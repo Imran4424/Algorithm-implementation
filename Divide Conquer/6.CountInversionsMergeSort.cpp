@@ -16,6 +16,9 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 	k = left; // k is index for merged sub array
 
 	while((i <= mid - 1) && (j <= right))
+	{
+		
+	}
 }
 
 int MergeSort(vector<int> roksana, vector <int> auxilary, int left, int right)
