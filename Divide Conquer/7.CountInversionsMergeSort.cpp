@@ -1,95 +1,87 @@
-// C++ program to Count 
-// Inversions in an array 
-// using Merge Sort 
-#include <bits/stdc++.h> 
-using namespace std; 
+/*
+	By using enhance merge sort
+*/
 
-int _mergeSort(int arr[], int temp[], int left, int right); 
-int merge(int arr[], int temp[], int left, int mid, int right); 
+#include <iostream>
+#include <vector>
+#include <time.h>
+using namespace std;
 
-/* This function sorts the input array and returns the 
-number of inversions in the array */
-int mergeSort(int arr[], int array_size) 
-{ 
-	int* temp = (int*)malloc(sizeof(int) * array_size); 
-	return _mergeSort(arr, temp, 0, array_size - 1); 
-} 
+int Merge(vector <int> &roksana, vector <int> auxilary, int left, int mid, int right)
+{
+	int i, j, k, inversionCount = 0;
 
-/* An auxiliary recursive function that sorts the input array and 
-returns the number of inversions in the array. */
-int _mergeSort(int arr[], int temp[], int left, int right) 
-{ 
-	int mid, inv_count = 0; 
-	if (right > left) 
-	{ 
-		/* Divide the array into two parts and 
-		call _mergeSortAndCountInv() 
-		for each of the parts */
-		mid = (right + left) / 2; 
+	i = left; // i is index for left sub array
+	j = mid + 1;  // j is index for right sub array
+	k = left; // k is index for merged sub array
 
-		/* Inversion count will be sum of 
-		inversions in left-part, right-part 
-		and number of inversions in merging */
-		inv_count = _mergeSort(arr, temp, left, mid); 
-		inv_count += _mergeSort(arr, temp, mid + 1, right); 
-
-		/*Merge the two parts*/
-		inv_count += merge(arr, temp, left, mid + 1, right); 
-	} 
-	return inv_count; 
-} 
-
-/* This funt merges two sorted arrays 
-and returns inversion count in the arrays.*/
-int merge(int arr[], int temp[], int left, 
-						int mid, int right) 
-{ 
-	int i, j, k; 
-	int inv_count = 0; 
-
-	i = left; /* i is index for left subarray*/
-	j = mid; /* j is index for right subarray*/
-	k = left; /* k is index for resultant merged subarray*/
-	while ((i <= mid - 1) && (j <= right)) 
-	{ 
-		if (arr[i] <= arr[j]) 
-		{ 
-			temp[k++] = arr[i++]; 
-		} 
+	while((i <= mid) && (j <= right))
+	{
+		if (roksana[i] <= roksana[j])
+		{
+			auxilary[k++] = roksana[i++];
+		}
 		else
-		{ 
-			temp[k++] = arr[j++]; 
+		{
+			auxilary[k++] = roksana[j++];
 
-			/* this is tricky -- see above 
-			explanation/diagram for merge()*/
-			inv_count = inv_count + (mid - i); 
-		} 
-	} 
 
-	/* Copy the remaining elements of left subarray 
-(if there are any) to temp*/
-	while (i <= mid - 1) 
-		temp[k++] = arr[i++]; 
+			inversionCount += (mid - i + 1);
+		}
+	}
 
-	/* Copy the remaining elements of right subarray 
-(if there are any) to temp*/
-	while (j <= right) 
-		temp[k++] = arr[j++]; 
+	while(i <= mid)
+	{
+		auxilary[k++] = roksana[i++];
+	}
 
-	/*Copy back the merged elements to original array*/
-	for (i = left; i <= right; i++) 
-		arr[i] = temp[i]; 
+	while(j <= right)
+	{
+		auxilary[k++] = roksana[j++];
+	}
 
-	return inv_count; 
-} 
+	/* copying back the merged elements to original array */
 
-/* Driver code */
-int main(int argv, char** args) 
-{ 
-	// int arr[] = { 1, 20, 6, 4, 5 }; 
-	int arr[] = { 13, 1, 3, 19, 11, 3, 4, 1, 10, 8 }; 
-	cout << " Number of inversions are " << mergeSort(arr, 10) << endl; 
-	return 0; 
-} 
+	for (i = left; i <= right; ++i)
+	{
+		roksana[i] = auxilary[i];
+	}
 
-// This is code is contributed by rathbhupendra 
+	return inversionCount;
+}
+
+int MergeSort(vector<int> &roksana, int left, int right)
+{
+	int mid, inversionCount = 0;
+
+	if (right > left)
+	{
+		mid = (left + right) / 2;
+
+		inversionCount += MergeSort(roksana, auxilary, left, mid); // left sub array
+		inversionCount += MergeSort(roksana, auxilary, mid+1, right); // right sub array
+
+		/* merging two parts*/
+
+		inversionCount += Merge(roksana, auxilary, left, mid, right);
+	}
+
+	return inversionCount;
+}
+
+int MergeSortHandler(vector <int> roksana)
+{
+	vector <int> auxilary(roksana.size());
+
+	return MergeSort(roksana, auxilary, 0, roksana.size()-1);
+}
+
+int main(int argc, char const *argv[])
+{
+	vector <int> roksana{13, 1, 3, 19, 11, 3, 4, 1, 10, 8}; // 23
+	// vector <int> roksana{1, 20, 6, 4, 5}; // 5
+
+	cout << "Number of inversions are: " << MergeSortHandler(roksana) << endl;
+
+	return 0;
+}
