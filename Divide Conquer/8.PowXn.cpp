@@ -13,6 +13,10 @@ lli Power(lli x, lli y)
 	{
 		return Power(x, y/2) * Power(x, y/2);
 	}
+	else
+	{
+		return x * Power(x, y/2) * Power(x, y/2);
+	}
 
 }
 
