@@ -50,7 +50,7 @@ int Merge(vector <int> &roksana, int left, int mid, int right)
 
 	for (i = left; i <= right; ++i)
 	{
-		roksana[i] = auxilary[i];
+		roksana[i] = auxilary[i-left];
 	}
 
 	return inversionCount;
