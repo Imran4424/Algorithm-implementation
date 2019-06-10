@@ -30,7 +30,7 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 		}
 	}
 
-	while(i <= mid)
+	while(i <= mid-1)
 	{
 		auxilary[k++] = roksana[i++];
 	}
