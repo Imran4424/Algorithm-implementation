@@ -36,7 +36,8 @@ int Merge(vector <int> &roksana, int left, int mid, int right)
 
 	while(i <= mid)
 	{
-		auxilary[k++] = roksana[i++];
+		// auxilary[k++] = roksana[i++];
+		auxilary.push_back(roksana[i++]);
 	}
 
 	while(j <= right)
