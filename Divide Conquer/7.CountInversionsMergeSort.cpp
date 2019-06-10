@@ -11,6 +11,8 @@ int Merge(vector <int> &roksana, int left, int mid, int right)
 {
 	int i, j, k, inversionCount = 0;
 
+	vector <int> auxilary;
+
 	i = left; // i is index for left sub array
 	j = mid + 1;  // j is index for right sub array
 	k = left; // k is index for merged sub array
