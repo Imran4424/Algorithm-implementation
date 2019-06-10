@@ -9,6 +9,8 @@ using namespace std;
 
 int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int right)
 {
+	int i, j, k, inversionCount = 0;
+
 	
 }
 
