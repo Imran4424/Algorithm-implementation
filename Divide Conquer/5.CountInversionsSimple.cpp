@@ -10,7 +10,10 @@ int CountInversions(vector <int> arr)
 	{
 		for (int j = i+1; j < arr.size(); ++j)
 		{
-			/* code */
+			if (arr[i] > arr[j])
+			{
+				/* code */
+			}
 		}
 	}
 }
