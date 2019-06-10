@@ -59,7 +59,7 @@ int MergeSort(vector<int> &roksana, int left, int right)
 		mid = (left + right) / 2;
 
 		inversionCount += MergeSort(roksana, left, mid); // left sub array
-		inversionCount += MergeSort(roksana, auxilary, mid+1, right); // right sub array
+		inversionCount += MergeSort(roksana, mid+1, right); // right sub array
 
 		/* merging two parts*/
 
