@@ -5,7 +5,10 @@ typedef long long int lli;
 
 lli Power(lli x, lli y)
 {
-	
+	if (y == 0)
+	{
+		/* code */
+	}
 }
 
 int main(int argc, char const *argv[])
