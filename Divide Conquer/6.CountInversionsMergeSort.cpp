@@ -10,7 +10,7 @@ using namespace std;
 
 int MergeSort(vector<int> roksana, int left, int right)
 {
-	
+	int mid, inversionCount = 0;
 }
 
 int main(int argc, char const *argv[])
