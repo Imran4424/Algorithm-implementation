@@ -34,7 +34,9 @@ int main(int argc, char const *argv[])
 
 	for (int i = 0; i < n; ++i)
 	{
-		arr.push_back(rand() % 20 + 1);
+		// arr.push_back(rand() % 20 + 1);
+
+		cin >> arr[i];
 
 		cout << arr[i] << " ";
 	}
