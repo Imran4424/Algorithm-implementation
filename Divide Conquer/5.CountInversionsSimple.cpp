@@ -16,6 +16,8 @@ int CountInversions(vector <int> arr)
 			}
 		}
 	}
+
+	return inversionCount;
 }
 
 int main(int argc, char const *argv[])
