@@ -23,7 +23,7 @@ int CountInversions(vector <int> arr)
 
 int main(int argc, char const *argv[])
 {
-	cout << "enter the array"
+	cout << "enter the array size" << endl;
 
 	return 0;
 }
