@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
 
 	srand(time(0)); // for managing session
 
-	for (int i = 0; i < arr.size(); ++i)
+	for (int i = 0; i < n; ++i)
 	{
 		arr.push_back(rand() % 100 + 1);
 	}
