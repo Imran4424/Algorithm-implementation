@@ -17,7 +17,7 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 
 	while((i <= mid) && (j <= right))
 	{
-		if (/* condition */)
+		if (roksana[i] <= roksana[j])
 		{
 			/* code */
 		}
