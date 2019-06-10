@@ -21,10 +21,15 @@ int MergeSort(vector<int> roksana, int left, int right)
 
 		/* merging two parts*/
 
-		
+
 	}
 
 	return inversionCount;
+}
+
+int MergeSortHandler(vector <int> roksana)
+{
+	vector <int> auxilary(roksana.size());
 }
 
 int main(int argc, char const *argv[])
