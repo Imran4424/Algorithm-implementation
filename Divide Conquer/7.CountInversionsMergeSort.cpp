@@ -69,7 +69,7 @@ int MergeSort(vector<int> &roksana, int left, int right)
 
 		/* merging two parts*/
 
-		inversionCount += Merge(roksana, auxilary, left, mid, right);
+		inversionCount += Merge(roksana, left, mid, right);
 	}
 
 	return inversionCount;
