@@ -80,5 +80,7 @@ int main(int argc, char const *argv[])
 {
 	vector <int> roksana{13, 1, 3, 19, 11, 3, 4, 1, 10, 8}; // 23
 
+	cout << "Number of inversions are: " << MergeSortHandler(roksana) << endl;
+
 	return 0;
 }
