@@ -7,9 +7,8 @@
 #include <time.h>
 using namespace std;
 
-int Merge()
 
-int MergeSort(vector<int> roksana)
+int MergeSort(vector<int> roksana, int left, int right)
 {
 	int mid, inversionCount = 0;
 
@@ -22,7 +21,7 @@ int MergeSort(vector<int> roksana)
 
 		/* merging two parts*/
 
-
+		
 	}
 
 	return inversionCount;
