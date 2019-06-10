@@ -29,6 +29,16 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 			inversionCount += (mid - i + 1);
 		}
 	}
+
+	while(i <= mid)
+	{
+		auxilary[k++] = roksana[i++];
+	}
+
+	while(j <= right)
+	{
+		auxilary[k++] = roksana[j++];
+	}
 }
 
 int MergeSort(vector<int> roksana, vector <int> auxilary, int left, int right)
