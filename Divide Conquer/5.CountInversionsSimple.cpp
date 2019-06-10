@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 
 	vector <int> arr;
 
-	srand(time(0)); // for managing 
+	srand(time(0)); // for managing session
 
 	return 0;
 }
