@@ -78,7 +78,7 @@ int MergeSortHandler(vector <int> roksana)
 
 int main(int argc, char const *argv[])
 {
-	vector <int> roksana{}
+	vector <int> roksana{13, 1, 3, 19, 11, 3, 4, 1, 10, 8};
 
 	return 0;
 }
