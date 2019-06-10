@@ -7,6 +7,10 @@
 #include <time.h>
 using namespace std;
 
+int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int right)
+{
+	
+}
 
 int MergeSort(vector<int> roksana, vector <int> auxilary, int left, int right)
 {
@@ -16,8 +20,8 @@ int MergeSort(vector<int> roksana, vector <int> auxilary, int left, int right)
 	{
 		mid = (left + right) / 2;
 
-		inversionCount += MergeSort(roksana, left, mid); // left sub array
-		inversionCount += MergeSort(roksana, mid+1, right); // right sub array
+		inversionCount += MergeSort(roksana, auxilary, left, mid); // left sub array
+		inversionCount += MergeSort(roksana, auxilary, mid+1, right); // right sub array
 
 		/* merging two parts*/
 
@@ -30,6 +34,8 @@ int MergeSort(vector<int> roksana, vector <int> auxilary, int left, int right)
 int MergeSortHandler(vector <int> roksana)
 {
 	vector <int> auxilary(roksana.size());
+
+	return MergeSort(roksana, auxilary, 0, roksana.size()-1);
 }
 
 int main(int argc, char const *argv[])
