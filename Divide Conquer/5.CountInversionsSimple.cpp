@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
 
 	int result = CountInversions(arr);
 
-	
-	
+	cout << "Number of inversions are: " << result << endl;
+
 	return 0;
 }
