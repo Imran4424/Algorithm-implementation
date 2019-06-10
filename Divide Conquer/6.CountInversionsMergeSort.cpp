@@ -42,7 +42,10 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 
 	/* copying back the merged elements to original array */
 
-	
+	for (i = left; i <= right; ++i)
+	{
+		/* code */
+	}
 }
 
 int MergeSort(vector<int> roksana, vector <int> auxilary, int left, int right)
