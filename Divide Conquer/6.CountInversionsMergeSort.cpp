@@ -19,7 +19,7 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 	{
 		if (roksana[i] <= roksana[j])
 		{
-			
+			auxilary[k++] = roksana[i++];
 		}
 	}
 }
