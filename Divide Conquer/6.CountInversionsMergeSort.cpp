@@ -14,7 +14,7 @@ int MergeSort(vector<int> roksana, int left, int right)
 
 	if (right > left)
 	{
-		/* code */
+
 	}
 }
 
