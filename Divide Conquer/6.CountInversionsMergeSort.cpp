@@ -24,6 +24,9 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 		else
 		{
 			auxilary[k++] = roksana[j++];
+
+
+			inversionCount += (mid - i + 1);
 		}
 	}
 }
