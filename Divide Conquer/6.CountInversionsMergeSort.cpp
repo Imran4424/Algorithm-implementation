@@ -58,7 +58,7 @@ int MergeSort(vector<int> roksana, vector <int> auxilary, int left, int right)
 	{
 		mid = (left + right) / 2;
 
-		inversionCount += MergeSort(roksana, auxilary, left, mid); // left sub array
+		inversionCount = MergeSort(roksana, auxilary, left, mid); // left sub array
 		inversionCount += MergeSort(roksana, auxilary, mid+1, right); // right sub array
 
 		/* merging two parts*/
@@ -78,7 +78,8 @@ int MergeSortHandler(vector <int> roksana)
 
 int main(int argc, char const *argv[])
 {
-	vector <int> roksana{13, 1, 3, 19, 11, 3, 4, 1, 10, 8}; // 23
+	// vector <int> roksana{13, 1, 3, 19, 11, 3, 4, 1, 10, 8}; // 23
+	vector <int> roksana{1, 20, 6, 4, 5}; // 5
 
 	cout << "Number of inversions are: " << MergeSortHandler(roksana) << endl;
 
