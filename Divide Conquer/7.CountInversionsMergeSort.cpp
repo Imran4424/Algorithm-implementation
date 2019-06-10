@@ -15,7 +15,7 @@ int Merge(vector <int> &roksana, int left, int mid, int right)
 
 	i = left; // i is index for left sub array
 	j = mid + 1;  // j is index for right sub array
-	k = left; // k is index for merged sub array
+	// k = left; // k is index for merged sub array
 
 	while((i <= mid) && (j <= right))
 	{
