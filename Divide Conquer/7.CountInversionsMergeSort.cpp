@@ -88,7 +88,7 @@ int main(int argv, char** args)
 { 
 	// int arr[] = { 1, 20, 6, 4, 5 }; 
 	int arr[] = { 13, 1, 3, 19, 11, 3, 4, 1, 10, 8 }; 
-	cout << " Number of inversions are " << mergeSort(arr, 5) << endl; 
+	cout << " Number of inversions are " << mergeSort(arr, 10) << endl; 
 	return 0; 
 } 
 

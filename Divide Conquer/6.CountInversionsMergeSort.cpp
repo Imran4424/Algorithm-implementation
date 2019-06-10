@@ -7,7 +7,7 @@
 #include <time.h>
 using namespace std;
 
-int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int right)
+int Merge(vector <int> &roksana, vector <int> auxilary, int left, int mid, int right)
 {
 	int i, j, k, inversionCount = 0;
 
@@ -50,7 +50,7 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 	return inversionCount;
 }
 
-int MergeSort(vector<int> roksana, vector <int> auxilary, int left, int right)
+int MergeSort(vector<int> &roksana, vector <int> auxilary, int left, int right)
 {
 	int mid, inversionCount = 0;
 
