@@ -9,7 +9,7 @@ using namespace std;
 
 int Merge()
 
-int MergeSort(vector<int> roksana, int left, int right)
+int MergeSort(vector<int> roksana)
 {
 	int mid, inversionCount = 0;
 
