@@ -11,7 +11,7 @@ lli Power(lli x, lli y)
 	}
 	else if (y % 2 == 0)
 	{
-		/* code 
+		/* 
 	}
 
 }
