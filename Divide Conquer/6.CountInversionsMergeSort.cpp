@@ -12,10 +12,10 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 	int i, j, k, inversionCount = 0;
 
 	i = left; // i is index for left sub array
-	j = mid + 1;  // j is index for right sub array
+	j = mid;  // j is index for right sub array
 	k = left; // k is index for merged sub array
 
-	while((i <= mid) && (j <= right))
+	while((i <= mid - 1) && (j <= right))
 	{
 		if (roksana[i] <= roksana[j])
 		{
@@ -26,7 +26,7 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 			auxilary[k++] = roksana[j++];
 
 
-			inversionCount += (mid - i );
+			inversionCount += (mid - i);
 		}
 	}
 
