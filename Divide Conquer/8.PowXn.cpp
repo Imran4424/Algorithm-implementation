@@ -7,8 +7,13 @@ lli Power(lli x, lli y)
 {
 	if (y == 0)
 	{
-		
+		return 1;
 	}
+	else if (/* condition */)
+	{
+		/* code */
+	}
+
 }
 
 int main(int argc, char const *argv[])
