@@ -42,7 +42,8 @@ int Merge(vector <int> &roksana, int left, int mid, int right)
 
 	while(j <= right)
 	{
-		auxilary[k++] = roksana[j++];
+		// auxilary[k++] = roksana[j++];
+		auxilary.push_back(roksana[j++]);
 	}
 
 	/* copying back the merged elements to original array */
