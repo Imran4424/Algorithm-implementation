@@ -26,7 +26,7 @@ int Merge(vector <int> roksana, vector <int> auxilary, int left, int mid, int ri
 			auxilary[k++] = roksana[j++];
 
 
-			inversionCount += (mid - i + 1);
+			inversionCount += (mid - i );
 		}
 	}
 
@@ -78,8 +78,8 @@ int MergeSortHandler(vector <int> roksana)
 
 int main(int argc, char const *argv[])
 {
-	// vector <int> roksana{13, 1, 3, 19, 11, 3, 4, 1, 10, 8}; // 23
-	vector <int> roksana{1, 20, 6, 4, 5}; // 5
+	vector <int> roksana{13, 1, 3, 19, 11, 3, 4, 1, 10, 8}; // 23
+	// vector <int> roksana{1, 20, 6, 4, 5}; // 5
 
 	cout << "Number of inversions are: " << MergeSortHandler(roksana) << endl;
 
