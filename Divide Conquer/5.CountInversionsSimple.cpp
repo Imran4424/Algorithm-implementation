@@ -12,7 +12,7 @@ int CountInversions(vector <int> arr)
 		{
 			if (arr[i] > arr[j])
 			{
-				/* code */
+				inversionCount++;
 			}
 		}
 	}
