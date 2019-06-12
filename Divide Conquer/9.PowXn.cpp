@@ -18,6 +18,6 @@ lli Power(lli base, lli pow)
 	}
 	else
 	{
-		
+		return base * hold * hold;
 	}
 }
