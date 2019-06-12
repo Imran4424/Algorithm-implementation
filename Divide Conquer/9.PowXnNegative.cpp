@@ -22,7 +22,7 @@ lli Power(lli base, lli pow)
 	}
 	else
 	{
-		if (/* condition */)
+		if ()
 		{
 			/* code */
 		}
