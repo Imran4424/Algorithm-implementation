@@ -1,2 +1,2 @@
 #include <iostream>
-using names
+using namesp
