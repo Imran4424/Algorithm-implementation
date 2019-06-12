@@ -12,7 +12,7 @@ lli Power(lli base, lli pow)
 
 	lli hold = Power(base, pow/2);
 
-	if (/* condition */)
+	if (pow )
 	{
 		/* code */
 	}
