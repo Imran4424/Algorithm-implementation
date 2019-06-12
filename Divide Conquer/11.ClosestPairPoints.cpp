@@ -1,2 +1,2 @@
 #include <iostream>
-using namespace s
+using namespace st
