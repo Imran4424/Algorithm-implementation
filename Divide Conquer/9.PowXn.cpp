@@ -22,6 +22,7 @@ lli Power(lli base, lli pow)
 	}
 }
 
+
 int main(int argc, char const *argv[])
 {
 	cout << "enter the base and pow" << endl;
