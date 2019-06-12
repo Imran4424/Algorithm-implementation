@@ -5,5 +5,8 @@ typedef long long int lli;
 
 lli Power(lli base, lli pow)
 {
-	
+	if (0 == pow)
+	{
+		
+	}
 }
