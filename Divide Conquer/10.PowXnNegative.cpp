@@ -38,7 +38,8 @@ int main(int argc, char const *argv[])
 {
 	cout << "enter the base and pow" << endl;
 
-	double base, pow;
+	double base, 
+	lli pow;
 	cin >> base >> pow;
 
 	cout << "Result is: " << Power(base, pow) << endl;
