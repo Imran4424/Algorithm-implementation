@@ -7,6 +7,13 @@ lli Power(lli base, lli pow)
 {
 	if (0 == pow)
 	{
-		
+		return 1;
+	}
+
+	lli hold = Power(base, pow/2);
+
+	if (/* condition */)
+	{
+		/* code */
 	}
 }
