@@ -22,11 +22,12 @@ lli Power(lli x, lli y)
 
 int main(int argc, char const *argv[])
 {
+	cout << "enter the base and pow" << endl;
 
+	lli base, pow;
+	cin >> base >> pow;
 
-	int base, pow;
-
-
+	
 
 	return 0;
 }
