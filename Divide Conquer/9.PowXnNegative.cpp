@@ -1,4 +1,6 @@
-
+/*
+	This code also works for negative power values
+*/
 
 #include <iostream>
 using namespace std;
