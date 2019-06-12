@@ -22,6 +22,8 @@ lli Power(lli x, lli y)
 
 int main(int argc, char const *argv[])
 {
+
+
 	int base, pow;
 
 
