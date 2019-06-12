@@ -1,5 +1,5 @@
 /*
-	This code also works for negative power values
+	This code also works for negative power values and double numbers
 */
 
 #include <iostream>
