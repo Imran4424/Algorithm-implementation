@@ -4,6 +4,6 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	/* cod
+	/* co
 	return 0;
 }
