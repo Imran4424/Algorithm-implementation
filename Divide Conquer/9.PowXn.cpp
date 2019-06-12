@@ -1,4 +1,4 @@
 #include <iostream>
 using namespace std;
 
-typedef 
+typedef long long int lli;
