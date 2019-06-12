@@ -2,4 +2,4 @@
 
 For Divide and conquer algorithms
 
-follow
+follow the following link
