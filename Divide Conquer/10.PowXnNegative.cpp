@@ -7,7 +7,7 @@ using namespace std;
 
 typedef long long int lli;
 
-double Power(double base, double pow)
+double Power(double base, lli pow)
 {
 	if (0 == pow)
 	{
