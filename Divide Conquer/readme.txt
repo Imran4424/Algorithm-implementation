@@ -1,3 +1,3 @@
 
 
-For Divide and conquer 
+For Divide and conquer algorithms
