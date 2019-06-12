@@ -28,7 +28,7 @@ lli Power(lli base, lli pow)
 		}
 		else
 		{
-			return (hold * hold) / 
+			return (hold * hold) / base;
 		}
 	}
 }
