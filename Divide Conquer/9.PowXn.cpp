@@ -14,6 +14,6 @@ lli Power(lli base, lli pow)
 
 	if (pow % 2 == 0)
 	{
-		/* code *
+		/* code 
 	}
 }
