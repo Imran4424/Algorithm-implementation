@@ -7,7 +7,7 @@ using namespace std;
 
 typedef long long int lli;
 
-lli Power(lli base, lli pow)
+double Power(double base, double pow)
 {
 	if (0 == pow)
 	{
@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
 {
 	cout << "enter the base and pow" << endl;
 
-	lli base, pow;
+	double base, pow;
 	cin >> base >> pow;
 
 	cout << "Result is: " << Power(base, pow) << endl;
