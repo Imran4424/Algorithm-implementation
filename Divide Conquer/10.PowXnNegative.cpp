@@ -14,7 +14,7 @@ double Power(double base, double pow)
 		return 1;
 	}
 
-	lli hold = Power(base, pow/2);
+	double hold = Power(base, pow/2);
 
 	if (pow % 2 == 0)
 	{
