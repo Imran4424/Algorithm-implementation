@@ -25,5 +25,6 @@ int main(int argc, char const *argv[])
 	int base, pow;
 
 
+
 	return 0;
 }
