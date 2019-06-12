@@ -22,7 +22,7 @@ lli Power(lli base, lli pow)
 	}
 	else
 	{
-		if ()
+		if (pow > 0)
 		{
 			/* code */
 		}
