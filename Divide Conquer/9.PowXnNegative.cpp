@@ -25,8 +25,8 @@ lli Power(lli base, lli pow)
 		if (pow > 0)
 		{
 			/* code */
-		}
 		return base * hold * hold;
+		}
 	}
 }
 
