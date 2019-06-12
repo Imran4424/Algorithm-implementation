@@ -27,7 +27,7 @@ int main(int argc, char const *argv[])
 	lli base, pow;
 	cin >> base >> pow;
 
-	
+	cout << "Result is: " << Power(base, pow) << endl;
 
 	return 0;
 }
