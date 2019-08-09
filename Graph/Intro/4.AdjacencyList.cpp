@@ -8,6 +8,7 @@ using namespace std;
 void AddEdge(list <int> adjacency[],int u, int v) // remember this is a list array
 {
 	adjacency[u].push_back(v);
+	adjacency[v].push_back(u);
 }
 
 void Display(list <int> adjacency[], int vetex) // remember this is a list array
