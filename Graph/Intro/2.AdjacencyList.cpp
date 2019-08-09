@@ -16,6 +16,8 @@ void Display(list <int> adjacency[], int vetex) // remember this is a list array
 	{
 		cout << i << ": ";
 
+		list <int> :: iterator it;
+
 		for (int j = 0; j < adjacency[i].size(); ++j)
 		{
 			cout << adjacency[i][j] << " ";
