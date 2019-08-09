@@ -16,9 +16,13 @@ void Display(vector<int> adjacency)
 	{
 		for (int j = 0; j < adjacency[i].size(); ++j)
 		{
-			
+			cout << adjacency[i][j] << " ";
 		}
+
+		cout << endl;
 	}
+
+
 }
 
 
@@ -28,15 +32,15 @@ int main(int argc, char const *argv[])
 	int vetex;
 	cin >> vetex;
 
-	vector <int> adjacency[vetex];
+	vector <int> adjacency[vetex + 1]; // cause array strats count from zero
 
-	AddEdge(adjacency, 0, 1); 
-	AddEdge(adjacency, 0, 4); 
 	AddEdge(adjacency, 1, 2); 
-	AddEdge(adjacency, 1, 3); 
-	AddEdge(adjacency, 1, 4); 
+	AddEdge(adjacency, 1, 5); 
 	AddEdge(adjacency, 2, 3); 
+	AddEdge(adjacency, 2, 4); 
+	AddEdge(adjacency, 2, 5); 
 	AddEdge(adjacency, 3, 4); 
+	AddEdge(adjacency, 4, 5); 
 
 	printGraph(adjacency, V); 
 
