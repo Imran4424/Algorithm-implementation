@@ -10,9 +10,9 @@ void AddEdge(vector <int> adjacency[],int u, int v) // remember this is a vector
 	adjacency[u].push_back(v);
 }
 
-void Display(vector<int> adjacency[]) // remember this is a vector array
+void Display(vector<int> adjacency[], int vetex) // remember this is a vector array
 {
-	for (int i = 1; i < adjacency.size(); ++i)
+	for (int i = 1; i < vetex; ++i)
 	{
 		cout << i << ": ";
 
@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
 	cout << "enter the vetex number" << endl;
 	int vetex;
 	cin >> vetex;
-	
+
 	// remember this is a vector array
 	vector <int> adjacency[vetex + 1]; // cause array strats count from zero
 
@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
 	AddEdge(adjacency, 3, 4); 
 	AddEdge(adjacency, 4, 5); 
 
-	Display(adjacency);
+	Display(adjacency, vetex);
 
 	return 0;
 }
