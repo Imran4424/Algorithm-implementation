@@ -12,8 +12,10 @@ void AddEdge(vector <int> adjacency,int u, int v)
 
 void Display(vector<int> adjacency)
 {
-	for (int i = 0; i < adjacency.size(); ++i)
+	for (int i = 1; i < adjacency.size(); ++i)
 	{
+		cout << i << ": ";
+
 		for (int j = 0; j < adjacency[i].size(); ++j)
 		{
 			cout << adjacency[i][j] << " ";
@@ -42,7 +44,7 @@ int main(int argc, char const *argv[])
 	AddEdge(adjacency, 3, 4); 
 	AddEdge(adjacency, 4, 5); 
 
-	printGraph(adjacency, V); 
+	Display(adjacency);
 
 	return 0;
 }
