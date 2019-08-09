@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void AddEdge(int u, int v)
+void AddEdge(vector <int> Adjacency,int u, int v)
 {
 
 }
@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 	int vetex;
 	cin >> vetex;
 
-	vector <int> Adjaceny[vetex];
+	vector <int> Adjacency[vetex];
 
 	return 0;
 }
