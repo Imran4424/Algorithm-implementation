@@ -2,9 +2,9 @@
 #include <vector>
 using namespace std;
 
-void AddEdge(vector <int> Adjacency,int u, int v)
+void AddEdge(vector <int> adjacency,int u, int v)
 {
-
+	adjacency[u].push_back(v);
 }
 
 int main(int argc, char const *argv[])
@@ -13,7 +13,17 @@ int main(int argc, char const *argv[])
 	int vetex;
 	cin >> vetex;
 
-	vector <int> Adjacency[vetex];
+	vector <int> adjacency[vetex];
+
+	AddEdge(adjacency, 0, 1); 
+	AddEdge(adjacency, 0, 4); 
+	AddEdge(adjacency, 1, 2); 
+	AddEdge(adjacency, 1, 3); 
+	AddEdge(adjacency, 1, 4); 
+	AddEdge(adjacency, 2, 3); 
+	AddEdge(adjacency, 3, 4); 
+
+	printGraph(adjacency, V); 
 
 	return 0;
 }
