@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 	int vetex;
 	cin >> vetex;
 
-
+	vector <int> Adjaceny[vetex];
 
 	return 0;
 }
