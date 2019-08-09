@@ -8,6 +8,9 @@ void AddEdge(int u, int v)
 
 int main(int argc, char const *argv[])
 {
+	cout << "enter the vetex number" << endl;
+	int vetex;
+	cin >> vetex;
 	
 	return 0;
 }
