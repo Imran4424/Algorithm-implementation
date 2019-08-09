@@ -5,12 +5,12 @@ using namespace std;
 /*
 	A utility function to add edge for directed graph
 */
-void AddEdge(vector <int> adjacency,int u, int v)
+void AddEdge(vector <int> adjacency[],int u, int v) // remember this is a vector array
 {
 	adjacency[u].push_back(v);
 }
 
-void Display(vector<int> adjacency)
+void Display(vector<int> adjacency[]) // remember this is a vector array
 {
 	for (int i = 1; i < adjacency.size(); ++i)
 	{
