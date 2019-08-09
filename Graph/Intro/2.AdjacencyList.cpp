@@ -18,7 +18,7 @@ void Display(list <int> adjacency[], int vetex) // remember this is a list array
 
 		list <int> :: iterator it;
 
-		for (it = adjacency -> begin(); it != adjacency -> end(); ++it) // '->' this is an array means pointer
+		for (it = adjacency[i].begin(); it != adjacency[i].end(); ++it) 
 		{
 			cout << *it << " ";
 		}
