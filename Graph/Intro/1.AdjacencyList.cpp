@@ -2,10 +2,25 @@
 #include <vector>
 using namespace std;
 
+/*
+	A utility function to add edge for directed graph
+*/
 void AddEdge(vector <int> adjacency,int u, int v)
 {
 	adjacency[u].push_back(v);
 }
+
+void Display(vector<int> adjacency)
+{
+	for (int i = 0; i < adjacency.size(); ++i)
+	{
+		for (int j = 0; j < adjacency[i].size(); ++j)
+		{
+			
+		}
+	}
+}
+
 
 int main(int argc, char const *argv[])
 {
