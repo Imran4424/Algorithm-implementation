@@ -33,7 +33,8 @@ int main(int argc, char const *argv[])
 	cout << "enter the vetex number" << endl;
 	int vetex;
 	cin >> vetex;
-
+	
+	// remember this is a vector array
 	vector <int> adjacency[vetex + 1]; // cause array strats count from zero
 
 	AddEdge(adjacency, 1, 2); 
