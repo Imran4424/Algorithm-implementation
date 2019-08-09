@@ -12,7 +12,7 @@ void AddEdge(list <int> adjacency[],int u, int v) // remember this is a list arr
 
 void Display(list <int> adjacency[], int vetex) // remember this is a list array
 {
-	for (int i = 1; i < vetex; ++i)
+	for (int i = 1; i <= vetex; ++i)
 	{
 		cout << i << ": ";
 

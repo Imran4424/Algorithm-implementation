@@ -12,7 +12,7 @@ void AddEdge(vector <int> adjacency[],int u, int v) // remember this is a vector
 
 void Display(vector<int> adjacency[], int vetex) // remember this is a vector array
 {
-	for (int i = 1; i < vetex; ++i)
+	for (int i = 1; i <= vetex; ++i)
 	{
 		cout << i << ": ";
 
