@@ -30,9 +30,9 @@ void Display(vector<int> adjacency[], int vetex) // remember this is a vector ar
 
 int main(int argc, char const *argv[])
 {
-	cout << "enter the vetex number" << endl;
-	int vetex;
-	cin >> vetex;
+	// cout << "enter the vetex number" << endl;
+	int vetex = 5;
+	// cin >> vetex;
 
 	// remember this is a vector array
 	vector <int> adjacency[vetex + 1]; // cause array strats count from zero
