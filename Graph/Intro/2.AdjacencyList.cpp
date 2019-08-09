@@ -38,6 +38,7 @@ int main(int argc, char const *argv[])
 
 	// remember this is a vector array
 	list <int> adjacency[vetex + 1]; // cause array strats count from zero
+	// list <int> *adjacency; // cause array strats count from zero
 
 	AddEdge(adjacency, 1, 2); 
 	AddEdge(adjacency, 1, 5); 
