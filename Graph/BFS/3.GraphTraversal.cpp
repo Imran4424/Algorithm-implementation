@@ -33,7 +33,7 @@ void BFS(int startVertex, int totalVertex)
 	visited[startVertex] = true;
 	currentNodes.push(startVertex);
 
-	list <int> ::iterator itr;
+	// list <int> ::iterator itr;
 
 	while(!currentNodes.empty())
 	{
@@ -42,12 +42,12 @@ void BFS(int startVertex, int totalVertex)
 
 		currentNodes.pop();
 
-		for( itr = adjacency[current].begin(); itr != adjacency[current].end(); itr++)
+		for(int k = 0 ; k < adjacency[current].size(); k++)
 		{
-			if (!visited[*itr])
+			if (!visited[adjacency[current][k]])
 			{
-				visited[*itr] = true;
-				currentNodes.push(*itr);
+				visited[adjacency[current][k]] = true;
+				currentNodes.push(adjacency[current][k]);
 			}
 		}
 	}
@@ -63,16 +63,16 @@ int main(int argc, char const *argv[])
 
 	adjacency = new vector <int> [vertex + 1];  // taking a array of vector
 
-	AddEdge(1, 2); 
 	AddEdge(2, 3); 
-	AddEdge(0, 2); 
-	AddEdge(2, 0); 
-	AddEdge(3, 3); 
-	AddEdge(0, 1); 
+	AddEdge(3, 4); 
+	AddEdge(1, 3); 
+	AddEdge(3, 1); 
+	AddEdge(4, 4); 
+	AddEdge(1, 2); 
 
 	cout << "Following is Breadth First Traversal "
 		<< "(starting from vertex 2) \n"; 
-	BFS(2, vertex); 
+	BFS(3, vertex); 
 	
 	return 0;
 }
