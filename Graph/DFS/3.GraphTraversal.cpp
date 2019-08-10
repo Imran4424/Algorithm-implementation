@@ -1,26 +1,26 @@
 /*
 	This is  an iterative approach of DFS graph traversal
 
-	here we used vector as adjacency list
+	here we used vector as adjacencyacency list
 */
 #include <iostream>
-#include <list>
+#include <vector>
 #include <stack>
 using namespace std;
 
-list <int> *adj;
+list <int> *adjacency;
 
 
 void AddEdge(int u, int v)
 {
-	adj[u].push_back(v);
+	adjacency[u].push_back(v);
 }
 
 void BFS(int startVertex, int totalVertex)
 {
-	bool visited[totalVertex];
+	bool visited[totalVertex + 1];
 
-	for(int i = 0; i < totalVertex; i++)
+	for(int i = 0; i <= totalVertex; i++)
 	{
 		visited[i] = false;
 	}
@@ -30,7 +30,6 @@ void BFS(int startVertex, int totalVertex)
 
 	currentNodes.push(startVertex);
 
-	//list <int> ::iterator itr;
 
 	while(!currentNodes.empty())
 	{
@@ -44,11 +43,11 @@ void BFS(int startVertex, int totalVertex)
 			visited[current] = true;
 		}
 
-		for(auto itr = adj[current].begin(); itr != adj[current].end(); itr++)
+		for(int k = 0 ; k < adjacency[current].size(); k++)
 		{
-			if (!visited[*itr])
+			if (!visited[adjacency[current][k]])
 			{
-				currentNodes.push(*itr);
+				currentNodes.push(adjacency[current][k]);
 			}
 		}
 	}
@@ -62,7 +61,7 @@ int main(int argc, char const *argv[])
 	int vertex;
 	cin >> vertex;
 
-	adjacency = new vector <int> [vertex + 1];  // taking a array of vector
+	adjacencyacency = new vector <int> [vertex + 1];  // taking a array of vector
 
 	AddEdge(2, 3); 
 	AddEdge(3, 4); 
