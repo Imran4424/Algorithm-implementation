@@ -1,11 +1,7 @@
 /*
 	This is  an iterative approach of DFS graph traversal
 
-	here we used list as adjacency list
-
-	auto keyword is for list pointer
-
-	actually auto keyword is an universal data type for  C++
+	here we used vector as adjacency list
 */
 #include <iostream>
 #include <list>
