@@ -8,7 +8,7 @@
 #include <stack>
 using namespace std;
 
-list <int> *adjacency;
+vector <int> *adjacency;
 
 
 void AddEdge(int u, int v)
@@ -61,7 +61,7 @@ int main(int argc, char const *argv[])
 	int vertex;
 	cin >> vertex;
 
-	adjacencyacency = new vector <int> [vertex + 1];  // taking a array of vector
+	adjacency = new vector <int> [vertex + 1];  // taking a array of vector
 
 	AddEdge(2, 3); 
 	AddEdge(3, 4); 
