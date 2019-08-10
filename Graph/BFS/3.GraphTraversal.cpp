@@ -33,7 +33,6 @@ void BFS(int startVertex, int totalVertex)
 	visited[startVertex] = true;
 	currentNodes.push(startVertex);
 
-	// list <int> ::iterator itr;
 
 	while(!currentNodes.empty())
 	{
