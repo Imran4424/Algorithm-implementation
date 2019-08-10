@@ -20,9 +20,9 @@ void AddEdge(int u, int v)
 
 void BFS(int startVertex, int totalVertex)
 {
-	bool visited[totalVertex];
+	bool visited[totalVertex+1];
 
-	for(int i = 0; i < totalVertex; i++)
+	for(int i = 0; i <= totalVertex; i++)
 	{
 		visited[i] = false;
 	}
@@ -47,6 +47,7 @@ void BFS(int startVertex, int totalVertex)
 			if (!visited[adjacency[current][k]])
 			{
 				visited[adjacency[current][k]] = true;
+			
 				currentNodes.push(adjacency[current][k]);
 			}
 		}
