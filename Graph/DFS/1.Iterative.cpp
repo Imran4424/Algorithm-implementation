@@ -1,3 +1,9 @@
+/*
+	This is  an iterative approach of DFS graph traversal
+
+	here we used list as adjacency list
+*/
+
 #include <iostream>
 #include <list>
 #include <stack>
