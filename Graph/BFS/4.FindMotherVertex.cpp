@@ -48,7 +48,10 @@ void BFS(int startVertex, int totalVertex)
 
 		for (int k = 0; k < adjacency[current].size(); ++k)
 		{
-			
+			if (!visited[adjacency[current][k]])
+			{
+				/* code */
+			}
 		}
 
 	}
