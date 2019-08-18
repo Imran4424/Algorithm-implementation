@@ -89,5 +89,12 @@ int main(int argc, char const *argv[])
 		AddEdge(u, v);
 	}
 
+	int x = 1;
+
+	while(motherVertex.size() == 0 && x <= vertex)
+	{
+		BFS(x++, vertex);
+	}
+
 	return 0;
 }
