@@ -22,6 +22,11 @@ vector <int> motherVertex;
 
 vector <int> *adjacency;
 
+void AddEdge(int startVertex, int endVertex)
+{
+	adjacency[startVertex].push_back(endVertex);
+}
+
 int main(int argc, char const *argv[])
 {
 	
