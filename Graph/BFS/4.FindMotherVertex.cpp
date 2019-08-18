@@ -51,7 +51,9 @@ void BFS(int startVertex, int totalVertex)
 			if (!visited[adjacency[current][k]])
 			{
 				currentNode.push_back(adjacency[current][k]);
-			}
+
+				visited[adjacency[current][k]] = true;
+			}	
 		}
 
 	}
