@@ -5,6 +5,8 @@
 	In a graph there can more than one mother vertex
 
 	In this we will print just one.
+
+	But, in the case undirected graph all vertices are mother vertices
 */
 #include <iostream>
 #include <vector>
