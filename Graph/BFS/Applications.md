@@ -25,3 +25,5 @@
 12) Finding all nodes within one connected component: We can either use Breadth First or Depth First Traversal to find all nodes reachable from a given node.
 
 Many algorithms like Prim’s Minimum Spanning Tree and Dijkstra’s Single Source Shortest Path use structure similar to Breadth First Search.
+
+Courtesy: [GeeksforGeeks](https://www.geeksforgeeks.org/applications-of-breadth-first-traversal/)
