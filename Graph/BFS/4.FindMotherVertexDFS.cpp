@@ -43,7 +43,7 @@ void DFS(int startVertex, int totalVertex)
 
 	while(!currentNode.empty())
 	{
-		int current = currentNode.front();
+		int current = currentNode.top();
 		currentNode.pop();
 
 		for (int k = 0; k < adjacency[current].size(); ++k)
