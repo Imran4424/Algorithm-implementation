@@ -39,10 +39,11 @@ void BFS(int startVertex, int totalVertex)
 
 	currentNode.push_back(startVertex);
 	visited[startVertex] = true;
+	count++;
 
 	while(!currentNode.empty())
 	{
-		
+
 	}
 
 
