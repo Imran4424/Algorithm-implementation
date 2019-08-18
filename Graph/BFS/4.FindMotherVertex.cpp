@@ -48,9 +48,13 @@ int main(int argc, char const *argv[])
 	int edges;
 	cin >> edges;
 
+	int u,v;
+
 	for (int i = 0; i < edges; ++i)
 	{
-		/* code */
+		cin >> u >> v;
+
+		AddEdge(u, v);
 	}
 
 	return 0;
