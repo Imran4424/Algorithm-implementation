@@ -18,9 +18,9 @@
 #include <queue>
 using namespace std;
 
-vector<int> motherVertex;
+vector <int> motherVertex;
 
-
+vector <int> *adjacency;
 
 int main(int argc, char const *argv[])
 {
