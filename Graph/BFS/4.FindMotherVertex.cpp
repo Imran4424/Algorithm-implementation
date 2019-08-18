@@ -18,6 +18,10 @@
 #include <queue>
 using namespace std;
 
+vector<int> motherVertex;
+
+
+
 int main(int argc, char const *argv[])
 {
 	
