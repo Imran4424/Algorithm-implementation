@@ -27,8 +27,21 @@ void AddEdge(int u, int v) // directed graph
 	adjacency[u].push_back(v);
 }
 
+void BFS(int startVertex, int totalVertex)
+{
+	vector <bool> visited(totalVertex+1, false);
+
+	queue <int> currentNode;
+}
+
 int main(int argc, char const *argv[])
 {
-	
+	cout << "enter the number of vertices" << endl;
+
+	int vertex;
+	cin >> vertex;
+
+	adjacency = new vector <int> (vertex+1);
+
 	return 0;
 }
