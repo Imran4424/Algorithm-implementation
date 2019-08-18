@@ -1,5 +1,5 @@
 /*
-	
+	Mother vertex - In graph mother vertex is that vertex or node, from which 
 */
 #include <iostream>
 #include <vector>
