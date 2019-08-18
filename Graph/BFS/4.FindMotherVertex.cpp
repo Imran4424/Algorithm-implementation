@@ -43,7 +43,14 @@ void BFS(int startVertex, int totalVertex)
 
 	while(!currentNode.empty())
 	{
-		
+		int current = currentNode.front();
+		currentNode.pop();
+
+		for (int k = 0; k < adjacency[current].size(); ++k)
+		{
+			/* code */
+		}
+
 	}
 
 
