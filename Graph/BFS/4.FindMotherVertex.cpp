@@ -37,7 +37,12 @@ void BFS(int startVertex, int totalVertex)
 
 	queue <int> currentNode;
 
+	currentNode.push_back(startVertex);
+	visited[startVertex] = true;
+
 	
+
+
 }
 
 int main(int argc, char const *argv[])
