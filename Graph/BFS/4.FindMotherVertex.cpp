@@ -37,7 +37,7 @@ void BFS(int startVertex, int totalVertex)
 
 	queue <int> currentNode;
 
-	currentNode.push_back(startVertex);
+	currentNode.push(startVertex);
 	visited[startVertex] = true;
 	count++;
 
@@ -50,7 +50,7 @@ void BFS(int startVertex, int totalVertex)
 		{
 			if (!visited[adjacency[current][k]])
 			{
-				currentNode.push_back(adjacency[current][k]);
+				currentNode.push(adjacency[current][k]);
 
 				visited[adjacency[current][k]] = true;
 
