@@ -22,9 +22,9 @@ vector <int> motherVertex;
 
 vector <int> *adjacency;
 
-void AddEdge(int startVertex, int endVertex)
+void AddEdge(int u, int v)
 {
-	adjacency[startVertex].push_back(endVertex);
+	adjacency[u].push_back(v);
 }
 
 int main(int argc, char const *argv[])
