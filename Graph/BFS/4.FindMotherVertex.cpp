@@ -22,7 +22,7 @@ vector <int> motherVertex;
 
 vector <int> *adjacency;
 
-void AddEdge(int u, int v)
+void AddEdge(int u, int v) // directed graph
 {
 	adjacency[u].push_back(v);
 }
