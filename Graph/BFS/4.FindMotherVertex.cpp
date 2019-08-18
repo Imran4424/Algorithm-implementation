@@ -82,6 +82,8 @@ int main(int argc, char const *argv[])
 
 	int u,v;
 
+	cout << "input the edges" << endl;
+
 	for (int i = 0; i < edges; ++i)
 	{
 		cin >> u >> v;
