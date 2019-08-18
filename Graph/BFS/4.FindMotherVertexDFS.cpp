@@ -15,7 +15,7 @@
 */
 #include <iostream>
 #include <vector>
-#include <queue>
+#include <stack>
 using namespace std;
 
 vector <int> motherVertex;
@@ -35,7 +35,7 @@ void DFS(int startVertex, int totalVertex)
 
 	count = 0;
 
-	queue <int> currentNode;
+	stack <int> currentNode;
 
 	currentNode.push(startVertex);
 	visited[startVertex] = true;
