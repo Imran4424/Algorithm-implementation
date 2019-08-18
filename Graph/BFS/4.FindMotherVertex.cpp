@@ -22,6 +22,8 @@ vector <int> motherVertex;
 
 vector <int> *adjacency;
 
+int count;
+
 void AddEdge(int u, int v) // directed graph
 {
 	adjacency[u].push_back(v);
@@ -30,6 +32,8 @@ void AddEdge(int u, int v) // directed graph
 void BFS(int startVertex, int totalVertex)
 {
 	vector <bool> visited(totalVertex+1, false);
+
+	count = 0;
 
 	queue <int> currentNode;
 }
