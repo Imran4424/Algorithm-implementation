@@ -98,5 +98,10 @@ int main(int argc, char const *argv[])
 		BFS(x++, vertex);
 	}
 
+	if (motherVertex.size())
+	{
+		cout << "Mother vertex: " << motherVertex[0] << endl;
+	}
+
 	return 0;
 }
