@@ -6,7 +6,12 @@
 
 	In this we will print just one.
 
-	But, in the case undirected graph all vertices are mother vertices
+	In the case undirected graph all vertices are mother vertices
+
+	But directed graph or undirected disconnected graph we need to find mother vertex.
+
+	In this code, we will consider directed graph.
+
 */
 #include <iostream>
 #include <vector>
