@@ -91,7 +91,7 @@ int main(int argc, char const *argv[])
 		AddEdge(u, v);
 	}
 
-	int x = 1;
+	int x = 0;
 
 	while(motherVertex.size() == 0 && x <= vertex)
 	{
