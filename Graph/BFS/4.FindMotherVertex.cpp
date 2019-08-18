@@ -53,12 +53,17 @@ void BFS(int startVertex, int totalVertex)
 				currentNode.push_back(adjacency[current][k]);
 
 				visited[adjacency[current][k]] = true;
+
+				count++;
 			}	
 		}
 
 	}
 
-
+	if (count == totalVertex)
+	{
+		motherVertex.push_back(startVertex);
+	}
 }
 
 int main(int argc, char const *argv[])
