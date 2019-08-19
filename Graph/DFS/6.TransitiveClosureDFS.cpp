@@ -14,7 +14,10 @@ void BFS(int current, vector <bool> &visited)
 	// mark the current as visited
 	visited[current] = true;
 
-	
+	for (int k = 0; k < adjacency[current].size(); ++k)
+	{
+		/* code */
+	}
 }
 
 int main(int argc, char const *argv[])
