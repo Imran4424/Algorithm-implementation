@@ -74,15 +74,14 @@ int SearchMother(int startVertex ,int totalVertex)
 
 	if (0 == startVertex)
 	{
-		/* code */
+		for (int i = startVertex; i < totalVertex; ++i)
+		{
+			/* code */
+		}
 	}
 	else
 	{
 		
-	}
-	for (int i = startVertex; i < totalVertex; ++i)
-	{
-		/* code */
 	}
 
 
