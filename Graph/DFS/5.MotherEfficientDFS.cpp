@@ -29,17 +29,17 @@ void AddEdge(int u, int v) // directed graph
 	adjacency[u].push_back(v);
 }
 
-void DFS(int vertex, vector <int> &visited)
+void DFS(int current, vector <int> &visited)
 {
-	vector <bool> visited(totalVertex+1, false);
+	visited[current] = true;
 
-	count = 0;
-
-	stack <int> currentNode;
-
-	currentNode.push(startVertex);
-	visited[startVertex] = true;
-	count++;
+	for (int k = 0; k < adjacency[current].size(); ++k)
+	{
+		if (!visited[adjacency[current][k]])
+		{
+			
+		}	
+	}
 
 	
 }
