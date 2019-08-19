@@ -76,7 +76,12 @@ int SearchMother(int startVertex ,int totalVertex)
 	{
 		for (int i = startVertex; i < totalVertex; ++i)
 		{
-			/* code */
+			if (!visited[i])
+			{
+				DFS(i, visited);
+
+				lastFinishedVertex = i;
+			}
 		}
 	}
 	else
