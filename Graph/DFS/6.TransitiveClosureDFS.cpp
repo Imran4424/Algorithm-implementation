@@ -53,6 +53,31 @@ void TransitiveClosure(int startVertex, int totalVertex)
 		}
 	}
 
+
+	if (0 == startVertex)
+	{
+		for (int i = startVertex; i < totalVertex; ++i)
+		{
+			for (int j = startVertex; j < totalVertex; ++j)
+			{
+				cout << transitiveMatrix[i][j] << " ";
+			}
+
+			cout << endl;
+		}
+	}
+	else
+	{		
+		for (int i = startVertex; i <= totalVertex; ++i)
+		{
+			if (!visited[i])
+			{
+				return -1;
+			}
+		}
+	}
+
+
 }
 
 int main(int argc, char const *argv[])
