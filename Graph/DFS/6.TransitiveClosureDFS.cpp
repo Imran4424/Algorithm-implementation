@@ -33,6 +33,7 @@ void DFS(int one, int another)
 
 void TransitiveClosure(int startVertex, int totalVertex)
 {
+	// resizing 2d vector in one line
 	
 	transitiveMatrix.resize(totalVertex+1, vector <bool> (totalVertex+1, false));
 
