@@ -35,7 +35,7 @@ void DFS(int current, vector <int> &visited)
 	visited[current] = true;
 
 
-	// looking at the adjacency 
+	// looking at the adjacency nodes of current
 	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
 		if (!visited[adjacency[current][k]])
@@ -65,8 +65,16 @@ int SearchMother(int startVertex ,int totalVertex)
 		}
 	}
 	else
-	{
-		
+	{		
+		for (int i = startVertex; i <= totalVertex; ++i)
+		{
+			if (!visited[i])
+			{
+				DFS(i, visited);
+
+				lastFinishedVertex = i;
+			}
+		}
 	}
 
 
