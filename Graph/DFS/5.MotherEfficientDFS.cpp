@@ -29,7 +29,7 @@ void AddEdge(int u, int v) // directed graph
 	adjacency[u].push_back(v);
 }
 
-void DFS(int startVertex, int totalVertex)
+void DFS(int vertex, vector <int> &visited)
 {
 	vector <bool> visited(totalVertex+1, false);
 
@@ -41,29 +41,7 @@ void DFS(int startVertex, int totalVertex)
 	visited[startVertex] = true;
 	count++;
 
-	while(!currentNode.empty())
-	{
-		int current = currentNode.top();
-		currentNode.pop();
-
-		for (int k = 0; k < adjacency[current].size(); ++k)
-		{
-			if (!visited[adjacency[current][k]])
-			{
-				currentNode.push(adjacency[current][k]);
-
-				visited[adjacency[current][k]] = true;
-
-				count++;
-			}	
-		}
-
-	}
-
-	if (count == totalVertex)
-	{
-		motherVertex.push_back(startVertex);
-	}
+	
 }
 
 int SearchMother(int startVertex ,int totalVertex)
