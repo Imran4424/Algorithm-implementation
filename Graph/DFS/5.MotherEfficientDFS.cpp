@@ -69,6 +69,8 @@ void DFS(int startVertex, int totalVertex)
 int SearchMother(int totalVertex)
 {
 	vector <bool> visited(totalVertex+1, false);
+
+	int lastFinishedVertex = 0;
 }
 
 int main(int argc, char const *argv[])
