@@ -4,12 +4,14 @@ using namespace std;
 
 vector <int> *adjacency;
 
+vector <bool> *transitiveMatrix;
+
 void AddEdge(int u, int v) // for directed graph
 {
 	adjacency[u].push_back(v);
 }
 
-void BFS(int current, vector <bool> &visited)
+void BFS(int current)
 {
 	// mark the current as visited
 	visited[current] = true;
@@ -26,7 +28,9 @@ void BFS(int current, vector <bool> &visited)
 
 void TransitiveClosure(int startVertex, int totalVertex)
 {
-	vector <bool> visited(totalVertex+1, false);
+	transitiveMatrix = new vector <bool> (totalVertex+1, false);
+
+	
 }
 
 int main(int argc, char const *argv[])
