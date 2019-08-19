@@ -66,9 +66,9 @@ void DFS(int startVertex, int totalVertex)
 	}
 }
 
-int SearchMother()
+int SearchMother(int totalVertex)
 {
-
+	vector <bool> visited(totalVertex+1, false);
 }
 
 int main(int argc, char const *argv[])
@@ -97,7 +97,7 @@ int main(int argc, char const *argv[])
 	}
 
 	
-	
+
 	if (motherVertex.size())
 	{
 		cout << "Mother vertex: " << motherVertex[0] << endl;
