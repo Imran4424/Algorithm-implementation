@@ -53,6 +53,7 @@ void TransitiveClosure(int startVertex, int totalVertex)
 		}
 	}
 
+	cout << "transitive closure Matrix is " << endl;
 
 	if (0 == startVertex)
 	{
