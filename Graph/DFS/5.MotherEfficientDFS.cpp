@@ -70,7 +70,20 @@ int SearchMother(int startVertex ,int totalVertex)
 {
 	vector <bool> visited(totalVertex+1, false);
 
-	int lastFinishedVertex = 0;
+	int lastFinishedVertex = startVertex;
+
+	if (0 == startVertex)
+	{
+		/* code */
+	}
+	else
+	{
+		
+	}
+	for (int i = startVertex; i < totalVertex; ++i)
+	{
+		/* code */
+	}
 
 
 }
