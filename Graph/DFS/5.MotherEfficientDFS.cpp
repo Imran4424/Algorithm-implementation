@@ -149,8 +149,8 @@ int main(int argc, char const *argv[])
 	}
 	else
 	{
-
-	}
+		cout << "Mother vertex is: " << result << endl;
+ 	}
 
 	return 0;
 }
