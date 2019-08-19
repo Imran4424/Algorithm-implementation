@@ -19,7 +19,7 @@ void BFS(int one, int another)
 	// looking at the adjacency nodes of another
 	for (int k = 0; k < adjacency[another].size(); ++k)
 	{
-		if (!transitiveMatrix[adjacency[another][k]])
+		if (!transitiveMatrix[another][adjacency[another][k]])
 		{
 			BFS(another, adjacency[another][k]);
 		}
