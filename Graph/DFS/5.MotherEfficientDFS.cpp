@@ -39,7 +39,7 @@ void AddEdge(int u, int v) // directed graph
 	adjacency[u].push_back(v);
 }
 
-void DFS(int current, vector <int> &visited) // this is a recursive DFS 
+void DFS(int current, vector <bool> &visited) // this is a recursive DFS 
 {
 	// marking the current node as visited
 	visited[current] = true;
@@ -116,7 +116,7 @@ int SearchMother(int startVertex ,int totalVertex)
 	   actually in real scenario  we are checking that is there any mother vertex or not for the
 	   inputed graph
 	*/
-	vector <int> reVisited(totalVertex+1, false);
+	vector <bool> reVisited(totalVertex+1, false);
 
 	// rechecking, this will cost one iteration time
 	DFS(lastFinishedVertex, reVisited);
