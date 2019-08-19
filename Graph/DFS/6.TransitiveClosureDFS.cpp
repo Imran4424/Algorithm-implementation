@@ -42,7 +42,7 @@ void TransitiveClosure(int startVertex, int totalVertex)
 	{
 		for (int i = startVertex; i < totalVertex; ++i)
 		{
-			DFS(i, i);
+			DFS(i, i); // Every vertex is reachable from itself
 		}
 	}
 	else // this is for start count at 1
