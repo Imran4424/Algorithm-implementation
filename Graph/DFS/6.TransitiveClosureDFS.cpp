@@ -4,7 +4,7 @@ using namespace std;
 
 vector <int> *adjacency;
 
-vector < vector <bool> > *transitiveMatrix;
+vector < vector <bool> > transitiveMatrix;
 
 void AddEdge(int u, int v) // for directed graph
 {
@@ -28,7 +28,7 @@ void BFS(int one, int another)
 
 void TransitiveClosure(int startVertex, int totalVertex)
 {
-	transitiveMatrix = new vector < vector <bool> > (totalVertex+1, vector <int> (totalVertex+1, false));
+	transitiveMatrix.resize(totalVertex+1, vector <int> (totalVertex+1, false));
 
 	/*
 		this if condition is here because,
