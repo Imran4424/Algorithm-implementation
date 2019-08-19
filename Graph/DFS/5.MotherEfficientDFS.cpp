@@ -142,12 +142,7 @@ int main(int argc, char const *argv[])
 		AddEdge(u, v);
 	}
 
-	
-
-	if (motherVertex.size())
-	{
-		cout << "Mother vertex: " << motherVertex[0] << endl;
-	}
+	int result = SearchMother(0, vertex);
 
 	return 0;
 }
