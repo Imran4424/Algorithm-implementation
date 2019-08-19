@@ -31,8 +31,11 @@ void AddEdge(int u, int v) // directed graph
 
 void DFS(int current, vector <int> &visited)
 {
+	// marking the current node as visited
 	visited[current] = true;
 
+
+	// looking at the adjacency 
 	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
 		if (!visited[adjacency[current][k]])
@@ -41,7 +44,6 @@ void DFS(int current, vector <int> &visited)
 		}	
 	}
 
-	
 }
 
 int SearchMother(int startVertex ,int totalVertex)
