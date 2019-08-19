@@ -11,5 +11,7 @@ int main(int argc, char const *argv[])
 	int vertex;
 	cin >> vertex;
 
+	
+
 	return 0;
 }
