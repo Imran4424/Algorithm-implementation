@@ -11,7 +11,7 @@ void AddEdge(int u, int v) // for directed graph
 	adjacency[u].push_back(v);
 }
 
-void BFS(int one, int another)
+void DFS(int one, int another)
 {
 	// mark from one to another as true 
 	transitiveMatrix[one][another] = true;
@@ -21,14 +21,15 @@ void BFS(int one, int another)
 	{
 		if (!transitiveMatrix[one][adjacency[another][k]])
 		{
-			BFS(one, adjacency[another][k]);
+			DFS(one, adjacency[another][k]);
 		}
 	}
 }
 
 void TransitiveClosure(int startVertex, int totalVertex)
 {
-	transitiveMatrix.resize(totalVertex+1, vector <int> (totalVertex+1, false));
+	
+	transitiveMatrix.resize(totalVertex+1, vector <bool> (totalVertex+1, false));
 
 	/*
 		this if condition is here because,
