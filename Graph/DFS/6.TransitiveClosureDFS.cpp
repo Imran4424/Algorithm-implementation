@@ -70,13 +70,14 @@ void TransitiveClosure(int startVertex, int totalVertex)
 	{		
 		for (int i = startVertex; i <= totalVertex; ++i)
 		{
-			if (!visited[i])
+			for (int j = startVertex; j <= totalVertex; ++j)
 			{
-				return -1;
+				cout << transitiveMatrix[i][j] << " ";
 			}
+
+			cout << endl;
 		}
 	}
-
 
 }
 
@@ -104,6 +105,8 @@ int main(int argc, char const *argv[])
 
 		AddEdge(u, v);
 	}
+
+	TransitiveClosure(0, vertex);
 
 	return 0;
 }
