@@ -26,7 +26,7 @@ void BFS(int current, vector <bool> &visited)
 
 void TransitiveClosure(int startVertex, int totalVertex)
 {
-	
+	vector <bool> visited(totalVertex+1, false);
 }
 
 int main(int argc, char const *argv[])
