@@ -144,5 +144,11 @@ int main(int argc, char const *argv[])
 
 	int result = SearchMother(0, vertex);
 
+
+	if (-1 == result)
+	{
+		cout << "there is no mother vertex" << endl;
+	}
+
 	return 0;
 }
