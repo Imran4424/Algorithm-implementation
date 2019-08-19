@@ -20,8 +20,6 @@ using namespace std;
 
 vector <int> *adjacency;
 
-int count;
-
 void AddEdge(int u, int v) // directed graph
 {
 	adjacency[u].push_back(v);
@@ -148,6 +146,10 @@ int main(int argc, char const *argv[])
 	if (-1 == result)
 	{
 		cout << "there is no mother vertex" << endl;
+	}
+	else
+	{
+
 	}
 
 	return 0;
