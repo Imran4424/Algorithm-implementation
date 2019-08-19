@@ -11,10 +11,10 @@ void AddEdge(int u, int v) // for directed graph
 	adjacency[u].push_back(v);
 }
 
-void BFS(int from, int to)
+void BFS(int one, int another)
 {
-	// mark the current as visited
-	visited[current] = true;
+	// mark from one to another as true 
+	visited[one][another] = true;
 
 	// looking at the adjacency nodes of current
 	for (int k = 0; k < adjacency[current].size(); ++k)
@@ -28,7 +28,7 @@ void BFS(int from, int to)
 
 void TransitiveClosure(int startVertex, int totalVertex)
 {
-	transitiveMatrix = new vector <bool> (totalVertex+1, false);
+	transitiveMatrix = new vector <bool> (totalVertex+1, vector <int> (totalVertex+1, false));
 
 	/*
 		this if condition is here because,
