@@ -9,6 +9,14 @@ void AddEdge(int u, int v) // for directed graph
 	adjacency[u].push_back(v);
 }
 
+void BFS(int current, vector <bool> &visited)
+{
+	// mark the current as visited
+	visited[current] = true;
+
+	
+}
+
 int main(int argc, char const *argv[])
 {
 	cout << "enter the number of vertex" << endl;
