@@ -24,7 +24,10 @@ void BFS(int current, vector <bool> &visited)
 	}
 }
 
-void TransitiveClosure(int )
+void TransitiveClosure(int startVertex, int totalVertex)
+{
+	
+}
 
 int main(int argc, char const *argv[])
 {
