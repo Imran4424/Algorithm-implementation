@@ -37,7 +37,7 @@ void DFS(int current, vector <int> &visited)
 	{
 		if (!visited[adjacency[current][k]])
 		{
-			
+			DFS(adjacency[current][k], visited);
 		}	
 	}
 
