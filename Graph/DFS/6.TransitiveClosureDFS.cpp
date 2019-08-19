@@ -14,9 +14,13 @@ void BFS(int current, vector <bool> &visited)
 	// mark the current as visited
 	visited[current] = true;
 
+	// looking at the adjacency nodes of current
 	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
-		/* code */
+		if (!visited[adjacency[current][k]])
+		{
+			BFS(adjacency[current][k], visited);
+		}
 	}
 }
 
