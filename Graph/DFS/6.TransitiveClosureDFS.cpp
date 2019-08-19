@@ -4,7 +4,7 @@ using namespace std;
 
 vector <int> *adjacency;
 
-vector < vector <int> > *transitiveMatrix;
+vector < vector <int> > **transitiveMatrix;
 
 void AddEdge(int u, int v) // for directed graph
 {
