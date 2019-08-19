@@ -24,6 +24,8 @@ void BFS(int current, vector <bool> &visited)
 	}
 }
 
+void TransitiveClosure(int )
+
 int main(int argc, char const *argv[])
 {
 	cout << "enter the number of vertex" << endl;
