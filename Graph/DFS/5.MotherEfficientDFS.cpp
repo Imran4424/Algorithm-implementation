@@ -87,7 +87,34 @@ int SearchMother(int startVertex ,int totalVertex)
 	*/
 	vector <int> reVisited(totalVertex+1, false);
 
+	// rechecking
 	DFS(lastFinishedVertex, reVisited);
+
+	//verifying
+
+	if (0 == startVertex)
+	{
+		for (int i = startVertex; i < totalVertex; ++i)
+		{
+			if (!visited[i])
+			{
+				return -1;
+			}
+		}
+	}
+	else
+	{		
+		for (int i = startVertex; i <= totalVertex; ++i)
+		{
+			if (!visited[i])
+			{
+				return -1;
+			}
+		}
+	}
+
+
+	return lastFinishedVertex; // returning the mother vertex
 }
 
 int main(int argc, char const *argv[])
