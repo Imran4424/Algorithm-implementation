@@ -4,7 +4,7 @@ using namespace std;
 
 vector <int> *adjacency;
 
-vector <bool> *transitiveMatrix;
+vector < vector <int> > *transitiveMatrix;
 
 void AddEdge(int u, int v) // for directed graph
 {
@@ -14,14 +14,14 @@ void AddEdge(int u, int v) // for directed graph
 void BFS(int one, int another)
 {
 	// mark from one to another as true 
-	visited[one][another] = true;
+	transitiveMatrix[one][another] = true;
 
-	// looking at the adjacency nodes of current
-	for (int k = 0; k < adjacency[current].size(); ++k)
+	// looking at the adjacency nodes of another
+	for (int k = 0; k < adjacency[another].size(); ++k)
 	{
-		if (!visited[adjacency[current][k]])
+		if (!transitiveMatrix[adjacency[another][k]])
 		{
-			BFS(adjacency[current][k], visited);
+			BFS(another, adjacency[another][k]);
 		}
 	}
 }
