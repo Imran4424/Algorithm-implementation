@@ -18,8 +18,6 @@
 #include <stack>
 using namespace std;
 
-vector <int> motherVertex;
-
 vector <int> *adjacency;
 
 int count;
@@ -77,7 +75,19 @@ int SearchMother(int startVertex ,int totalVertex)
 		}
 	}
 
+	/*
+	   creating a new same size boolean vector array
 
+	   for rechecking that
+
+	   the lastFinishedVertex is mother vertex or not
+
+	   actually in real scenario  we are checking that is there any mother vertex or not for the
+	   inputed graph
+	*/
+	vector <int> reVisited(totalVertex+1, false);
+
+	DFS(lastFinishedVertex, reVisited);
 }
 
 int main(int argc, char const *argv[])
