@@ -11,7 +11,7 @@ void AddEdge(int u, int v) // for directed graph
 	adjacency[u].push_back(v);
 }
 
-void BFS(int current)
+void BFS(int from, int to)
 {
 	// mark the current as visited
 	visited[current] = true;
@@ -30,7 +30,29 @@ void TransitiveClosure(int startVertex, int totalVertex)
 {
 	transitiveMatrix = new vector <bool> (totalVertex+1, false);
 
-	
+	/*
+		this if condition is here because,
+
+		some people start the vertex count at 0
+		and
+		some people start the vertex count at 1
+	*/
+
+	if (0 == startVertex) // this is for start count at 0
+	{
+		for (int i = startVertex; i < totalVertex; ++i)
+		{
+			DFS(i, i);
+		}
+	}
+	else // this is for start count at 1
+	{		
+		for (int i = startVertex; i <= totalVertex; ++i)
+		{
+			DFS(i, i);
+		}
+	}
+
 }
 
 int main(int argc, char const *argv[])
