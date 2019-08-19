@@ -73,7 +73,15 @@ int SearchMother(int startVertex ,int totalVertex)
 		that saves lot of time
 	*/
 
-	if (0 == startVertex)
+	/*
+		this if condition is here because,
+
+		some people start the vertex count at 0
+		and
+		some people start the vertex count at 1
+	*/
+
+	if (0 == startVertex) // this is for start count at 0
 	{
 		for (int i = startVertex; i < totalVertex; ++i)
 		{
@@ -85,7 +93,7 @@ int SearchMother(int startVertex ,int totalVertex)
 			}
 		}
 	}
-	else
+	else // this is for start count at 1
 	{		
 		for (int i = startVertex; i <= totalVertex; ++i)
 		{
