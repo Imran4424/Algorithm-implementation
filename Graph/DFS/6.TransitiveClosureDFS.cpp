@@ -13,5 +13,17 @@ int main(int argc, char const *argv[])
 
 	adjacency = new vector <int> (vertex + 1);
 
+	cout << "How many edges?" << endl;
+
+	int edges;
+	cin >> edges;
+
+	cout << "enter the edges" << endl;
+
+	for (int i = 0; i < edges; ++i)
+	{
+		/* code */
+	}
+
 	return 0;
 }
