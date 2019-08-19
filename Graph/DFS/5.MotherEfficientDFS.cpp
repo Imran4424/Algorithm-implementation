@@ -12,6 +12,20 @@
 
 	In this code, we will consider directed graph.
 
+	......
+
+	this is a efficient approach
+
+	because when in naive approach we need
+
+	totalVertex * one iteration time
+
+	In this approach we will need 
+
+	2 * one iteration time
+
+	1 for finding
+	1 for verifying
 */
 #include <iostream>
 #include <vector>
@@ -25,7 +39,7 @@ void AddEdge(int u, int v) // directed graph
 	adjacency[u].push_back(v);
 }
 
-void DFS(int current, vector <int> &visited)
+void DFS(int current, vector <int> &visited) // this is a recursive DFS 
 {
 	// marking the current node as visited
 	visited[current] = true;
@@ -47,6 +61,17 @@ int SearchMother(int startVertex ,int totalVertex)
 	vector <bool> visited(totalVertex+1, false);
 
 	int lastFinishedVertex = startVertex;
+
+	/*
+		Here, we are doing recursive function call
+
+		at the end 
+
+		all the vertex will visited if there is a mother vertex with one 
+		iteration  time
+
+		that saves lot of time
+	*/
 
 	if (0 == startVertex)
 	{
@@ -85,7 +110,7 @@ int SearchMother(int startVertex ,int totalVertex)
 	*/
 	vector <int> reVisited(totalVertex+1, false);
 
-	// rechecking
+	// rechecking, this will cost one iteration time
 	DFS(lastFinishedVertex, reVisited);
 
 	//verifying
