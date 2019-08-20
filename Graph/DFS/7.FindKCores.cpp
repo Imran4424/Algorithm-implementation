@@ -7,9 +7,9 @@ vector <int> *adjacency;
 
 void AddEdge(int u, int v) // unidirected graph
 {
-	AddEdge[u].push_back(v);
+	adjacency[u].push_back(v);
 
-	AddEdge[v].push_back(u);
+	adjacency[v].push_back(u);
 }
 
 void Eliminating(int current, int cores)
