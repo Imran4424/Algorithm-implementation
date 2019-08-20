@@ -26,7 +26,7 @@ void Eliminating(int current, int cores)
 		adjacency[current].erase(adjacency[current].begin()); // making directed from undirected
 
 		// completely removing the link
-		adjacency[target].erase(remove(adjacency[current].begin(), adjacency[current].end(), target), adjacency[target].end());
+		adjacency[target].erase(remove(adjacency[target].begin(), adjacency[target].end(), current), adjacency[target].end());
 	}
 }
 
