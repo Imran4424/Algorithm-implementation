@@ -16,7 +16,29 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 {
 	vector <bool> visited(vertex+1, false);
 
-	
+	/*
+		this if condition is here because,
+
+		some people start the vertex count at 0
+		and
+		some people start the vertex count at 1
+	*/
+
+	if (0 == startVertex) // this is for start count at 0
+	{
+		for (int i = startVertex; i < totalVertex; ++i)
+		{
+			DFS(i, i); // Every vertex is reachable from itself
+		}
+	}
+	else // this is for start count at 1
+	{		
+		for (int i = startVertex; i <= totalVertex; ++i)
+		{
+			DFS(i, i); // Every vertex is reachable from itself
+		}
+	}
+
 }
 
 
