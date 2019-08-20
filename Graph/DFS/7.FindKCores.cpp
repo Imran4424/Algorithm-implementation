@@ -36,6 +36,11 @@ int main(int argc, char const *argv[])
 
 		AddEdge(u, v);
 	}
+
+	cout << "How many cores" << endl;
+
+	int cores;
+	cin >> cores;
 	
 	return 0;
 }
