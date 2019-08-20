@@ -15,6 +15,8 @@ void AddEdge(int u, int v) // unidirected graph
 void FindingKCores(int cores, int startVertex, int totalVertex)
 {
 	vector <bool> visited(vertex+1, false);
+
+	
 }
 
 
