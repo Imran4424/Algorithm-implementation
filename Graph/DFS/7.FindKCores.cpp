@@ -12,6 +12,9 @@ void AddEdge(int u, int v) // unidirected graph
 }
 
 
+void FindingKCores()
+
+
 int main(int argc, char const *argv[])
 {
 	cout << "enter the number of vertex" << endl;
