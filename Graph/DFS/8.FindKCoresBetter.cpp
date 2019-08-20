@@ -7,7 +7,7 @@ vector <int> *adjacency;
 
 vector <int> vDegrees;
 
-void TestDisplay()
+void TestDisplay() // for testing purposes
 {
 	for (int i = 0; i < 9; ++i)
 	{
