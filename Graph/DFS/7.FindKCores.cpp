@@ -64,7 +64,7 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 		
 	}
 
-	cout << " K Core Graph is: "
+	cout << " K Core Graph is: " << endl;
 
 	if (0 == startVertex) // this is for start count at 0
 	{
