@@ -98,22 +98,31 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 	else // this is for start count at 1
 	{		
 		
-		for (int i = startVertex; i <= totalVertex; ++i)
+		for (int i = startVertex; i < totalVertex; ++i)
 		{
-			for (int j = 0; j < adjacency[i].size(); ++j)
+			if (vDegrees[i] >= cores)
 			{
-				if (j == 0)
+				
+				for (int j = 0; j < adjacency[i].size(); ++j)
 				{
-					cout << i << " -> " ;
+					if (j == 0)
+					{
+						cout << i << " -> " ;
+					}
+
+					if (vDegrees[adjacency[i][j]] >= cores)
+					{
+						cout << adjacency[i][j] << " ";
+					}
+
 				}
 
-				cout << adjacency[i][j] << " ";
+				if (adjacency[i].size())
+				{
+					cout << endl;
+				}
 			}
-
-			if (adjacency[i].size())
-			{
-				cout << endl;
-			}
+			
 		}
 	}
 
