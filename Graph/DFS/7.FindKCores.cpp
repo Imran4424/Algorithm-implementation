@@ -14,6 +14,12 @@ void AddEdge(int u, int v) // unidirected graph
 
 int main(int argc, char const *argv[])
 {
+	cout << "enter the number of vertex" << endl;
+
+	int vertex;
+	cin >> vertex;
+
+	
 	
 	return 0;
 }
