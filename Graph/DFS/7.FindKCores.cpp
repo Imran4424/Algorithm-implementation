@@ -64,6 +64,8 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 		
 	}
 
+	cout << " K Core Graph is: "
+
 	if (0 == startVertex) // this is for start count at 0
 	{
 		for (int i = startVertex; i < totalVertex; ++i)
@@ -78,7 +80,11 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 				cout << adjacency[i][j] << " ";
 			}
 
-			cout << endl;
+			if (adjacency[i].size())
+			{
+				cout << endl;
+			}
+			
 		}
 	}
 	else // this is for start count at 1
@@ -96,7 +102,10 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 				cout << adjacency[i][j] << " ";
 			}
 
-			cout << endl;
+			if (adjacency[i].size())
+			{
+				cout << endl;
+			}
 		}
 	}
 
