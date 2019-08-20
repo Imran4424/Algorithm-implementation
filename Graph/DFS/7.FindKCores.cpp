@@ -18,9 +18,9 @@ void Eliminating(int current, int cores)
 		return;
 	}
 
-	for (int i = 0; i < adjacency[current].size(); ++i)
+	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
-		/* code */
+		
 	}
 }
 
