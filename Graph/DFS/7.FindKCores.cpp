@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 vector <int> *adjacency;
@@ -18,16 +19,21 @@ void Eliminating(int current, int cores)
 		return;
 	}
 
-	for (int k = 0; k < adjacency[current].size(); ++k)
+	while(adjacency[current].size())
 	{
-		
+		int target = adjacency[current].front();
+
+		adjacency[current].erase(adjacency.begin()); // making directed from undirected
+
+		// completely removing the link
+		adjacency[target].erase(remove(adjacency[current].begin, adjacency[current].end(), target), adjacency[target].end());
 	}
 }
 
 
 void FindingKCores(int cores, int startVertex, int totalVertex)
 {
-	vector <bool> visited(vertex+1, false);
+	// vector <bool> visited(vertex+1, false);
 
 	/*
 		this if condition is here because,
@@ -37,20 +43,27 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 		some people start the vertex count at 1
 	*/
 
-	if (0 == startVertex) // this is for start count at 0
+	int count = 3; // 3 for rechecking purposes
+
+	while(count--)
 	{
-		for (int i = startVertex; i < totalVertex; ++i)
+		if (0 == startVertex) // this is for start count at 0
 		{
-			DFS(i, i); // Every vertex is reachable from itself
+			for (int i = startVertex; i < totalVertex; ++i)
+			{
+				DFS(i, cores); // Every vertex is reachable from itself
+			}
 		}
-	}
-	else // this is for start count at 1
-	{		
-		for (int i = startVertex; i <= totalVertex; ++i)
-		{
-			DFS(i, i); // Every vertex is reachable from itself
+		else // this is for start count at 1
+		{		
+			for (int i = startVertex; i <= totalVertex; ++i)
+			{
+				DFS(i, cores); // Every vertex is reachable from itself
+			}
 		}
+		
 	}
+
 
 }
 
