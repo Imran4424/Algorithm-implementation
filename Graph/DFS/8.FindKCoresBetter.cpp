@@ -16,7 +16,7 @@ void AddEdge(int u, int v) // unidirected graph
 
 void Eliminating(int current, int cores)
 {
-	if (vDegrees[current] >= cores)
+	if (vDegrees[current] >= cores || vDegrees[current] == 0)
 	{
 		return;
 	}
@@ -26,10 +26,7 @@ void Eliminating(int current, int cores)
 	// looking at the adjacency nodes of current
 	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
-		if (!visited[adjacency[current][k]])
-		{
-			DFS(adjacency[current][k], visited);
-		}	
+		vDegrees[adjacency[current][k]]--;	
 	}
 }
 
@@ -73,19 +70,27 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 	{
 		for (int i = startVertex; i < totalVertex; ++i)
 		{
-			for (int j = 0; j < adjacency[i].size(); ++j)
+			if (vDegrees[i] >= cores)
 			{
-				if (j == 0)
+				
+				for (int j = 0; j < adjacency[i].size(); ++j)
 				{
-					cout << i << " -> " ;
+					if (j == 0)
+					{
+						cout << i << " -> " ;
+					}
+
+					if (vDegrees[adjacency[i][j]] >= cores)
+					{
+						cout << adjacency[i][j] << " ";
+					}
+
 				}
 
-				cout << adjacency[i][j] << " ";
-			}
-
-			if (adjacency[i].size())
-			{
-				cout << endl;
+				if (adjacency[i].size())
+				{
+					cout << endl;
+				}
 			}
 			
 		}
