@@ -16,19 +16,20 @@ void AddEdge(int u, int v) // unidirected graph
 
 void Eliminating(int current, int cores)
 {
-	if (adjacency[current].size() >= cores)
+	if (vDegrees[current] >= cores)
 	{
 		return;
 	}
 
-	while(adjacency[current].size())
+	vDegrees[current] = 0;
+
+	// looking at the adjacency nodes of current
+	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
-		int target = adjacency[current].front();
-
-		adjacency[current].erase(adjacency[current].begin()); // making directed from undirected
-
-		// completely removing the link
-		adjacency[target].erase(remove(adjacency[target].begin(), adjacency[target].end(), current), adjacency[target].end());
+		if (!visited[adjacency[current][k]])
+		{
+			DFS(adjacency[current][k], visited);
+		}	
 	}
 }
 
