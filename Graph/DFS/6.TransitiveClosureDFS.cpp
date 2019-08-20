@@ -2,6 +2,10 @@
 	Transitive Closure
 
 	Means
+
+	Finding out paths from each vertex to all other vertex
+
+	Transitive Matrix shows if there path from each vertex to all other vertex or not
 */
 #include <iostream>
 #include <vector>
@@ -34,7 +38,7 @@ void DFS(int one, int another)
 void TransitiveClosure(int startVertex, int totalVertex)
 {
 	// resizing 2d vector in one line
-	
+
 	transitiveMatrix.resize(totalVertex+1, vector <bool> (totalVertex+1, false));
 
 	/*
