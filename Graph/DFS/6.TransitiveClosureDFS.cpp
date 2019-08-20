@@ -11,9 +11,9 @@
 #include <vector>
 using namespace std;
 
-vector <int> *adjacency;
+vector <int> *adjacency; // global vector array
 
-vector < vector <bool> > transitiveMatrix;
+vector < vector <bool> > transitiveMatrix; // global 2d vector
 
 void AddEdge(int u, int v) // for directed graph
 {
