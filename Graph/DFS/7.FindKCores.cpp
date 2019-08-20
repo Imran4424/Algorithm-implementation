@@ -51,20 +51,33 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 		{
 			for (int i = startVertex; i < totalVertex; ++i)
 			{
-				DFS(i, cores); // Every vertex is reachable from itself
+				Eliminating(i, cores); // Every vertex is reachable from itself
 			}
 		}
 		else // this is for start count at 1
 		{		
 			for (int i = startVertex; i <= totalVertex; ++i)
 			{
-				DFS(i, cores); // Every vertex is reachable from itself
+				Eliminating(i, cores); // Every vertex is reachable from itself
 			}
 		}
 		
 	}
 
+	for (int i = 0; i < adjacency.size(); ++i)
+	{
+		for (int j = 0; j < adjacency[i].size(); ++j)
+		{
+			if (j == 0)
+			{
+				cout << i << " -> " ;
+			}
 
+			cout << adjacency[i][j] << " ";
+		}
+
+		cout << endl;
+	}
 }
 
 
