@@ -11,6 +11,8 @@ void AddEdge(int u, int v) // unidirected graph
 	AddEdge[v].push_back(u);
 }
 
+void DFS()
+
 
 void FindingKCores(int cores, int startVertex, int totalVertex)
 {
