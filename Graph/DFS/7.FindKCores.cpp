@@ -110,6 +110,8 @@ int main(int argc, char const *argv[])
 
 	int cores;
 	cin >> cores;
+
+	FindingKCores(cores, 0, vertex);
 	
 	return 0;
 }
