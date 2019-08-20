@@ -16,12 +16,17 @@ void AddEdge(int u, int v) // unidirected graph
 
 void Eliminating(int current, int cores)
 {
-	if (vDegrees[current] >= cores || vDegrees[current] == 0)
+	if (vDegrees[current] >= cores)
 	{
 		return;
 	}
 
-	vDegrees[current] = 0;
+	if (-1 == vDegrees[current])
+	{
+		return;
+	}
+
+	vDegrees[current] = -1;
 
 	// looking at the adjacency nodes of current
 	for (int k = 0; k < adjacency[current].size(); ++k)
@@ -64,7 +69,7 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 		
 	}
 
-	cout << " K Core Graph is: " << endl;
+	cout << "K Core Graph is: " << endl;
 
 	if (0 == startVertex) // this is for start count at 0
 	{
@@ -72,7 +77,8 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 		{
 			if (vDegrees[i] >= cores)
 			{
-				
+
+				cout << "test" << endl; 
 				for (int j = 0; j < adjacency[i].size(); ++j)
 				{
 					if (j == 0)
@@ -87,10 +93,7 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 
 				}
 
-				if (adjacency[i].size())
-				{
-					cout << endl;
-				}
+				cout << endl;
 			}
 			
 		}
@@ -98,7 +101,7 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 	else // this is for start count at 1
 	{		
 		
-		for (int i = startVertex; i < totalVertex; ++i)
+		for (int i = startVertex; i <= totalVertex; ++i)
 		{
 			if (vDegrees[i] >= cores)
 			{
@@ -117,10 +120,7 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 
 				}
 
-				if (adjacency[i].size())
-				{
-					cout << endl;
-				}
+				cout << endl;
 			}
 			
 		}
@@ -143,7 +143,11 @@ void SetDegrees(int startVertex, int totalVertex)
 		for (int i = startVertex; i < totalVertex; ++i)
 		{
 			vDegrees[i] = adjacency[i].size();
+
+			// cout << vDegrees[i] << " ";
 		}
+
+		// cout << endl;
 	}
 	else // this is for start count at 1
 	{		
