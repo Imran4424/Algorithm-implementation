@@ -7,6 +7,17 @@ vector <int> *adjacency;
 
 vector <int> vDegrees;
 
+void TestDisplay()
+{
+	for (int i = 0; i < 9; ++i)
+	{
+
+		cout << vDegrees[i] << " ";
+	}
+
+	cout << endl;
+}
+
 void AddEdge(int u, int v) // unidirected graph
 {
 	adjacency[u].push_back(v);
@@ -16,23 +27,18 @@ void AddEdge(int u, int v) // unidirected graph
 
 void Eliminating(int current, int cores)
 {
-	if (vDegrees[current] >= cores)
+	if (vDegrees[current] >= cores || 0 >= vDegrees[current])
 	{
 		return;
 	}
-
-	if (-1 == vDegrees[current])
-	{
-		return;
-	}
-
-	vDegrees[current] = -1;
 
 	// looking at the adjacency nodes of current
 	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
-		vDegrees[adjacency[current][k]]--;	
+		vDegrees[adjacency[current][k]]--;
 	}
+
+	vDegrees[current] = 0;
 }
 
 
@@ -78,7 +84,6 @@ void FindingKCores(int cores, int startVertex, int totalVertex)
 			if (vDegrees[i] >= cores)
 			{
 
-				cout << "test" << endl; 
 				for (int j = 0; j < adjacency[i].size(); ++j)
 				{
 					if (j == 0)
@@ -187,6 +192,7 @@ int main(int argc, char const *argv[])
 
 	vDegrees.resize(vertex+1);
 	SetDegrees(0, vertex);
+
 
 
 	cout << "How many cores" << endl;
