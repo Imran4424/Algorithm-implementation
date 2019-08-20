@@ -28,9 +28,13 @@ int main(int argc, char const *argv[])
 
 	cout << "enter the edges" << endl;
 
+	int u, v;
+
 	for (int i = 0; i < edges; ++i)
 	{
-		
+		cin >> u >> v;
+
+		AddEdge(u, v);
 	}
 	
 	return 0;
