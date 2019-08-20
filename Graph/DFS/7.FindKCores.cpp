@@ -11,7 +11,18 @@ void AddEdge(int u, int v) // unidirected graph
 	AddEdge[v].push_back(u);
 }
 
-void DFS()
+void Eliminating(int current, int cores)
+{
+	if (adjacency[current].size() >= cores)
+	{
+		return;
+	}
+
+	for (int i = 0; i < adjacency[current].size(); ++i)
+	{
+		/* code */
+	}
+}
 
 
 void FindingKCores(int cores, int startVertex, int totalVertex)
