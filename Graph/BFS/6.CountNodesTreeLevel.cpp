@@ -58,6 +58,8 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 		{
 			if (!visited[adjacency[current][k]])
 			{
+				currentNodes.push(adjacency[current][k]);
+
 				level[adjacency[current][k]] = level[current] + 1;
 
 				visited[adjacency[current][k]] = true;
@@ -66,7 +68,7 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 	}
 
 	TestDisplay(startVertex, totalVertex, level);
-	
+
 	int count = 0;
 
 	/*
