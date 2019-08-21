@@ -46,5 +46,7 @@ int main(int argc, char const *argv[])
 	int level;
 	cin >> level;
 
+	BFS(0, vertex, level);
+
 	return 0;
 }
