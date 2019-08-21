@@ -12,11 +12,36 @@ void AddEdge(int u, int v) // undirected graph
 	adjacency[v].push_back(u);
 }
 
+void TestDisplay(int startVertex, int totalVertex,vector <int> level)
+{
+	if (0 == startVertex) // this is for start count at 0
+	{
+
+		for (int i = startVertex; i < totalVertex; ++i)
+		{
+			cout << level[i] << " ";
+		}
+
+		cout << endl;
+	}
+	else // this is for start count at 1
+	{		
+		for (int i = startVertex; i <= totalVertex; ++i)
+		{
+			cout << level[i] << " ";
+		}
+
+		cout << endl;
+	}
+}
+
 int BFS(int startVertex, int totalVertex, int searchLevel)
 {
-	vector <bool> visited(vertex + 1, false);
+	vector <bool> visited(totalVertex + 1, false);
 
-	vector <int> level(vertex + 1, 0);
+	vector <int> level(totalVertex + 1, 0);
+
+	TestDisplay()
 
 	queue <int> currentNodes;
 	currentNodes.push(startVertex);
@@ -52,6 +77,7 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 
 	if (0 == startVertex) // this is for start count at 0
 	{
+
 		for (int i = startVertex; i < totalVertex; ++i)
 		{
 			if (searchLevel == level[i])
