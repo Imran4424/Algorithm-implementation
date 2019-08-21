@@ -56,7 +56,7 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 		{
 			if (searchLevel == level[i])
 			{
-				/* code */
+				count++;
 			}
 		}
 	}
@@ -64,7 +64,10 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 	{		
 		for (int i = startVertex; i <= totalVertex; ++i)
 		{
-			DFS(i, i); // Every vertex is reachable from itself
+			if (searchLevel == level[i])
+			{
+				count++;
+			}
 		}
 	}
 
