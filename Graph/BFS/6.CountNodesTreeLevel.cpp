@@ -71,6 +71,7 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 		}
 	}
 
+	return count;
 }
 
 int main(int argc, char const *argv[])
