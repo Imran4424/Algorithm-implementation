@@ -16,7 +16,7 @@ void AddEdge(int u, int v)
 	adjacency[u].push_back(v);
 }
 
-void BFS(int startVertex, int totalVertex)
+void DFS(int startVertex, int totalVertex)
 {
 	bool visited[totalVertex + 1];
 
@@ -72,7 +72,7 @@ int main(int argc, char const *argv[])
 
 	cout << "Following is Breadth First Traversal "
 		<< "(starting from vertex 2) \n"; 
-	BFS(3, vertex); 
+	DFS(3, vertex); 
 	
 	return 0;
 }

@@ -12,9 +12,13 @@ void AddEdge(int u, int v) // undirected graph
 	AddEdge[v].push_back(u);
 }
 
-void BFS(int startVertex, int totalVertex, int level)
+int BFS(int startVertex, int totalVertex, int level)
 {
+	vector <bool> visited(vertex + 1, false);
 
+	vector <int> level(vertex + 1, 0);
+
+	
 }
 
 int main(int argc, char const *argv[])
