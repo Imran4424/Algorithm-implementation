@@ -41,8 +41,6 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 
 	vector <int> level(totalVertex + 1, 0);
 
-	TestDisplay(startVertex, totalVertex, level);
-
 	queue <int> currentNodes;
 	currentNodes.push(startVertex);
 
@@ -67,7 +65,6 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 		}
 	}
 
-	TestDisplay(startVertex, totalVertex, level);
 
 	int count = 0;
 
