@@ -18,7 +18,11 @@ int BFS(int startVertex, int totalVertex, int level)
 
 	vector <int> level(vertex + 1, 0);
 
-	
+	queue <int> currentNodes;
+	currentNodes.push(startVertex);
+
+	visited[startVertex] = true;
+	level[startVertex] = 0;
 }
 
 int main(int argc, char const *argv[])
