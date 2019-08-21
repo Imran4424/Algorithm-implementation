@@ -41,7 +41,7 @@ void TestDisplay(int startVertex, int totalVertex, vector <int> level) // testin
 	}
 }
 
-int BFS(int startVertex, int totalVertex, int searchLevel)
+int BFS(int startVertex, int totalVertex, int searchLevel) // iterative BFS
 {
 	vector <bool> visited(totalVertex + 1, false);
 
