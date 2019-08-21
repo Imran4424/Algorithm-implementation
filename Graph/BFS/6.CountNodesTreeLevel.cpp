@@ -12,7 +12,7 @@ void AddEdge(int u, int v) // undirected graph
 	adjacency[v].push_back(u);
 }
 
-void TestDisplay(int startVertex, int totalVertex,vector <int> level)
+void TestDisplay(int startVertex, int totalVertex, vector <int> level)
 {
 	if (0 == startVertex) // this is for start count at 0
 	{
@@ -41,7 +41,7 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 
 	vector <int> level(totalVertex + 1, 0);
 
-	TestDisplay()
+	TestDisplay(startVertex, totalVertex, level);
 
 	queue <int> currentNodes;
 	currentNodes.push(startVertex);
@@ -65,6 +65,8 @@ int BFS(int startVertex, int totalVertex, int searchLevel)
 		}
 	}
 
+	TestDisplay(startVertex, totalVertex, level);
+	
 	int count = 0;
 
 	/*
