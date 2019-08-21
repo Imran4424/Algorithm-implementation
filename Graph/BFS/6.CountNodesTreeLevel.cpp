@@ -12,7 +12,7 @@ void AddEdge(int u, int v) // undirected graph
 	AddEdge[v].push_back(u);
 }
 
-int BFS(int startVertex, int totalVertex, int level)
+int BFS(int startVertex, int totalVertex, int searchLevel)
 {
 	vector <bool> visited(vertex + 1, false);
 
@@ -31,9 +31,43 @@ int BFS(int startVertex, int totalVertex, int level)
 
 		for (int k = 0; k < adjacency[current].size(); ++k)
 		{
-			
+			if (!visited[adjacency[current][k]])
+			{
+				level[adjacency[current][k]] = level[current] + 1;
+
+				visited[adjacency[current][k]] = true;
+			}
 		}
 	}
+
+	int count = 0;
+
+	/*
+		this if condition is here because,
+
+		some people start the vertex count at 0
+		and
+		some people start the vertex count at 1
+	*/
+
+	if (0 == startVertex) // this is for start count at 0
+	{
+		for (int i = startVertex; i < totalVertex; ++i)
+		{
+			if (searchLevel == level[i])
+			{
+				/* code */
+			}
+		}
+	}
+	else // this is for start count at 1
+	{		
+		for (int i = startVertex; i <= totalVertex; ++i)
+		{
+			DFS(i, i); // Every vertex is reachable from itself
+		}
+	}
+
 }
 
 int main(int argc, char const *argv[])
@@ -62,10 +96,10 @@ int main(int argc, char const *argv[])
 
 	cout << "enter the level" << endl;
 
-	int level;
-	cin >> level;
+	int searchLevel;
+	cin >> searchLevel;
 
-	BFS(0, vertex, level);
+	BFS(0, vertex, searchLevel);
 
 	return 0;
 }
