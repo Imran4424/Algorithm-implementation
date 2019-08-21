@@ -24,9 +24,15 @@ int BFS(int startVertex, int totalVertex, int level)
 	visited[startVertex] = true;
 	level[startVertex] = 0;
 
-	while(!queue.empty())
+	while(!currentNodes.empty())
 	{
-		
+		int current = currentNodes.front();
+		currentNodes.pop();
+
+		for (int k = 0; k < adjacency[current].size(); ++k)
+		{
+			
+		}
 	}
 }
 
