@@ -20,7 +20,7 @@ void AddEdge(int u, int v) // for directed graph
 	adjacency[u].push_back(v);
 }
 
-void DFS(int one, int another)
+void DFS(int one, int another) // recursive dfs
 {
 	// mark from one to another as true 
 	transitiveMatrix[one][another] = true;
