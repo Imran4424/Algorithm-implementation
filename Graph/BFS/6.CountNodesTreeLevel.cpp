@@ -12,7 +12,7 @@ void AddEdge(int u, int v) // undirected graph
 	adjacency[v].push_back(u);
 }
 
-void TestDisplay(int startVertex, int totalVertex, vector <int> level)
+void TestDisplay(int startVertex, int totalVertex, vector <int> level) // testing function
 {
 	if (0 == startVertex) // this is for start count at 0
 	{
