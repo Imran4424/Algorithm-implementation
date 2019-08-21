@@ -105,5 +105,7 @@ int main(int argc, char const *argv[])
 
 	int levelVertex = BFS(0, vertex, searchLevel);
 
+	cout << "total vertex in inputed level is: " << levelVertex << endl;
+
 	return 0;
 }
