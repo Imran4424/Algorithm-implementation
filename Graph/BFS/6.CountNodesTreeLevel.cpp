@@ -23,6 +23,11 @@ int BFS(int startVertex, int totalVertex, int level)
 
 	visited[startVertex] = true;
 	level[startVertex] = 0;
+
+	while(!queue.empty())
+	{
+		
+	}
 }
 
 int main(int argc, char const *argv[])
