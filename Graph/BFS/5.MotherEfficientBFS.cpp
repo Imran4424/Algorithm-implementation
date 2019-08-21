@@ -39,7 +39,7 @@ void AddEdge(int u, int v) // directed graph
 	adjacency[u].push_back(v);
 }
 
-void BFS(int current, vector <bool> &visited) // this is a recursive BFS 
+void BFS(int current, vector <bool> &visited) // this is a recursive BFS, not sure, need to check 
 {
 	// marking the current node as visited
 	visited[current] = true;
