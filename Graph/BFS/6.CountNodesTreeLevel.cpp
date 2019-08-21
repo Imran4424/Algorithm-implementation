@@ -14,7 +14,7 @@ void AddEdge(int u, int v) // undirected graph
 
 void BFS(int startVertex, int totalVertex, int level)
 {
-	
+
 }
 
 int main(int argc, char const *argv[])
@@ -40,6 +40,11 @@ int main(int argc, char const *argv[])
 
 		AddEdge(u, v);
 	}
+
+	cout << "enter the level" << endl;
+
+	int level;
+	cin >> level;
 
 	return 0;
 }
