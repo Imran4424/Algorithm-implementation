@@ -5,6 +5,18 @@ using namespace std;
 
 vector <int> *adjacency;
 
+void AddEdge(int u, int v) // undirected graph
+{
+	AddEdge[u].push_back(v);
+
+	AddEdge[v].push_back(u);
+}
+
+void BFS(int startVertex, int totalVertex, int level)
+{
+	
+}
+
 int main(int argc, char const *argv[])
 {
 	cout << "enter the number of vertex" << endl;
