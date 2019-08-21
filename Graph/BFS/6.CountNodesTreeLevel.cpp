@@ -103,7 +103,7 @@ int main(int argc, char const *argv[])
 	int searchLevel;
 	cin >> searchLevel;
 
-	BFS(0, vertex, searchLevel);
+	int levelVertex = BFS(0, vertex, searchLevel);
 
 	return 0;
 }
