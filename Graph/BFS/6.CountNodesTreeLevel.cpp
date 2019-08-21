@@ -1,5 +1,7 @@
 /*
-	In this code
+	In this code, we are using bfs
+
+	to calculate vetices or nodes at a specific level in a tree
 
 */
 #include <iostream>
