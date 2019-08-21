@@ -13,5 +13,7 @@ int main(int argc, char const *argv[])
 	cin >> vertex;
 	
 	adjacency = new vector <int> [vertex + 1];
+
+	
 	return 0;
 }
