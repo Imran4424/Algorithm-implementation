@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
 	{
 		cin >> u >> v;
 
-		
+		AddEdge(u, v);
 	}
 
 	return 0;
