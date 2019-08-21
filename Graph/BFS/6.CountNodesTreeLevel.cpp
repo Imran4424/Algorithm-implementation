@@ -7,9 +7,9 @@ vector <int> *adjacency;
 
 void AddEdge(int u, int v) // undirected graph
 {
-	AddEdge[u].push_back(v);
+	adjacency[u].push_back(v);
 
-	AddEdge[v].push_back(u);
+	adjacency[v].push_back(u);
 }
 
 int BFS(int startVertex, int totalVertex, int searchLevel)
