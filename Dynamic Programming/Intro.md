@@ -8,3 +8,5 @@ Dynamic Programming is mainly an optimization over plain recursion. Wherever we 
 
 3.[Solving Dynamic programming problem step by step](https://www.geeksforgeeks.org/solve-dynamic-programming-problem/)
 
+
+[Homepage](https://www.geeksforgeeks.org/dynamic-programming/#concepts)
