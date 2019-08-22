@@ -4,4 +4,7 @@ Dynamic Programming is mainly an optimization over plain recursion. Wherever we 
 
 [Overlapping Subproblems Property in Dynamic Programming](https://www.geeksforgeeks.org/overlapping-subproblems-property-in-dynamic-programming-dp-1/)
 
-[Optimal Substructure Property in Dynamic Programming ](https://www.geeksforgeeks.org/optimal-substructure-property-in-dynamic-programming-dp-2/)
+[Optimal Substructure Property in Dynamic Programming](https://www.geeksforgeeks.org/optimal-substructure-property-in-dynamic-programming-dp-2/)
+
+[Solving Dynamic programming problem step by step](https://www.geeksforgeeks.org/solve-dynamic-programming-problem/)
+
