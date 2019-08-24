@@ -15,13 +15,17 @@ void GetNthUgly(lli n)
 
 	lli  nextUglyNo = 1;
 
-	cout << ugly[0] = 1 << " ";
+	ugly[0] = 1;
+
+	cout << ugly[0] << " ";
 
 	for (int i = 0; i < n; ++i)
 	{
 		nextUglyNo = min(nextMultipleOf2, min(nextMultipleOf3, nextMultipleOf5));
 
-		cout << ugly[i] = ugly[i] << " ";
+		ugly[i] = nextUglyNo;
+
+		cout << ugly[i] << " ";
 
 		if (nextUglyNo == nextMultipleOf2)
 		{
