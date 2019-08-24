@@ -1,8 +1,26 @@
 #include <iostream>
 using namespace std;
 
-int GetNthUgly(int n)
+bool IsUgly(int num)
 {
+
+}
+
+void GetNthUgly(int n)
+{
+	int i = 1, count = 1;
+
+	cout << i << " ";
+
+	for (; count < n; ++i)
+	{
+		if (IsUgly(i))
+		{
+			cout << i << " ";
+
+			count++;
+		}
+	}
 
 }
 
@@ -14,6 +32,8 @@ int main(int argc, char const *argv[])
 	cin >> n;
 
 	GetNthUgly(n);
+
+
 
 	return 0;
 }
