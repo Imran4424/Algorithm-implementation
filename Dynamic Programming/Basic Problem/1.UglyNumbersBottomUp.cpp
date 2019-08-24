@@ -25,7 +25,7 @@ void GetNthUgly(lli n)
 
 		ugly[i] = nextUglyNo;
 
-		cout << ugly[i] << " ";
+		cout << nextUglyNo << " ";
 
 		if (nextUglyNo == nextMultipleOf2)
 		{
