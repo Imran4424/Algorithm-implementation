@@ -11,7 +11,7 @@ void InitDp(int n)
 {
 	for (int i = 0; i <= n; ++i)
 	{
-		lookup[n] = -1;
+		lookup[i] = -1;
 	}
 }
 
@@ -29,11 +29,6 @@ int Fibonacci(int n)
 		}
 		
 	}
-	
-	// if (-1 == n || -2 == n)
-	// {
-	// 	return 0;
-	// }
 
 	return lookup[n];
 }
@@ -49,9 +44,7 @@ int main(int argc, char const *argv[])
 
 	InitDp(n);
 
-	int result = Fibonacci(n);
-
-	cout << "The nth Fibonacci number is: " << result << endl;
+	cout << "The nth Fibonacci number is: " << Fibonacci(n) << endl;
 
 	return 0;
 }
