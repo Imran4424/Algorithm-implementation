@@ -9,9 +9,9 @@ void GetNthUgly(lli n)
 	lli ugly[n];
 	lli i2 = 0, i3 = 0, i5 = 0;
 
-	lli nexMultipleOf2 = 2;
-	lli nexMultipleOf3 = 3;
-	lli nexMultipleOf5 = 5;
+	lli nextMultipleOf2 = 2;
+	lli nextMultipleOf3 = 3;
+	lli nextMultipleOf5 = 5;
 
 	lli  nextUglyNo = 1;
 
@@ -19,6 +19,8 @@ void GetNthUgly(lli n)
 
 	for (int i = 0; i < n; ++i)
 	{
+		nextUglyNo = min(nextMultipleOf2, min(nextMultipleOf3, nextMultipleOf5));
+
 		
 	}
 }
