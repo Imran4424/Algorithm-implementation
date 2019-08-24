@@ -21,25 +21,29 @@ void GetNthUgly(lli n)
 
 	for (int i = 1; i < n; ++i)
 	{
-		nextUglyNo = min(nextMultipleOf2, min(nextMultipleOf3, nextMultipleOf5));
+		nextUglyNo = min(nextMultipleOf2, min(nextMultipleOf3, nextMultipleOf5)); // a trick to use binary input functions
 
 		ugly[i] = nextUglyNo;
 
 		cout << nextUglyNo << " ";
 
+
+		// here don't use if elseif else block
+		// that will cause repetations
 		if (nextUglyNo == nextMultipleOf2)
 		{
 			i2 = i2 + 1;
 
 			nextMultipleOf2 = ugly[i2] * 2;
 		}
-		else if(nextUglyNo == nextMultipleOf3)
+
+		if(nextUglyNo == nextMultipleOf3)
 		{
 			i3 = i3 + 1;
 
 			nextMultipleOf3 = ugly[i3] * 3;
 		}
-		else if (nextUglyNo == nextMultipleOf5)
+		if (nextUglyNo == nextMultipleOf5)
 		{
 			i5 = i5 + 1;
 
