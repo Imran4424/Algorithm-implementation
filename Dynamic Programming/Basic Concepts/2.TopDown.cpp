@@ -21,11 +21,11 @@ int Fibonacci(int n)
 	{
 		if (n <= 1)
 		{
-			lookup[n] = n;
+			lookup[n] = n; // this statement is for less than 2 values 
 		}
 		else
 		{
-			lookup[n] = Fibonacci(n-1) + Fibonacci(n-2);
+			lookup[n] = Fibonacci(n-1) + Fibonacci(n-2); // this statement is for greater than or equal to 2 values
 		}
 		
 	}
