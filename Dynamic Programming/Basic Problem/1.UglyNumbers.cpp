@@ -29,7 +29,7 @@ void GetNthUgly(int n)
 {
 	int i = 1, count = 1;
 
-	cout << i << " ";
+	cout << i++ << " ";
 
 	for (; count < n; ++i)
 	{
