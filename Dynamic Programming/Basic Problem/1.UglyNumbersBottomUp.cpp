@@ -21,7 +21,8 @@ void GetNthUgly(lli n)
 	{
 		nextUglyNo = min(nextMultipleOf2, min(nextMultipleOf3, nextMultipleOf5));
 
-		
+		cout << ugly[i] = ugly[i] << " ";
+
 	}
 }
 
