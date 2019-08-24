@@ -23,6 +23,25 @@ void GetNthUgly(lli n)
 
 		cout << ugly[i] = ugly[i] << " ";
 
+		if (nextUglyNo == nextMultipleOf2)
+		{
+			i2 = i2 + 1;
+
+			nextMultipleOf2 = ugly[i2] * 2;
+		}
+		else if(nextUglyNo == nextMultipleOf3)
+		{
+			i3 = i3 + 1;
+
+			nextMultipleOf3 = ugly[i3] * 3;
+		}
+		else if (nextUglyNo == nextMultipleOf5)
+		{
+			i5 = i5 + 1;
+
+			nextMultipleOf5 = ugly[i5] * 5;
+		}
+
 	}
 }
 
