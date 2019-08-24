@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace std;
 
-typedef long long int lli;
+typedef unsigned long long int lli;
 
 void GetNthUgly(lli n)
 {
@@ -17,9 +17,9 @@ void GetNthUgly(lli n)
 
 	ugly[0] = 1;
 
-	cout << ugly[0] << " ";
+	cout << nextUglyNo << " ";
 
-	for (int i = 0; i < n; ++i)
+	for (int i = 1; i < n; ++i)
 	{
 		nextUglyNo = min(nextMultipleOf2, min(nextMultipleOf3, nextMultipleOf5));
 
