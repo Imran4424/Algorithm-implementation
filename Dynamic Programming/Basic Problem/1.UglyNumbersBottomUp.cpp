@@ -12,6 +12,15 @@ void GetNthUgly(lli n)
 	lli nexMultipleOf2 = 2;
 	lli nexMultipleOf3 = 3;
 	lli nexMultipleOf5 = 5;
+
+	lli  nextUglyNo = 1;
+
+	cout << ugly[0] = 1 << " ";
+
+	for (int i = 0; i < n; ++i)
+	{
+		
+	}
 }
 
 int main(int argc, char const *argv[])
