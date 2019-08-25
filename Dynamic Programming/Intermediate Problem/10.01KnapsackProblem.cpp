@@ -10,6 +10,11 @@ int *weight, *value, *bits;
 
 int main(int argc, char const *argv[])
 {
-	int 
+	cout << "how many objects" << endl;
+
+	int size;
+	cin >> size;
+
+	
 	return 0;
 }
