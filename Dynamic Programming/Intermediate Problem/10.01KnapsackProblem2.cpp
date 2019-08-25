@@ -18,16 +18,11 @@ void Init()
 	}
 }
 
-void Binary(int i, sumVal, sumWeight)
+int Binary(int i, sumVal, sumWeight)
 {
 	if (i == size)
 	{
-		if (sumVal > maximum && sumWeight <= totalWeight)
-		{
-			maximum = sumVal;
-		}
-
-		return;
+		return 
 	}
 
 	bits[i] = 0;
@@ -56,7 +51,7 @@ int main(int argc, char const *argv[])
 
 	cin >> totalWeight;
 
-	cout << "So maximum weight can you carry" << maximum << endl;
+
 
 	return 0;
 }
