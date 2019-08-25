@@ -6,10 +6,10 @@
 using namespace std;
 
 int totalWeight;
-int *weight, *value;
+int *weight, *value, *bits;
 
 int main(int argc, char const *argv[])
 {
-	
+	int 
 	return 0;
 }
