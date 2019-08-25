@@ -15,6 +15,11 @@ int main(int argc, char const *argv[])
 	int size;
 	cin >> size;
 
+	weight = new int[size+1];
+	value = new int[size+1];
+	bits = new int[size+1];
+
 	
+
 	return 0;
 }
