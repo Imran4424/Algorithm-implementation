@@ -37,6 +37,17 @@ void Catalan(ulli n)
 
 int main(int argc, char const *argv[])
 {
+	cout << "enter the nth term" << endl;
+
+	ulli n;
+	cin >> n;
+
+	for (int i = 1; i <= n; ++i)
+	{
+		Catalan(i)
+	}
+
+	cout << endl;
 	
 	return 0;
 }
