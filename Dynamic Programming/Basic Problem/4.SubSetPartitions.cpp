@@ -19,12 +19,36 @@ using namespace std;
 
 typedef long long int lli; // supports 19 digit
 
+lli CountPartitions(lli memNum, lli subsetNum)
+{
+	// Base cases
+	if (0 == memNum || 0 == subsetNum || memNum < subsetNum)
+	{
+		return 0;
+	}
+
+	if (1 == subsetNum || memNum == subsetNum)
+	{
+		return 1;
+	}
+
+	return subsetNum * CountPartitions(memNum-1, subsetNum) + CountPartitions(memNum-1, subsetNum-1);
+}
+
 int main(int argc, char const *argv[])
 {
-	cout << "enter the member number subset number" << endl;
+	while(1)
+	{
+		cout << "enter the member number subset number" << endl;
 
-	lli memNum, subsetNum;
-	cin >> memNum >> subsetNum;
+		lli memNum, subsetNum;
+		cin >> memNum >> subsetNum;
+		
+		cout << "number of partition: " << CountPartitions(memNum, subsetNum) << endl << endl;
+	}
+
+
+
 
 	return 0;
 }
