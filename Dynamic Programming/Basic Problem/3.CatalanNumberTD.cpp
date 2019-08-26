@@ -17,7 +17,7 @@
 #include <vector>
 using namespace std;
 
-typedef unsigned long long int ulli;
+typedef unsigned long long int ulli; // supports 20 digit
 
 vector <ulli> catDp;
 
