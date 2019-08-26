@@ -21,17 +21,14 @@ vector <int> combination(100, -1);
 
 ulli ComibinationalHelper(ulli num, ulli endPoint)
 {
-	// if (-1 != combination[num])
-	// {
-	// 	return combination[num];
-	// }
+	ulli result = 1;
 
-	if (endPoint == num)
+	for (ulli i = num; i >= endPoint; --i)
 	{
-		return num;
+		result = num *i;
 	}
 
-	return num * ComibinationalHelper(num - 1, endPoint);
+	return result;
 }
 
 ulli Factorial(ulli num) // dynamic recursive factorial 
