@@ -55,6 +55,8 @@ int main(int argc, char const *argv[])
 
 	cin >> totalWeight;
 
+	Binary(0, 0, 0);
+
 	cout << "So maximum weight can you carry: " << maximum << endl;
 
 	return 0;
