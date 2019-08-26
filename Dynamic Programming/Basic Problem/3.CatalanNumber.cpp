@@ -14,7 +14,7 @@ vector <int> fact(100, -1);
 
 ulli Factorial(ulli num) // dynamic recursive factorial 
 {
-	if (fact[num] >= 0)
+	if (fact[num] >= 1)
 	{
 		return fact[num];
 	}
