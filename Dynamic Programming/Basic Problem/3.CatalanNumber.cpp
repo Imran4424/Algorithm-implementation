@@ -22,12 +22,16 @@ vector <ulli> fact(100, -1);
 
 ulli ComibinationalHelper(ulli num, ulli endPoint)
 {
-	if (num == endPoint)
+	ulli result = 1;
+
+	while(endPoint <= num)
 	{
-		return num;
+		result = result * endPoint;
+
+		endPoint++;
 	}
 
-	return num * ComibinationalHelper(num-1, endPoint);
+	return result;
 }
 
 ulli Factorial(ulli num) // dynamic recursive factorial 
@@ -69,7 +73,7 @@ int main(int argc, char const *argv[])
 	ulli n;
 	cin >> n;
 
-	for (ulli i = 0; i <= n; ++i)
+	for (ulli i = 0; i < n; ++i)
 	{
 		Catalan(i);
 	}
