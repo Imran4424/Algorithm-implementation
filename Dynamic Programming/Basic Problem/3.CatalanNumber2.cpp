@@ -20,14 +20,14 @@ typedef unsigned long long int ulli;
 
 vector <ulli> fact(100, -1);
 
-ulli ComibinationalHelper(ulli num, ulli endPoint)
+ulli CatalanHelper(ulli num, ulli endPoint)
 {
 	if (num == endPoint)
 	{
 		return num;
 	}
 
-	return num * ComibinationalHelper(num-1, endPoint);
+	return num * CatalanHelper(num-1, endPoint);
 }
 
 ulli Factorial(ulli num) // dynamic recursive factorial 
@@ -55,7 +55,7 @@ void Catalan(ulli n)
 	}
 
 
-	ulli result = ComibinationalHelper(2 * n, n+2) / (Factorial(n));
+	ulli result = CatalanHelper(2 * n, n+2) / (Factorial(n));
 
 	cout << result << " ";
 }
