@@ -17,6 +17,8 @@
 #include <iostream>
 using namespace std;
 
+typedef unsigned long long int ulli; // supports 20 digit
+
 int main(int argc, char const *argv[])
 {
 	
