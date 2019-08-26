@@ -17,10 +17,14 @@
 #include <iostream>
 using namespace std;
 
-typedef unsigned long long int ulli; // supports 20 digit
+typedef long long int lli; // supports 19 digit
 
 int main(int argc, char const *argv[])
 {
-	
+	cout << "enter the member number subset number" << endl;
+
+	lli memNum, subsetNum;
+	cin >> memNum >> subsetNum;
+
 	return 0;
 }
