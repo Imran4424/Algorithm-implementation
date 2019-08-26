@@ -10,6 +10,8 @@
 	Cn = <Summation of <0 to n-1>> Ci*Cn-i-1
 
 	https://en.wikipedia.org/wiki/Catalan_number
+
+	this code can conduct 60+
 */
 #include <iostream>
 using namespace std;
