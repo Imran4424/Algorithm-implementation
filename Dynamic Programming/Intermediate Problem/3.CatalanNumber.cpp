@@ -35,3 +35,8 @@ void Catalan(ulli n)
 	cout << result << " ";
 }
 
+int main(int argc, char const *argv[])
+{
+	
+	return 0;
+}
