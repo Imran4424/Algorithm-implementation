@@ -19,6 +19,11 @@ using namespace std;
 
 typedef unsigned long long int ulli; // supports 20 digit
 
+ulli Catalan(ulli num)
+{
+	
+}
+
 int main(int argc, char const *argv[])
 {
 
