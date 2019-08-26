@@ -21,7 +21,22 @@ typedef unsigned long long int ulli; // supports 20 digit
 
 ulli Catalan(ulli num)
 {
-	
+	vector <ulli> catDp(num+1);
+
+	catDp[0] = catDp[1] = 1;
+
+	for (int i = 2; i <= num; ++i)
+	{
+		catDp[i] = 0;
+
+		for (int j = 0; j < i; ++j)
+		{
+			catDp[i] += catDp[j] * catDp[i-j-1];
+		}
+
+	}
+
+	return catDp[num];
 }
 
 int main(int argc, char const *argv[])
@@ -32,7 +47,7 @@ int main(int argc, char const *argv[])
 	ulli n;
 	cin >> n;
 
-	catDp.resize(n+1, -1);
+	
 
 	for (ulli i = 0; i < n; ++i)
 	{
