@@ -5,12 +5,12 @@
 */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 typedef unsigned long long int ulli;
 
 vector <int> fact(100, -1);
-fact[0] = 0;
 
 ulli Factorial(ulli num) // dynamic recursive factorial 
 {
@@ -37,6 +37,8 @@ void Catalan(ulli n)
 
 int main(int argc, char const *argv[])
 {
+	fact[0] = 1;
+
 	cout << "enter the nth term" << endl;
 
 	ulli n;
@@ -44,7 +46,7 @@ int main(int argc, char const *argv[])
 
 	for (int i = 1; i <= n; ++i)
 	{
-		Catalan(i)
+		Catalan(i);
 	}
 
 	cout << endl;
