@@ -24,12 +24,12 @@ ulli ComibinationalHelper(ulli num, ulli endPoint)
 
 	while(endPoint <= num)
 	{
-		cout << result << endl;
+		cout << "Hi: " << result << endl;
 
 		result = result * endPoint;
 
-		cout << result << endl;
-		
+		cout << "Hi: " << result << endl;
+
 		endPoint++;
 	}
 
