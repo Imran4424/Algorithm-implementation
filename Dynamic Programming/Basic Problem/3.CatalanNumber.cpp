@@ -8,6 +8,8 @@
 			  = (2n*(2n-1)*(2n-2)*...*(2n-n+2)) / (n)!
 
 	https://en.wikipedia.org/wiki/Catalan_number
+
+	this code can calculate upto 15
 */
 
 #include <iostream>
@@ -20,15 +22,11 @@ vector <ulli> fact(100, -1);
 
 ulli ComibinationalHelper(ulli num, ulli endPoint)
 {
-	ulli result = endPoint;
+	ulli result = 1;
 
 	while(endPoint <= num)
 	{
-		cout << "Hi: " << result << endl;
-
 		result = result * endPoint;
-
-		cout << "Hi: " << result << endl;
 
 		endPoint++;
 	}
