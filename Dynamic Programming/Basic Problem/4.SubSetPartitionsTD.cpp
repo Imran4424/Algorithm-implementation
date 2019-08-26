@@ -15,24 +15,32 @@
 */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 typedef long long int lli; // supports 19 digit
 
+vector< vector<lli> > dpCount(101, vector <lli> (101, -1) );
+
 lli CountPartitions(lli memNum, lli subsetNum)
 {
 	// Base cases
+	if (dpCount[memNum][subsetNum] != -1)
+	{
+		return dpCount[memNum][subsetNum];
+	}
+
 	if (0 == memNum || 0 == subsetNum || memNum < subsetNum)
 	{
-		return 0;
+		return dpCount[memNum][subsetNum] = 0;
 	}
 
 	if (1 == subsetNum || memNum == subsetNum)
 	{
-		return 1;
+		return dpCount[memNum][subsetNum] = 1;
 	}
 
-	return subsetNum * CountPartitions(memNum-1, subsetNum) + CountPartitions(memNum-1, subsetNum-1);
+	return dpCount[memNum][subsetNum] = subsetNum * CountPartitions(memNum-1, subsetNum) + CountPartitions(memNum-1, subsetNum-1);
 }
 
 int main(int argc, char const *argv[])
