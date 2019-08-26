@@ -5,7 +5,7 @@
 
 			  = (1/(n+1)) * 2n C n
 
-			  = (2n*(2n-1)*(2n-2)*...*(2n-n+1)) / (n+1)!
+			  = (2n*(2n-1)*(2n-2)*...*(2n-n+2)) / (n)!
 
 	https://en.wikipedia.org/wiki/Catalan_number
 */
@@ -33,14 +33,14 @@ ulli ComibinationalHelper(ulli num, ulli endPoint)
 
 ulli Factorial(ulli num) // dynamic recursive factorial 
 {
-	if (fact[num] >= 1)
-	{
-		return fact[num];
-	}
-
 	if (num == 1)
 	{
 		return fact[1] = 1;
+	}
+
+	if (fact[num] != -1)
+	{
+		return fact[num];
 	}
 
 	return fact[num] = num * Factorial(num - 1);
@@ -54,7 +54,7 @@ void Catalan(ulli n)
 	}
 
 
-	int result = ComibinationalHelper(2 * n, n+1) / (Factorial(n + 1));
+	int result = ComibinationalHelper(2 * n, n+2) / (Factorial(n));
 
 	cout << result << " ";
 }
