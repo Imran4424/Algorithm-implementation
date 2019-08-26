@@ -18,3 +18,24 @@
 using namespace std;
 
 typedef unsigned long long int ulli; // supports 20 digit
+
+int main(int argc, char const *argv[])
+{
+
+	cout << "enter the nth term" << endl;
+
+	ulli n;
+	cin >> n;
+
+	catDp.resize(n+1, -1);
+
+	for (ulli i = 0; i < n; ++i)
+	{
+
+		cout << Catalan(i) << " ";
+	}
+
+	cout << endl;
+	
+	return 0;
+}
