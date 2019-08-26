@@ -11,7 +11,7 @@
 
 	https://en.wikipedia.org/wiki/Catalan_number
 
-	this code can conduct 60+
+	this code can conduct 37+
 */
 #include <iostream>
 #include <vector>
