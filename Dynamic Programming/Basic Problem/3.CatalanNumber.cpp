@@ -22,16 +22,12 @@ vector <ulli> fact(100, -1);
 
 ulli ComibinationalHelper(ulli num, ulli endPoint)
 {
-	ulli result = 1;
-
-	while(endPoint <= num)
+	if (num == endPoint)
 	{
-		result = result * endPoint;
-
-		endPoint++;
+		return num;
 	}
 
-	return result;
+	return num * ComibinationalHelper(num-1, endPoint);
 }
 
 ulli Factorial(ulli num) // dynamic recursive factorial 
