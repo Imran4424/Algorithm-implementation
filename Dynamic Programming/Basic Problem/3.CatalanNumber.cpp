@@ -2,6 +2,12 @@
 	Catalan number
 
 	Formula, nth term = (2n)! / (n+1)! n!
+
+			  = (1/(n+1)) * 2n C n
+
+			  = (2n*(2n-1)*(2n-2)*...*(2n-n+1)) / (n+1)!
+
+	https://en.wikipedia.org/wiki/Catalan_number
 */
 
 #include <iostream>
@@ -11,6 +17,22 @@ using namespace std;
 typedef unsigned long long int ulli;
 
 vector <int> fact(100, -1);
+vector <int> combination(100, -1);
+
+ulli ComibinationalHelper(ulli num, ulli endPoint)
+{
+	// if (-1 != combination[num])
+	// {
+	// 	return combination[num];
+	// }
+
+	if (endPoint == num)
+	{
+		return num;
+	}
+
+	return num * ComibinationalHelper(num - 1, endPoint);
+}
 
 ulli Factorial(ulli num) // dynamic recursive factorial 
 {
@@ -29,8 +51,13 @@ ulli Factorial(ulli num) // dynamic recursive factorial
 
 void Catalan(ulli n)
 {
+	if (n == 0) // base case
+	{
+		cout << 1 << " ";
+	}
 
-	int result = Factorial(2 * n) / (Factorial(n + 1) * Factorial(n));
+
+	int result = ComibinationalHelper(2 * n, n+1) / (Factorial(n + 1));
 
 	cout << result << " ";
 }
@@ -44,7 +71,7 @@ int main(int argc, char const *argv[])
 	ulli n;
 	cin >> n;
 
-	for (int i = 1; i <= n; ++i)
+	for (int i = 0; i <= n; ++i)
 	{
 		Catalan(i);
 	}
