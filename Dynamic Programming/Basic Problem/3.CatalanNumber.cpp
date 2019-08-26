@@ -16,16 +16,21 @@ using namespace std;
 
 typedef unsigned long long int ulli;
 
-vector <int> fact(100, -1);
-vector <int> combination(100, -1);
+vector <ulli> fact(100, -1);
 
 ulli ComibinationalHelper(ulli num, ulli endPoint)
 {
-	ulli result = 1;
+	ulli result = endPoint;
 
-	for (ulli i = num; i >= endPoint; --i)
+	while(endPoint <= num)
 	{
-		result = num *i;
+		cout << result << endl;
+
+		result = result * endPoint;
+
+		cout << result << endl;
+		
+		endPoint++;
 	}
 
 	return result;
@@ -48,13 +53,15 @@ ulli Factorial(ulli num) // dynamic recursive factorial
 
 void Catalan(ulli n)
 {
-	if (n == 0) // base case
+	if (n == 0 || n == 1) // base case
 	{
 		cout << 1 << " ";
+
+		return;
 	}
 
 
-	int result = ComibinationalHelper(2 * n, n+2) / (Factorial(n));
+	ulli result = ComibinationalHelper(2 * n, n+2) / (Factorial(n));
 
 	cout << result << " ";
 }
@@ -68,7 +75,7 @@ int main(int argc, char const *argv[])
 	ulli n;
 	cin >> n;
 
-	for (int i = 0; i <= n; ++i)
+	for (ulli i = 0; i <= n; ++i)
 	{
 		Catalan(i);
 	}
