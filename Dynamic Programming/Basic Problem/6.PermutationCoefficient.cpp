@@ -1,9 +1,9 @@
 /*
-	In this code, we will implement binomial coefficient. This also known as combination
+	In this code, we will implement permutation coefficient. This also known as permutation
 
-	we know combination rule for nCk is
+	we know permutation rule for nCk is
 
-	nCk = n! / (k!*(n-k)!)
+	nCk = n! / (n-k)!
 */
 
 /*
@@ -23,7 +23,10 @@ vector < vector <lli> > dpPermutations(size, vector <lli> (size, -1));
 
 lli PermutationCoefficient(lli number, lli combination)
 {
-	
+	if (dpPermutations[number][combination])
+	{
+		/* code */
+	}
 }
 
 int main(int argc, char const *argv[])
