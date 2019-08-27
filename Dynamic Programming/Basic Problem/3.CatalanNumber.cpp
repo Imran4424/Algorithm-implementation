@@ -16,13 +16,13 @@
 #include <vector>
 using namespace std;
 
-typedef unsigned long long int ulli;
+typedef long long int lli;
 
-vector <ulli> fact(100, -1);
+vector <lli> fact(100, -1);
 
-ulli ComibinationalHelper(ulli num, ulli endPoint)
+lli ComibinationalHelper(lli num, lli endPoint)
 {
-	ulli result = 1;
+	lli result = 1;
 
 	while(endPoint <= num)
 	{
@@ -34,7 +34,7 @@ ulli ComibinationalHelper(ulli num, ulli endPoint)
 	return result;
 }
 
-ulli Factorial(ulli num) // dynamic recursive factorial 
+lli Factorial(lli num) // dynamic recursive factorial 
 {
 	if (num == 1)
 	{
@@ -49,7 +49,7 @@ ulli Factorial(ulli num) // dynamic recursive factorial
 	return fact[num] = num * Factorial(num - 1);
 }
 
-void Catalan(ulli n)
+void Catalan(lli n)
 {
 	if (n == 0 || n == 1) // base case
 	{
@@ -59,7 +59,7 @@ void Catalan(ulli n)
 	}
 
 
-	ulli result = ComibinationalHelper(2 * n, n+2) / (Factorial(n));
+	lli result = ComibinationalHelper(2 * n, n+2) / (Factorial(n));
 
 	cout << result << " ";
 }
@@ -70,10 +70,10 @@ int main(int argc, char const *argv[])
 
 	cout << "enter the nth term" << endl;
 
-	ulli n;
+	lli n;
 	cin >> n;
 
-	for (ulli i = 0; i < n; ++i)
+	for (lli i = 0; i < n; ++i)
 	{
 		Catalan(i);
 	}
