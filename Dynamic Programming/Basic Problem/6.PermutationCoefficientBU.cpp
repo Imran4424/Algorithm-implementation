@@ -32,7 +32,37 @@ vector < vector <lli> > dpPermutations(size, vector <lli> (size, -1));
 
 lli PermutationCoefficient(lli number, lli combinations)
 {
-	
+	for (lli i = 0; i <= number; ++i)
+	{
+		for (lli j = 0; j < min(i, combinations); ++j)
+		{
+			// if (-1 != dpPermutations[i][j])
+			// {
+			// 	continue;
+			// }
+
+			if (0 == j)
+			{
+				dpPermutations[i][j] = 1;
+
+				continue;
+			}
+
+			if (1 == j)
+			{
+				dpPermutations[i][j] = i;
+
+				continue;
+			}
+
+			dpPermutations[i][j] = dpPermutations[i-1][j] + (j * dpPermutations[i-1][j-1]);
+
+
+			dpPermutations[i][j+1] = 0;
+		}
+	}
+
+	return dpPermutations[number][combinations];
 }
 
 int main(int argc, char const *argv[])
