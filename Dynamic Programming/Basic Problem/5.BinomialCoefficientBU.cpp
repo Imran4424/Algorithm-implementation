@@ -9,3 +9,7 @@
 /*
 	In this code we will implement Bottom Up approach
 */
+
+#include <iostream>
+#include <vector>
+using namespace std;
