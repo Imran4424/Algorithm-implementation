@@ -9,30 +9,30 @@
 /*
 	in this code, we are doing bottom up approach
 
-	can correctly calculated upto 27
+	can correctly calculated upto 26
 */
 
 #include <iostream>
 #include <vector>
 using namespace std;
 
-typedef unsigned long long int ulli;
+typedef long long int lli;
 
-// vector< vector <ulli> > belTriangle(101, vector <ulli> (101, -1));
+// vector< vector <lli> > belTriangle(101, vector <lli> (101, -1));
 
-ulli BellNumber(ulli number)
+lli BellNumber(lli number)
 {
-	ulli belTriangle[number+1][number+1];
+	lli belTriangle[number+1][number+1];
 
 	belTriangle[0][0] = 1;
 
-	for (ulli i = 1; i <= number; ++i)
+	for (lli i = 1; i <= number; ++i)
 	{
 		// filling for j = 0 means by copying from previous row's last element
 		belTriangle[i][0] = belTriangle[i-1][i-1]; // both are i-1 one because every row same number of 
 		                                            //  column the row number
 
-		for(ulli j=1; j<=i; j++)
+		for(lli j=1; j<=i; j++)
 		{
 			belTriangle[i][j] = belTriangle[i][j-1] + belTriangle[i-1][j-1];
 		}
@@ -45,12 +45,12 @@ int main(int argc, char const *argv[])
 {
 	cout << "enter the nth term" << endl;
 
-	ulli n;
+	lli n;
 	cin >> n;
 
 	
 
-	for (ulli i = 0; i < n; ++i)
+	for (lli i = 0; i < n; ++i)
 	{
 
 		cout << BellNumber(i) << " ";
