@@ -14,7 +14,7 @@ typedef long long int lli;
 
 const int size = 101;
 
-vector < vetor <lli> > dpCombinations(size, vector <lli> (size, -1));
+vector < vector <lli> > dpCombinations(size, vector <lli> (size, -1));
 
 lli BinomialCoefficient(lli number, lli combinations)
 {
