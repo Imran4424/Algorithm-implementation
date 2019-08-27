@@ -9,17 +9,17 @@
 /*
 	in this code, we are doing bottom up approach
 
-	can correctly calculated upto 27
+	can correctly calculated upto 26
 */
 #include <iostream>
 #include <vector>
 using namespace std;
 
-typedef unsigned long long int ulli;
+typedef long long int lli; // covers 19 digit
 
-vector< vector <ulli> > belTriangle(101, vector <ulli> (101, -1));
+vector< vector <lli> > belTriangle(101, vector <lli> (101, -1));
 
-ulli BellNumber(ulli number, ulli col)
+lli BellNumber(lli number, lli col)
 {
 	if (-1 != belTriangle[number][col])
 	{
@@ -44,12 +44,12 @@ int main(int argc, char const *argv[])
 {
 	cout << "enter the nth term" << endl;
 
-	ulli n;
+	lli n;
 	cin >> n;
 
 	
 
-	for (ulli i = 0; i < n; ++i)
+	for (lli i = 0; i < n; ++i)
 	{
 
 		cout << BellNumber(i, 0) << " ";
