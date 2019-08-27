@@ -7,11 +7,12 @@
 */ 
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 typedef long long int lli;
 
-vector< vector <lli> > belltriangle(101, vector <lli> (101, -1));
+// vector< vector <lli> > belltriangle(101, vector <lli> (101, -1));
 
 lli BellNumber(lli number)
 {
@@ -22,15 +23,15 @@ int main(int argc, char const *argv[])
 {
 	cout << "enter the nth term" << endl;
 
-	ulli n;
+	lli n;
 	cin >> n;
 
 	
 
-	for (ulli i = 0; i < n; ++i)
+	for (lli i = 0; i < n; ++i)
 	{
 
-		cout << Catalan(i) << " ";
+		cout << BellNumber(i) << " ";
 	}
 
 	cout << endl;
