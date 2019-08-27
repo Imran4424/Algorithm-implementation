@@ -20,6 +20,20 @@ lli BellNumber(lli number)
 
 int main(int argc, char const *argv[])
 {
+	cout << "enter the nth term" << endl;
+
+	ulli n;
+	cin >> n;
+
 	
+
+	for (ulli i = 0; i < n; ++i)
+	{
+
+		cout << Catalan(i) << " ";
+	}
+
+	cout << endl;
+
 	return 0;
 }
