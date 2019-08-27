@@ -15,7 +15,7 @@
 */
 
 /*
-	In this code we will implement a old school method iterative
+	In this code we will implement a old school method recursive
 */
 
 #include <iostream>
