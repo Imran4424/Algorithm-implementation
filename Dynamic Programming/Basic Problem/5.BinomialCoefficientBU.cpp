@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <vector>
+#include <math.h>
 using namespace std;
 
 typedef long long int lli;
@@ -23,11 +24,17 @@ vector < vector <lli> > dpCombinations(size, vector <lli> (size, -1));
 
 lli BinomialCoefficient(lli number, lli combinations)
 {
-	for (int i = 0; i <= number; ++i)
+	for (lli i = 0; i <= number; ++i)
 	{
-		for (int j = 0; j <= min(i, combinations); ++j)
+		for (lli j = 0; j <= min(i, combinations); ++j)
 		{
 			// Base cases
+
+			if (-1 != dpCombinations[i][j]) // checking if calculation already there or not
+			{
+				continue;
+			}
+
 
 			if (0 == j || i == j)
 			{
