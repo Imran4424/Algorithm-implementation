@@ -28,14 +28,10 @@ typedef long long int lli;
 
 lli PermutationCoefficient(lli number, lli combinations)
 {
-	lli result = 1;
-
-	for(lli x = number; x > number - combinations; x--)
+	if (/* condition */)
 	{
-		result = result * x;
+		/* code */
 	}
-
-	return result;
 }
 
 int main(int argc, char const *argv[])
