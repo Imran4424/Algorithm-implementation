@@ -19,4 +19,4 @@ typedef long long int lli;
 
 const int size = 101;
 
-vector < vector <lli> > dpCombinations(size, vector <lli> (size, -1));
+vector < vector <lli> > dpPermutations(size, vector <lli> (size, -1));
