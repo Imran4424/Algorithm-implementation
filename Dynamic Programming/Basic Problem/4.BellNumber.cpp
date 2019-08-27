@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
 	for (ulli i = 0; i < n; ++i)
 	{
 
-		cout << BellNumber(i) << " ";
+		cout << BellNumber(i, 0) << " ";
 	}
 
 	cout << endl;
