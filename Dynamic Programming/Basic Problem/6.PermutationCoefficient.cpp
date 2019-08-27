@@ -8,6 +8,9 @@
 	recursive rule of permutaion is,
 
 	P(n, k) = P(n-1, k) + k* P(n-1, k-1)
+
+	P(n, 0) = 1
+	P(n, 1) = n
 */
 
 /*
