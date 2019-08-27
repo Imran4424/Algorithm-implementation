@@ -13,3 +13,23 @@ typedef unsigned long long int ulli;
 
 vector< vector <ulli> > belTriangle(101, vector <ulli> (101, -1));
 
+
+int main(int argc, char const *argv[])
+{
+	cout << "enter the nth term" << endl;
+
+	ulli n;
+	cin >> n;
+
+	
+
+	for (ulli i = 0; i < n; ++i)
+	{
+
+		cout << BellNumber(i) << " ";
+	}
+
+	cout << endl;
+
+	return 0;
+}
