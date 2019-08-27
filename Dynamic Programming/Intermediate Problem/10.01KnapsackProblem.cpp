@@ -8,7 +8,8 @@ using namespace std;
 int totalWeight, size, maximum = 0;
 int *weight, *value, *bits;
 
-int dp[101][10001];
+int dpVal[101][10001];
+int dpWeight[101][10001];
 
 void Init()
 {

@@ -1,4 +1,10 @@
-/*
+int dpVal[101][10001];
+int dpWeight[101][10001];
+
+void Init()
+{
+	
+}/*
 	0-1 knapsack problem is a dynamic programming problem
 */
 
@@ -8,15 +14,14 @@ using namespace std;
 int totalWeight, size, maximum = 0;
 int *weight, *value, *bits;
 
-int dp[101][10001];
+int dpVal[101][10001];
+int dpWeight[101][10001];
 
 void Init()
 {
-	for (int i = 0; i < count; ++i)
-	{
-		/* code */
-	}
+	
 }
+
 
 int Binary(int i, sumVal, sumWeight)
 {
