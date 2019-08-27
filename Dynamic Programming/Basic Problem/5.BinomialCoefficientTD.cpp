@@ -6,6 +6,10 @@
 	nCk = n! / (k!*(n-k)!)
 */
 
+/*
+	In this code we will implement Top Down approach
+*/
+
 #include <iostream>
 #include <vector>
 using namespace std;
