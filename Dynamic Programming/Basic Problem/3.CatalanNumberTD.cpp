@@ -17,11 +17,11 @@
 #include <vector>
 using namespace std;
 
-typedef long long int ulli; // supports 19 digit
+typedef long long int lli; // supports 19 digit
 
-vector <ulli> catDp;
+vector <lli> catDp;
 
-ulli Catalan(ulli num)
+lli Catalan(lli num)
 {
 	if (num < 0)
 	{
@@ -38,9 +38,9 @@ ulli Catalan(ulli num)
 		return catDp[num] = 1;
 	}
 
-	ulli sum = 0;
+	lli sum = 0;
 
-	for (ulli i = 0; i < num; ++i)
+	for (lli i = 0; i < num; ++i)
 	{
 		sum = sum + Catalan(i) * Catalan(num - i - 1);
 	}
@@ -53,12 +53,12 @@ int main(int argc, char const *argv[])
 
 	cout << "enter the nth term" << endl;
 
-	ulli n;
+	lli n;
 	cin >> n;
 
 	catDp.resize(n+1, -1);
 
-	for (ulli i = 0; i < n; ++i)
+	for (lli i = 0; i < n; ++i)
 	{
 
 		cout << Catalan(i) << " ";
