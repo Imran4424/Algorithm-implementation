@@ -1,9 +1,13 @@
 /*
 	In this code, we will implement permutation coefficient. This also known as permutation
 
-	we know permutation rule for nCk is
+	we know permutation rule for nPk is
 
-	nCk = n! / (n-k)!
+	nPk = n! / (n-k)!
+
+	recursive rule of permutaion is,
+
+	P(n, k) = P(n-1, k) + k* P(n-1, k-1)
 */
 
 /*

@@ -4,6 +4,12 @@
 	we know combination rule for nCk is
 
 	nCk = n! / (k!*(n-k)!)
+
+	recursive rule of combination is,
+
+	C(n, k) = C(n-1, k-1) + C(n-1, k)
+	
+	C(n, 0) = C(n, n) = 1
 */
 
 /*
