@@ -23,7 +23,30 @@ vector < vector <lli> > dpCombinations(size, vector <lli> (size, -1));
 
 lli BinomialCoefficient(lli number, lli combinations)
 {
-	
+	for (int i = 0; i <= number; ++i)
+	{
+		for (int j = 0; j <= min(i, combinations); ++j)
+		{
+			// Base cases
+
+			if (0 == j || i == j)
+			{
+				dpCombinations[i][j] = 1;
+
+				continue;
+			}
+
+			if (1 == j)
+			{
+				dpCombinations[i][j] = i;
+			}
+
+			dpCombinations[i][j] = dpCombinations[i-1][j] + dpCombinations[i-1][j-1];
+
+		}
+	}
+
+	return dpCombinations[number]
 }
 
 int main(int argc, char const *argv[])
