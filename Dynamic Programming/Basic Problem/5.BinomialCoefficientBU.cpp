@@ -7,5 +7,5 @@
 */
 
 /*
-	In this code we will implement bottom up approach
+	In this code we will implement Bottom Up approach
 */
