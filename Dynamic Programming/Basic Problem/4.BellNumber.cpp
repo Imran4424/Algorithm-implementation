@@ -15,7 +15,22 @@ vector< vector <ulli> > belTriangle(101, vector <ulli> (101, -1));
 
 ulli BellNumber(ulli number, ulli col)
 {
+	if (-1 != belTriangle[number][col])
+	{
+		return belTriangle[number][col];
+	}
 
+	if (0 == number && 0 == col)
+	{
+		return belTriangle[number][col] = 1;
+	}
+
+	if (0 == col)
+	{
+		return belTriangle[number][col] = BellNumber(number-1, number-1);
+	}
+
+	return belTriangle[number][col] = BellNumber(number, col-1) + BellNumber(number-1, col-1);
 }
 
 
