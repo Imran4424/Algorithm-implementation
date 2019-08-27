@@ -18,3 +18,8 @@ lli BellNumber(lli number)
 
 }
 
+int main(int argc, char const *argv[])
+{
+	
+	return 0;
+}
