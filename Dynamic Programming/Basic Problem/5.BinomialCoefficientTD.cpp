@@ -12,8 +12,25 @@ using namespace std;
 
 typedef long long int lli;
 
+const int size = 101;
+
+vector < vetor <lli> > dpCombinations(size, vector <int> (size, -1));
+
+lli BinomialCoefficient(lli number, lli combinations)
+{
+
+}
+
 int main(int argc, char const *argv[])
 {
-	
+	while(1)
+	{
+		cout << "enter the n k" << endl;
+		
+		lli n, k;
+		cin >> n >> k;
+
+		cout << "The result of " << n << "C" << k << " is: " << 
+	}
 	return 0;
 }
