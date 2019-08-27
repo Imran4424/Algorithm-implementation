@@ -28,9 +28,9 @@ const int size = 101;
 
 vector < vector <lli> > dpPermutations(size, vector <lli> (size, -1));
 
-lli PermutationCoefficient(lli number, lli combination)
+lli PermutationCoefficient(lli number, lli combinations)
 {
-	if (dpPermutations[number][combination])
+	if (-1 != dpPermutations[number][combinations])
 	{
 		/* code */
 	}
