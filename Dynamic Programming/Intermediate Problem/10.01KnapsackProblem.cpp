@@ -8,13 +8,7 @@ using namespace std;
 int totalWeight, size, maximum = 0;
 int *weight, *value, *bits;
 
-int dpVal[101][10001];
-int dpWeight[101][10001];
 
-void Init()
-{
-	
-}
 
 void Binary(int i, int sumVal, int sumWeight)
 {
