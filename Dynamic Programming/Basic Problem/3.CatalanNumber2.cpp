@@ -16,7 +16,7 @@
 #include <vector>
 using namespace std;
 
-typedef unsigned long long int lli;
+typedef long long int lli;
 
 vector <lli> fact(100, -1);
 
