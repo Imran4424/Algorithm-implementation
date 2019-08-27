@@ -15,7 +15,7 @@
 */
 
 /*
-	In this code we will implement Top Down approach
+	In this code we will implement Bottom Up approach
 */
 
 #include <iostream>
@@ -34,7 +34,7 @@ lli PermutationCoefficient(lli number, lli combinations)
 {
 	for (lli i = 0; i <= number; ++i)
 	{
-		for (lli j = 0; j < min(i, combinations); ++j)
+		for (lli j = 0; j <= min(i, combinations); ++j)
 		{
 			// if (-1 != dpPermutations[i][j])
 			// {
@@ -58,7 +58,7 @@ lli PermutationCoefficient(lli number, lli combinations)
 			dpPermutations[i][j] = dpPermutations[i-1][j] + (j * dpPermutations[i-1][j-1]);
 
 
-			dpPermutations[i][j+1] = 0;
+			// dpPermutations[i][j+1] = 0;
 		}
 	}
 
