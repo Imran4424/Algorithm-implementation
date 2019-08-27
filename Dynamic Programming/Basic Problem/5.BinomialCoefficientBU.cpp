@@ -16,6 +16,11 @@ using namespace std;
 
 typedef long long int lli;
 
+lli BinomialCoefficient(lli number, lli combinations)
+{
+	
+}
+
 int main(int argc, char const *argv[])
 {
 	int test = 20;
