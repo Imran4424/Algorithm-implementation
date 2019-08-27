@@ -25,13 +25,23 @@ using namespace std;
 
 typedef long long int lli;
 
+lli endPoint;
+bool status;
+
 
 lli PermutationCoefficient(lli number, lli combinations)
 {
-	if (/* condition */)
+	if (status)
 	{
 		/* code */
 	}
+
+	if (endPoint == number)
+	{
+		return number;
+	}
+
+	return number * PermutationCoefficient(number-1, combinations);
 }
 
 int main(int argc, char const *argv[])
@@ -40,6 +50,8 @@ int main(int argc, char const *argv[])
 
 	while(test--)
 	{
+		status = true; // for each test case
+
 		cout << "enter the n k" << endl;
 		
 		lli n, k;
