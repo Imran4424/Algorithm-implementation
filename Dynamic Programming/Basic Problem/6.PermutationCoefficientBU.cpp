@@ -27,7 +27,7 @@ typedef long long int lli;
 
 const int size = 101;
 
-vector < vector <lli> > dpPermutations(size, vector <lli> (size, -1));
+vector < vector <lli> > dpPermutations(size, vector <lli> (size, 0));
 
 
 lli PermutationCoefficient(lli number, lli combinations)
@@ -36,10 +36,6 @@ lli PermutationCoefficient(lli number, lli combinations)
 	{
 		for (lli j = 0; j <= min(i, combinations); ++j)
 		{
-			// if (-1 != dpPermutations[i][j])
-			// {
-			// 	continue;
-			// }
 
 			if (0 == j)
 			{
@@ -57,8 +53,6 @@ lli PermutationCoefficient(lli number, lli combinations)
 
 			dpPermutations[i][j] = dpPermutations[i-1][j] + (j * dpPermutations[i-1][j-1]);
 
-
-			// dpPermutations[i][j+1] = 0;
 		}
 	}
 
