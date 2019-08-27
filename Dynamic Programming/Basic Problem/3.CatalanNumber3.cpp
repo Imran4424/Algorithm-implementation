@@ -16,7 +16,7 @@
 #include <iostream>
 using namespace std;
 
-typedef unsigned long long int ulli;
+typedef long long int ulli;
 
 ulli Catalan(ulli num)
 {
