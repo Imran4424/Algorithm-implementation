@@ -45,7 +45,9 @@ int main(int argc, char const *argv[])
 		lli n, k;
 		cin >> n >> k;
 
-		cout << "The result of " << n << "C" << k << " is: " << 
+		cout << "The result of " << n << "C" << k << " is: " << BinomialCoefficient(n, k) << endl;
+
+		cout << endl;
 	}
 	return 0;
 }
