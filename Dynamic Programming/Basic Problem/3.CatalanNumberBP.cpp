@@ -11,17 +11,17 @@
 
 	https://en.wikipedia.org/wiki/Catalan_number
 
-	this code can conduct 37
+	this code can conduct 36
 */
 #include <iostream>
 #include <vector>
 using namespace std;
 
-typedef unsigned long long int ulli; // supports 20 digit
+typedef long long int lli; // supports 19 digit
 
-ulli Catalan(ulli num)
+lli Catalan(lli num)
 {
-	vector <ulli> catDp(num+1);
+	vector <lli> catDp(num+1);
 
 	catDp[0] = catDp[1] = 1;
 
@@ -44,12 +44,12 @@ int main(int argc, char const *argv[])
 
 	cout << "enter the nth term" << endl;
 
-	ulli n;
+	lli n;
 	cin >> n;
 
 	
 
-	for (ulli i = 0; i < n; ++i)
+	for (lli i = 0; i < n; ++i)
 	{
 
 		cout << Catalan(i) << " ";
