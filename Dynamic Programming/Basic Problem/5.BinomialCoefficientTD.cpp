@@ -5,3 +5,7 @@
 
 	nCk = n! / (k!*(n-k)!)
 */
+
+#include <iostream>
+#include <vector>
+using namespace std;
