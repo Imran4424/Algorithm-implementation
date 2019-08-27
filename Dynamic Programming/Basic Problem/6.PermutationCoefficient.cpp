@@ -21,7 +21,7 @@ const int size = 101;
 
 vector < vector <lli> > dpPermutations(size, vector <lli> (size, -1));
 
-
+lli 
 
 int main(int argc, char const *argv[])
 {
@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
 		lli n, k;
 		cin >> n >> k;
 
-		cout << "The result of " << n << "C" << k << " is: " << BinomialCoefficient(n, k) << endl;
+		cout << "The result of " << n << "C" << k << " is: " << PermutationCoefficient(n, k) << endl;
 
 		cout << endl;
 	}
