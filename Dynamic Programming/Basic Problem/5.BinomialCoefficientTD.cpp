@@ -10,7 +10,7 @@
 #include <vector>
 using namespace std;
 
-typedef long long int lli;
+typedef long long int lli; // supports 19 digit
 
 const int size = 101;
 
