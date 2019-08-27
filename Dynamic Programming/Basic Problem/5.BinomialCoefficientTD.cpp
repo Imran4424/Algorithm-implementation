@@ -18,6 +18,21 @@ vector < vetor <lli> > dpCombinations(size, vector <int> (size, -1));
 
 lli BinomialCoefficient(lli number, lli combinations)
 {
+	if (-1 != dpCombinations[number][combinations])
+	{
+		return dpCombinations[number][combinations];
+	}
+
+	if (0 == combinations || number == combinations)
+	{
+		return dpCombinations[number][combinations] = 1;
+	}
+
+	if (1 == combinations)
+	{
+		return dpCombinations[number][combinations] = number;
+	}
+
 	
 }
 
