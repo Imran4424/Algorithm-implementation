@@ -33,7 +33,7 @@ lli BinomialCoefficient(lli number, lli combinations)
 		return dpCombinations[number][combinations] = number;
 	}
 
-	
+	return dpCombinations[number][combinations] = BinomialCoefficient(number-1, combinations) + BinomialCoefficient(number-1, combinations-1);
 }
 
 int main(int argc, char const *argv[])
