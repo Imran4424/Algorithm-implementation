@@ -28,6 +28,23 @@ const int size = 101;
 
 vector < vector <lli> > dpPermutations(size, vector <lli> (size, -1));
 
+vector <lli> dpfact(size, -1);
+
+lli Factorial(lli num)
+{
+	if (-1 != dpfact[num])
+	{
+		return dpfact[num];
+	}
+
+	if (1 == num)
+	{
+		return dpfact[num] = 1;
+	}
+
+	return dpfact[num] = num * Factorial(num-1);
+}
+
 lli PermutationCoefficient(lli number, lli combinations)
 {
 	if (-1 != dpPermutations[number][combinations])
@@ -45,7 +62,12 @@ lli PermutationCoefficient(lli number, lli combinations)
 		return dpPermutations[number][combinations] = number;
 	}
 
-	return dpPermutations[number][combinations] = PermutationCoefficient(number-1, combinations) + (combinations *PermutationCoefficient(number-1, combinations-1));
+	if (number == combinations)
+	{
+		return dpPermutations[number][combinations] = Factorial(number);
+	}
+
+	return dpPermutations[number][combinations] = PermutationCoefficient(number-1, combinations) + combinations *PermutationCoefficient(number-1, combinations-1);
 }
 
 int main(int argc, char const *argv[])
