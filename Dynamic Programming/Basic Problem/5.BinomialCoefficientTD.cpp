@@ -38,7 +38,9 @@ lli BinomialCoefficient(lli number, lli combinations)
 
 int main(int argc, char const *argv[])
 {
-	while(1)
+	int test = 20;
+
+	while(test--)
 	{
 		cout << "enter the n k" << endl;
 		
