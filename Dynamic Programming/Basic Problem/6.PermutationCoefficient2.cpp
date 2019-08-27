@@ -19,8 +19,6 @@
 */
 
 #include <iostream>
-#include <vector>
-#include <math.h>
 using namespace std;
 
 typedef long long int lli;
@@ -33,7 +31,9 @@ lli PermutationCoefficient(lli number, lli combinations)
 {
 	if (status)
 	{
-		/* code */
+		endPoint = number - combinations + 1;
+
+		status = false;
 	}
 
 	if (endPoint == number)
