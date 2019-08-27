@@ -21,7 +21,10 @@ const int size = 101;
 
 vector < vector <lli> > dpPermutations(size, vector <lli> (size, -1));
 
-lli 
+lli PermutationCoefficient(lli number, lli combination)
+{
+	
+}
 
 int main(int argc, char const *argv[])
 {
