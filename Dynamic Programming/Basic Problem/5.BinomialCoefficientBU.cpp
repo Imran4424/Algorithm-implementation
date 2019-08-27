@@ -46,7 +46,7 @@ lli BinomialCoefficient(lli number, lli combinations)
 		}
 	}
 
-	return dpCombinations[number]
+	return dpCombinations[number][combinations];
 }
 
 int main(int argc, char const *argv[])
