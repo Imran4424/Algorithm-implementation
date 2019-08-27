@@ -21,6 +21,8 @@ const int size = 101;
 
 vector < vector <lli> > dpPermutations(size, vector <lli> (size, -1));
 
+
+
 int main(int argc, char const *argv[])
 {
 	int test = 20;
