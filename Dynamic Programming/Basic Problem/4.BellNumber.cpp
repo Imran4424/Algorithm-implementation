@@ -13,6 +13,11 @@ typedef unsigned long long int ulli;
 
 vector< vector <ulli> > belTriangle(101, vector <ulli> (101, -1));
 
+ulli BellNumber(ulli number, ulli col)
+{
+
+}
+
 
 int main(int argc, char const *argv[])
 {
