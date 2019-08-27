@@ -5,6 +5,8 @@
 
 	https://en.wikipedia.org/wiki/Bell_number
 */ 
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
