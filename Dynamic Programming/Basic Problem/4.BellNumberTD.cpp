@@ -6,7 +6,11 @@
 	https://en.wikipedia.org/wiki/Bell_number
 */ 
 
+/*
+	in this code, we are doing bottom up approach
 
+	can correctly calculated upto 27
+*/
 #include <iostream>
 #include <vector>
 using namespace std;
