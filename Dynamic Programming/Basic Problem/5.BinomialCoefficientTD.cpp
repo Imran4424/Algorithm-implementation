@@ -48,7 +48,6 @@ int main(int argc, char const *argv[])
 		cout << "The result of " << n << "C" << k << " is: " << BinomialCoefficient(n, k) << endl;
 
 		cout << endl;
-
 	}
 	return 0;
 }
