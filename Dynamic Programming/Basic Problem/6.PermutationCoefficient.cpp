@@ -32,7 +32,7 @@ lli PermutationCoefficient(lli number, lli combinations)
 {
 	if (-1 != dpPermutations[number][combinations])
 	{
-		/* code */
+		return dpPermutations[number][combinations];
 	}
 }
 
