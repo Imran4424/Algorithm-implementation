@@ -25,10 +25,6 @@ using namespace std;
 
 typedef long long int lli;
 
-const int size = 101;
-
-vector < vector <lli> > dpPermutations(size, vector <lli> (size, 0));
-
 
 lli PermutationCoefficient(lli number, lli combinations)
 {
