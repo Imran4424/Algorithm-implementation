@@ -19,7 +19,7 @@ int dpWeight[101][10001];
 
 void Init()
 {
-	for (int i = 0; i < size; ++i)
+	for (int i = 0; i <= size; ++i)
 	{
 		for (int i = 0; i < size; ++i)
 		{
@@ -56,6 +56,8 @@ int main(int argc, char const *argv[])
 	for (int i = 0; i < size; ++i)
 	{
 		cin >> value[i] >> weight[i];
+
+		
 	}
 
 	cout << "how much weight can carry" << endl;
