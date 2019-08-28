@@ -2,6 +2,14 @@
 #include <bits/stdc++.h> 
 using namespace std; 
 
+
+int maximumAllowedWeight, size, maximum;
+int *weight, *value;
+
+int totalValue; // almost all cases value is greater than weight
+
+int dpVal[101][10001];
+
 // A utility function that returns maximum of two integers 
 
 int max(int a, int b)
@@ -14,27 +22,50 @@ int max(int a, int b)
 	return b;
 }
 
+void Init()
+{
+	for(int m = 0; m <= size; m++)
+	{
+		for(int n = 0; n <= totalValue; n++)
+		{
+			dpVal[m][n] = -1;
+		}
+	}
+}
+
 // Returns the maximum value that 
 // can be put in a knapsack of capacity W 
-int knapSack(int W, int wt[], int val[], int n) 
+int knapSack(int currentObject, int currentWeight) 
 { 
-	
-// Base Case 
-if (n == 0 || W == 0) 
-	return 0; 
+	// Base cases
 
-// If weight of the nth item is more 
-// than Knapsack capacity W, then 
-// this item cannot be included 
-// in the optimal solution 
-if (wt[n-1] > W) 
-	return knapSack(W, wt, val, n-1); 
+	if(currentObject >= size)
+	{
 
-// Return the maximum of two cases: 
-// (1) nth item included 
-// (2) not included 
-else return max( val[n-1] + knapSack(W-wt[n-1], wt, val, n-1), 
-					knapSack(W, wt, val, n-1) ); 
+	}
+
+	if (-1 != dpVal[currentObject][currentWeight])
+	{
+		return dpVal[currentObject][currentWeight];
+	}
+
+	if (0 == currentObject || 0 == currentWeight)
+	{
+		return dpVal[currentObject][currentWeight];
+	}
+
+	// If weight of the nth item is more 
+	// than Knapsack capacity W, then 
+	// this item cannot be included 
+	// in the optimal solution 
+	if (wt[n-1] > W) 
+		return knapSack(W, wt, val, n-1); 
+
+	// Return the maximum of two cases: 
+	// (1) nth item included 
+	// (2) not included 
+	else return max( val[n-1] + knapSack(W-wt[n-1], wt, val, n-1), 
+						knapSack(W, wt, val, n-1) ); 
 } 
 
 
