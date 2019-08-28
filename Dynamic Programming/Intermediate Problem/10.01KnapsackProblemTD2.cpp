@@ -50,7 +50,7 @@ int main(int argc, char const *argv[])
 
 	weight = new int[size+1];
 	value = new int[size+1];
-	bits = new int[size+1];
+	
 
 	cout << "enter the value and weight" << endl;
 
