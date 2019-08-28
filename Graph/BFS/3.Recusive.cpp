@@ -11,39 +11,30 @@ void AddEdge(int u, int v)
 	adj[u].push_back(v);
 }
 
-void BFS(int startVertex, vector <bool> &visited)
+void BFS(queue <int> &currentNodes, vector <bool> &visited)
 {
-	bool visited[totalVertex];
+	
+	// Base cases
 
-	for(int i = 0; i < totalVertex; i++)
+	if (currentNodes.empty())
 	{
-		visited[i] = false;
+		return;
 	}
 
+	int current = currentNodes.front();
+	cout << current << " ";
 
-	queue <int> currentNodes;
+	visited[current] = true;
 
-	visited[startVertex] = true;
-	currentNodes.push(startVertex);
-
-	list <int> ::iterator itr;
-
-	while(!currentNodes.empty())
+	for(int k = 0; k < adj[current].size(); k++)
 	{
-		int current = currentNodes.front();
-		cout << current << " ";
-
-		currentNodes.pop();
-
-		for( itr = adj[current].begin(); itr != adj[current].end(); itr++)
+		if (!visited[adj[current][k]])
 		{
-			if (!visited[*itr])
-			{
-				visited[*itr] = true;
-				currentNodes.push(*itr);
-			}
+			currentNodes.push(adj[current][k]);
 		}
 	}
+
+	BFS(currentNodes, visited);
 }
 
 
@@ -52,9 +43,11 @@ int main(int argc, char const *argv[])
 	cout << "How many vertex of the graph" << endl;
 
 	int vertex;
-	cin >> vertex;
+	// cin >> vertex;
 
-	adj = new list <int> [vertex];  // taking an array of list (doubly link list)
+	vertex = 4;
+
+	adj = new vector <int> [vertex+1];  // taking an array of vector
 
 	AddEdge(1, 2); 
 	AddEdge(2, 3); 
@@ -75,7 +68,7 @@ int main(int argc, char const *argv[])
 
 	currentNodes.push(startVertex);
 
-	BFS(); 
+	BFS(currentNodes, visited); 
 	
 	return 0;
 }
