@@ -23,9 +23,10 @@ void Init()
 {
 	for (int i = 0; i <= size; ++i)
 	{
-		for (int i = 0; i < size; ++i)
+		for (int i = 0; i <=  totalValue; ++i)
 		{
-			dpVal[i][j]
+			dpVal[i][j] = -1;
+			dpWeight[i][j] = -1;
 		}
 	}
 }
@@ -47,6 +48,8 @@ int Binary(int i, sumVal, sumWeight)
 
 int main(int argc, char const *argv[])
 {
+	totalValue = 0;
+
 	cout << "how many objects" << endl;
 
 	cin >> size;
