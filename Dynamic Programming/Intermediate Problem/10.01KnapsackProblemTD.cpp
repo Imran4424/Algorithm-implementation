@@ -69,6 +69,8 @@ void Binary(int i, int sumVal, int sumWeight)
 	*/
 	if (leftWeight <= maximumAllowedWeight && rightWeight <= maximumAllowedWeight) 
 	{
+		cout << "Hi max all" << endl;
+
 		if (leftVal > rightVal)
 		{
 			dpVal[i][sumVal] = leftVal;
@@ -82,16 +84,21 @@ void Binary(int i, int sumVal, int sumWeight)
 	}
 	else if(leftWeight <= maximumAllowedWeight)
 	{
+		cout << "Hi left" << endl;
 		dpVal[i][sumVal] = leftVal;
 		dpWeight[i][sumWeight] = leftWeight;
 	}
 	else if (rightWeight <= maximumAllowedWeight)
 	{
+		cout << "Hi right" << endl;
+
 		dpVal[i][sumVal] = rightVal;
 		dpWeight[i][sumWeight] = rightWeight;
 	}
 	else
 	{
+		cout << "Hi none" << endl;
+
 		if (leftVal > rightVal)
 		{
 			dpVal[i][sumVal] = leftVal;
