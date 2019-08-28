@@ -39,7 +39,8 @@ void Init()
 }
 
 // Returns the maximum value that 
-// can be put in a KnapSack of capacity W 
+// can be put in a KnapSack of capacity maximumAllowedWeight
+
 int KnapSack(int currentObject, int currentWeight) 
 { 
 	// Base cases
@@ -49,12 +50,17 @@ int KnapSack(int currentObject, int currentWeight)
 		return 0;
 	}
 
+	// if solution exists then return the solution
+
 	if (-1 != dpVal[currentObject][currentWeight])
 	{
 		return dpVal[currentObject][currentWeight];
 	}
 
 	int withProfit, withoutProfit;
+
+	
+	// here we are considering current object weight
 
 	if (currentWeight + weight[currentObject] <= maximumAllowedWeight)
 	{
@@ -65,7 +71,11 @@ int KnapSack(int currentObject, int currentWeight)
 		withProfit = 0;
 	}
 
+	// here we are not considering current object weight
+
 	withoutProfit = KnapSack(currentObject + 1, currentWeight);
+
+	// now comparing and returning the max value among them
 
 	return dpVal[currentObject][currentWeight] = Max(withProfit, withoutProfit);
 } 
