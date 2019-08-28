@@ -17,7 +17,7 @@ void Init()
 {
 	for (int i = 0; i <= size; ++i)
 	{
-		for (int i = 0; i <=  totalValue; ++i)
+		for (int j = 0; j <=  totalValue; ++j)
 		{
 			dpVal[i][j] = -1;
 			dpWeight[i][j] = -1;
@@ -26,7 +26,7 @@ void Init()
 }
 
 
-void Binary(int i, sumVal, sumWeight)
+void Binary(int i, int sumVal, int sumWeight)
 {
 	if (dpVal[i][sumVal] >= 0 && dpVal[i][sumVal] >= 0)
 	{
@@ -117,6 +117,8 @@ int main(int argc, char const *argv[])
 	value = new int[size+1];
 	bits = new int[size+1];
 
+	cout << "enter the value and weight" << endl;
+
 	for (int i = 0; i < size; ++i)
 	{
 		cin >> value[i] >> weight[i];
@@ -128,7 +130,9 @@ int main(int argc, char const *argv[])
 
 	cin >> maximumAllowedWeight;
 
+	Binary(0, 0, 0);
 
+	cout << "So maximum weight can you carry: " << maximum << endl;
 
 	return 0;
 }
