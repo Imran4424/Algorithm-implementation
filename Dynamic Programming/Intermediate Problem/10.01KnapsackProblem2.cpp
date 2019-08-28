@@ -19,7 +19,13 @@ int dpWeight[101][10001];
 
 void Init()
 {
-	
+	for (int i = 0; i < size; ++i)
+	{
+		for (int i = 0; i < size; ++i)
+		{
+			dpVal[i][j]
+		}
+	}
 }
 
 
