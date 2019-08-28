@@ -29,16 +29,16 @@ void Init()
 
 void Binary(int i, int sumVal, int sumWeight)
 {
-	cout << "    " << i << "   " << endl;
+	// cout << "    " << i << "   " << endl;
 
-	cout << dpVal[i][sumVal] << " " << dpWeight[i][sumWeight] << endl;
+	// cout << dpVal[i][sumVal] << " " << dpWeight[i][sumWeight] << endl;
  
 	if (dpVal[i][sumVal] != -1 && dpWeight[i][sumWeight] != -1)
 	{
 		return;
 	}
 
-	cout << "entry point" << endl;
+	// cout << "entry point" << endl;
 
 	if (i == size)
 	{
@@ -76,7 +76,7 @@ void Binary(int i, int sumVal, int sumWeight)
 	*/
 	if (leftWeight <= maximumAllowedWeight && rightWeight <= maximumAllowedWeight) 
 	{
-		cout << "Hi max all" << endl;
+		// cout << "Hi max all" << endl;
 
 		if (leftVal > rightVal)
 		{
@@ -91,20 +91,20 @@ void Binary(int i, int sumVal, int sumWeight)
 	}
 	else if(leftWeight <= maximumAllowedWeight)
 	{
-		cout << "Hi left" << endl;
+		// cout << "Hi left" << endl;
 		dpVal[i][sumVal] = leftVal;
 		dpWeight[i][sumWeight] = leftWeight;
 	}
 	else if (rightWeight <= maximumAllowedWeight)
 	{
-		cout << "Hi right" << endl;
+		// cout << "Hi right" << endl;
 
 		dpVal[i][sumVal] = rightVal;
 		dpWeight[i][sumWeight] = rightWeight;
 	}
 	else
 	{
-		cout << "Hi none" << endl;
+		// cout << "Hi none" << endl;
 
 		if (leftWeight < rightWeight)
 		{
@@ -122,9 +122,9 @@ void Binary(int i, int sumVal, int sumWeight)
 
 int main(int argc, char const *argv[])
 {
-	Init();
 	totalValue = 0;
 	maximum = 0;
+
 
 	cout << "how many objects" << endl;
 
@@ -146,6 +146,8 @@ int main(int argc, char const *argv[])
 	cout << "how much weight can carry" << endl;
 
 	cin >> maximumAllowedWeight;
+
+	Init(); // this is the right place to call init
 
 	Binary(0, 0, 0);
 
