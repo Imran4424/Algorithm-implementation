@@ -26,7 +26,7 @@ void Init()
 }
 
 
-int Binary(int i, sumVal, sumWeight)
+void Binary(int i, sumVal, sumWeight)
 {
 	if (dpVal[i][sumVal] >= 0 && dpVal[i][sumVal] >= 0)
 	{
