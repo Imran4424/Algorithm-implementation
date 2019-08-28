@@ -11,8 +11,10 @@ void Init()
 #include <iostream>
 using namespace std;
 
-int maxWeight, size, maximum = 0;
+int maxWeight, size, maximumAllowed = 0;
 int *weight, *value, *bits;
+
+int totalValue; // almost all cases value is greater than weight
 
 int dpVal[101][10001];
 int dpWeight[101][10001];
@@ -57,7 +59,7 @@ int main(int argc, char const *argv[])
 	{
 		cin >> value[i] >> weight[i];
 
-		
+		totalValue += value[i];
 	}
 
 	cout << "how much weight can carry" << endl;
