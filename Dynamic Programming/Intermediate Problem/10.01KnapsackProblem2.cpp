@@ -83,6 +83,11 @@ int Binary(int i, sumVal, sumWeight)
 		dpVal[i][sumVal] = leftVal;
 		dpWeight[i][sumWeight] = leftWeight;
 	}
+	else if (rightWeight <= maximumAllowedWeight)
+	{
+		dpVal[i][sumVal] = rightVal;
+		dpWeight[i][sumWeight] = rightWeight;
+	}
 
 }
 
