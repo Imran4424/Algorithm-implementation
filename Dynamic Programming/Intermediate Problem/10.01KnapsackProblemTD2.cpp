@@ -1,9 +1,8 @@
-/* A Naive recursive implementation of 0-1 Knapsack problem */
 #include <bits/stdc++.h> 
 using namespace std; 
 
 
-int maximumAllowedWeight, size, maximum;
+int maximumAllowedWeight, size;
 int *weight, *value;
 
 int totalValue; // almost all cases value is greater than weight
@@ -12,7 +11,7 @@ int dpVal[101][10001];
 
 // A utility function that returns maximum of two integers 
 
-int max(int a, int b)
+int Max(int a, int b)
 {
 	if (a > b)
 	{
@@ -34,14 +33,14 @@ void Init()
 }
 
 // Returns the maximum value that 
-// can be put in a knapsack of capacity W 
-int knapSack(int currentObject, int currentWeight) 
+// can be put in a KnapSack of capacity W 
+int KnapSack(int currentObject, int currentWeight) 
 { 
 	// Base cases
 
 	if(currentObject >= size)
 	{
-
+		return 0;
 	}
 
 	if (-1 != dpVal[currentObject][currentWeight])
@@ -49,23 +48,20 @@ int knapSack(int currentObject, int currentWeight)
 		return dpVal[currentObject][currentWeight];
 	}
 
-	if (0 == currentObject || 0 == currentWeight)
+	int withProfit, withoutProfit;
+
+	if (currentWeight + weight[currentWeight] <= maximumAllowedWeight)
 	{
-		return dpVal[currentObject][currentWeight];
+		withProfit = value[i] + KnapSack(currentObject + 1, currentWeight + weight[currentObject]);
+	}
+	else
+	{
+		withProfit = 0;
 	}
 
-	// If weight of the nth item is more 
-	// than Knapsack capacity W, then 
-	// this item cannot be included 
-	// in the optimal solution 
-	if (wt[n-1] > W) 
-		return knapSack(W, wt, val, n-1); 
+	withoutProfit = KnapSack(currentObject + 1, currentWeight);
 
-	// Return the maximum of two cases: 
-	// (1) nth item included 
-	// (2) not included 
-	else return max( val[n-1] + knapSack(W-wt[n-1], wt, val, n-1), 
-						knapSack(W, wt, val, n-1) ); 
+	return dpVal[currentObject][currentWeight] = Max(withProfit, withoutProfit);
 } 
 
 
@@ -98,7 +94,7 @@ int main(int argc, char const *argv[])
 
 	Init(); // this is the right place to call init
 
-	Binary(0, 0, 0);
+	int maximum = KnapSack(0, 0);
 
 	cout << "So maximum weight can you carry: " << maximum << endl;
 
