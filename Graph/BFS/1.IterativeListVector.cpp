@@ -52,7 +52,7 @@ int main(int argc, char const *argv[])
 	int vertex;
 	cin >> vertex;
 
-	adj = new list <int> [vertex];  // taking an array of list (doubly link list)
+	adj = new vector <int> [vertex+1];  // taking an array of vector
 
 	AddEdge(1, 2); 
 	AddEdge(2, 3); 
