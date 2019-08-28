@@ -9,7 +9,6 @@ int maximumAllowedWeight, size, maximum = 0;
 int *weight, *value, *bits;
 
 
-
 void Binary(int i, int sumVal, int sumWeight)
 {
 	if (i == size)

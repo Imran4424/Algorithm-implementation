@@ -1,3 +1,9 @@
+/*
+	0-1 knapsack problem is a dynamic programming problem
+
+	this code implement top down approach
+*/
+
 #include <bits/stdc++.h> 
 using namespace std; 
 
