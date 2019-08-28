@@ -68,9 +68,7 @@ int KnapSack(int currentObject, int currentWeight)
 int main(int argc, char const *argv[])
 {
 	totalValue = 0;
-	maximum = 0;
-
-
+	
 	cout << "how many objects" << endl;
 
 	cin >> size;
