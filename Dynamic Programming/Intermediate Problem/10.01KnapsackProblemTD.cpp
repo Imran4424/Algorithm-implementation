@@ -5,6 +5,7 @@
 #include <iostream>
 using namespace std;
 
+
 int maximumAllowedWeight, size, maximum;
 int *weight, *value, *bits;
 
@@ -19,7 +20,8 @@ void Init()
 	{
 		for(int n = 0; n <= totalValue; n++)
 		{
-			
+			dpVal[m][n] = -1;
+			dpWeight[m][n] = -1;
 		}
 	}
 }
