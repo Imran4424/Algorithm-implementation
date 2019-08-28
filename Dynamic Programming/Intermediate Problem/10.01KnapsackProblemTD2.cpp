@@ -2,6 +2,8 @@
 	0-1 knapsack problem is a dynamic programming problem
 
 	this code implement top down approach
+
+	Runtime: 0.110s
 */
 
 #include <bits/stdc++.h> 
