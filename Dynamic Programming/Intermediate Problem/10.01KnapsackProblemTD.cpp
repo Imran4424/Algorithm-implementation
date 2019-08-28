@@ -44,7 +44,7 @@ void Binary(int i, int sumVal, int sumWeight)
 	{
 		if (sumVal > maximum && sumWeight <= maximumAllowedWeight)
 		{
-			cout << "Hi max" << endl;
+			// cout << "Hi max" << endl;
 
 			maximum = sumVal;
 		}
