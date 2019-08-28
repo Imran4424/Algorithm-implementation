@@ -57,7 +57,7 @@ void Binary(int i, int sumVal, int sumWeight)
 	Binary(i+1, sumVal+value[i], sumWeight+weight[i]);
 
 	int rightVal = dpVal[i+1][sumVal+ value[i]];
-	int rightWeight = dpWeight[i+1][sumWeight+value[i]];
+	int rightWeight = dpWeight[i+1][sumWeight+weight[i]];
 
 
 	/*
@@ -90,7 +90,7 @@ void Binary(int i, int sumVal, int sumWeight)
 	}
 	else
 	{
-		if (leftWeight < rightWeight)
+		if (leftVal > rightVal)
 		{
 			dpVal[i][sumVal] = leftVal;
 			dpWeight[i][sumWeight] = leftWeight;
