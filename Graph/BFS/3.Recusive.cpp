@@ -22,6 +22,8 @@ void BFS(queue <int> &currentNodes, vector <bool> &visited)
 	}
 
 	int current = currentNodes.front();
+	currentNodes.pop();	
+
 	cout << current << " ";
 
 	visited[current] = true;
@@ -60,7 +62,7 @@ int main(int argc, char const *argv[])
 		<< "(starting from vertex 2) \n";
 
 
-	vector <bool> visited(totalVertex+1, false);
+	vector <bool> visited(vertex+1, false);
 
 	int startVertex = 2;
 
