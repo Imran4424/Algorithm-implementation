@@ -50,9 +50,9 @@ int KnapSack(int currentObject, int currentWeight)
 
 	int withProfit, withoutProfit;
 
-	if (currentWeight + weight[currentWeight] <= maximumAllowedWeight)
+	if (currentWeight + weight[currentObject] <= maximumAllowedWeight)
 	{
-		withProfit = value[i] + KnapSack(currentObject + 1, currentWeight + weight[currentObject]);
+		withProfit = value[currentObject] + KnapSack(currentObject + 1, currentWeight + weight[currentObject]);
 	}
 	else
 	{
@@ -68,7 +68,7 @@ int KnapSack(int currentObject, int currentWeight)
 int main(int argc, char const *argv[])
 {
 	totalValue = 0;
-	
+
 	cout << "how many objects" << endl;
 
 	cin >> size;
