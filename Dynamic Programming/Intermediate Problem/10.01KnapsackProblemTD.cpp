@@ -15,12 +15,11 @@ int dpWeight[101][10001];
 
 void Init()
 {
-	for (int i = 0; i <= size; ++i)
+	for(int m = 0; m <= size; m++)
 	{
-		for (int j = 0; j <=  totalValue; ++j)
+		for(int n = 0; n <= totalValue; n++)
 		{
-			dpVal[i][j] = -1;
-			dpWeight[i][j] = -1;
+			
 		}
 	}
 }
@@ -28,10 +27,16 @@ void Init()
 
 void Binary(int i, int sumVal, int sumWeight)
 {
-	if (dpVal[i][sumVal] >= 0 && dpVal[i][sumVal] >= 0)
+	cout << "    " << i << "   " << endl;
+
+	cout << dpVal[i][sumVal] << " " << dpWeight[i][sumWeight] << endl;
+ 
+	if (dpVal[i][sumVal] != -1 && dpWeight[i][sumWeight] != -1)
 	{
 		return;
 	}
+
+	cout << "entry point" << endl;
 
 	if (i == size)
 	{
@@ -99,7 +104,7 @@ void Binary(int i, int sumVal, int sumWeight)
 	{
 		cout << "Hi none" << endl;
 
-		if (leftVal > rightVal)
+		if (leftWeight < rightWeight)
 		{
 			dpVal[i][sumVal] = leftVal;
 			dpWeight[i][sumWeight] = leftWeight;
@@ -115,6 +120,7 @@ void Binary(int i, int sumVal, int sumWeight)
 
 int main(int argc, char const *argv[])
 {
+	Init();
 	totalValue = 0;
 	maximum = 0;
 
