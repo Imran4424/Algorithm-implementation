@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-int maxWeight, size, maximum = 0;
+int maximumAllowedWeight, size, maximum = 0;
 int *weight, *value, *bits;
 
 
@@ -14,7 +14,7 @@ void Binary(int i, int sumVal, int sumWeight)
 {
 	if (i == size)
 	{
-		if (sumVal > maximum && sumWeight <= maxWeight)
+		if (sumVal > maximum && sumWeight <= maximumAllowedWeight)
 		{
 			maximum = sumVal;
 		}
@@ -48,7 +48,7 @@ int main(int argc, char const *argv[])
 
 	cout << "how much weight can carry" << endl;
 
-	cin >> maxWeight;
+	cin >> maximumAllowedWeight;
 
 	Binary(0, 0, 0);
 
