@@ -11,7 +11,7 @@ void AddEdge(int u, int v)
 	adj[u].push_back(v);
 }
 
-void BFS(int startVertex, vector <bool> &visited)
+void BFS(int startVertex, int totalVertex)
 {
 	bool visited[totalVertex];
 
@@ -26,8 +26,6 @@ void BFS(int startVertex, vector <bool> &visited)
 	visited[startVertex] = true;
 	currentNodes.push(startVertex);
 
-	list <int> ::iterator itr;
-
 	while(!currentNodes.empty())
 	{
 		int current = currentNodes.front();
@@ -35,12 +33,12 @@ void BFS(int startVertex, vector <bool> &visited)
 
 		currentNodes.pop();
 
-		for( itr = adj[current].begin(); itr != adj[current].end(); itr++)
+		for(int k = 0; k < adj[current].size(); k++)
 		{
-			if (!visited[*itr])
+			if (!visited[adj[current][k]])
 			{
-				visited[*itr] = true;
-				currentNodes.push(*itr);
+				visited[adj[current][k]] = true;
+				currentNodes.push(adj[current][k]);
 			}
 		}
 	}
@@ -64,18 +62,8 @@ int main(int argc, char const *argv[])
 	AddEdge(0, 1); 
 
 	cout << "Following is Breadth First Traversal "
-		<< "(starting from vertex 2) \n";
-
-
-	vector <bool> visited(totalVertex+1, false);
-
-	int startVertex = 2;
-
-	queue <int> currentNodes;
-
-	currentNodes.push(startVertex);
-
-	BFS(); 
+		<< "(starting from vertex 2) \n"; 
+	BFS(2, vertex); 
 	
 	return 0;
 }
