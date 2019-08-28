@@ -26,13 +26,13 @@ void BFS(queue <int> &currentNodes, vector <bool> &visited)
 
 	cout << current << " ";
 
-	visited[current] = true;
-
 	for(int k = 0; k < adj[current].size(); k++)
 	{
 		if (!visited[adj[current][k]])
 		{
 			currentNodes.push(adj[current][k]);
+
+			visited[adj[current][k]] = true;
 		}
 	}
 
@@ -69,6 +69,7 @@ int main(int argc, char const *argv[])
 	queue <int> currentNodes;
 
 	currentNodes.push(startVertex);
+	visited[startVertex] = true;
 
 	BFS(currentNodes, visited); 
 	
