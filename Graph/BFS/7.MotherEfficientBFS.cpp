@@ -29,7 +29,6 @@
 */
 #include <iostream>
 #include <vector>
-#include <stack>
 using namespace std;
 
 vector <int> *adjacency;
@@ -39,22 +38,35 @@ void AddEdge(int u, int v) // directed graph
 	adjacency[u].push_back(v);
 }
 
-void BFS(int current, vector <bool> &visited) // this is a recursive BFS, not sure, need to check 
+void BFS(queue <int> &currentNodes, vector <bool> &visited) // this is recursive BFS
 {
-	// marking the current node as visited
-	visited[current] = true;
+	
+	// Base cases
 
-
-	// looking at the adjacency nodes of current
-	for (int k = 0; k < adjacency[current].size(); ++k)
+	if (currentNodes.empty())
 	{
-		if (!visited[adjacency[current][k]])
-		{
-			BFS(adjacency[current][k], visited);
-		}	
+		return;
 	}
 
+	int current = currentNodes.front();
+	currentNodes.pop();	
+
+	// cout << current << " ";
+
+	// looking for adjacency nodes
+	for(int k = 0; k < adj[current].size(); k++)
+	{
+		if (!visited[adj[current][k]])
+		{
+			currentNodes.push(adj[current][k]);
+
+			visited[adj[current][k]] = true;
+		}
+	}
+
+	BFS(currentNodes, visited);
 }
+
 
 int SearchMother(int startVertex ,int totalVertex)
 {
@@ -87,7 +99,13 @@ int SearchMother(int startVertex ,int totalVertex)
 		{
 			if (!visited[i])
 			{
-				BFS(i, visited);
+				queue <in> currentNodes;
+
+				currentNodes.push(i);
+
+				visited[i] = true;
+
+				BFS(currentNodes, visited);
 
 				lastFinishedVertex = i;
 			}
@@ -99,7 +117,13 @@ int SearchMother(int startVertex ,int totalVertex)
 		{
 			if (!visited[i])
 			{
-				BFS(i, visited);
+				queue <in> currentNodes;
+
+				currentNodes.push(i);
+
+				visited[i] = true;
+
+				BFS(currentNodes, visited);
 
 				lastFinishedVertex = i;
 			}
