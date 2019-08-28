@@ -1,17 +1,11 @@
-int dpVal[101][10001];
-int dpWeight[101][10001];
-
-void Init()
-{
-	
-}/*
+/*
 	0-1 knapsack problem is a dynamic programming problem
 */
 
 #include <iostream>
 using namespace std;
 
-int maxWeight, size, maximumAllowed = 0;
+int maximumAllowedWeight, size, maximum;
 int *weight, *value, *bits;
 
 int totalValue; // almost all cases value is greater than weight
@@ -41,19 +35,56 @@ int Binary(int i, sumVal, sumWeight)
 
 	if (i == size)
 	{
-		return 
+		if (sumVal > maximum && sumWeight <= maximumAllowedWeight)
+		{
+			maximum = sumVal;
+		}
+
+		dpVal[i][sumVal] = sumVal;
+
+		dpVal[i][sumWeight] = sumWeight;
+
+		return;
 	}
 
 	bits[i] = 0;
 	Binary(i+1, sumVal, sumWeight);
 
+	int leftVal = dpVal[i+1][sumVal];
+	int leftWeight = dpWeight[i+1][sumWeight];
+
 	bits[i] = 1;
 	Binary(i+1, sumVal+value[i], sumWeight+weight[i]);
+
+	int rightVal = dpVal[i+1][sumVal+ value[i]];
+	int rightWeight = dpWeight[i+1][sumWeight+value[i]];
+
+
+	/*
+		if both node satisfies take the maximum Allowed Weight
+
+		then choose the maximum value
+	*/
+	if (leftWeight <= maximumAllowedWeight && rightWeight <= maximumAllowedWeight) 
+	{
+		if (leftVal > rightVal)
+		{
+			dpVal[i][sumVal] = leftVal;
+			dpWeight[i][sumWeight] = leftWeight;
+		}
+		else
+		{
+			dpVal[i][sumVal] = rightVal;
+			dpWeight[i][sumWeight] = rightWeight;
+		}
+	}
+
 }
 
 int main(int argc, char const *argv[])
 {
 	totalValue = 0;
+	maximum = 0;
 
 	cout << "how many objects" << endl;
 
@@ -72,7 +103,7 @@ int main(int argc, char const *argv[])
 
 	cout << "how much weight can carry" << endl;
 
-	cin >> maxWeight;
+	cin >> maximumAllowedWeight;
 
 
 
