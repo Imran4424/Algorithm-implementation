@@ -53,7 +53,12 @@ int main(int argc, char const *argv[])
 		AddEdge(u, v);
 	}
 
+	cout << "enter the entry and destination vertex" << endl;
 
+	int entry, destination;
+	cin >> entry >> destination;
+
+	RecursiveDFS(entry, destination);
 	
 	return 0;
 }
