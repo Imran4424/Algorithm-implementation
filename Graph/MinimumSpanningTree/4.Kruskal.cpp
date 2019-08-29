@@ -33,5 +33,21 @@ int main(int argc, char const *argv[])
 
 	parent = new int[vertex + 1];
 
+	vector <Edges> edgeList;
+
+	cout << "How many edges?" << endl;
+
+	int edges;
+	cin >> edges;
+
+	Edges input;
+
+	cout << "enter edges source, destination and weight" << endl;
+
+	for (int i = 0; i < edges; ++i)
+	{
+		cin >> 
+	}
+
 	return 0;
 }
