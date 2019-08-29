@@ -11,18 +11,24 @@ void AddEdge(int u, int v) // directed graph
 	adjacency[u].push_back(v);
 }
 
-void RecursiveDFS(int current, int destination)
+void RecursiveDFS(int current, int destination, vector <bool> visited) // here visited array will be different
 {
-	if (current == destination)
+	if (current == destination)                                   //  for every iteration in reaction
 	{
 		count++;
 
 		return;
 	}
 
-	for (int k = 0; i < adjacency[current].size(); ++k)
+	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
-		RecursiveDFS(adjacency[current][k], destination);
+		if (!visited[adjacency[current][k]])
+		{
+			visited[adjacency[current][k]] = true;
+
+			RecursiveDFS(adjacency[current][k], destination, visited);
+		}
+
 	}
 }
 
@@ -39,7 +45,7 @@ int main(int argc, char const *argv[])
 
 	cout << "How many edges?" << endl;
 
-	in edges;
+	int edges;
 	cin >> edges;
 
 	cout << "enter the edges" << endl;
@@ -58,7 +64,11 @@ int main(int argc, char const *argv[])
 	int entry, destination;
 	cin >> entry >> destination;
 
-	RecursiveDFS(entry, destination);
+	vector <bool> visited(vertex + 1, false);
+
+	visited[entry] = true;
+
+	RecursiveDFS(entry, destination, visited);
 
 	cout << "number of paths are: " << count << endl;
 	
