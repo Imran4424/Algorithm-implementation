@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-int *parent, count;
+int *parent, countMinimum;
 
 /*
 	Initializing the disjoint set
@@ -49,13 +49,13 @@ void Union(int xVertex, int yVertex)
 	{
 		parent[yVertex] = xVertex;
 
-		count++;
+		countMinimum++;
 	}
 }
 
 int main(int argc, char const *argv[])
 {
-	cout =0; // edge count
+	countMinimum =0; // edge countMinimum
 
 	cout << "enter the number of vertex" << endl;
 
@@ -71,6 +71,8 @@ int main(int argc, char const *argv[])
 	int pairs;
 	cin >> pairs;
 
+	cout << "enter the pairs"
+
 	int u, v;
 
 	for (int i = 0; i < pairs; ++i)
@@ -80,7 +82,7 @@ int main(int argc, char const *argv[])
 		Union(u, v);
 	}
 
-	cout << "Minimum edge needed: " << endl;
+	cout << "Minimum edge needed: " << countMinimum << endl;
 
 	return 0;
 }
