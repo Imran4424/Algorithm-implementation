@@ -24,11 +24,42 @@ class EdgeInstance
 	}
 };
 
-int MinimumSpanningTree(vector <EdgeInstance> edgeList)
+void Makeset(int p)
+{
+	parent[p] = p;
+}
+
+void InitDisjoint(int vertex)
+{
+	for (int i = 1; i <= vertex; ++i)
+	{
+		InitDisjoint(i);
+	}
+}
+
+int SearchParent(int vertex)
+{
+	if (vertex == parent[vertex])
+	{
+		return vertex
+	}
+
+	return parent[vertex] = SearchParent(parent[vertex]);
+}
+
+void Union(int xVertex, int yVertex)
+{
+	if (SearchParent(xVertex) != SearchParent(yVertex))
+	{
+		/* code */
+	}
+}
+
+int MinimumSpanningTree(int vertex, vector <EdgeInstance> edgeList)
 {
 	sort(edgeList.begin(), edgeList.end()); // ascending sort
 
-	
+
 }
 
 int main(int argc, char const *argv[])
