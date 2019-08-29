@@ -106,5 +106,7 @@ int main(int argc, char const *argv[])
 		edgeList.push_back(input);
 	}
 
+	cout << "Minimum Spanning Tree: " << MinimumSpanningTree(vertex, edgeList);
+
 	return 0;
 }
