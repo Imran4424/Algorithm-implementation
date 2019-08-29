@@ -27,6 +27,8 @@ class EdgeInstance
 int MinimumSpanningTree(vector <EdgeInstance> edgeList)
 {
 	sort(edgeList.begin(), edgeList.end()); // ascending sort
+
+	
 }
 
 int main(int argc, char const *argv[])
