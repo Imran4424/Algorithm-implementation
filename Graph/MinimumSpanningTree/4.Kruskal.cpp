@@ -41,7 +41,7 @@ int SearchParent(int vertex)
 {
 	if (vertex == parent[vertex])
 	{
-		return vertex
+		return vertex;
 	}
 
 	return parent[vertex] = SearchParent(parent[vertex]);
@@ -49,8 +49,8 @@ int SearchParent(int vertex)
 
 bool Union(int xVertex, int yVertex)
 {
-	int xParent = FindParent(xVertex);
-	int yParent = FindParent(yVertex);
+	int xParent = SearchParent(xVertex);
+	int yParent = SearchParent(yVertex);
 
 	if (xParent != yParent)
 	{
