@@ -1,0 +1,1 @@
+[Application of Minimum spanning tree](https://www.geeksforgeeks.org/applications-of-minimum-spanning-tree/)
