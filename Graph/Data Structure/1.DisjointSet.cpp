@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-int *parent;
+int *parent, count;
 
 /*
 	Initializing the disjoint set
@@ -27,7 +27,13 @@ void InitDisjoint(int vertex)
 	end of the initialization
 */
 
-int FindParent(int vertex)
+/*
+	this find parent function is without path relaxation
+
+	this can cost much time if the graph depth is long
+*/
+
+int FindParent(int vertex) 
 {
 	if (parent[vertex] == vertex)
 	{
@@ -37,8 +43,20 @@ int FindParent(int vertex)
 	return FindParent(parent[vertex]);
 }
 
+void Union(int xVertex, int yVertex)
+{
+	if (FindParent(xVertex) != FindParent(yVertex))
+	{
+		parent[yVertex] = xVertex;
+
+		count++;
+	}
+}
+
 int main(int argc, char const *argv[])
 {
+	cout =0; // edge count
+
 	cout << "enter the number of vertex" << endl;
 
 	int vertex;
@@ -47,6 +65,13 @@ int main(int argc, char const *argv[])
 	parent = new int[vertex + 1];
 
 	InitDisjoint(vertex);
+
+	cout << "How many pairs want to join?" << endl;
+
+	int pairs;
+	cin >> pairs;
+
+	
 
 
 
