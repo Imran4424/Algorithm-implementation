@@ -14,15 +14,20 @@ int *parent;
 	customized datatype
 */
 
-class Edges
+class EdgeInstance
 {
 	public: int source, destination, weight;
 
-	public: bool operator <(const Edges& obj)
+	public: bool operator <(const EdgeInstance& obj)
 	{
 		return weight < obj.weight;
 	}
 };
+
+int MinimumSpanningTree(vector <EdgeInstance> edgeList)
+{
+	sort(edgeList.begin(), edgeList.end()); // ascending sort
+}
 
 int main(int argc, char const *argv[])
 {
@@ -33,20 +38,22 @@ int main(int argc, char const *argv[])
 
 	parent = new int[vertex + 1];
 
-	vector <Edges> edgeList;
+	vector <EdgeInstance> edgeList;
 
 	cout << "How many edges?" << endl;
 
 	int edges;
 	cin >> edges;
 
-	Edges input;
+	EdgeInstance input;
 
 	cout << "enter edges source, destination and weight" << endl;
 
 	for (int i = 0; i < edges; ++i)
 	{
-		cin >> 
+		cin >> input.source >> input.destination >> input.weight;
+
+		edgeList.push_back(input);
 	}
 
 	return 0;
