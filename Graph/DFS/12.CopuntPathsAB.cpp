@@ -11,6 +11,11 @@ void AddEdge(int u, int v) // directed graph
 	adjacency[u].push_back(v);
 }
 
+void RecursiveDFS(int current)
+{
+	
+}
+
 int main(int argc, char const *argv[])
 {
 	count = 0; // clearing for every test cases
