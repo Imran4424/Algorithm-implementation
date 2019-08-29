@@ -66,7 +66,17 @@ int MinimumSpanningTree(int vertex, vector <EdgeInstance> edgeList)
 {
 	sort(edgeList.begin(), edgeList.end()); // ascending sort
 
+	int currentWeight = 0;
 
+	for (int i = 0; i < edgeList.size(); ++i)
+	{
+		if (Union(edgeList[i].source, edgeList[i].destination))
+		{
+			currentWeight = currentWeight + edgeList[i].weight;
+		}
+	}
+
+	return currentWeight;
 }
 
 int main(int argc, char const *argv[])
