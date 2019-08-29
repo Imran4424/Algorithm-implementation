@@ -45,9 +45,12 @@ int FindParent(int vertex)
 
 void Union(int xVertex, int yVertex)
 {
-	if (FindParent(xVertex) != FindParent(yVertex))
+	int xParent = FindParent(xVertex);
+	int yParent = FindParent(yVertex);
+
+	if (xParent != yParent)
 	{
-		parent[yVertex] = xVertex;
+		parent[yParent] = xParent;
 
 		countMinimum++;
 	}
