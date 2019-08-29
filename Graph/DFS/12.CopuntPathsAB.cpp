@@ -59,6 +59,8 @@ int main(int argc, char const *argv[])
 	cin >> entry >> destination;
 
 	RecursiveDFS(entry, destination);
+
+	cout << "number of paths are: " << count << endl;
 	
 	return 0;
 }
