@@ -71,9 +71,16 @@ int main(int argc, char const *argv[])
 	int pairs;
 	cin >> pairs;
 
-	
+	int u, v;
 
+	for (int i = 0; i < pairs; ++i)
+	{
+		cin >> u >> v;
 
+		Union(u, v);
+	}
+
+	cout << "Minimum edge needed: " << endl;
 
 	return 0;
 }
