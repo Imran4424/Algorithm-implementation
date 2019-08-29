@@ -71,7 +71,7 @@ int main(int argc, char const *argv[])
 	int pairs;
 	cin >> pairs;
 
-	cout << "enter the pairs"
+	cout << "enter the pairs" << endl;
 
 	int u, v;
 
