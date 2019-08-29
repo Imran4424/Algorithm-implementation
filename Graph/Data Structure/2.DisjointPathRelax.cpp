@@ -28,20 +28,30 @@ void InitDisjoint(int vertex)
 */
 
 /*
-	this find parent function is without path relaxation
+	this find parent function is with path relaxation
 
-	this can cost much time if the graph depth is long
+	this is very much time efficient
 */
 
-int FindParent(int vertex) 
+int FindParent(int vertex) // this is a recursive function to find vertex parent
 {
 	if (parent[vertex] == vertex)
 	{
 		return vertex;
 	}
 
-	return FindParent(parent[vertex]);
+	return parent[vertex] = FindParent(parent[vertex]);
 }
+
+/*
+	this function union two vertex if their parent aren't same
+
+	if their parent is same then Union skips
+
+	so that
+
+	graph doesn't contain a graph
+*/
 
 void Union(int xVertex, int yVertex)
 {
