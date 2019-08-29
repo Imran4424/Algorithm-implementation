@@ -64,6 +64,8 @@ bool Union(int xVertex, int yVertex)
 
 int MinimumSpanningTree(int vertex, vector <EdgeInstance> edgeList)
 {
+	InitDisjoint(vertex);
+
 	sort(edgeList.begin(), edgeList.end()); // ascending sort
 
 	int currentWeight = 0;
