@@ -14,11 +14,11 @@ int *parent; // parent array to hold the parents
 	customized datatype
 */
 
-class EdgeInstance
+struct EdgeInstance
 {
-	public: int source, destination, weight;
+	int source, destination, weight;
 
-	public: bool operator <(const EdgeInstance& obj)
+	bool operator <(const EdgeInstance& obj)
 	{
 		return weight < obj.weight;
 	}
