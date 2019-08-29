@@ -47,12 +47,19 @@ int SearchParent(int vertex)
 	return parent[vertex] = SearchParent(parent[vertex]);
 }
 
-void Union(int xVertex, int yVertex)
+bool Union(int xVertex, int yVertex)
 {
-	if (SearchParent(xVertex) != SearchParent(yVertex))
+	int xParent = FindParent(xVertex);
+	int yParent = FindParent(yVertex);
+
+	if (xParent != yParent)
 	{
-		/* code */
+		parent[yParent] = xParent;
+
+		return true;
 	}
+
+	return false;
 }
 
 int MinimumSpanningTree(int vertex, vector <EdgeInstance> edgeList)
