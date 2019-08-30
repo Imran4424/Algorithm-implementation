@@ -17,6 +17,8 @@ void AddEdge(int source, int destination, int weight) // undirected weighted gra
 	adjacency[destination].push_back(make_set(source, weight));
 }
 
+
+
 int main(int argc, char const *argv[])
 {
 	cout << "enter the number of vertex" << endl;
@@ -42,7 +44,7 @@ int main(int argc, char const *argv[])
 		AddEdge(source, destination, weight);
 	}
 	
-	
+
 
 	return 0;
 }
