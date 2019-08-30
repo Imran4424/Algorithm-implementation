@@ -12,9 +12,9 @@ vector <couple> *adjacency;
 
 void AddEdge(int source, int destination, int weight) // undirected weighted graph
 {
-	adjacency[source].push_back(make_set(destination, weight));
+	adjacency[source].push_back(make_pair(destination, weight));
 
-	adjacency[destination].push_back(make_set(source, weight));
+	adjacency[destination].push_back(make_pair(source, weight));
 }
 
 int PrimsMinimumSpanningTree(int startVertex, int totalVertex)
@@ -36,7 +36,7 @@ int PrimsMinimumSpanningTree(int startVertex, int totalVertex)
 	{
 		couple helper = adjacency[startVertex][k]; // adjacency pair
 
-		weightedList.push(make_set(helper.second, make_set(startVertex, helper.first)));
+		weightedList.push(make_pair(helper.second, make_pair(startVertex, helper.first)));
 	}
 
 	while(!weightedList.empty() && visitedCount--) // reducing visitedCount by 1
@@ -58,7 +58,7 @@ int PrimsMinimumSpanningTree(int startVertex, int totalVertex)
 
 			if (!visited[helper.first])
 			{
-				weightedList.push_back(make_set(helper.second, make_set(current, helper.first)));
+				weightedList.push(make_pair(helper.second, make_pair(current, helper.first)));
 			}
 		}
 	}
@@ -93,7 +93,7 @@ int main(int argc, char const *argv[])
 	
 	int minimumWeight = PrimsMinimumSpanningTree(1, vertex);
 
-	cout << ""
+	cout << "minimum spanning tree: " << minimumWeight << endl;
 
 	return 0;
 }
