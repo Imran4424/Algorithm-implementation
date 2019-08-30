@@ -17,7 +17,10 @@ void AddEdge(int source, int destination, int weight) // undirected weighted gra
 	adjacency[destination].push_back(make_set(source, weight));
 }
 
-
+int PrimsMinimumSpanningTree(int startVertex, int totalVertex)
+{
+	vector <bool> visited(totalVertex + 1, false);
+}
 
 int main(int argc, char const *argv[])
 {
