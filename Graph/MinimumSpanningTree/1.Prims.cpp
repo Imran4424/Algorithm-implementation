@@ -19,7 +19,51 @@ void AddEdge(int source, int destination, int weight) // undirected weighted gra
 
 int PrimsMinimumSpanningTree(int startVertex, int totalVertex)
 {
+	int minimumWeight = 0; // for minimum spanning tree weight
+
+	// declaring priority queue of weighted edges ascending order
+	priority_queue < nestedCouple, vector <nestedCouple>, greater <nestedCouple> > weightedList;
+
 	vector <bool> visited(totalVertex + 1, false);
+
+	int visitedCount = totalVertex; // for tracking visited vertex number
+				       //  Initializing visitedCount with totalVertex
+
+	visited[startVertex] = true; // marking the startVertex as visited
+	visitedCount--;
+
+	for (int k = 0; k < adjacency[startVertex].size(); ++k) // finding startVertex adjacency
+	{
+		couple helper = adjacency[startVertex][k]; // adjacency pair
+
+		weightedList.push(make_set(helper.second, make_set(startVertex, helper.first)));
+	}
+
+	while(!weightedList.empty() && visitedCount--) // reducing visitedCount by 1
+	{                                             //  visitedCount == 0 means
+		                                     //   all vertex have been visited
+
+		nestedCouple hand = weightedList.top();
+		weightedList.pop();
+
+		minimumWeight = minimumWeight + hand.first;
+
+		int current = hand.second.second; // destination vertex from the startVertex
+
+		visited[current] = true;
+
+		for (int k = 0; k < adjacency[current].size(); ++k) // now finding the adjacency of current vertex
+		{
+			couple helper = adjacency[current][k]; // adjacency pair
+
+			if (!visited[helper.first])
+			{
+				weightedList.push_back(make_set(helper.second, make_set(current, helper.first)));
+			}
+		}
+	}
+
+	return minimumWeight;
 }
 
 int main(int argc, char const *argv[])
@@ -47,7 +91,9 @@ int main(int argc, char const *argv[])
 		AddEdge(source, destination, weight);
 	}
 	
+	int minimumWeight = PrimsMinimumSpanningTree(1, vertex);
 
+	cout << ""
 
 	return 0;
 }
