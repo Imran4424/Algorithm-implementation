@@ -51,7 +51,7 @@ int PrimsMinimumSpanningTree(int startVertex, int totalVertex)
 		
 			minimumWeight = minimumWeight + hand.first;
 
-			cout << hand.first << endl;
+			// cout << hand.first << endl; // for testing
 
 			int current = hand.second; // destination vertex from the startVertex
 

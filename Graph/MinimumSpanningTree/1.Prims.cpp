@@ -39,28 +39,36 @@ int PrimsMinimumSpanningTree(int startVertex, int totalVertex)
 		weightedList.push(make_pair(helper.second, make_pair(startVertex, helper.first)));
 	}
 
-	while(!weightedList.empty() && visitedCount--) // reducing visitedCount by 1
+	while(!weightedList.empty() && visitedCount) // reducing visitedCount by 1
 	{                                             //  visitedCount == 0 means
 		                                     //   all vertex have been visited
 
 		nestedCouple hand = weightedList.top();
 		weightedList.pop();
 
-		minimumWeight = minimumWeight + hand.first;
+		if (!visited[hand.second.second]) // rechecking if there exist any minimum edges 
+		{                         //  with visited vertex
+			
+			
+			minimumWeight = minimumWeight + hand.first;
 
-		int current = hand.second.second; // destination vertex from the startVertex
+			int current = hand.second.second; // destination vertex from the startVertex
 
-		visited[current] = true;
+			visited[current] = true;
+			visitedCount--;
 
-		for (int k = 0; k < adjacency[current].size(); ++k) // now finding the adjacency of current vertex
-		{
-			couple helper = adjacency[current][k]; // adjacency pair
-
-			if (!visited[helper.first])
+			for (int k = 0; k < adjacency[current].size(); ++k) // now finding the adjacency of current vertex
 			{
-				weightedList.push(make_pair(helper.second, make_pair(current, helper.first)));
+				couple helper = adjacency[current][k]; // adjacency pair
+
+				if (!visited[helper.first])
+				{
+					weightedList.push(make_pair(helper.second, make_pair(current, helper.first)));
+				}
 			}
+
 		}
+
 	}
 
 	return minimumWeight;
