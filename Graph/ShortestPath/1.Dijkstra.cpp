@@ -24,9 +24,29 @@ void Dijkstra(int startVertex, int totalVertex)
 
 	priority_queue<couple, vector <couple>, greater <couple> > weightedList;
 
+
+	weightedList.push(make_pair(0, startVertex))
+
 	distance[startVertex] = 0;
 
+	while(!weightedList.empty())
+	{
+		couple hand = weightedList.top();
+		weightedList.pop();
 
+		int current = hand.second;
+
+		for (int k = 0; k < adjacency[current].size; ++k)
+		{
+			int neighbour = adjacency[current][k].second;
+			int neighbourDistance = adjacency[current][k].first;
+
+			if(distance[current] + neighbourDistance < distance[neighbour])
+			{
+				distance[neighbour] = distance[current] + neighbourDistance;
+			}
+		}
+	}
 
 }
 
