@@ -6,7 +6,7 @@
 using namespace std;
 
 typedef pair <int, int> couple;
-typedef pair <int, pair <int, int> > nestedCouple;
+
 
 vector <couple> *adjacency;
 
