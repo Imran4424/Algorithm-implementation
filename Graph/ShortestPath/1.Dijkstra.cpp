@@ -9,7 +9,7 @@ typedef pair <int, int> couple;
 
 vector <couple> *adjacency;
 
-vector <int> distance;
+vector <int> distanceFromSource;
 
 void AddEdge(int source, int destination, int weight)
 {
@@ -20,33 +20,36 @@ void AddEdge(int source, int destination, int weight)
 
 void Dijkstra(int startVertex, int totalVertex)
 {
-	distance.resize(totalVertex + 1, INT_MAX);
+
+	distanceFromSource.resize(totalVertex + 1, INT_MAX);
 
 	priority_queue<couple, vector <couple>, greater <couple> > weightedList;
 
 
-	weightedList.push(make_pair(0, startVertex))
+	weightedList.push(make_pair(0, startVertex));
 
-	distance[startVertex] = 0;
+	distanceFromSource[startVertex] = 0;
 
 	while(!weightedList.empty())
 	{
+		cout << "Hi" << endl;
+		
 		couple hand = weightedList.top();
 		weightedList.pop();
 
 		int current = hand.second;
 
-		for (int k = 0; k < adjacency[current].size; ++k)
+		for (int k = 0; k < adjacency[current].size(); ++k)
 		{
-			int neighbour = adjacency[current][k].second;
-			int neighbourDistance = adjacency[current][k].first;
+			int neighbour = adjacency[current][k].first;
+			int neighbourDistance = adjacency[current][k].second;
 
-			if(distance[current] + neighbourDistance < distance[neighbour])
+			if(distanceFromSource[current] + neighbourDistance < distanceFromSource[neighbour])
 			{
-				distance[neighbour] = distance[current] + neighbourDistance;
+				distanceFromSource[neighbour] = distanceFromSource[current] + neighbourDistance;
 			}
 
-			weightedList.push(adjacency[current][k]);
+			weightedList.push(make_pair(neighbourDistance, neighbour));
 		}
 	}
 
@@ -68,7 +71,7 @@ int main(int argc, char const *argv[])
 
 	cout << "enter the source, destination and weight" << endl;
 
-	int source, destination, weight
+	int source, destination, weight;
 
 	for (int i = 0; i < edges; ++i)
 	{
@@ -85,14 +88,14 @@ int main(int argc, char const *argv[])
 	{
 		for (int i = startVertex; i < vertex; ++i)
 		{
-			cout << i << " " << distance[i] << endl;
+			cout << i << " " << distanceFromSource[i] << endl;
 		}
 	}
 	else
 	{
 		for (int i = startVertex; i <= vertex; ++i)
 		{
-			cout << i << " " << distance[i] << endl;
+			cout << i << " " << distanceFromSource[i] << endl;
 		}
 	}
 	
