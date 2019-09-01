@@ -22,9 +22,11 @@ void Dijkstra(int startVertex, int totalVertex)
 {
 	distance.resize(totalVertex + 1, INT_MAX);
 
+	priority_queue<couple, vector <couple>, greater <couple> > weightedList;
+
 	distance[startVertex] = 0;
 
-	priority_queue(couple, vector <couple>, greater <couple>);
+
 
 }
 
