@@ -45,6 +45,8 @@ void Dijkstra(int startVertex, int totalVertex)
 			{
 				distance[neighbour] = distance[current] + neighbourDistance;
 			}
+
+			weightedList.push(adjacency[current][k]);
 		}
 	}
 
@@ -75,7 +77,24 @@ int main(int argc, char const *argv[])
 		AddEdge(source, destination, weight);
 	}
 
+	int startVertex = 0;
 
+	Dijkstra(startVertex, vertex);
+
+	if (0 == startVertex)
+	{
+		for (int i = startVertex; i < vertex; ++i)
+		{
+			cout << i << " " << distance[i] << endl;
+		}
+	}
+	else
+	{
+		for (int i = startVertex; i <= vertex; ++i)
+		{
+			cout << i << " " << distance[i] << endl;
+		}
+	}
 	
 	return 0;
 }
