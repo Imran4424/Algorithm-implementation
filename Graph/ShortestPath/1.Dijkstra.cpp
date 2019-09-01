@@ -25,7 +25,7 @@ void Dijkstra(int startVertex, int totalVertex)
 
 	priority_queue<couple, vector <couple>, greater <couple> > weightedList;
 
-	int iteration = 3;
+	int iteration = (totalVertex / 2);
 
 	while(iteration--)
 	{
