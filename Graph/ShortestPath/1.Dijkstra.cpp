@@ -30,7 +30,14 @@ int main(int argc, char const *argv[])
 	int edges;
 	cin >> edges;
 
-	
+	cout << "enter the source, destination and weight" << endl;
+
+	int source, destination, weight
+
+	for (int i = 0; i < edges; ++i)
+	{
+		/* code */
+	}
 	
 	return 0;
 }
