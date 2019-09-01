@@ -6,7 +6,9 @@ using namespace std;
 
 typedef pair <int, int> couple;
 
-vector <int> *adjacency;
+vector <couple> *adjacency;
+
+vector <int> distance;
 
 void AddEdge(int source, int destination, int weight)
 {
@@ -15,6 +17,10 @@ void AddEdge(int source, int destination, int weight)
 	adjacency[destination].push_back(make_pair(source, weight));
 }
 
+void Dijkstra()
+{
+	
+}
 
 int main(int argc, char const *argv[])
 {
@@ -23,7 +29,7 @@ int main(int argc, char const *argv[])
 	int vertex;
 	cin >> vertex;
 
-	adjacency = new vector <int> [vertex + 1];
+	adjacency = new vector <couple> [vertex + 1];
 
 	cout << "How many edges ?" << endl;
 
@@ -37,7 +43,11 @@ int main(int argc, char const *argv[])
 	for (int i = 0; i < edges; ++i)
 	{
 		cin >> source >> destination >> weight;
+
+		AddEdge(source, destination, weight);
 	}
+
+
 	
 	return 0;
 }
