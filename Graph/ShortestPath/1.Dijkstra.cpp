@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
 
 	for (int i = 0; i < edges; ++i)
 	{
-		/* code */
+		cin >> source >> destination >> weight;
 	}
 	
 	return 0;
