@@ -22,6 +22,15 @@ int main(int argc, char const *argv[])
 
 	int vertex;
 	cin >> vertex;
+
+	adjacency = new vector <int> [vertex + 1];
+
+	cout << "How many edges ?" << endl;
+
+	int edges;
+	cin >> edges;
+
+	
 	
 	return 0;
 }
