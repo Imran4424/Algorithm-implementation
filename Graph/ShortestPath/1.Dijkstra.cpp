@@ -2,6 +2,7 @@
 #include <vector>
 #include <utility>
 #include <queue>
+#include <limits.h>
 using namespace std;
 
 typedef pair <int, int> couple;
@@ -17,9 +18,14 @@ void AddEdge(int source, int destination, int weight)
 	adjacency[destination].push_back(make_pair(source, weight));
 }
 
-void Dijkstra()
+void Dijkstra(int startVertex, int totalVertex)
 {
-	
+	distance.resize(totalVertex + 1, INT_MAX);
+
+	distance[startVertex] = 0;
+
+	priority_queue(couple, vector <couple>, greater <couple>);
+
 }
 
 int main(int argc, char const *argv[])
