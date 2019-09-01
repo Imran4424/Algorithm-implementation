@@ -25,32 +25,48 @@ void Dijkstra(int startVertex, int totalVertex)
 
 	priority_queue<couple, vector <couple>, greater <couple> > weightedList;
 
+	int iteration = 3;
 
-	weightedList.push(make_pair(0, startVertex));
-
-	distanceFromSource[startVertex] = 0;
-
-	while(!weightedList.empty())
+	while(iteration--)
 	{
-		cout << "Hi" << endl;
-		
-		couple hand = weightedList.top();
-		weightedList.pop();
 
-		int current = hand.second;
+		vector <bool> visited(totalVertex + 1, false);
 
-		for (int k = 0; k < adjacency[current].size(); ++k)
+		weightedList.push(make_pair(0, startVertex));
+
+		// following two statements won't create any problem for next iteration
+		distanceFromSource[startVertex] = 0;
+		visited[startVertex] = true;
+
+
+		while(!weightedList.empty())
 		{
-			int neighbour = adjacency[current][k].first;
-			int neighbourDistance = adjacency[current][k].second;
+			// cout << "Hi" << endl;
 
-			if(distanceFromSource[current] + neighbourDistance < distanceFromSource[neighbour])
+			couple hand = weightedList.top();
+			weightedList.pop();
+
+			int current = hand.second;
+
+			for (int k = 0; k < adjacency[current].size(); ++k)
 			{
-				distanceFromSource[neighbour] = distanceFromSource[current] + neighbourDistance;
-			}
+				int neighbour = adjacency[current][k].first;
+				int neighbourDistance = adjacency[current][k].second;
 
-			weightedList.push(make_pair(neighbourDistance, neighbour));
+				if(distanceFromSource[current] + neighbourDistance < distanceFromSource[neighbour])
+				{
+					distanceFromSource[neighbour] = distanceFromSource[current] + neighbourDistance;
+				}
+
+				if (!visited[neighbour])
+				{
+					weightedList.push(make_pair(neighbourDistance, neighbour));
+
+					visited[neighbour] = true;
+				}
+			}
 		}
+
 	}
 
 }
@@ -83,6 +99,8 @@ int main(int argc, char const *argv[])
 	int startVertex = 0;
 
 	Dijkstra(startVertex, vertex);
+
+	cout << "Distance from source is" << endl;
 
 	if (0 == startVertex)
 	{
