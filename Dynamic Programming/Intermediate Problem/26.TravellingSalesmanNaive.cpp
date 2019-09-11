@@ -7,20 +7,26 @@ typedef pair <int, int> couple;
 
 vector <couple> *adjacency;
 
+int minimunDistance;
+
 void AddEdge(int source, int destination, int weight)
 {
 	adjacency[source].push_back(make_pair(destination, weight));
 	adjacency[destination].push_back(make_pair(source, weight));
 }
 
-void DFS(int current, vector <bool> visited, int vertexCount)
+void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 {
 
+	visited[current] = true;
 	vertexCount++;
 
 	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
-		/* code */
+		if (!visited[adjacency[current][k].first])
+		{
+			DFS(adjacency[current][k].first, visited, vertexCount, pathCost + adjacency[current][k].second);
+		}
 	}
 }
 
