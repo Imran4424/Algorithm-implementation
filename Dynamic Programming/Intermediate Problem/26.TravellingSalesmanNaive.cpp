@@ -15,8 +15,12 @@ void AddEdge(int source, int destination, int weight)
 	adjacency[destination].push_back(make_pair(source, weight));
 }
 
-void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
+void DFS(int current, totalVertex, vector <bool> visited, int vertexCount, int pathCost)
 {
+	if (vertexCount == totalVertex)
+	{
+		
+	}
 
 	visited[current] = true;
 	vertexCount++;
