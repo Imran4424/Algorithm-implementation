@@ -1,5 +1,6 @@
 #include <iostream>
 #include <utility>
+#include <vector>
 using namespace std;
 
 typedef pair <int, int> couple;
@@ -11,6 +12,11 @@ void AddEdge(int source, int destination, int weight)
 	adjacency[source].push_back(make_pair(destination, weight));
 	adjacency[destination].push_back(make_pair(source, weight));
 }
+
+DFS(int current, )
+
+
+void Solve()
 
 int main(int argc, char const *argv[])
 {
@@ -31,9 +37,9 @@ int main(int argc, char const *argv[])
 
 	for (int i = 0; i < edges; ++i)
 	{
-		cin >> source >> destination >> edges;
+		cin >> source >> destination >> weight;
 
-		AddEdge(source, destination, edges);
+		AddEdge(source, destination, weight);
 	}
 
 	return 0;
