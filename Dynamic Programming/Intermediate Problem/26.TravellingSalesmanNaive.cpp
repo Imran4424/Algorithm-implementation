@@ -28,7 +28,7 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 			{
 				if (pathCost + finalHelper.second < minimunDistance)
 				{
-					cout << current << " " << helper.second << endl;
+					cout << current << " " << finalHelper.second << endl;
 
 					minimunDistance = pathCost + finalHelper.second;
 				}
@@ -67,8 +67,8 @@ void Solve()
 	vector <bool> visited(totalVertex + 1, false);
 
 	visited[startVertex] = true;
-	DFS(startVertex, visited, 0, 0);
-
+	DFS(startVertex, visited, 1, 0); // remember vertexcount starts from 1
+                                        //  cause start vertex is also countable  
 	cout << minimunDistance << endl;
 }
 
