@@ -13,7 +13,10 @@ void AddEdge(int source, int destination, int weight)
 	adjacency[destination].push_back(make_pair(source, weight));
 }
 
-DFS(int current, )
+DFS(int current, vector <bool>, int vCount)
+{
+	
+}
 
 
 void Solve()
