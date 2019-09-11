@@ -13,13 +13,23 @@ void AddEdge(int source, int destination, int weight)
 	adjacency[destination].push_back(make_pair(source, weight));
 }
 
-DFS(int current, vector <bool>, int vCount)
+void DFS(int current, vector <bool> visited, int vertexCount)
 {
-	
+
+	vertexCount++;
+
+	for (int k = 0; k < adjacency[current].size(); ++k)
+	{
+		/* code */
+	}
 }
 
 
-void Solve()
+void Solve(int startVertex, int totalVertex)
+{
+	vector <bool> visited(totalVertex + 1, false);
+}
+
 
 int main(int argc, char const *argv[])
 {
@@ -44,6 +54,8 @@ int main(int argc, char const *argv[])
 
 		AddEdge(source, destination, weight);
 	}
+
+	Solve(1, vertex);
 
 	return 0;
 }
