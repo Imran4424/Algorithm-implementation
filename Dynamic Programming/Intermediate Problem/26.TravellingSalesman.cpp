@@ -66,7 +66,8 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 
 		}
 
-		visited[helper.first] = false; // backtrack
+		// this backtrack is not needed in this sorted optimal solution
+		// visited[helper.first] = false; // backtrack
 	}
 }
 
