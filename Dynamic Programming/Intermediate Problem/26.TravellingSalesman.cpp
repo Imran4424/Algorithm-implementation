@@ -115,7 +115,8 @@ int main(int argc, char const *argv[])
 		AddEdge(source, destination, weight);
 	}
 
-	startVertex = 1;
+	startVertex = 1; // this one depend upon the vertex counting
+
 	totalVertex = vertex;
 
 	Solve();
