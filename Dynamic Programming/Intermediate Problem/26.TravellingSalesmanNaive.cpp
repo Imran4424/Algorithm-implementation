@@ -19,15 +19,18 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 {
 	if (vertexCount == totalVertex)
 	{
-		cout << "I am here" << endl;
 
 		for (int k = 0; k < adjacency[current].size(); ++k)
 		{
-			if (adjacency[current][k].first == startVertex)
+			couple finalHelper = adjacency[current][k];
+
+			if (finalHelper.first == startVertex)
 			{
-				if (pathCost + adjacency[current][k].second < minimunDistance)
+				if (pathCost + finalHelper.second < minimunDistance)
 				{
-					minimunDistance = pathCost + adjacency[current][k].second;
+					cout << current << " " << helper.second << endl;
+
+					minimunDistance = pathCost + finalHelper.second;
 				}
 
 				k = adjacency[current].size();
@@ -40,14 +43,19 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 
 	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
-		if (!visited[adjacency[current][k].first])
+		couple helper = adjacency[current][k];
+
+		if (!visited[helper.first])
 		{
-			cout << "inside non visited" << endl
+			// cout << "inside non visited" << endl;
 
-			visited[adjacency[current][k].first] = true;
+			visited[helper.first] = true;
 
-			DFS(adjacency[current][k].first, visited, vertexCount+1, pathCost + adjacency[current][k].second);
+			DFS(helper.first, visited, vertexCount+1, pathCost + helper.second);
+
 		}
+
+		visited[helper.first] = false; // backtrack
 	}
 }
 
