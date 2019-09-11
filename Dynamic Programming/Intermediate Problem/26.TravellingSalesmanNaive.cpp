@@ -25,7 +25,16 @@ int main(int argc, char const *argv[])
 	int edges;
 	cin >> edges;
 
-	
+	int source, destination, weight;
+
+	cout << "enter the edges " << endl;
+
+	for (int i = 0; i < edges; ++i)
+	{
+		cin >> source >> destination >> edges;
+
+		AddEdge(source, destination, edges);
+	}
 
 	return 0;
 }
