@@ -28,7 +28,7 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 			{
 				if (pathCost + finalHelper.second < minimunDistance)
 				{
-					cout << current << " " << finalHelper.second << endl;
+					//cout << current << " " << finalHelper.second << endl;
 
 					minimunDistance = pathCost + finalHelper.second;
 				}
