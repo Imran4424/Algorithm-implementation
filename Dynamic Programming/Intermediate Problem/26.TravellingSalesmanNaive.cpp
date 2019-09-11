@@ -19,6 +19,8 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 {
 	if (vertexCount == totalVertex)
 	{
+		cout << "I am here" << endl;
+
 		for (int k = 0; k < adjacency[current].size(); ++k)
 		{
 			if (adjacency[current][k].first == startVertex)
@@ -28,21 +30,23 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 					minimunDistance = pathCost + adjacency[current][k].second;
 				}
 
-				break;
+				k = adjacency[current].size();
 			}
 		}
 
 		return;
 	}
 
-	visited[current] = true;
-	vertexCount++;
 
 	for (int k = 0; k < adjacency[current].size(); ++k)
 	{
 		if (!visited[adjacency[current][k].first])
 		{
-			DFS(adjacency[current][k].first, visited, vertexCount, pathCost + adjacency[current][k].second);
+			cout << "inside non visited" << endl
+
+			visited[adjacency[current][k].first] = true;
+
+			DFS(adjacency[current][k].first, visited, vertexCount+1, pathCost + adjacency[current][k].second);
 		}
 	}
 }
@@ -50,9 +54,14 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 
 void Solve()
 {
+	minimunDistance = 32000;
+
 	vector <bool> visited(totalVertex + 1, false);
 
+	visited[startVertex] = true;
 	DFS(startVertex, visited, 0, 0);
+
+	cout << minimunDistance << endl;
 }
 
 
