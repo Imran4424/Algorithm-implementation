@@ -17,6 +17,11 @@ void AddEdge(int source, int destination, int weight)
 
 void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 {
+	if(pathCost > minimunDistance)
+	{
+		return;
+	}
+	
 	if (vertexCount == totalVertex)
 	{
 

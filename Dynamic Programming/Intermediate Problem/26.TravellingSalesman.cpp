@@ -1,6 +1,7 @@
 #include <iostream>
 #include <utility>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 typedef pair <int, int> couple;
@@ -8,6 +9,11 @@ typedef pair <int, int> couple;
 vector <couple> *adjacency;
 
 int minimunDistance, startVertex, totalVertex;
+
+bool SortBySecond(const couple &a, const couple &b)
+{
+	return a.second < b.second;
+}
 
 void AddEdge(int source, int destination, int weight)
 {
@@ -17,6 +23,11 @@ void AddEdge(int source, int destination, int weight)
 
 void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 {
+	if(pathCost > minimunDistance)
+	{
+		return;
+	}
+
 	if (vertexCount == totalVertex)
 	{
 
@@ -62,6 +73,12 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 
 void Solve()
 {
+	for (int i = 0; i <= totalVertex; ++i)
+	{
+		sort(adjacency[i].begin(), adjacency[i].end(), SortBySecond);
+	}
+
+
 	minimunDistance = 32000;
 
 	vector <bool> visited(totalVertex + 1, false);
