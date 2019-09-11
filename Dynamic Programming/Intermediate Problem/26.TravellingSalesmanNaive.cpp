@@ -27,8 +27,12 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 				{
 					minimunDistance = pathCost + adjacency[current][k].second;
 				}
+
+				break;
 			}
 		}
+
+		return;
 	}
 
 	visited[current] = true;
@@ -47,6 +51,8 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 void Solve()
 {
 	vector <bool> visited(totalVertex + 1, false);
+
+	DFS(startVertex, visited, 0, 0);
 }
 
 
