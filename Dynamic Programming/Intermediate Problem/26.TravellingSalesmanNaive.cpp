@@ -25,7 +25,7 @@ void DFS(int current, vector <bool> visited, int vertexCount, int pathCost)
 			{
 				if (pathCost + adjacency[current][k].second < minimunDistance)
 				{
-					/* code */
+					minimunDistance = pathCost + adjacency[current][k].second;
 				}
 			}
 		}
