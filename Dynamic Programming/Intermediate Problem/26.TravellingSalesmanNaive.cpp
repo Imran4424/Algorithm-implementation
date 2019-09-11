@@ -102,7 +102,8 @@ int main(int argc, char const *argv[])
 		AddEdge(source, destination, weight);
 	}
 
-	startVertex = 1;
+	startVertex = 1; // this one is the start and end vertex, vertex number can be
+                        //  different. sometimes start and end vertex are also different
 	totalVertex = vertex;
 
 	Solve();
