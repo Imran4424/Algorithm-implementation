@@ -84,6 +84,8 @@ int main(int argc, char const *argv[])
 
 	sort(sortedDiff.begin(), sortedDiff.end());
 
+	// Here we calculated median for better performance
+
 	int avgDiffTime;
 
 	if (sortedDiff.size() % 2 == 0)
