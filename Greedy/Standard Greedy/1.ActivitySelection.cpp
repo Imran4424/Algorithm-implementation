@@ -5,7 +5,7 @@
 	the maximum number of activities that can be performed by a single person, 
 	assuming that a person can only work on a single activity at a time.
 
-	Example 1 : Consider the following 3 activities sorted by
+	Example 1 : Consider the following 3 activities sorted by start and
 	by finish time.
 
 	     start[]  =  {10, 12, 20};
@@ -16,9 +16,9 @@
 	is {0, 2} [ These are indexes in start[] and 
 	finish[] ]
 
-	Example 2 : Consider the following 6 activities 
-	sorted by by finish time.
-	
+	Example 2 : Consider the following 6 activities sorted by start and 
+	finish time.
+
 	     start[]  =  {1, 3, 0, 5, 8, 5};
 	     finish[] =  {2, 4, 6, 7, 9, 9};
 
