@@ -34,6 +34,8 @@
 #include <algorithm>
 using namespace std;
 
+typedef pair <int, int> couple;
+
 int MaximumWorksDone(vector <int> startTime, vector <int> finishTime, vector <int> diffTime, int avgDiffTime)
 {
 	int leastStartTime = startTime[0];

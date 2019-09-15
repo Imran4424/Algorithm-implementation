@@ -28,6 +28,12 @@
 	finish[] ]
 */
 
+/*
+	this is better version of all 
+
+	so far I hope	
+*/
+
 #include <iostream>
 #include <vector>
 #include <utility>
