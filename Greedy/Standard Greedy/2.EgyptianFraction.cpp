@@ -81,7 +81,11 @@ int main(int argc, char const *argv[])
 	int numerator, denominator;
 	cin >> numerator >> denominator;
 
-	cout << numerator << " / " << denominator << " = " << PrintEgyptian(numerator, denominator) << endl;
+	cout << numerator << " / " << denominator << " = " ;
+
+	PrintEgyptian(numerator, denominator);
+
+	cout << endl;
 
 	return 0;
 }
