@@ -68,6 +68,10 @@ void PrintEgyptian(int numerator, int denominator)
 	int fraction = (denominator / numerator) + 1;
 
 	cout << "1 / " << fraction << " + ";
+
+	// now recur for remaining part
+
+	PrintEgyptian();
 }
 
 int main(int argc, char const *argv[])
