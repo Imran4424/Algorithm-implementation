@@ -65,7 +65,9 @@ void PrintEgyptian(int numerator, int denominator)
 	// we need to find the ceiling of denominator/numerator
 	// and print it as first fraction 
 
-	
+	int fraction = (denominator / numerator) + 1;
+
+	cout << "1 / " << fraction << " + ";
 }
 
 int main(int argc, char const *argv[])
