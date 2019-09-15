@@ -32,9 +32,28 @@
 #include <vector>
 using namespace std;
 
-int MaximumWorksDone(vector <int> startTime, vector <int> finishTime)
+int MaximumWorksDone(vector <int> startTime, vector <int> finishTime, vector <int> diffTime, int avgDiffTime)
 {
-	int leastStartTime = startTime[i];
+	int leastStartTime = startTime[0];
+
+	int workDoneCount = 0;
+
+	for (int i = 0; i < startTime.size(); ++i)
+	{
+		if (diffTime[i] > avgDiffTime)
+		{
+			continue;
+		}
+
+		if (startTime[i] < leastStartTime)
+		{
+			continue;
+		}
+
+		workDoneCount++;
+
+		leastStartTime = finishTime[i];
+	}
 }
 
 int main(int argc, char const *argv[])
@@ -76,7 +95,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	int avgDiffTime = (maxDiffTime - minDiffTime) / 2;
+	int avgDiffTime = (maxDiffTime + minDiffTime) / 2;
 
 	return 0;
 }
