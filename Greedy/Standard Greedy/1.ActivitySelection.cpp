@@ -76,7 +76,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-
+	int avgDiffTime = (maxDiffTime - minDiffTime) / 2;
 
 	return 0;
 }
