@@ -84,8 +84,8 @@ int main(int argc, char const *argv[])
 
 	for (int i = 0; i < works; ++i)
 	{
-		startTime[i] = input.second;
-		finishTime[i] = input.first;
+		startTime[i] = input[i].second;
+		finishTime[i] = input[i].first;
 	}
 
 	cout << "maximum work done by one person: " << MaximumWorksDone(startTime, finishTime) << endl;
