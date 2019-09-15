@@ -67,7 +67,6 @@ int main(int argc, char const *argv[])
 
 	vector <int> startTime(works);
 	vector <int> finishTime(works);
-	vector <int> diffTime;
 
 	int maxDiffTime, minDiffTime;
 
@@ -81,12 +80,7 @@ int main(int argc, char const *argv[])
 
 	}
 
-	// we are calculating here arithemetic mean (alternative version)
-	// sometimes this can be tricky
-
-	int avgDiffTime = (maxDiffTime + minDiffTime) / 2;
-
-	cout << "maximum work done by one person: " << MaximumWorksDone(startTime, finishTime, diffTime, avgDiffTime) << endl;
+	cout << "maximum work done by one person: " << MaximumWorksDone(startTime, finishTime) << endl;
 
 	return 0;
 }
