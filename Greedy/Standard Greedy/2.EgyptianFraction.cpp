@@ -71,7 +71,7 @@ void PrintEgyptian(int numerator, int denominator)
 
 	// now recur for remaining part
 
-	PrintEgyptian();
+	PrintEgyptian(numerator*fraction - denominator, denominator*fraction);
 }
 
 int main(int argc, char const *argv[])
@@ -81,7 +81,7 @@ int main(int argc, char const *argv[])
 	int numerator, denominator;
 	cin >> numerator >> denominator;
 
-
+	cout << numerator << " / " << denominator << " = " << PrintEgyptian(numerator, denominator) << endl;
 
 	return 0;
 }
