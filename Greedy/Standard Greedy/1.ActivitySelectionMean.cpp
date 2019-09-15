@@ -30,7 +30,11 @@
 
 #include <iostream>
 #include <vector>
+#include <utility>
+#include <algorithm>
 using namespace std;
+
+typedef pair <int, int> couple;
 
 int MaximumWorksDone(vector <int> startTime, vector <int> finishTime, vector <int> diffTime, int avgDiffTime)
 {
@@ -65,6 +69,8 @@ int main(int argc, char const *argv[])
 	int works;
 	cin >> works;
 
+	cout << "enter the work's start and finish time " << endl;
+	
 	vector <couple> input;
 
 	int startInput, finishInput;
@@ -84,7 +90,6 @@ int main(int argc, char const *argv[])
 
 	int maxDiffTime, minDiffTime;
 
-	cout << "enter the work's start and finish time " << endl;
 
 	for (int i = 0; i < works; ++i)
 	{
