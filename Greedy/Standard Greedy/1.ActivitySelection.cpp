@@ -46,12 +46,34 @@ int main(int argc, char const *argv[])
 
 	vector <int> startTime(works);
 	vector <int> finishTime(works);
+	vector <int> diffTime;
+
+	int maxDiffTime, minDiffTime;
 
 	cout << "enter the work's start and finish time " << endl;
 
 	for (int i = 0; i < works; ++i)
 	{
 		cin >> startTime[i] >> finishTime[i];
+
+		diffTime.push_back(finishTime[i] - startTime);
+
+		if (0 == i)
+		{
+			maxDiffTime = minDiffTime = diffTime[i];
+		}
+		else
+		{
+			if (diffTime[i] > maxDiffTime)
+			{
+				maxDiffTime = diffTime[i];
+			}
+
+			if (diffTime[i] < minDiffTime)
+			{
+				minDiffTime = diffTime[i];
+			}
+		}
 	}
 
 
