@@ -54,6 +54,8 @@ int MaximumWorksDone(vector <int> startTime, vector <int> finishTime, vector <in
 
 		leastStartTime = finishTime[i];
 	}
+
+	return workDoneCount;
 }
 
 int main(int argc, char const *argv[])
