@@ -65,6 +65,19 @@ int main(int argc, char const *argv[])
 	int works;
 	cin >> works;
 
+	vector <couple> input;
+
+	int startInput, finishInput;
+
+	for (int i = 0; i < works; ++i)
+	{
+		cin >> startInput >> finishInput;
+
+		input.push_back(make_pair(finishInput, startInput));
+	}
+
+	sort(input.begin(), input.end());
+
 	vector <int> startTime(works);
 	vector <int> finishTime(works);
 	vector <int> diffTime;
@@ -75,7 +88,8 @@ int main(int argc, char const *argv[])
 
 	for (int i = 0; i < works; ++i)
 	{
-		cin >> startTime[i] >> finishTime[i];
+		startTime[i] = input.second;
+		finishTime[i] = input.first;
 
 		diffTime.push_back(finishTime[i] - startTime[i]);
 

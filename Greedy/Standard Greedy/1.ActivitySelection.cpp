@@ -30,7 +30,11 @@
 
 #include <iostream>
 #include <vector>
+#include <utility>
+#include <algorithm>
 using namespace std;
+
+typedef pair <int, int> couple;
 
 int MaximumWorksDone(vector <int> startTime, vector <int> finishTime)
 {
@@ -40,11 +44,6 @@ int MaximumWorksDone(vector <int> startTime, vector <int> finishTime)
 
 	for (int i = 0; i < startTime.size(); ++i)
 	{
-		if (diffTime[i] > avgDiffTime)
-		{
-			continue;
-		}
-
 		if (startTime[i] < leastStartTime)
 		{
 			continue;
@@ -65,19 +64,28 @@ int main(int argc, char const *argv[])
 	int works;
 	cin >> works;
 
-	vector <int> startTime(works);
-	vector <int> finishTime(works);
-
-	int maxDiffTime, minDiffTime;
-
 	cout << "enter the work's start and finish time " << endl;
+
+	vector <couple> input;
+
+	int startInput, finishInput;
 
 	for (int i = 0; i < works; ++i)
 	{
-		cin >> startTime[i] >> finishTime[i];
+		cin >> startInput >> finishInput;
 
-		diffTime.push_back(finishTime[i] - startTime[i]);
+		input.push_back(make_pair(finishInput, startInput));
+	}
 
+	sort(input.begin(), input.end());
+
+	vector <int> startTime(works);
+	vector <int> finishTime(works);
+
+	for (int i = 0; i < works; ++i)
+	{
+		startTime[i] = input.second;
+		finishTime[i] = input.first;
 	}
 
 	cout << "maximum work done by one person: " << MaximumWorksDone(startTime, finishTime) << endl;
