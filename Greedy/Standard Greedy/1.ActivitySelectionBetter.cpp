@@ -80,6 +80,10 @@ int main(int argc, char const *argv[])
 		diffTime.push_back(finishTime[i] - startTime[i]);
 	}
 
+	vector <int> sortedDiff = diffTime;
+
+	sort(sortedDiff.begin(), sortedDiff.end());
+
 	int avgDiffTime = (maxDiffTime + minDiffTime) / 2;
 
 	cout << "maximum work done by one person: " << MaximumWorksDone(startTime, finishTime, diffTime, avgDiffTime) << endl;

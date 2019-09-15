@@ -97,6 +97,8 @@ int main(int argc, char const *argv[])
 		}
 	}
 
+	// we are calculating here 
+
 	int avgDiffTime = (maxDiffTime + minDiffTime) / 2;
 
 	cout << "maximum work done by one person: " << MaximumWorksDone(startTime, finishTime, diffTime, avgDiffTime) << endl;
