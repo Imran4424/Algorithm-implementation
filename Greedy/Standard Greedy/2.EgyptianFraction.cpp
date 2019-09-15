@@ -25,9 +25,15 @@ void PrintEgyptian(int numerator, int denominator)
 		return;		
 	}
 
+	// here numerator equally divides denominator
+	// that's why
+	// this simple divion makes the fraction in form 1/n
+
 	if (denominator % numerator == 0)
 	{
 		cout << "1 / " << denominator / numerator << endl;
+
+		return;
 	}
 }
 
