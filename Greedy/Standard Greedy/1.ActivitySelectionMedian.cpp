@@ -65,6 +65,7 @@ int main(int argc, char const *argv[])
 	int works;
 	cin >> works;
 
+	cout << "enter the work's start and finish time " << endl;
 	vector <couple> input;
 
 	int startInput, finishInput;
@@ -82,12 +83,11 @@ int main(int argc, char const *argv[])
 	vector <int> finishTime(works);
 	vector <int> diffTime;
 
-	cout << "enter the work's start and finish time " << endl;
 
 	for (int i = 0; i < works; ++i)
 	{
-		startTime[i] = input.second;
-		finishTime[i] = input.first;
+		startTime[i] = input[i].second;
+		finishTime[i] = input[i].first;
 
 		diffTime.push_back(finishTime[i] - startTime[i]);
 	}
