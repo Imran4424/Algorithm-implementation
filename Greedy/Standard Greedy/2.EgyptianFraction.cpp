@@ -31,9 +31,14 @@ void PrintEgyptian(int numerator, int denominator)
 
 	if (denominator % numerator == 0)
 	{
-		cout << "1 / " << denominator / numerator << endl;
+		cout << "1 / " << denominator / numerator ;
 
 		return;
+	}
+
+	if (numerator % denominator == 0)
+	{
+		cout << numerator/ denominator;
 	}
 }
 
