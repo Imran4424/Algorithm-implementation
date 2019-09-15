@@ -10,5 +10,13 @@
 	Egyptian Fraction Representation of 6/14 is 1/3 + 1/11 + 1/231
 	Egyptian Fraction Representation of 12/13 is 1/2 + 1/3 + 1/12 + 1/156
 
-	
 */
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	
+	return 0;
+}
