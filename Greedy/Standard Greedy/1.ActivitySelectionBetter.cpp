@@ -78,23 +78,6 @@ int main(int argc, char const *argv[])
 		cin >> startTime[i] >> finishTime[i];
 
 		diffTime.push_back(finishTime[i] - startTime[i]);
-
-		if (0 == i)
-		{
-			maxDiffTime = minDiffTime = diffTime[i];
-		}
-		else
-		{
-			if (diffTime[i] > maxDiffTime)
-			{
-				maxDiffTime = diffTime[i];
-			}
-
-			if (diffTime[i] < minDiffTime)
-			{
-				minDiffTime = diffTime[i];
-			}
-		}
 	}
 
 	int avgDiffTime = (maxDiffTime + minDiffTime) / 2;
