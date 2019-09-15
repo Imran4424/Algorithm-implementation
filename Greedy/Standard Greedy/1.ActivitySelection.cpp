@@ -97,7 +97,8 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	// we are calculating here 
+	// we are calculating here arithemetic mean
+	// sometimes this can be tricky
 
 	int avgDiffTime = (maxDiffTime + minDiffTime) / 2;
 
