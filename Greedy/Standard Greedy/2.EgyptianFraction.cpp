@@ -36,6 +36,9 @@ void PrintEgyptian(int numerator, int denominator)
 		return;
 	}
 
+	when denominator equally divides numerator
+	then it is not a fraction number
+
 	if (numerator % denominator == 0)
 	{
 		cout << numerator/ denominator;
