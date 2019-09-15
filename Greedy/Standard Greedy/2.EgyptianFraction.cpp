@@ -24,6 +24,11 @@ void PrintEgyptian(int numerator, int denominator)
 	{
 		return;		
 	}
+
+	if (denominator % numerator == 0)
+	{
+		cout << "1 / " << denominator / numerator << endl;
+	}
 }
 
 int main(int argc, char const *argv[])
