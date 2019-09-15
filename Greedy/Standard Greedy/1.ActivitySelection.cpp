@@ -29,9 +29,13 @@
 */
 
 /*
-	this is better version of all 
+	this is better version of all
 
-	so far I hope	
+	taking average time wont be needed
+
+	cause
+
+	the finishing time are sorted
 */
 
 #include <iostream>
