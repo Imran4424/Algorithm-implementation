@@ -47,6 +47,21 @@ void PrintEgyptian(int numerator, int denominator)
 	}
 
 
+	// if numerator is greater than denominator
+
+	if (numerator > denominator)
+	{
+		// first print the integer part
+		cout << numerator / denominator << " + ";
+
+		// then call for the fractional part
+		PrintEgyptian(numerator % denominator, denominator);
+
+		return;
+	}
+
+
+
 }
 
 int main(int argc, char const *argv[])
