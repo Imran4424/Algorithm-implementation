@@ -84,7 +84,10 @@ int main(int argc, char const *argv[])
 
 	sort(sortedDiff.begin(), sortedDiff.end());
 
-	
+	if (sortedDiff.size() % 2 == 0)
+	{
+		
+	}
 
 	int avgDiffTime = (maxDiffTime + minDiffTime) / 2;
 
