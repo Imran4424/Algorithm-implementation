@@ -84,14 +84,20 @@ int main(int argc, char const *argv[])
 
 	sort(sortedDiff.begin(), sortedDiff.end());
 
+	int avgDiffTime;
+
 	if (sortedDiff.size() % 2 == 0)
 	{
 		avgDiffTime = (sortedDiff[sortedDiff.size()/2] + sortedDiff[(sortedDiff.size()/2)-1]) / 2;
 
 		avgDiffTime += 3;
 	}
+	else
+	{
+		avgDiffTime = sortedDiff[sortedDiff.size()/2];
 
-	int avgDiffTime = (maxDiffTime + minDiffTime) / 2;
+		avgDiffTime += 3;
+	}
 
 	cout << "maximum work done by one person: " << MaximumWorksDone(startTime, finishTime, diffTime, avgDiffTime) << endl;
 
