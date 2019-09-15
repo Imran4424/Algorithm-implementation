@@ -60,8 +60,12 @@ void PrintEgyptian(int numerator, int denominator)
 		return;
 	}
 
+	// Now denominator > numerator and
+	// denominator % numerator is non-zero
+	// we need to find the ceiling of denominator/numerator
+	// and print it as first fraction 
 
-
+	
 }
 
 int main(int argc, char const *argv[])
