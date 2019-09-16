@@ -31,3 +31,7 @@
 	        c, a, e
 
 */
+
+#include <iostream>
+#include <vector>
+using namespace std;
