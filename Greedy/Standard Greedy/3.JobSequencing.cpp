@@ -42,7 +42,12 @@ typedef pair <int, couple> nestedCouple;
 
 vector <couple> MaximumProfit(vector <nestedCouple> givenJobs, int maxDeadline)
 {
+	int currentDeadline = 1;
 
+	for (int i = 0; i < givenJobs.size(); ++i)
+	 {
+	 	/* code */
+	 } 
 }
 
 int main(int argc, char const *argv[])
@@ -70,7 +75,8 @@ int main(int argc, char const *argv[])
 		{
 			maxDeadline = deadline;
 		}
-		else if(maxDeadline < deadline)
+		
+		if(maxDeadline < deadline)
 		{
 			maxDeadline = deadline;
 		}
