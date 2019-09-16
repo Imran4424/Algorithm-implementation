@@ -56,12 +56,12 @@ vector <couple> MaximumProfit(vector <nestedCouple> givenJobs, int maxDeadline)
 			break;
 		}
 
-		if (currentDeadline >= givenJobs[i].second.first)
+		if (currentDeadline <= givenJobs[i].second.first)
 		{
 			jobList.push_back(givenJobs[i].second);
-		}
 
-		currentDeadline++;
+			currentDeadline++;
+		}
 	}
 
 	// making the job list sorted according to the deadline
@@ -85,20 +85,20 @@ int main(int argc, char const *argv[])
 
 	cout << "enter the jobId, deadline and profit" << endl;
 
-	for (int i = 0; i < Jobs; ++i)
+	for (int i = 0; i < jobs; ++i)
 	{
-		cin >> jobId >> deadline >> profit;
+		cin >> jobId >> deadLine >> profit;
 
-		givenJobs.push_back(make_pair(profit, make_pair(deadline, jobId)));
+		givenJobs.push_back(make_pair(profit, make_pair(deadLine, jobId)));
 
 		if (0 == i)
 		{
-			maxDeadline = deadline;
+			maxDeadline = deadLine;
 		}
 		
-		if(maxDeadline < deadline)
+		if(maxDeadline < deadLine)
 		{
-			maxDeadline = deadline;
+			maxDeadline = deadLine;
 		}
 	}
 
