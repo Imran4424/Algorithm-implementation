@@ -53,7 +53,12 @@ vector <couple> MaximumProfit(vector <nestedCouple> givenJobs, int maxDeadline)
 			break;
 		}
 
-		
+		if (currentDeadline >= givenJobs[i].second.first)
+		{
+			jobList.push_back(givenJobs[i].second);
+		}
+
+		currentDeadline++;
 	} 
 }
 
