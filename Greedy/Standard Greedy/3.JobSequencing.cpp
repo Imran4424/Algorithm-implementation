@@ -37,6 +37,9 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	
+	cout << "how many jobs" << endl;
+	int jobs;
+	cin >> jobs;
+
 	return 0;
 }
