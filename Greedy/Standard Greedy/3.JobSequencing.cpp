@@ -44,10 +44,17 @@ vector <couple> MaximumProfit(vector <nestedCouple> givenJobs, int maxDeadline)
 {
 	int currentDeadline = 1;
 
+	vector <couple> jobList;
+
 	for (int i = 0; i < givenJobs.size(); ++i)
-	 {
-	 	/* code */
-	 } 
+	{
+		if (currentDeadline > maxDeadline)
+		{
+			break;
+		}
+
+		
+	} 
 }
 
 int main(int argc, char const *argv[])
