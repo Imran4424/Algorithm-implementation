@@ -40,9 +40,9 @@ using namespace std;
 typedef pair <int, char> couple;
 typedef pair <int, couple> nestedCouple;
 
-vector <couple> MaximumProfit(vector <nestedCouple> givenJobs)
+vector <couple> MaximumProfit(vector <nestedCouple> givenJobs, int maxDeadline)
 {
-	
+
 }
 
 int main(int argc, char const *argv[])
@@ -56,6 +56,8 @@ int main(int argc, char const *argv[])
 
 	vector <nestedCouple> givenJobs;
 
+	int maxDeadline;
+
 	cout << "enter the jobId, deadline and profit" << endl;
 
 	for (int i = 0; i < Jobs; ++i)
@@ -63,6 +65,15 @@ int main(int argc, char const *argv[])
 		cin >> jobId >> deadline >> profit;
 
 		givenJobs.push_back(make_pair(profit, make_pair(deadline, jobId)));
+
+		if (0 == i)
+		{
+			maxDeadline = deadline;
+		}
+		else if(maxDeadline < deadline)
+		{
+			maxDeadline = deadline;
+		}
 	}
 
 	sort(givenJobs.rbegin(), givenJobs.rend());
