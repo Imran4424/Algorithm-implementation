@@ -102,7 +102,14 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	vector 
+	vector <couple> jobList = MaximumProfit(givenJobs, maxDeadline);
+
+	for (int i = 0; i < jobList.size(); ++i)
+	{
+		cout << jobList[i].second << " ";
+	}
+
+	cout << endl;
 
 	return 0;
 }
