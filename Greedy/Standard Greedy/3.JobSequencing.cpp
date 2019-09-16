@@ -35,11 +35,17 @@
 #include <vector>
 using namespace std;
 
+typedef pair <int, char> couple;
+typedef pair <int, couple> nestedCouple;
+
 int main(int argc, char const *argv[])
 {
 	cout << "how many jobs" << endl;
 	int jobs;
 	cin >> jobs;
+
+	char jobId;
+	int deadLine, profit;
 
 	return 0;
 }
