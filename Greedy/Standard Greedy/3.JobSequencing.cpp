@@ -42,6 +42,9 @@ typedef pair <int, couple> nestedCouple;
 
 vector <couple> MaximumProfit(vector <nestedCouple> givenJobs, int maxDeadline)
 {
+	// making the job sorted according to higher profit
+	sort(givenJobs.rbegin(), givenJobs.rend());
+
 	int currentDeadline = 1;
 
 	vector <couple> jobList;
@@ -59,7 +62,12 @@ vector <couple> MaximumProfit(vector <nestedCouple> givenJobs, int maxDeadline)
 		}
 
 		currentDeadline++;
-	} 
+	}
+
+	// making the job list sorted according to the deadline
+	sort(jobList.begin(), jobList.end());
+
+	return jobList;
 }
 
 int main(int argc, char const *argv[])
@@ -94,7 +102,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	sort(givenJobs.rbegin(), givenJobs.rend());
+	vector 
 
 	return 0;
 }
