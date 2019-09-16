@@ -33,6 +33,8 @@
 */
 #include <iostream>
 #include <vector>
+#include <utility>
+#include <algorithm>
 using namespace std;
 
 typedef pair <int, char> couple;
@@ -46,6 +48,19 @@ int main(int argc, char const *argv[])
 
 	char jobId;
 	int deadLine, profit;
+
+	vector <nestedCouple> givenJobs;
+
+	cout << "enter the jobId, deadline and profit" << endl;
+
+	for (int i = 0; i < Jobs; ++i)
+	{
+		cin >> jobId >> deadline >> profit;
+
+		givenJobs.push_back(make_pair(profit, make_pair(deadline, jobId)));
+	}
+
+	sort(givenJobs.rbegin(), givenJobs.rend());
 
 	return 0;
 }
