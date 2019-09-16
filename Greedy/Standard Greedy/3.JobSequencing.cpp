@@ -40,6 +40,11 @@ using namespace std;
 typedef pair <int, char> couple;
 typedef pair <int, couple> nestedCouple;
 
+vector <couple> MaximumProfit(vector <nestedCouple> givenJobs)
+{
+	
+}
+
 int main(int argc, char const *argv[])
 {
 	cout << "how many jobs" << endl;
