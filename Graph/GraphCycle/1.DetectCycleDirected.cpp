@@ -70,7 +70,6 @@ void Init()
 
 void ReadCase()
 {
-	cin >> vertex;
 
 	Init();
 

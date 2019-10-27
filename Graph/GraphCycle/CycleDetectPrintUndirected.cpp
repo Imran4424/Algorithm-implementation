@@ -23,6 +23,8 @@ void ReadCase()
 {
 	cin >> vertex >> edges;
 
+	Init();
+
 	int x, y;
 
 	while(edges--)
