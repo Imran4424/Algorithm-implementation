@@ -54,21 +54,30 @@ int DetectCycle(int current, int currentColor)
 		{
 			if (path[current][next])
 			{
-				int status = DetectCycle(next, currentColor + 1);
+				// clearing Undirected edges
 
-				if (-1 == status)
+				path[current][next] = 0;
+				path[next][current] = 0;
+
+				int nodeNum = DetectCycle(next, currentColor + 1);
+
+				if (-1 == nodeNum)
 				{
 					color[next] = -1;
 				}
+				else
+				{
+					return nodeNum;
+				}
 			}
 
-
-			
 		}
+
+		return -1;
 	}
 	else
 	{
-		return color[x];
+		return color[current];
 	}
 }
 
@@ -76,13 +85,13 @@ void Solve()
 {
 	cycleFound = -1;
 
-	int color = 0;
+	int paint = 0;
 
 	for (int x = 1; x <= vertex; ++x)
 	{
 		if (0 == color[x])
 		{
-			cycleFound = DetectCycle(x, color + 1);
+			cycleFound = DetectCycle(x, paint + 1);
 
 			if (-1 != cycleFound)
 			{
@@ -92,16 +101,40 @@ void Solve()
 	}
 }
 
+void Display()
+{
+	if (-1 != cycleFound)
+	{
+		for (int x = 1; x <= vertex; ++x)
+		{
+			if (cycleFound <= color[x])
+			{
+				printf(" %d", x);
+			}
+		}
+
+		printf("\n");
+	}
+	else
+	{
+		printf(" -1\n");
+	}
+}
+
 int main(int argc, char const *argv[])
 {
+	freopen("input.txt", "r", stdin);
+
 	int test;
 	cin >> test;
 
 	for (int t = 1; t <= test; ++t)
 	{
-		printf("#%d ", t);
+		printf("#%d", t);
 
 		ReadCase();
+		Solve();
+		Display();
 	}
 
 	return 0;

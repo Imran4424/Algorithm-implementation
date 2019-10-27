@@ -56,6 +56,7 @@ int solve(int i, int color)
 				}
 			}
 		}
+		
 		return -1;
 	}
 	else
