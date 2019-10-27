@@ -112,7 +112,7 @@ int main(int argc, char const *argv[])
 
 		ReadCase();
 		Solve();
-		Display();
+		//Display();
 	}
 
 
