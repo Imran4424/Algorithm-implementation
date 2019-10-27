@@ -103,8 +103,13 @@ int main(int argc, char const *argv[])
 {
 	freopen("input.txt", "r", stdin);
 
-	while(cin >> vertex && vertex)
+	while(cin >> vertex)
 	{
+		if (!vertex)
+		{
+			break;
+		}
+
 		ReadCase();
 		Solve();
 		Display();
