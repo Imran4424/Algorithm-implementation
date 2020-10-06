@@ -88,7 +88,7 @@ void kmpReplaceSubstring(char pattern[], char replace[]) {
 			}
 			// for clearing
 			j = 0;
-		} else if(mainString[i] && mainString[i] != mainString[j]) {
+		} else if(mainString[i] && mainString[i] != pattern[j]) {
 			if(j > 0) {
 				j = piArray[j - 1];
 			} else {
