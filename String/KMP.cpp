@@ -123,25 +123,27 @@ int main(int argc, char const *argv[])
 	// getchar();
 	// scanf("%[^\n]", pattern);
 
-	scanf("%s %s %s", mainString, pattern, replace);
+	scanf("%s", mainString, pattern, replace);
 
-	printf("%s\n", mainString);
-	printf("%s\n", pattern);
+	// printf("%s\n", mainString);
+	// printf("%s\n", pattern);
 
-	kmpPreProcess(pattern);
+	while(cin >> pattern >> replace) {
+		kmpPreProcess(pattern);
 
-	if(kmp(pattern)) {
-		printf("subString found\n");
-	} else {
-		printf("subString not found\n");
+		if(kmp(pattern)) {
+			printf("subString found\n");
+		} else {
+			printf("subString not found\n");
+		}
+
+		printf("subString positions: ");
+		kmpAllPositions(pattern);
+		printf("\n\n");
+
+		kmpReplaceSubstring(pattern, replace);
+		printf("%s\n", mainString);
 	}
-
-	printf("subString positions: ");
-	kmpAllPositions(pattern);
-	printf("\n\n");
-
-	kmpReplaceSubstring(pattern, replace);
-	printf("%s\n", mainString);
 
 	return 0;
 }
