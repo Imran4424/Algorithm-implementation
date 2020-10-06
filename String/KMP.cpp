@@ -33,7 +33,7 @@ bool kmp(char pattern[]) {
 	int j = 0;
 	for(int i = 0; mainString[i]; i++) {
 		if (mainString[i] == pattern[j]) {
-			if(3 == j) {
+			if(!pattern[j + 1]) {
 				return true;
 			}
 			j++;
@@ -58,7 +58,7 @@ void kmpAllPositions(char pattern[]) {
 		if (mainString[i] == pattern[j]) {
 			if (0 == j) {
 				beginIndex = i;
-			} else if(3 == j) {
+			} else if(!pattern[j + 1]) {
 				printf("%d ", beginIndex);
 				// for clearing
 				j = 0;
@@ -83,7 +83,7 @@ void kmpReplaceSubstring(char pattern[], char replace[]) {
 		if (mainString[i] == pattern[j]) {
 			if (0 == j) {
 				beginIndex = i;
-			} else if(3 == j) {
+			} else if(!pattern[j + 1]) {
 				int x, y;
 				for (x = beginIndex, y = 0; replace[y]; x++, y++) {
 					mainString[x] = replace[y];
