@@ -81,12 +81,13 @@ int main(int argc, char const *argv[])
 	freopen("input.txt", "r", stdin);
 
 	char pattern[5];
+	char replace[5];
 
 	// scanf("%[^\n]", mainString);
 	// getchar();
 	// scanf("%[^\n]", pattern);
 
-	scanf("%s %s", mainString, pattern);
+	scanf("%s %s %s", mainString, pattern, replace);
 
 	printf("%s\n", mainString);
 	printf("%s\n", pattern);
