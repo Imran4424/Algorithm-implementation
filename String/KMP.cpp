@@ -33,7 +33,7 @@ bool kmp(char pattern[]) {
 	int j = 0;
 	for(int i = 0; mainString[i]; i++) {
 		if (mainString[i] == pattern[j]) {
-			if(2 == j) {
+			if(3 == j) {
 				return true;
 			}
 			j++;
@@ -58,7 +58,7 @@ void kmpAllPositions(char pattern[]) {
 		if (mainString[i] == pattern[j]) {
 			if (0 == j) {
 				beginIndex = i;
-			} else if(2 == j) {
+			} else if(3 == j) {
 				printf("%d ", beginIndex);
 				// for clearing
 				j = 0;
