@@ -59,12 +59,15 @@ void kmpAllPositions(char pattern[]) {
 			printf("%d - %d ", i, j);
 			if (0 == j) {
 				beginIndex = i;
-			} else if(!pattern[j + 1]) {
+			}
+
+			if(!pattern[j + 1]) {
 				//printf("%d ", beginIndex);
 				// for clearing
 				j = 0;
+			} else {
+				j++;
 			}
-			j++;
 		} else {
 			while(j > 0) {
 				j = piArray[j - 1];
@@ -84,15 +87,19 @@ void kmpReplaceSubstring(char pattern[], char replace[]) {
 		if (mainString[i] == pattern[j]) {
 			if (0 == j) {
 				beginIndex = i;
-			} else if(!pattern[j + 1]) {
+			}
+
+			if(!pattern[j + 1]) {
 				int x, y;
 				for (x = beginIndex, y = 0; replace[y]; x++, y++) {
 					mainString[x] = replace[y];
 				}
 				// for clearing
 				j = 0;
+			} else {
+				j++;
 			}
-			j++;
+			
 		} else {
 			while(j > 0) {
 				j = piArray[j - 1];
