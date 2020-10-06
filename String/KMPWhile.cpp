@@ -48,25 +48,26 @@ bool kmp(char pattern[]) {
 }
 
 void kmpAllPositions(char pattern[]) {
+	int i = 0;
 	int j = 0;
-	for(int i = 0; mainString[i]; i++) {
+	while(mainString[i]) {
 		if (mainString[i] == pattern[j]) {
-			printf("%d - %d ", i, j);
-			
-			if(2 == j) {
-				//printf("%d ", i - j);
-				// for clearing
-				j = 0;
-			} else {
-				j++;
+			i++;
+			j++;
+		} 
+
+		if(3 == j) {
+			int x, y;
+			for (x = i - j, y = 0; replace[y]; x++, y++) {
+				mainString[x] = replace[y];
 			}
-		} else {
-			while(j > 0) {
+			// for clearing
+			j = 0;
+		} else if(mainString[i] && mainString[i] != pattern[j]) {
+			if(j > 0) {
 				j = piArray[j - 1];
-				if (mainString[i] == pattern[j]) {
-					j++;
-					break;
-				}
+			} else {
+				i++;
 			}
 		}
 	}

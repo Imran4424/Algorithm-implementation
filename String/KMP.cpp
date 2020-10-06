@@ -58,7 +58,7 @@ void kmpAllPositions(char pattern[]) {
 			printf("%d - %d ", i, j);
 			
 			if(2 == j) {
-				//printf("%d ", i - j);
+				printf("%d ", i - j);
 				// for clearing
 				j = 0;
 			} else {
