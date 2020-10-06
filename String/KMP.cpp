@@ -76,6 +76,34 @@ void kmpAllPositions(char pattern[]) {
 	}
 }
 
+void kmpReplaceSubstring(char pattern[], char replace[]) {
+	int j = 0;
+	int beginIndex;
+	for(int i = 0; mainString[i]; i++) {
+		if (mainString[i] == pattern[j]) {
+			if (0 == j) {
+				beginIndex = i;
+			} else if(3 == j) {
+				int x, y;
+				for (x = beginIndex, y = 0; replace[y]; x++, y++) {
+					mainString[x] = replace[y];
+				}
+				// for clearing
+				j = 0;
+			}
+			j++;
+		} else {
+			while(j != 0) {
+				j = piArray[j - 1];
+				if (mainString[i] == pattern[j]) {
+					j++;
+					break;
+				}
+			}
+		}
+	}
+}
+
 int main(int argc, char const *argv[])
 {
 	freopen("input.txt", "r", stdin);
@@ -102,7 +130,10 @@ int main(int argc, char const *argv[])
 
 	printf("subString positions: ");
 	kmpAllPositions(pattern);
-	printf("\n");
+	printf("\n\n");
+
+	kmpReplaceSubstring(pattern, replace);
+	printf("%s\n", mainString);
 
 	return 0;
 }
