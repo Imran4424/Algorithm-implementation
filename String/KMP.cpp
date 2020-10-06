@@ -77,8 +77,8 @@ void kmpAllPositions(char pattern[]) {
 }
 
 void kmpReplaceSubstring(char pattern[], char replace[]) {
-	int j = 0;
 	int beginIndex;
+	int j = 0;
 	for(int i = 0; mainString[i]; i++) {
 		if (mainString[i] == pattern[j]) {
 			if (0 == j) {
