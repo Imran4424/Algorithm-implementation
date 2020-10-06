@@ -56,10 +56,11 @@ void kmpAllPositions(char pattern[]) {
 	int beginIndex;
 	for(int i = 0; mainString[i]; i++) {
 		if (mainString[i] == pattern[j]) {
+			printf("%d - %d ", i, j);
 			if (0 == j) {
 				beginIndex = i;
 			} else if(!pattern[j + 1]) {
-				printf("%d ", beginIndex);
+				//printf("%d ", beginIndex);
 				// for clearing
 				j = 0;
 			}
