@@ -125,7 +125,7 @@ int main(int argc, char const *argv[])
 
 	scanf("%s", mainString, pattern, replace);
 
-	// printf("%s\n", mainString);
+	printf("%s\n", mainString);
 	// printf("%s\n", pattern);
 
 	while(cin >> pattern >> replace) {
