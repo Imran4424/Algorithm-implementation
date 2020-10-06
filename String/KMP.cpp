@@ -51,6 +51,31 @@ bool kmp(char pattern[]) {
 	return false;	
 }
 
+void kmpAllPositions(char pattern[]) {
+	int j = 0;
+	int beginIndex;
+	for(int i = 0; mainString[i]; i++) {
+		if (mainString[i] == pattern[j]) {
+			if (0 == j) {
+				beginIndex = i;
+			} else if(2 == j) {
+				printf("%d ", beginIndex);
+				// for clearing
+				j = 0;
+			}
+			j++;
+		} else {
+			while(j != 0) {
+				j = piArray[j - 1];
+				if (mainString[i] == pattern[j]) {
+					j++;
+					break;
+				}
+			}
+		}
+	}
+}
+
 int main(int argc, char const *argv[])
 {
 	freopen("input.txt", "r", stdin);
@@ -73,6 +98,10 @@ int main(int argc, char const *argv[])
 	} else {
 		printf("subString not found\n");
 	}
+
+	printf("subString positions: ");
+	kmpAllPositions(pattern);
+	printf("\n");
 
 	return 0;
 }
