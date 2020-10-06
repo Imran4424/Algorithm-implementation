@@ -17,7 +17,7 @@ void kmpPreProcess(char pattern[]) {
 			// initiating
 			piArray[i] = 0;
 
-			while (j != 0){
+			while (j > 0){
 				j = piArray[j - 1];
 				if (pattern[i] == pattern[j]) {
 					// changed if found prefix match
@@ -38,7 +38,7 @@ bool kmp(char pattern[]) {
 			}
 			j++;
 		} else {
-			while(j != 0) {
+			while(j > 0) {
 				j = piArray[j - 1];
 				if (mainString[i] == pattern[j]) {
 					j++;
@@ -65,7 +65,7 @@ void kmpAllPositions(char pattern[]) {
 			}
 			j++;
 		} else {
-			while(j != 0) {
+			while(j > 0) {
 				j = piArray[j - 1];
 				if (mainString[i] == pattern[j]) {
 					j++;
@@ -93,7 +93,7 @@ void kmpReplaceSubstring(char pattern[], char replace[]) {
 			}
 			j++;
 		} else {
-			while(j != 0) {
+			while(j > 0) {
 				j = piArray[j - 1];
 				if (mainString[i] == pattern[j]) {
 					j++;
