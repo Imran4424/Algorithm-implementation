@@ -115,6 +115,7 @@ void kmpReplaceSubstring(char pattern[], char replace[]) {
 int main(int argc, char const *argv[])
 {
 	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
 
 	char pattern[5];
 	char replace[5];
