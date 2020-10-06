@@ -17,10 +17,12 @@ void kmpPreProcess(char pattern[]) {
 		} else {
 			if(j > 0) {
 				j = piArray[j - 1];
+				// do not increment here
+			} else {
+				piArray[i++] = 0;
 			}
 		}
 	}
-	
 }
 
 bool kmp(char pattern[]) {
@@ -71,27 +73,26 @@ void kmpAllPositions(char pattern[]) {
 }
 
 void kmpReplaceSubstring(char pattern[], char replace[]) {
+	int i = 0;
 	int j = 0;
-	for(int i = 0; mainString[i]; i++) {
+	while(mainString[i]) {
 		if (mainString[i] == pattern[j]) {
-			if(!pattern[j + 1]) {
-				int x, y;
-				for (x = i - j, y = 0; replace[y]; x++, y++) {
-					mainString[x] = replace[y];
-				}
-				// for clearing
-				j = 0;
-			} else {
-				j++;
+			i++;
+			j++;
+		} 
+
+		if(!pattern[j]) {
+			int x, y;
+			for (x = i - j, y = 0; replace[y]; x++, y++) {
+				mainString[x] = replace[y];
 			}
-			
-		} else {
-			while(j > 0) {
+			// for clearing
+			j = 0;
+		} else if(mainString[i] && mainString[i] != mainString[j]) {
+			if(j > 0) {
 				j = piArray[j - 1];
-				if (mainString[i] == pattern[j]) {
-					j++;
-					break;
-				}
+			} else {
+				i++;
 			}
 		}
 	}
