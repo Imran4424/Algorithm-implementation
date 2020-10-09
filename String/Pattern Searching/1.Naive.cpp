@@ -89,10 +89,6 @@ int main(int argc, char const *argv[])
 	char pattern[5];
 	char replace[5];
 
-	// scanf("%[^\n]", mainString);
-	// getchar();
-	// scanf("%[^\n]", pattern);
-
 	scanf("%s", mainString);
 
 	printf("given String - %s\n\n", mainString);
@@ -100,17 +96,17 @@ int main(int argc, char const *argv[])
 	while(cin >> pattern >> replace) {
 		printf("%s %s\n", pattern, replace);
 
-		if(kmp(pattern)) {
+		if(findSubString(pattern)) {
 			printf("subString found\n");
 		} else {
 			printf("subString not found\n");
 		}
 
 		printf("subString positions: ");
-		kmpAllPositions(pattern);
+		findSubStringAllPositions(pattern);
 		printf("\n\n");
 
-		kmpReplaceSubstring(pattern, replace);
+		replaceAllSubString(pattern, replace);
 		printf("%s\n", mainString);
 	}
 
