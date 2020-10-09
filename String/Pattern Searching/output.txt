@@ -25,3 +25,4 @@ subString not found
 subString positions: 0 - 0 1 - 1 4 - 0 6 - 0 9 - 0 10 - 1 13 - 0 14 - 1 17 - 0 
 
 bbaababaabbaabbaabaa
+bbaababaabbaabbaabaa
