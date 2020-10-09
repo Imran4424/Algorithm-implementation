@@ -6,7 +6,28 @@ using namespace std;
 char mainString[50005];
 
 bool findSubString(char pattern[]) {
+	for(int i = 0; mainString[i]; i++) {
+		if (mainString[i] == pattern[0]) {
+			bool isFound = false;
+			int x, y;
 
+			for (x = i + 1, y = 1; pattern[y]; x++, y++) {
+				if (mainString[x] == pattern[y]) {
+					isFound = true;
+				}
+				else {
+					isFound = false;
+					break;
+				}
+			}
+
+			if (isFound) {
+				return true;
+			}	
+		}
+    	}
+
+    	return false;
 }
 
 void findSubStringAllPositions(char pattern[]) {
