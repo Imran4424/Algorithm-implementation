@@ -14,7 +14,31 @@ void findSubStringAllPositions(char pattern[]) {
 }
 
 void replaceAllSubString(char pattern[], char replace[]) {
-	
+	for(int i = 0; mainString[i]; i++) {
+		if (mainString[i] == pattern[0]) {
+			bool isFound = false;
+			int x, y;
+
+			for (x = i + 1, y = 1; pattern[y]; x++, y++) {
+				if (mainString[x] == pattern[y]) {
+					isFound = true;
+				}
+				else {
+					isFound = false;
+					break;
+				}
+			}
+
+			if (isFound) {
+				for (int k = 0; replace[k]; k++) {
+					mainString[i++] = replace[k];
+				}
+
+				i--;
+				ret++;
+			}	
+		}
+    	}
 }
 
 int main(int argc, char const *argv[])
