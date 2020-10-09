@@ -75,7 +75,6 @@ void replaceAllSubString(char pattern[], char replace[]) {
 				}
 
 				i--;
-				ret++;
 			}	
 		}
     	}
