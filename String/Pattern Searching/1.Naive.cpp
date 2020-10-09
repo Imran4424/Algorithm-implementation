@@ -3,6 +3,20 @@
 #include <iostream>
 using namespace std;
 
+char mainString[50005];
+
+bool findSubString(char pattern[]) {
+
+}
+
+void findSubStringAllPositions(char pattern[]) {
+
+}
+
+void replaceAllSubString(char pattern[], char replace[]) {
+	
+}
+
 int main(int argc, char const *argv[])
 {
 	freopen("input.txt", "r", stdin);
@@ -21,7 +35,6 @@ int main(int argc, char const *argv[])
 
 	while(cin >> pattern >> replace) {
 		printf("%s %s\n", pattern, replace);
-		kmpPreProcess(pattern);
 
 		if(kmp(pattern)) {
 			printf("subString found\n");
