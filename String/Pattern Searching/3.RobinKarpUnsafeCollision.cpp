@@ -61,6 +61,11 @@ int findMatch(char pattern[]) {
 		return 0;
 		//We should've checked the substrings character by character here as hash collision might happen
 	}
+
+	for (int i = patternSize; i < mainStringSize; i++) {
+		// updating rolling hash
+		hashMainString = (hashMainString - (power * mainString[i - patternSize]) % modulus) % modulus;
+	}
 }
 
 int main(int argc, char const *argv[])
