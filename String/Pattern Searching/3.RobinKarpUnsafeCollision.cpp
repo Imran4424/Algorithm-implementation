@@ -24,6 +24,8 @@ lli getHash(char text[], lli textSize, lli base, lli modulus) {
 	for (int i = textSize - 1; i >= 0; i--) {
 		h = h + (s[i] * power) % modulus;
 		h = h % modulus;
+
+		power = (power * base) % modulus;
 	}
 }
 
