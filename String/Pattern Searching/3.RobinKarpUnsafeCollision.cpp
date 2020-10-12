@@ -22,7 +22,8 @@ int stringLength(char text[]) {
 lli getHash()
 
 int findMatch(char pattern[]) {
-	
+	int mainStringSize = stringLength(mainString);
+	int patternSize = stringLength(pattern);
 }
 
 int main(int argc, char const *argv[])
