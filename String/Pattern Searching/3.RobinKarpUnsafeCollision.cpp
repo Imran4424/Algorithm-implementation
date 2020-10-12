@@ -20,13 +20,15 @@ int stringLength(char text[]) {
 }
 
 lli getHash(char text[], lli textSize, lli base, lli modulus) {
-	lli h = 0, power = 1;
+	lli hash = 0, power = 1;
 	for (int i = textSize - 1; i >= 0; i--) {
-		h = h + (s[i] * power) % modulus;
-		h = h % modulus;
+		hash = hash + (text[i] * power) % modulus;
+		hash = hash % modulus;
 
 		power = (power * base) % modulus;
 	}
+
+	return hash;
 }
 
 int findMatch(char pattern[]) {
@@ -51,6 +53,8 @@ int findMatch(char pattern[]) {
 
 	// hash value of pattern
 	lli hashPattern = getHash(pattern, patternSize, base, modulus);
+	// hash value of mainString
+	lli hashMainString = getHash(mainString, mainStringSize, base, modulus);
 }
 
 int main(int argc, char const *argv[])
