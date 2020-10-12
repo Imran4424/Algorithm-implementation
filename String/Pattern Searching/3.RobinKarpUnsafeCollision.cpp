@@ -34,6 +34,8 @@ int findMatch(char pattern[]) {
 	}
 
 	lli base = 347, modulus = 1000000000 + 7;
+
+	// calculate B^m-1
 }
 
 int main(int argc, char const *argv[])
