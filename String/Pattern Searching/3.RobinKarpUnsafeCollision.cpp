@@ -8,6 +8,12 @@ using namespace std;
 
 typedef long long int lli;
 
+char mainString[50005];
+
+lli getHash()
+
+int findMatch()
+
 int main(int argc, char const *argv[])
 {
 	
