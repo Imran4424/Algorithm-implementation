@@ -19,7 +19,13 @@ int stringLength(char text[]) {
 	return len;
 }
 
-lli getHash()
+lli getHash(char text[], lli textSize, lli base, lli modulus) {
+	lli h = 0, power = 1;
+	for (int i = textSize - 1; i >= 0; i--) {
+		h = h + (s[i] * power) % modulus;
+		h = h % modulus;
+	}
+}
 
 int findMatch(char pattern[]) {
 	int mainStringSize = stringLength(mainString);
@@ -35,7 +41,14 @@ int findMatch(char pattern[]) {
 
 	lli base = 347, modulus = 1000000000 + 7;
 
-	// calculate B^m-1
+	// calculate B^patternSize-1
+	lli power = 1;
+	for (int i = 1; i < patternSize; i++) {
+		power = (power * base) % modulus;
+	}
+
+	// hash value of pattern
+	lli hashPattern = getHash(pattern, patternSize, base, modulus);
 }
 
 int main(int argc, char const *argv[])
