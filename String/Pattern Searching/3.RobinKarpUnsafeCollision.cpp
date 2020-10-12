@@ -22,7 +22,7 @@ int stringLength(char text[]) {
 lli getHash()
 
 int findMatch(char pattern[]) {
-
+	
 }
 
 int main(int argc, char const *argv[])
