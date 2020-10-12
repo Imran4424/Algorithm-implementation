@@ -80,6 +80,13 @@ int findMatch(char pattern[]) {
 
 int main(int argc, char const *argv[])
 {
-	cout << findMatch("Hello World", "World") << endl;
+	freopen("input2.txt", "r", stdin);
+
+	char pattern[30];
+
+	scanf("%s %s", mainString, pattern);
+
+	cout << findMatch(pattern) << endl;
+	
 	return 0;
 }
