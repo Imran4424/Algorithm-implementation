@@ -74,10 +74,12 @@ int findMatch(char pattern[]) {
 			// We should've checked the substrings character by character here as hash collision might happen
 		}
 	}
+
+	return -1;
 }
 
 int main(int argc, char const *argv[])
 {
-	
+	cout << findMatch("Hello World", "World") << endl;
 	return 0;
 }
