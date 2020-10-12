@@ -65,6 +65,7 @@ int findMatch(char pattern[]) {
 	for (int i = patternSize; i < mainStringSize; i++) {
 		// updating rolling hash
 		hashMainString = (hashMainString - (power * mainString[i - patternSize]) % modulus) % modulus;
+		hashMainString = (hashMainString + modulus) % modulus; // take care of M of negative value
 	}
 }
 
