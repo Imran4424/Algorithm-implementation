@@ -32,6 +32,8 @@ int findMatch(char pattern[]) {
 	if (0 == mainStringSize || 0 == patternSize) {
 		return -1;
 	}
+
+	lli base = 347, modulus = 1000000000 + 7;
 }
 
 int main(int argc, char const *argv[])
