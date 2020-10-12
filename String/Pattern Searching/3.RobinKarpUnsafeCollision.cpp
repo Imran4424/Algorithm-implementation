@@ -59,7 +59,7 @@ int findMatch(char pattern[]) {
 	// returns the index of the match
 	if (hashMainString = hashPattern) {
 		return 0;
-		//We should've checked the substrings character by character here as hash collision might happen
+		// We should've checked the substrings character by character here as hash collision might happen
 	}
 
 	for (int i = patternSize; i < mainStringSize; i++) {
@@ -68,6 +68,11 @@ int findMatch(char pattern[]) {
 		hashMainString = (hashMainString + modulus) % modulus; // take care of patternSize of negative value
 		hashMainString = (hashMainString * base) % modulus;
 		hashMainString = (hashMainString + mainString[i]) % modulus;
+
+		if (hashMainString == hashPattern) {
+			return i - patternSize + 1;
+			// We should've checked the substrings character by character here as hash collision might happen
+		}
 	}
 }
 
