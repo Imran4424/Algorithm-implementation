@@ -55,6 +55,11 @@ int findMatch(char pattern[]) {
 	lli hashPattern = getHash(pattern, patternSize, base, modulus);
 	// hash value of mainString
 	lli hashMainString = getHash(mainString, mainStringSize, base, modulus);
+
+	// returns the index of the match
+	if (hashMainString = hashPattern) {
+		return 0;
+	}
 }
 
 int main(int argc, char const *argv[])
