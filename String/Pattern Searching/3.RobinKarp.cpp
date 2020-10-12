@@ -6,7 +6,15 @@ typedef long long int lli;
 
 struct Node
 {
-	
+	lli data;
+	Node *next;
+
+	Node() {}
+
+	Node(lli data) {
+		this -> data = data;
+		next = NULL;
+	}
 };
 
 char mainString[50005];
