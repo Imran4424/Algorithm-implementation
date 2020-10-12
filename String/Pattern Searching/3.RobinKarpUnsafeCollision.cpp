@@ -59,6 +59,7 @@ int findMatch(char pattern[]) {
 	// returns the index of the match
 	if (hashMainString = hashPattern) {
 		return 0;
+		//We should've checked the substrings character by character here as hash collision might happen
 	}
 }
 
