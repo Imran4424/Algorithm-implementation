@@ -24,6 +24,14 @@ lli getHash()
 int findMatch(char pattern[]) {
 	int mainStringSize = stringLength(mainString);
 	int patternSize = stringLength(pattern);
+
+	if (mainStringSize < patternSize) {
+		return -1;
+	}
+
+	if (0 == mainStringSize || 0 == patternSize) {
+		return -1;
+	}
 }
 
 int main(int argc, char const *argv[])
