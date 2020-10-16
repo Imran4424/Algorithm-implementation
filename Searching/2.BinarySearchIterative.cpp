@@ -5,6 +5,16 @@
 #include <time.h>
 using namespace std;
 
+/*
+	if while condition is low <= high
+	then, low = mid + 1, high = mid - 1;
+
+	if while condition is low < high
+	then, low = mid + 1, high = mid
+
+	always remember the difference
+*/
+
 int BinarySearch(vector<int> ar, int target, int start, int stop)
 {
 	sort(ar.begin(), ar.end());
