@@ -18,8 +18,14 @@ int binarySearch(int arr[], int low, int high, int target) {
 			high = mid;
 		}
 
-		if (arr[i] == target) {
-			
+		if (arr[low] == target) {
+			return low;
+		}
+
+		if(arr[high] == target) {
+			return high;
 		}
 	}
+
+	return -1;
 }
