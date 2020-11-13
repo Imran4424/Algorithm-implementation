@@ -7,5 +7,15 @@
 
 
 int binarySearch(int arr[], int low, int high, int target) {
-	
+	int mid;
+
+	while(high - low > 1) {
+		mid = low + (high - low) / 2;
+		
+		if(arr[mid] <= target) {
+			low = mid;
+		} else {
+			high = mid;
+		}
+	}
 }
