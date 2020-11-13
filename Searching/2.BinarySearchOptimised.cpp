@@ -1,6 +1,4 @@
 /*
 	Problem statement
 
-
-
 */
