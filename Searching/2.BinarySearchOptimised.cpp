@@ -1,3 +1,6 @@
 /*
 	Problem statement
+	Given a sorted array of N distinct elements. Find a key in the array using least number of comparisons. 
+
+	
 */
