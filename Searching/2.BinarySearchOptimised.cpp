@@ -32,6 +32,6 @@ int binarySearch(int arr[], int low, int high, int target) {
 
 int main(int argc, char const *argv[])
 {
-	/* code */
+	
 	return 0;
 }
