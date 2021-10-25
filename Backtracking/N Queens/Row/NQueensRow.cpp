@@ -18,7 +18,7 @@ bool IsSafe(int num, int row, int col, int board[num][num])
 
 	// check upper diagonal on the left side
 
-	for(i = row-1,j = col-1; i>=0, j>=0; i--, j--)
+	for(i = row-1,j = col-1; i>=0 && j>=0; i--, j--)
 	{
 		if (board[i][j])
 		{
@@ -28,7 +28,7 @@ bool IsSafe(int num, int row, int col, int board[num][num])
 
 	// check upper diagonal on the right side
 
-	for(i = row-1,j = col+1; i >= 0, j < num; i--, j++)
+	for(i = row-1,j = col+1; i >= 0 && j < num; i--, j++)
 	{
 		if (board[i][j])
 		{
