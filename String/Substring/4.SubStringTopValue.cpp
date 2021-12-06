@@ -4,6 +4,7 @@
 using namespace std;
 
 unordered_map<string, int> subTopValue;
+unordered_map<string, int> restaurantScore;
 
 void generateAllSubString(string name) {
 	for (int i = 0; name[i]; i++) {
@@ -15,8 +16,25 @@ void generateAllSubString(string name) {
 	}
 }
 
+void addRestaurant(string name) {
+
+}
+
+void addValue(string name, int value) {
+
+}
+
+int getValue(string str) {
+
+}
+
 int main(int argc, char const *argv[])
 {
 	
 	return 0;
 }
+
+/*
+	In this code,
+	We will calculate subString top value during addValue
+*/
