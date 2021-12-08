@@ -6,16 +6,10 @@ using namespace std;
 void findSubString(string mainString, string pattern) {
 	int n = mainString.size();
 	int m = pattern.size();
-	int foundPos = -1;
+	
+	auto foundPos = mainString.find(pattern);
 
-	for (int i = 0; i + m <= n; i++) {
-		if (mainString.substr(i, m) == pattern) {
-			foundPos = i;
-			break;
-		}
-	}
-
-	if (-1 == foundPos) {
+	if (string::npos != foundPos) {
 		cout << "Sub String not found" << endl;
 	} else {
 		cout << "found substring at position " << foundPos << endl;
@@ -26,10 +20,12 @@ void findAllSubStringPositions(string mainString, string pattern) {
 	int n = mainString.size();
 	int m = pattern.size();
 
-	for (int i = 0; i + m <= n; i++) {
-		if (mainString.substr(i, m) == pattern) {
-			cout << i << endl;
-		}
+	auto foundPos = mainString.find(pattern);
+
+	while(foundPos != string::npos) {
+		cout << foundPos << endl;
+
+		foundPos = mainString.find(pattern, foundPos + 1);
 	}
 }
 
@@ -37,12 +33,14 @@ string replaceAllSubString(string mainString, string pattern, string replace) {
 	int n = mainString.size();
 	int m = pattern.size();
 
-	for (int i = 0; i + m <= n; i++) {
-		if (mainString.substr(i, m) == pattern) {
-			for (int k = 0; replace[k]; k++) {
-				mainString[i + k] = replace[k];
-			}
+	auto foundPos = mainString.find(pattern);
+
+	while(foundPos != string::npos) {
+		for (int k = 0; replace[k]; k++) {
+			mainString[foundPos + k] = replace[k];
 		}
+
+		foundPos = mainString.find(pattern, foundPos + 1);
 	}
 
 	return mainString;
