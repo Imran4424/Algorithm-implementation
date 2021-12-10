@@ -151,7 +151,7 @@ int SearchMother(int startVertex ,int totalVertex)
 	{
 		for (int i = startVertex; i < totalVertex; ++i)
 		{
-			if (!visited[i])
+			if (!reVisited[i])
 			{
 				return -1;
 			}
@@ -161,7 +161,7 @@ int SearchMother(int startVertex ,int totalVertex)
 	{		
 		for (int i = startVertex; i <= totalVertex; ++i)
 		{
-			if (!visited[i])
+			if (!reVisited[i])
 			{
 				return -1;
 			}

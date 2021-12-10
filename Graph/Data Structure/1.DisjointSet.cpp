@@ -58,7 +58,7 @@ void Union(int xVertex, int yVertex)
 
 int main(int argc, char const *argv[])
 {
-	countMinimum =0; // edge countMinimum
+	countMinimum = 0; // edge countMinimum
 
 	cout << "enter the number of vertex" << endl;
 

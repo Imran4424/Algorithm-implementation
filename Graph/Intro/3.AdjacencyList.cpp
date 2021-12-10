@@ -50,3 +50,7 @@ int main(int argc, char const *argv[])
 
 	return 0;
 }
+
+/*
+	This code demontrate adjacency list for undirected graph
+*/
