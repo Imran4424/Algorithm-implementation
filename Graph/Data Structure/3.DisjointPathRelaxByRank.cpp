@@ -3,6 +3,7 @@
 using namespace std;
 
 int *parent, countMinimum;
+int *rank;
 
 /*
 	Initializing the disjoint set
@@ -10,16 +11,12 @@ int *parent, countMinimum;
 	making everyone their parent himself
 */
 
-void MakeSet(int p) 
-{
-	parent[p] = p;
-}
-
 void InitDisjoint(int vertex)
 {
 	for (int i = 1; i <= vertex; ++i)
 	{
-		MakeSet(i);
+		parent[i] = i;
+		rank[i] = 1;
 	}
 }
 
@@ -60,7 +57,16 @@ void Union(int xVertex, int yVertex)
 
 	if (xParent != yParent)
 	{
-		parent[yParent] = xParent;
+		if (rank[xParent] > rank[yParent]) {
+			parent[yParent] = xParent;
+		} else if (rank[xParent] < rank[yParent]) {
+			parent[xParent] = yParent;
+		} else {
+			parent[yParent] = xParent;
+			rank[xParent] += 1;
+		}
+
+		
 
 		countMinimum++;
 	}
@@ -76,6 +82,7 @@ int main(int argc, char const *argv[])
 	cin >> vertex;
 
 	parent = new int[vertex + 1];
+	rank = new int[vertex + 1];
 
 	InitDisjoint(vertex);
 
@@ -103,8 +110,8 @@ int main(int argc, char const *argv[])
 /*
 	Time complexity:
 		Construct - O(N)
-		Find - O(log N)
-		Union - O(log N)
+		Find - O(1)
+		Union - O(1)
 
 	Space complextiy: O(N)
 
