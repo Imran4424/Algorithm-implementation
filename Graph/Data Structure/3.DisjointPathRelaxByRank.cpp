@@ -3,7 +3,8 @@
 using namespace std;
 
 int *parent, countMinimum;
-int *rank;
+int *currentRank
+;
 
 /*
 	Initializing the disjoint set
@@ -16,7 +17,7 @@ void InitDisjoint(int vertex)
 	for (int i = 1; i <= vertex; ++i)
 	{
 		parent[i] = i;
-		rank[i] = 1;
+		currentRank[i] = 1;
 	}
 }
 
@@ -57,16 +58,14 @@ void Union(int xVertex, int yVertex)
 
 	if (xParent != yParent)
 	{
-		if (rank[xParent] > rank[yParent]) {
+		if (currentRank[xParent] > currentRank[yParent]) {
 			parent[yParent] = xParent;
-		} else if (rank[xParent] < rank[yParent]) {
+		} else if (currentRank[xParent] < currentRank[yParent]) {
 			parent[xParent] = yParent;
 		} else {
 			parent[yParent] = xParent;
-			rank[xParent] += 1;
+			currentRank[xParent]++;
 		}
-
-		
 
 		countMinimum++;
 	}
@@ -74,7 +73,7 @@ void Union(int xVertex, int yVertex)
 
 int main(int argc, char const *argv[])
 {
-	countMinimum =0; // edge countMinimum
+	countMinimum = 0; // edge countMinimum
 
 	cout << "enter the number of vertex" << endl;
 
@@ -82,7 +81,7 @@ int main(int argc, char const *argv[])
 	cin >> vertex;
 
 	parent = new int[vertex + 1];
-	rank = new int[vertex + 1];
+	currentRank = new int[vertex + 1];
 
 	InitDisjoint(vertex);
 
