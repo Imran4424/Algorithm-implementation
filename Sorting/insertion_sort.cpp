@@ -17,16 +17,13 @@ void insertion_sort(int ar[], int size)
 		int hole_pos = i;
 		
 
-		for(int j = i-1; j >= 0; --j)
+		for(int j = i-1; j >= 0 && ar[j] > ar[hole_pos]; --j)
 		{
-			if (ar[j] > ar[hole_pos])
-			{
-				int temp = ar[j];
-				ar[j] = ar[hole_pos];
-				ar[hole_pos] = temp;
+			int temp = ar[j];
+			ar[j] = ar[hole_pos];
+			ar[hole_pos] = temp;
 
-				hole_pos = j;
-			}
+			hole_pos = j;
 		}
 	}
 }
@@ -38,16 +35,13 @@ void insertion_sort_decending(int ar[], int size)
 		int hole_pos = i;
 		
 
-		for(int j = i-1; j >= 0; --j)
+		for(int j = i-1; j >= 0 && ar[j] < ar[hole_pos]; --j)
 		{
-			if (ar[j] < ar[hole_pos])
-			{
-				int temp = ar[j];
-				ar[j] = ar[hole_pos];
-				ar[hole_pos] = temp;
+			int temp = ar[j];
+			ar[j] = ar[hole_pos];
+			ar[hole_pos] = temp;
 
-				hole_pos = j;
-			}
+			hole_pos = j;
 		}
 	}
 }
@@ -74,10 +68,10 @@ int main(int argc, char const *argv[])
 
 	for (int i = 0; i < n; ++i)
 	{
-		cout<<ar[i]<<" ";
+		cout << ar[i] << " ";
 	}
 
-	cout<<endl;
+	cout << endl;
 
 	// insertion sort ascending
 
@@ -85,10 +79,10 @@ int main(int argc, char const *argv[])
 
 	for (int i = 0; i < n; ++i)
 	{
-		cout<<ar[i]<<" ";
+		cout << ar[i] << " ";
 	}
 
-	cout<<endl;
+	cout << endl;
 
 	return 0;
 }
