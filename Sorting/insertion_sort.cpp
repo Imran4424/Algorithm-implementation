@@ -14,17 +14,19 @@ void insertion_sort(int ar[], int size)
 {
 	for (int i = 1; i < size; ++i)
 	{
-		int hole_pos = i;
-		
+		int holePosition = i;
+		int holePositionValue = ar[i];
 
-		for(int j = i-1; j >= 0 && ar[j] > ar[hole_pos]; --j)
-		{
-			int temp = ar[j];
-			ar[j] = ar[hole_pos];
-			ar[hole_pos] = temp;
-
-			hole_pos = j;
+		for (int j = i - 1; j >= 0 && ar[j] > holePositionValue; --j) {
+			ar[j + 1] = ar[j];
+			holePosition = j;
 		}
+
+		ar[holePosition] = holePositionValue;
+		
+		// if (holePositionValue != ar[i]) {
+		// 	ar[holePosition] = holePositionValue;
+		// }
 	}
 }
 
