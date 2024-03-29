@@ -96,7 +96,7 @@ int main(int argc, char const *argv[])
 		AddEdge(source, destination, weight);
 	}
 
-	int startVertex = 0;
+	int startVertex = 1;
 
 	Dijkstra(startVertex, vertex);
 
